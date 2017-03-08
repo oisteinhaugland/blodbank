@@ -1,1 +1,13 @@
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.pdb
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.dll
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.Form1.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
