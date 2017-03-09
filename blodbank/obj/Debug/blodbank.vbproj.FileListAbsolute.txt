@@ -11,3 +11,11 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.pdb
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.pdb
