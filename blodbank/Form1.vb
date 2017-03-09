@@ -48,3 +48,4 @@ Public Class Form1
         sql_sporring("CREATE TABLE Person (Id int, Fornavn char(25), Etternavn char(25), mail char(25))")
     End Sub
 End Class
+'Noratest
