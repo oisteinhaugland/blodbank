@@ -11,3 +11,15 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.pdb
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.xml
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.xml
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Form1.resources
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
+C:\Users\Andreas Grinderud\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
