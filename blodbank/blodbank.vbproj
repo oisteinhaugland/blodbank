@@ -73,11 +73,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="blodgiverMinSide.Designer.vb">
+      <DependentUpon>blodgiverMinSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="blodgiverMinSide.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="loggInn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loggInn.Designer.vb">
+      <DependentUpon>loggInn.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,16 +101,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="registrerBlodgiver.Designer.vb">
+      <DependentUpon>registrerBlodgiver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registrerBlodgiver.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="blodgiverMinSide.resx">
+      <DependentUpon>blodgiverMinSide.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loggInn.resx">
+      <DependentUpon>loggInn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrerBlodgiver.resx">
+      <DependentUpon>registrerBlodgiver.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +136,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gjoremol.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

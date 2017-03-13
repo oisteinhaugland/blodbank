@@ -1,0 +1,18 @@
+﻿#
+
+Forms:
+
+	registrerBlodgiver:
+		Validering av hele registreringen
+			Gi respektive tilbakemeldinger ved ikke riktig gitt informasjon i tekstboksene
+
+		vurder nytten av kalender
+			alternativ er en text box med en regex eller noe som setter riktig format.
+
+
+Sette placeholder text
+	Logg inn form
+	registrerBlodgiver form
+
+
+
