@@ -79,6 +79,18 @@
     <Compile Include="blodgiverMinSide.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="blodgiver_egenerklering.Designer.vb">
+      <DependentUpon>blodgiver_egenerklering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="blodgiver_egenerklering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blodgiver_timebestilling.Designer.vb">
+      <DependentUpon>blodgiver_timebestilling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="blodgiver_timebestilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="loggInn.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
   <ItemGroup>
     <EmbeddedResource Include="blodgiverMinSide.resx">
       <DependentUpon>blodgiverMinSide.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blodgiver_egenerklering.resx">
+      <DependentUpon>blodgiver_egenerklering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="blodgiver_timebestilling.resx">
+      <DependentUpon>blodgiver_timebestilling.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loggInn.resx">
       <DependentUpon>loggInn.vb</DependentUpon>
