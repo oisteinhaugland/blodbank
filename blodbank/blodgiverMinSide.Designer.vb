@@ -37,56 +37,58 @@ Partial Class blodgiverMinSide
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MinSideToolStripMenuItem, Me.TimebestillingToolStripMenuItem, Me.EgenerklæringToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1078, 33)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
+        Me.MenuStrip1.Size = New System.Drawing.Size(719, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MinSideToolStripMenuItem
         '
         Me.MinSideToolStripMenuItem.Name = "MinSideToolStripMenuItem"
-        Me.MinSideToolStripMenuItem.Size = New System.Drawing.Size(93, 29)
+        Me.MinSideToolStripMenuItem.Size = New System.Drawing.Size(65, 22)
         Me.MinSideToolStripMenuItem.Text = "Min Side"
         '
         'TimebestillingToolStripMenuItem
         '
         Me.TimebestillingToolStripMenuItem.Name = "TimebestillingToolStripMenuItem"
-        Me.TimebestillingToolStripMenuItem.Size = New System.Drawing.Size(133, 29)
+        Me.TimebestillingToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.TimebestillingToolStripMenuItem.Text = "Timebestilling"
         '
         'EgenerklæringToolStripMenuItem
         '
         Me.EgenerklæringToolStripMenuItem.Name = "EgenerklæringToolStripMenuItem"
-        Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
+        Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(95, 22)
         Me.EgenerklæringToolStripMenuItem.Text = "Egenerklæring"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 67)
+        Me.Label1.Location = New System.Drawing.Point(15, 44)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Min side"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(250, 224)
+        Me.Label2.Location = New System.Drawing.Point(167, 146)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(389, 20)
+        Me.Label2.Size = New System.Drawing.Size(266, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Masse tekst og oversikt over blodgiveren, evt statistikk"
         '
         'blodgiverMinSide
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1078, 743)
+        Me.ClientSize = New System.Drawing.Size(719, 483)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "blodgiverMinSide"
         Me.Text = "blodgiverMinSide"
         Me.MenuStrip1.ResumeLayout(False)
