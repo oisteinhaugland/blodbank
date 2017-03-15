@@ -1,70 +1,27 @@
-﻿Imports MySql.Data.MySqlClient
-
-Imports System.Net.Mail
-
-
+﻿'Imports System.Net.Mail
 Public Class loggInn
-
-    'Tilkoblingsinformasjon til phpMyAdmin Konto team 5
-    Private team_passord As String = "M2oHUQ17"
-    Private team_brukernavn As String = "g_oops_05"
-    Private tjener_navn As String = "mysql.stud.iie.ntnu.no"
-    Private db_tilkobling_str As String
-    Private db_oppkobling As New MySqlConnection
-
-    'Funksjon for å kjøre SQL spørringer
-    Private Function sql_sporring(ByRef sql As String) As DataTable
-        Dim data_tabell As New DataTable
-
-        Try
-            db_oppkobling.Open()
-            Dim sql_kommando As New MySqlCommand(sql, db_oppkobling)
-            Dim data_adapter As New MySqlDataAdapter
-
-            data_adapter.SelectCommand = sql_kommando
-            data_adapter.Fill(data_tabell)
-
-            db_oppkobling.Close()
-        Catch ex As MySqlException
-            MessageBox.Show("goofed: " & ex.Message)
-            db_oppkobling.Close()
-        End Try
-
-        Return data_tabell
-
-    End Function
-
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Location = New Point(0, 0)
 
-        'String for å koble seg til phpMyAdmin
-        db_tilkobling_str = "Server=" & tjener_navn & ";" &
-                            "Database=" & team_brukernavn & ";" &
-                            "Uid=" & team_brukernavn & ";" &
-                            "Pwd=" & team_passord & ";"
-
-        db_oppkobling.ConnectionString = db_tilkobling_str
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
         Dim tabell As New DataTable
-        tabell = sql_sporring("SELECT * FROM Blodgiver")
+        tabell = hvemErInnlogget()
 
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
+                innlogget_bruker = brukernavn
                 blodgiverMinSide.Show()
                 Me.Hide()
+            Else
+                MsgBox("Feil brukernavn eller passord")
             End If
         Next
-
-
-
-
-
 
     End Sub
 
@@ -75,28 +32,6 @@ Public Class loggInn
     End Sub
 
 
-    ' funka ikke enda
-    'Private Sub glemtPassordKnapp_Click(sender As Object, e As EventArgs) Handles glemtPassordKnapp.Click
-    '    Dim EmailMessage As New MailMessage()
-    '    Try
-    '        Dim SmtpServer As New SmtpClient()
-    '        Dim mail As New MailMessage()
-    '        SmtpServer.Credentials = New _
-    '        Net.NetworkCredential("haugland.1193@gmail.com", "edSeiler1917@")
-    '        SmtpServer.Port = 587
-    '        SmtpServer.Host = "smtp.gmail.com"
-    '        mail = New MailMessage()
-    '        mail.From = New MailAddress("haugland.1193@gmail.com")
-    '        mail.To.Add("mathias.bytingsvik@gmail.com")
-    '        mail.Subject = "Test Mail"
-    '        mail.Body = "This is for testing SMTP mail from GMAIL MATHIAS, du er flink"
-    '        SmtpServer.Send(mail)
-    '        MsgBox("mail send")
-    '    Catch ex As Exception
-    '        MsgBox(ex.ToString)
-    '    End Try
-
-    'End Sub
 End Class
 '<<<<<<< HEAD:blodbank/Form1.vb
 ''Noratest
@@ -104,3 +39,33 @@ End Class
 '=======
 ''Vi tester igjen
 '>>>>>>> refs/remotes/origin/master:blodbank/loggInn.vb
+
+
+
+
+
+
+
+
+' funka ikke enda
+'Private Sub glemtPassordKnapp_Click(sender As Object, e As EventArgs) Handles glemtPassordKnapp.Click
+'    Dim EmailMessage As New MailMessage()
+'    Try
+'        Dim SmtpServer As New SmtpClient()
+'        Dim mail As New MailMessage()
+'        SmtpServer.Credentials = New _
+'        Net.NetworkCredential("haugland.1193@gmail.com", "edSeiler1917@")
+'        SmtpServer.Port = 587
+'        SmtpServer.Host = "smtp.gmail.com"
+'        mail = New MailMessage()
+'        mail.From = New MailAddress("haugland.1193@gmail.com")
+'        mail.To.Add("mathias.bytingsvik@gmail.com")
+'        mail.Subject = "Test Mail"
+'        mail.Body = "This is for testing SMTP mail from GMAIL MATHIAS, du er flink"
+'        SmtpServer.Send(mail)
+'        MsgBox("mail send")
+'    Catch ex As Exception
+'        MsgBox(ex.ToString)
+'    End Try
+
+'End Sub
