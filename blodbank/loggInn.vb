@@ -1,6 +1,9 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class Form1
+Imports System.Net.Mail
+
+
+Public Class loggInn
 
     'Tilkoblingsinformasjon til phpMyAdmin Konto team 5
     Private team_passord As String = "M2oHUQ17"
@@ -43,10 +46,43 @@ Public Class Form1
     End Sub
 
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
         sql_sporring("CREATE TABLE Person (Id int, Fornavn char(25), Etternavn char(25), mail char(25))")
     End Sub
+
+
+    Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs) Handles registrerBrukerKnapp.Click
+        Me.Hide()
+        registrerBlodgiver.Show()
+    End Sub
+
+
+    ' funka ikke enda
+    'Private Sub glemtPassordKnapp_Click(sender As Object, e As EventArgs) Handles glemtPassordKnapp.Click
+    '    Dim EmailMessage As New MailMessage()
+    '    Try
+    '        Dim SmtpServer As New SmtpClient()
+    '        Dim mail As New MailMessage()
+    '        SmtpServer.Credentials = New _
+    '        Net.NetworkCredential("haugland.1193@gmail.com", "edSeiler1917@")
+    '        SmtpServer.Port = 587
+    '        SmtpServer.Host = "smtp.gmail.com"
+    '        mail = New MailMessage()
+    '        mail.From = New MailAddress("haugland.1193@gmail.com")
+    '        mail.To.Add("mathias.bytingsvik@gmail.com")
+    '        mail.Subject = "Test Mail"
+    '        mail.Body = "This is for testing SMTP mail from GMAIL MATHIAS, du er flink"
+    '        SmtpServer.Send(mail)
+    '        MsgBox("mail send")
+    '    Catch ex As Exception
+    '        MsgBox(ex.ToString)
+    '    End Try
+
+    'End Sub
 End Class
-'Noratest
-'Emilie
+'<<<<<<< HEAD:blodbank/Form1.vb
+''Noratest
+''Emilie
+'=======
+''Vi tester igjen
+'>>>>>>> refs/remotes/origin/master:blodbank/loggInn.vb
