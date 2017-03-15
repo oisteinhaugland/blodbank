@@ -36,6 +36,8 @@ Public Class loggInn
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(0, 0)
+
         'String for å koble seg til phpMyAdmin
         db_tilkobling_str = "Server=" & tjener_navn & ";" &
                             "Database=" & team_brukernavn & ";" &
@@ -47,13 +49,29 @@ Public Class loggInn
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
-        sql_sporring("CREATE TABLE Person (Id int, Fornavn char(25), Etternavn char(25), mail char(25))")
+        Dim tabell As New DataTable
+        tabell = sql_sporring("SELECT * FROM Blodgiver")
+
+        For Each rad In tabell.Rows
+            Dim brukernavn = rad("epost")
+            Dim passord = rad("passord")
+            If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
+                blodgiverMinSide.Show()
+                Me.Hide()
+            End If
+        Next
+
+
+
+
+
+
     End Sub
 
 
     Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs) Handles registrerBrukerKnapp.Click
-        Me.Hide()
         registrerBlodgiver.Show()
+        Me.Hide()
     End Sub
 
 

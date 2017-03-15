@@ -28,6 +28,7 @@ Partial Class blodgiverMinSide
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,11 +81,21 @@ Partial Class blodgiverMinSide
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Masse tekst og oversikt over blodgiveren, evt statistikk"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(198, 229)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(304, 115)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Logg ut"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'blodgiverMinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(719, 483)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -104,4 +115,5 @@ Partial Class blodgiverMinSide
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
 End Class

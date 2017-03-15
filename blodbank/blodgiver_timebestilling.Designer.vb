@@ -76,14 +76,14 @@ Partial Class blodgiver_timebestilling
         'MonthCalendar1
         '
         Me.MonthCalendar1.Location = New System.Drawing.Point(25, 77)
-        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(6)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(281, 118)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 32)
         Me.Button1.TabIndex = 4
@@ -93,7 +93,7 @@ Partial Class blodgiver_timebestilling
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(281, 154)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(116, 30)
         Me.Button2.TabIndex = 5
@@ -103,7 +103,7 @@ Partial Class blodgiver_timebestilling
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(31, 257)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker1.TabIndex = 6
@@ -119,7 +119,7 @@ Partial Class blodgiver_timebestilling
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "blodgiver_timebestilling"
         Me.Text = "blodgiver_timebestilling"
         Me.MenuStrip1.ResumeLayout(False)

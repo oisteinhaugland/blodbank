@@ -193,7 +193,7 @@ Partial Class registrerBlodgiver
         '
         'personNrTextBox
         '
-        Me.personNrTextBox.Location = New System.Drawing.Point(150, 171)
+        Me.personNrTextBox.Location = New System.Drawing.Point(561, 313)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(100, 20)
         Me.personNrTextBox.TabIndex = 13
@@ -201,7 +201,7 @@ Partial Class registrerBlodgiver
         'personNrLabel
         '
         Me.personNrLabel.AutoSize = True
-        Me.personNrLabel.Location = New System.Drawing.Point(67, 174)
+        Me.personNrLabel.Location = New System.Drawing.Point(478, 316)
         Me.personNrLabel.Name = "personNrLabel"
         Me.personNrLabel.Size = New System.Drawing.Size(84, 13)
         Me.personNrLabel.TabIndex = 14
@@ -260,7 +260,7 @@ Partial Class registrerBlodgiver
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(251, 174)
+        Me.Label2.Location = New System.Drawing.Point(662, 316)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 21

@@ -5,40 +5,13 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.dll
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.xml
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
-<<<<<<< HEAD
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\bin\Debug\blodbank.exe.config
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.exe
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.xml
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\blodbank\blodbank\obj\Debug\blodbank.pdb
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe.config
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.exe
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.xml
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
-=======
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\bin\Debug\blodbank.exe.config
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.exe
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.xml
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.pdb
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
->>>>>>> Lagt til forms: logginn, registrer blodgivere, todo.txt og renamet labels og tekstbokser
->>>>>>> refs/remotes/origin/master
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.pdb
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.xml
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.dll
-C:\Users\Emilie\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.xml
