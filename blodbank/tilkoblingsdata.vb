@@ -8,7 +8,6 @@ Module tilkoblingsdata
     Private db_tilkobling_str As String
     Private db_oppkobling As New MySqlConnection
 
-
     'Brukerinformasjon.
     Public innlogget_bruker As String
     Public innlogget_etternavn As String
@@ -25,6 +24,7 @@ Module tilkoblingsdata
     Public innlogget_post_nr As Integer
     Public innlogget_post_sted As String
     Public innlogget_telefon As Integer
+    Public innlogget_personnummer As Integer
 
 
     'Funksjon for å kjøre SQL spørringer
@@ -57,6 +57,10 @@ Module tilkoblingsdata
 
     Public Function selectBlogiver()
         Return sql_sporring("SELECT * FROM Blodgiver")
+    End Function
+
+    Public Function selectAnsatt()
+        Return sql_sporring("SELECT epost,passord FROM Ansatt")
     End Function
 
 

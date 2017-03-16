@@ -6,6 +6,7 @@
 	adresse varchar(30),
     post_nr  int(4),
     post_sted  varchar(30),
+	personnummer int (5),
 	telefon int(30),
 	epost varchar(30),
 	forrige_blodtapp date,
@@ -120,3 +121,7 @@ VALUES (
             " & Post_sted & ", 
             " & Passord & "
         )")
+
+
+	
+	INSERT INTO Ansatt (fornavn,etternavn,fodseldato,adresse,post_nr,post_sted,telefon,epost,lederstatus,passord) VALUES("Bob","Lunde","1990-06-03","Torkjelsvegen 5", 5208, "Os", 56308612, "1337@gmail.com",0,"qwerty")

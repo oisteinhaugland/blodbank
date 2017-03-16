@@ -22,7 +22,6 @@ Partial Class registrerBlodgiver
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.fornavnTextbox = New System.Windows.Forms.TextBox()
         Me.epostTextbox = New System.Windows.Forms.TextBox()
         Me.etterNavnTextBox = New System.Windows.Forms.TextBox()
@@ -33,8 +32,6 @@ Partial Class registrerBlodgiver
         Me.passordLabel = New System.Windows.Forms.Label()
         Me.gjenntaPassordTextbox = New System.Windows.Forms.TextBox()
         Me.gjentaPassordLabel = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.fodselsDatoLabel = New System.Windows.Forms.Label()
         Me.personNrTextBox = New System.Windows.Forms.TextBox()
         Me.personNrLabel = New System.Windows.Forms.Label()
         Me.registrerBrukerKnapp = New System.Windows.Forms.Button()
@@ -50,8 +47,7 @@ Partial Class registrerBlodgiver
         Me.postNrTextBox = New System.Windows.Forms.TextBox()
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Personalia = New System.Windows.Forms.GroupBox()
         Me.SuspendLayout()
         '
         'fornavnTextbox
@@ -134,24 +130,9 @@ Partial Class registrerBlodgiver
         Me.gjentaPassordLabel.TabIndex = 10
         Me.gjentaPassordLabel.Text = "Gjenta Passord"
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(588, 44)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 11
-        '
-        'fodselsDatoLabel
-        '
-        Me.fodselsDatoLabel.AutoSize = True
-        Me.fodselsDatoLabel.Location = New System.Drawing.Point(591, 25)
-        Me.fodselsDatoLabel.Name = "fodselsDatoLabel"
-        Me.fodselsDatoLabel.Size = New System.Drawing.Size(70, 13)
-        Me.fodselsDatoLabel.TabIndex = 12
-        Me.fodselsDatoLabel.Text = "Fødselsdato: "
-        '
         'personNrTextBox
         '
-        Me.personNrTextBox.Location = New System.Drawing.Point(561, 313)
+        Me.personNrTextBox.Location = New System.Drawing.Point(151, 171)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(100, 20)
         Me.personNrTextBox.TabIndex = 13
@@ -159,7 +140,7 @@ Partial Class registrerBlodgiver
         'personNrLabel
         '
         Me.personNrLabel.AutoSize = True
-        Me.personNrLabel.Location = New System.Drawing.Point(478, 316)
+        Me.personNrLabel.Location = New System.Drawing.Point(68, 174)
         Me.personNrLabel.Name = "personNrLabel"
         Me.personNrLabel.Size = New System.Drawing.Size(84, 13)
         Me.personNrLabel.TabIndex = 14
@@ -167,9 +148,9 @@ Partial Class registrerBlodgiver
         '
         'registrerBrukerKnapp
         '
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(178, 377)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(48, 376)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(161, 71)
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(347, 71)
         Me.registrerBrukerKnapp.TabIndex = 10
         Me.registrerBrukerKnapp.Text = "Registrer bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = True
@@ -213,12 +194,12 @@ Partial Class registrerBlodgiver
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "dd-mm-åååå"
+        Me.Label1.Text = "dd.mm.åååå"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(662, 316)
+        Me.Label2.Location = New System.Drawing.Point(252, 174)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 21
@@ -265,16 +246,23 @@ Partial Class registrerBlodgiver
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(471, 424)
+        Me.Button1.Location = New System.Drawing.Point(677, 24)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "test"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ErrorProvider1
+        'Personalia
         '
-        Me.ErrorProvider1.ContainerControl = Me
+        Me.Personalia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Personalia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Personalia.Location = New System.Drawing.Point(48, 12)
+        Me.Personalia.Name = "Personalia"
+        Me.Personalia.Size = New System.Drawing.Size(347, 359)
+        Me.Personalia.TabIndex = 27
+        Me.Personalia.TabStop = False
+        Me.Personalia.Text = "Personalia"
         '
         'registrerBlodgiver
         '
@@ -296,8 +284,6 @@ Partial Class registrerBlodgiver
         Me.Controls.Add(Me.registrerBrukerKnapp)
         Me.Controls.Add(Me.personNrLabel)
         Me.Controls.Add(Me.personNrTextBox)
-        Me.Controls.Add(Me.fodselsDatoLabel)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.gjentaPassordLabel)
         Me.Controls.Add(Me.gjenntaPassordTextbox)
         Me.Controls.Add(Me.passordLabel)
@@ -308,9 +294,9 @@ Partial Class registrerBlodgiver
         Me.Controls.Add(Me.etterNavnTextBox)
         Me.Controls.Add(Me.epostTextbox)
         Me.Controls.Add(Me.fornavnTextbox)
+        Me.Controls.Add(Me.Personalia)
         Me.Name = "registrerBlodgiver"
         Me.Text = "nyBruker"
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -326,8 +312,6 @@ Partial Class registrerBlodgiver
     Friend WithEvents passordLabel As Label
     Friend WithEvents gjenntaPassordTextbox As TextBox
     Friend WithEvents gjentaPassordLabel As Label
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents fodselsDatoLabel As Label
     Friend WithEvents personNrTextBox As TextBox
     Friend WithEvents personNrLabel As Label
     Friend WithEvents registrerBrukerKnapp As Button
@@ -343,5 +327,5 @@ Partial Class registrerBlodgiver
     Friend WithEvents postNrTextBox As TextBox
     Friend WithEvents poststedTextBox As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Personalia As GroupBox
 End Class

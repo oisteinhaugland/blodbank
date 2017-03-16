@@ -1,19 +1,16 @@
 ﻿
-hvilke sosiale egenekspaer povirker kj;peradtferd
-v'r spesifikk pa a skille mellom kulturelle, sosialle og personlige og psykologiske egenskaper.
-
 #
-legg til personnummer
-ikke la personer registreres hvis de allerede r i databsen
+##legg til personnummer check
+##ikke la personer registreres hvis de allerede r i databsen check
 
 
 For torsdag 16.03:
-Legg til legg til bruker funksjonalitet CHECK
-	skjekk om email allerede er registrert i databsen
+##Legg til legg til bruker funksjonalitet CHECK
+	#skjekk om email allerede er registrert i databsen
 	valider hele skjemaet.
-	sett inn fodselsdato til oistein.
+	#sett inn fodselsdato til oistein.
 
-Gjør ferdig innhening for min side.
+##Gjør ferdig innhening for min side.
 Legg til Ansatte i db
 Fullfør navigasjon for ansatte
 Registrer en blodenhet i db
