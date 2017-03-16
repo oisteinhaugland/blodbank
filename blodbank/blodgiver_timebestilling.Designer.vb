@@ -41,7 +41,7 @@ Partial Class blodgiver_timebestilling
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(433, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(533, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -82,7 +82,7 @@ Partial Class blodgiver_timebestilling
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(281, 118)
+        Me.Button1.Location = New System.Drawing.Point(231, 207)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 32)
@@ -92,7 +92,7 @@ Partial Class blodgiver_timebestilling
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(281, 154)
+        Me.Button2.Location = New System.Drawing.Point(231, 243)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(116, 30)
@@ -112,7 +112,7 @@ Partial Class blodgiver_timebestilling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 331)
+        Me.ClientSize = New System.Drawing.Size(533, 382)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

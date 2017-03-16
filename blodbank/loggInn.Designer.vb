@@ -33,23 +33,23 @@ Partial Class loggInn
         '
         'loggInnKnapp
         '
-        Me.loggInnKnapp.Location = New System.Drawing.Point(159, 230)
+        Me.loggInnKnapp.Location = New System.Drawing.Point(111, 208)
         Me.loggInnKnapp.Name = "loggInnKnapp"
-        Me.loggInnKnapp.Size = New System.Drawing.Size(100, 39)
-        Me.loggInnKnapp.TabIndex = 0
+        Me.loggInnKnapp.Size = New System.Drawing.Size(102, 39)
+        Me.loggInnKnapp.TabIndex = 3
         Me.loggInnKnapp.Text = "Logg Inn"
         Me.loggInnKnapp.UseVisualStyleBackColor = True
         '
         'brukerNavnTextbox
         '
-        Me.brukerNavnTextbox.Location = New System.Drawing.Point(159, 117)
+        Me.brukerNavnTextbox.Location = New System.Drawing.Point(111, 113)
         Me.brukerNavnTextbox.Name = "brukerNavnTextbox"
         Me.brukerNavnTextbox.Size = New System.Drawing.Size(100, 20)
         Me.brukerNavnTextbox.TabIndex = 1
         '
         'passordTextBox
         '
-        Me.passordTextBox.Location = New System.Drawing.Point(159, 184)
+        Me.passordTextBox.Location = New System.Drawing.Point(111, 162)
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.passordTextBox.TabIndex = 2
@@ -57,7 +57,7 @@ Partial Class loggInn
         'brukernavnLabel
         '
         Me.brukernavnLabel.AutoSize = True
-        Me.brukernavnLabel.Location = New System.Drawing.Point(156, 101)
+        Me.brukernavnLabel.Location = New System.Drawing.Point(108, 97)
         Me.brukernavnLabel.Name = "brukernavnLabel"
         Me.brukernavnLabel.Size = New System.Drawing.Size(105, 13)
         Me.brukernavnLabel.TabIndex = 3
@@ -66,7 +66,7 @@ Partial Class loggInn
         'passordLabel
         '
         Me.passordLabel.AutoSize = True
-        Me.passordLabel.Location = New System.Drawing.Point(156, 168)
+        Me.passordLabel.Location = New System.Drawing.Point(108, 146)
         Me.passordLabel.Name = "passordLabel"
         Me.passordLabel.Size = New System.Drawing.Size(88, 13)
         Me.passordLabel.TabIndex = 5
@@ -74,19 +74,19 @@ Partial Class loggInn
         '
         'registrerBrukerKnapp
         '
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(265, 230)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(217, 208)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
         Me.registrerBrukerKnapp.Size = New System.Drawing.Size(100, 39)
-        Me.registrerBrukerKnapp.TabIndex = 6
+        Me.registrerBrukerKnapp.TabIndex = 4
         Me.registrerBrukerKnapp.Text = "Ny bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = True
         '
         'glemtPassordKnapp
         '
-        Me.glemtPassordKnapp.Location = New System.Drawing.Point(159, 285)
+        Me.glemtPassordKnapp.Location = New System.Drawing.Point(111, 267)
         Me.glemtPassordKnapp.Name = "glemtPassordKnapp"
         Me.glemtPassordKnapp.Size = New System.Drawing.Size(102, 33)
-        Me.glemtPassordKnapp.TabIndex = 7
+        Me.glemtPassordKnapp.TabIndex = 5
         Me.glemtPassordKnapp.Text = "Glemt passord?"
         Me.glemtPassordKnapp.UseVisualStyleBackColor = True
         '
@@ -94,7 +94,7 @@ Partial Class loggInn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 376)
+        Me.ClientSize = New System.Drawing.Size(823, 543)
         Me.Controls.Add(Me.glemtPassordKnapp)
         Me.Controls.Add(Me.registrerBrukerKnapp)
         Me.Controls.Add(Me.passordLabel)

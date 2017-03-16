@@ -76,7 +76,7 @@ Partial Class registrerBlodgiver
         Me.passordTextBox.Location = New System.Drawing.Point(151, 298)
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.passordTextBox.TabIndex = 8
+        Me.passordTextBox.TabIndex = 9
         '
         'fornavnLabel
         '
@@ -119,7 +119,7 @@ Partial Class registrerBlodgiver
         Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(151, 325)
         Me.gjenntaPassordTextbox.Name = "gjenntaPassordTextbox"
         Me.gjenntaPassordTextbox.Size = New System.Drawing.Size(100, 20)
-        Me.gjenntaPassordTextbox.TabIndex = 9
+        Me.gjenntaPassordTextbox.TabIndex = 10
         '
         'gjentaPassordLabel
         '
@@ -135,7 +135,7 @@ Partial Class registrerBlodgiver
         Me.personNrTextBox.Location = New System.Drawing.Point(151, 171)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.personNrTextBox.TabIndex = 13
+        Me.personNrTextBox.TabIndex = 5
         '
         'personNrLabel
         '
@@ -151,7 +151,7 @@ Partial Class registrerBlodgiver
         Me.registrerBrukerKnapp.Location = New System.Drawing.Point(48, 376)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
         Me.registrerBrukerKnapp.Size = New System.Drawing.Size(347, 71)
-        Me.registrerBrukerKnapp.TabIndex = 10
+        Me.registrerBrukerKnapp.TabIndex = 11
         Me.registrerBrukerKnapp.Text = "Registrer bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = True
         '
@@ -219,7 +219,7 @@ Partial Class registrerBlodgiver
         Me.adresseTextBox.Location = New System.Drawing.Point(150, 197)
         Me.adresseTextBox.Name = "adresseTextBox"
         Me.adresseTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.adresseTextBox.TabIndex = 5
+        Me.adresseTextBox.TabIndex = 6
         '
         'postnrLabel
         '
@@ -235,22 +235,22 @@ Partial Class registrerBlodgiver
         Me.postNrTextBox.Location = New System.Drawing.Point(150, 230)
         Me.postNrTextBox.Name = "postNrTextBox"
         Me.postNrTextBox.Size = New System.Drawing.Size(52, 20)
-        Me.postNrTextBox.TabIndex = 6
+        Me.postNrTextBox.TabIndex = 7
         '
         'poststedTextBox
         '
         Me.poststedTextBox.Location = New System.Drawing.Point(208, 230)
         Me.poststedTextBox.Name = "poststedTextBox"
         Me.poststedTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.poststedTextBox.TabIndex = 7
+        Me.poststedTextBox.TabIndex = 8
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(677, 24)
+        Me.Button1.Location = New System.Drawing.Point(401, 376)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "test"
+        Me.Button1.Size = New System.Drawing.Size(347, 71)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Gå tilbake & Avbryt registrering"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Personalia

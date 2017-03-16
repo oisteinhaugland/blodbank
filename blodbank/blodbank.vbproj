@@ -167,6 +167,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AA-notater.txt" />
     <Content Include="createTables.txt" />
     <Content Include="gjoremol.txt" />
   </ItemGroup>
