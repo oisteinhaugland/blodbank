@@ -253,9 +253,9 @@ Partial Class registrerBlodgiver
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(251, 148)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "ddmmåååå"
+        Me.Label1.Text = "dd-mm-åååå"
         '
         'Label2
         '

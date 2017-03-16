@@ -7,9 +7,6 @@
     End Sub
 
 
-
-
-
     'Navigasjon
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         blodgiver_timebestilling.Show()

@@ -9,7 +9,7 @@ Public Class loggInn
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
         Dim tabell As New DataTable
-        tabell = hvemErInnlogget()
+        tabell = selectBlogiver()
 
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")

@@ -107,3 +107,16 @@ VALUES (
     "Os", 
     "123passord"
 );
+
+
+   sql_sporring("insert into blodgiver(fornavn, etternavn, telefon,epost,adresse,post_nr,post_sted,passord)
+        values (
+            " & Fornavn & ",
+            " & Etternavn & ",
+            " & TelefonNr & ",
+            " & Epost & ",
+            " & Adresse & ",
+            " & Post_nr & ",
+            " & Post_sted & ", 
+            " & Passord & "
+        )")

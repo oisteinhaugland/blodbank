@@ -39,7 +39,7 @@ Module tilkoblingsdata
 
     End Function
 
-    Public Function hvemErInnlogget()
+    Public Function selectBlogiver()
         Return sql_sporring("SELECT * FROM Blodgiver")
     End Function
 
