@@ -122,7 +122,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_fornavn
         '
         Me.label_innlogget_fornavn.AutoSize = True
-        Me.label_innlogget_fornavn.Location = New System.Drawing.Point(110, 109)
+        Me.label_innlogget_fornavn.Location = New System.Drawing.Point(116, 128)
         Me.label_innlogget_fornavn.Name = "label_innlogget_fornavn"
         Me.label_innlogget_fornavn.Size = New System.Drawing.Size(30, 13)
         Me.label_innlogget_fornavn.TabIndex = 5
@@ -131,7 +131,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_etternavn
         '
         Me.label_innlogget_etternavn.AutoSize = True
-        Me.label_innlogget_etternavn.Location = New System.Drawing.Point(110, 137)
+        Me.label_innlogget_etternavn.Location = New System.Drawing.Point(116, 143)
         Me.label_innlogget_etternavn.Name = "label_innlogget_etternavn"
         Me.label_innlogget_etternavn.Size = New System.Drawing.Size(36, 13)
         Me.label_innlogget_etternavn.TabIndex = 6
@@ -140,7 +140,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_adresse
         '
         Me.label_innlogget_adresse.AutoSize = True
-        Me.label_innlogget_adresse.Location = New System.Drawing.Point(110, 154)
+        Me.label_innlogget_adresse.Location = New System.Drawing.Point(116, 158)
         Me.label_innlogget_adresse.Name = "label_innlogget_adresse"
         Me.label_innlogget_adresse.Size = New System.Drawing.Size(36, 13)
         Me.label_innlogget_adresse.TabIndex = 7
@@ -149,7 +149,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_blodtype
         '
         Me.label_innlogget_blodtype.AutoSize = True
-        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(113, 171)
+        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(116, 173)
         Me.label_innlogget_blodtype.Name = "label_innlogget_blodtype"
         Me.label_innlogget_blodtype.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_blodtype.TabIndex = 8
@@ -158,7 +158,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_fodselsdato
         '
         Me.label_innlogget_fodselsdato.AutoSize = True
-        Me.label_innlogget_fodselsdato.Location = New System.Drawing.Point(116, 188)
+        Me.label_innlogget_fodselsdato.Location = New System.Drawing.Point(116, 189)
         Me.label_innlogget_fodselsdato.Name = "label_innlogget_fodselsdato"
         Me.label_innlogget_fodselsdato.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_fodselsdato.TabIndex = 9
