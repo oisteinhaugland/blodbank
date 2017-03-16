@@ -2,7 +2,10 @@
 
 For torsdag 16.03:
 Legg til legg til bruker funksjonalitet
+
+
 Gjør ferdig innhening for min side.
+
 Legg til Ansatte i db
 Fullfør navigasjon for ansatte
 Registrer en blodenhet i db

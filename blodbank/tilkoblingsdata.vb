@@ -11,6 +11,7 @@ Module tilkoblingsdata
 
     Public innlogget_bruker As String
 
+
     'Funksjon for å kjøre SQL spørringer
     Public Function sql_sporring(ByRef sql As String) As DataTable
         'string for database opptilkobling
@@ -42,6 +43,8 @@ Module tilkoblingsdata
     Public Function selectBlogiver()
         Return sql_sporring("SELECT * FROM Blodgiver")
     End Function
+
+
 
 
 

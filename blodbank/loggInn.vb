@@ -1,27 +1,34 @@
 ﻿'Imports System.Net.Mail
 Public Class loggInn
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Location = New Point(0, 0)
-
-    End Sub
+    Public melding_logg_inn_feil As String = "Feil brukernavn eller passord, vennligst prøv igjen."
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
+    Public Function loggInnBlodgiver()
         Dim tabell As New DataTable
+        Dim innskrevet_bruker_navn As String
         tabell = selectBlogiver()
+        Dim loggetInn As Boolean = False
 
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
                 innlogget_bruker = brukernavn
-                blodgiverMinSide.Show()
-                Me.Hide()
-            Else
-                MsgBox("Feil brukernavn eller passord")
+                loggetInn = True
             End If
         Next
+
+        If loggetInn Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(0, 0)
 
     End Sub
 
@@ -31,7 +38,15 @@ Public Class loggInn
         Me.Hide()
     End Sub
 
+    Private Sub loggInnKnapp_Click_1(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
 
+        If loggInnBlodgiver() Then
+            Me.Hide()
+            blodgiverMinSide.Show()
+        Else
+            MsgBox(melding_logg_inn_feil)
+        End If
+    End Sub
 End Class
 '<<<<<<< HEAD:blodbank/Form1.vb
 ''Noratest
