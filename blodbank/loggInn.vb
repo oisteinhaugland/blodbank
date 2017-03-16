@@ -80,4 +80,9 @@ Public Class loggInn
 
     'End Sub
 End Class
-'Vi tester igjen
+'<<<<<<< HEAD:blodbank/Form1.vb
+''Noratest
+''Emilie
+'=======
+''Vi tester igjen
+'>>>>>>> refs/remotes/origin/master:blodbank/loggInn.vb
