@@ -1,11 +1,13 @@
 ﻿#
 
 For torsdag 16.03:
-Legg til legg til bruker funksjonalitet
+Legg til legg til bruker funksjonalitet CHECK
+	skjekk om email allerede er registrert i databsen
+	valider hele skjemaet
+	sett inn fodselsdato til oistein.
 
 
 Gjør ferdig innhening for min side.
-
 Legg til Ansatte i db
 Fullfør navigasjon for ansatte
 Registrer en blodenhet i db

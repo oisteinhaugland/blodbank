@@ -7,6 +7,7 @@ Public Class registrerBlodgiver
         Return innskrevetDato.ToString("yyyy-MM-dd")
     End Function
 
+
     Private Sub registrer_bruker()
         Dim errors = 0
 
