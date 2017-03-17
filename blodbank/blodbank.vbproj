@@ -98,6 +98,12 @@
     <Compile Include="blodgiver_timebestilling.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="hashtest.Designer.vb">
+      <DependentUpon>hashtest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="hashtest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="loggInn.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="blodgiver_timebestilling.resx">
       <DependentUpon>blodgiver_timebestilling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hashtest.resx">
+      <DependentUpon>hashtest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loggInn.resx">
       <DependentUpon>loggInn.vb</DependentUpon>

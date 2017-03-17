@@ -131,6 +131,10 @@ Public Class loggInn
         Me.Hide()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        hashtest.Show()
+    End Sub
 End Class
 
 '<<<<<<< HEAD:blodbank/Form1.vb

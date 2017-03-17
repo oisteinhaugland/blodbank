@@ -29,6 +29,7 @@ Partial Class loggInn
         Me.passordLabel = New System.Windows.Forms.Label()
         Me.registrerBrukerKnapp = New System.Windows.Forms.Button()
         Me.glemtPassordKnapp = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'loggInnKnapp
@@ -90,11 +91,21 @@ Partial Class loggInn
         Me.glemtPassordKnapp.Text = "Glemt passord?"
         Me.glemtPassordKnapp.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(622, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "HashTest"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'loggInn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(823, 543)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.glemtPassordKnapp)
         Me.Controls.Add(Me.registrerBrukerKnapp)
         Me.Controls.Add(Me.passordLabel)
@@ -116,4 +127,5 @@ Partial Class loggInn
     Friend WithEvents passordLabel As Label
     Friend WithEvents registrerBrukerKnapp As Button
     Friend WithEvents glemtPassordKnapp As Button
+    Friend WithEvents Button1 As Button
 End Class
