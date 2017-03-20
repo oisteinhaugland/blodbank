@@ -1,4 +1,5 @@
 ﻿Public Class blodgiver_egenerklering
+    Dim sideIndeks = 0
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         blodgiver_timebestilling.Show()
         Me.Hide()
@@ -17,11 +18,17 @@
 
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        If sideIndeks <> 9 Then
+            sideIndeks += 1
+            TabControl1.SelectedIndex = sideIndeks
+        End If
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        If sideIndeks <> 0 Then
+            sideIndeks -= 1
+            TabControl1.SelectedIndex = sideIndeks
+        End If
     End Sub
 End Class

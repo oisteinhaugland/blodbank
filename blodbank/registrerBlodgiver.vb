@@ -78,9 +78,6 @@ Public Class registrerBlodgiver
         End If
 
 
-
-
-
         Dim datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
         Dim fodselsdatoformatMatch As Match = Regex.Match((fodselsdatoTextBox.Text), datoFormat)
         If fodselsdatoformatMatch.Success Then
