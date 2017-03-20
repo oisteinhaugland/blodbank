@@ -16,3 +16,4 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources

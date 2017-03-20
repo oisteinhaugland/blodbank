@@ -1,0 +1,1 @@
+﻿Blodgivere må ha registrert bestilte timer i db

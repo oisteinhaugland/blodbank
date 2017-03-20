@@ -14,7 +14,9 @@
     End Sub
 
     Private Sub blodgiver_timebestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
+        Me.BackColor = Color.FromArgb(247, 247, 247)
 
     End Sub
 End Class
