@@ -1,4 +1,77 @@
-﻿#
+﻿
+#
+##legg til personnummer check
+##ikke la personer registreres hvis de allerede r i databsen check
+
+
+For torsdag 16.03:
+##Legg til legg til bruker funksjonalitet CHECK
+	#skjekk om email allerede er registrert i databsen
+	valider hele skjemaet.
+	#sett inn fodselsdato til oistein.
+
+##Gjør ferdig innhening for min side.
+Legg til Ansatte i db
+Fullfør navigasjon for ansatte
+Registrer en blodenhet i db
+Registrerr ett blodtapp i db og VB
+
+
+
+
+
+Egenskjemaet må lagres i databasen
+Brukere må kunne registreres i databasen
+Blodenheter må kunnelagres i databasen
+
+Blodgiver må kunne logge inn
+Ansatt må kunne logge inn
+Ledelse må kunne logge inn
+
+
+Blodgiver må kunne fylle ut egenerklæring
+Blodgiver må kunne se
+
+
+Blogiver må kunne registreres
+Blodiver må kunne bestille time
+
+Ansatt må kunne bestille blod
+Ansatt må kunne utlevere blod
+
+Ansatt må kunne inkalle blodgivere
+
+
+Ledelse må kunne se statistikk
+
+Blodgiver må kunne bekrefte time
+Blodgiver må kunne avbestille time
+
+Alle forms må være opprettet
+
+En må kunne navigere gjennom formene
+Egenskjemaet må valideres
+Svarene må lagres i db
+
+Module for innlogging på forskjellige forms
+
+for each panel setting 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Forms:
 
@@ -13,6 +86,8 @@ Forms:
 Sette placeholder text
 	Logg inn form
 	registrerBlodgiver form
+
+
 
 
 

@@ -5,9 +5,16 @@
 
     Private Sub MinSideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinSideToolStripMenuItem.Click
         blodgiverMinSide.Show()
+        Me.Hide()
     End Sub
 
     Private Sub EgenerklæringToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgenerklæringToolStripMenuItem.Click
         blodgiver_egenerklering.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub blodgiver_timebestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Location = New Point(0, 0)
+
     End Sub
 End Class

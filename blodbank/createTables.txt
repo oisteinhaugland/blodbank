@@ -1,0 +1,127 @@
+﻿CREATE TABLE Blodgiver (
+    blodgiver_id int NOT NULL AUTO_INCREMENT,
+    fornavn varchar(30),
+    etternavn varchar(30),
+    fodseldato date,
+	adresse varchar(30),
+    post_nr  int(4),
+    post_sted  varchar(30),
+	personnummer int (5),
+	telefon int(30),
+	epost varchar(30),
+	forrige_blodtapp date,
+	godkjent_egenerklering TINYINT,
+	karantene int(30),
+	passord varchar(30),
+	blodtype varchar(3),
+	PRIMARY KEY (blodgiver_id)
+)
+
+CREATE TABLE Ansatt (
+	ansatt_id int NOT NULL AUTO_INCREMENT,
+	fornavn varchar(30),
+	etternavn varchar(30),
+	fodseldato date,
+	adresse varchar(30),
+	post_nr  int(4),
+    post_sted  varchar(30),
+	telefon varchar(30),
+	epost varchar(30),
+	lederstatus TINYINT,
+	passord varchar(30),
+	PRIMARY KEY (ansatt_id)
+)
+
+CREATE TABLE Blodtapp (
+	blodTapp_id int NOT NULL AUTO_INCREMENT,
+	plasma_mengde int(2),
+	blodlegemer_mengde int(2),
+	blodplater_mengde int(2),
+	tappe_dato date,
+	PRIMARY KEY (blodTapp_id)
+)
+
+CREATE TABLE BlodLagerEnhet (
+	enhet_id int NOT NULL AUTO_INCREMENT,
+	blodtype_id int (1),
+	blodegensskap_id int (1),
+	mengde int(1),
+	holdbarhet int (5),
+	PRIMARY KEY (enhet_id)
+)
+
+CREATE TABLE Blodtype (
+	blodtype_id int NOT NULL AUTO_INCREMENT,
+	blodtype varchar(3),
+	PRIMARY KEY (blodtype_id)
+)
+
+CREATE TABLE Blodegenskap (
+	blodegenskap_id int NOT NULL AUTO_INCREMENT,
+	navn varchar(30),
+	PRIMARY KEY (blodegenskap_id)
+)
+
+CREATE TABLE Timebestilling (
+	timebestilling_id int NOT NULL AUTO_INCREMENT,
+	besttilling_dato date,
+	blodgiver_id int(4),
+	PRIMARY KEY (timebestilling_id)
+)
+
+CREATE TABLE Inkalling (
+	innkalling_id int NOT NULL AUTO_INCREMENT,
+	hasteprose_dyre TINYINT,
+	tidspunkt date, 
+	blogiver_id int(4),
+	ansatt_id int (4),
+	PRIMARY KEY (innkalling_id)
+)
+
+CREATE TABLE Blod_bestillinger (
+	blodbestilling_id int NOT NULL AUTO_INCREMENT,
+	blod_mengde int(30),
+	orde_dato date,
+	blodegenskap_id int (4),
+	PRIMARY KEY (blodbestilling_id)
+)
+
+
+
+####################################################
+#INSERT SETNINGER
+###################################################
+
+
+Registrer ny ansatt_id
+
+
+INSERT INTO Blodgiver(fornavn, etternavn, telefon,epost,fodseldato,adresse,post_nr,post_sted,passord)
+VALUES (
+    "terje",
+    "Hogtvedt",
+     95768319,
+    "123@gmail.com",
+    STR_TO_DATE('10-11-1993', '%d-%m-%Y'),
+    "Harbukktappen 15",
+    5208,
+    "Os", 
+    "123passord"
+);
+
+
+   sql_sporring("insert into blodgiver(fornavn, etternavn, telefon,epost,adresse,post_nr,post_sted,passord)
+        values (
+            " & Fornavn & ",
+            " & Etternavn & ",
+            " & TelefonNr & ",
+            " & Epost & ",
+            " & Adresse & ",
+            " & Post_nr & ",
+            " & Post_sted & ", 
+            " & Passord & "
+        )")
+
+
+	
+	INSERT INTO Ansatt (fornavn,etternavn,fodseldato,adresse,post_nr,post_sted,telefon,epost,lederstatus,passord) VALUES("Bob","Lunde","1990-06-03","Torkjelsvegen 5", 5208, "Os", 56308612, "1337@gmail.com",0,"qwerty")

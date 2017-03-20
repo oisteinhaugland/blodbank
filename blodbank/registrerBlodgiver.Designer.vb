@@ -26,18 +26,12 @@ Partial Class registrerBlodgiver
         Me.epostTextbox = New System.Windows.Forms.TextBox()
         Me.etterNavnTextBox = New System.Windows.Forms.TextBox()
         Me.passordTextBox = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.kjønnLabel = New System.Windows.Forms.Label()
         Me.fornavnLabel = New System.Windows.Forms.Label()
         Me.epostLabel = New System.Windows.Forms.Label()
         Me.etterNavnLabel = New System.Windows.Forms.Label()
         Me.passordLabel = New System.Windows.Forms.Label()
         Me.gjenntaPassordTextbox = New System.Windows.Forms.TextBox()
         Me.gjentaPassordLabel = New System.Windows.Forms.Label()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.fodselsDatoLabel = New System.Windows.Forms.Label()
         Me.personNrTextBox = New System.Windows.Forms.TextBox()
         Me.personNrLabel = New System.Windows.Forms.Label()
         Me.registrerBrukerKnapp = New System.Windows.Forms.Button()
@@ -52,7 +46,8 @@ Partial Class registrerBlodgiver
         Me.postnrLabel = New System.Windows.Forms.Label()
         Me.postNrTextBox = New System.Windows.Forms.TextBox()
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
-        Me.Panel1.SuspendLayout()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Personalia = New System.Windows.Forms.GroupBox()
         Me.SuspendLayout()
         '
         'fornavnTextbox
@@ -67,62 +62,21 @@ Partial Class registrerBlodgiver
         Me.epostTextbox.Location = New System.Drawing.Point(150, 119)
         Me.epostTextbox.Name = "epostTextbox"
         Me.epostTextbox.Size = New System.Drawing.Size(100, 20)
-        Me.epostTextbox.TabIndex = 1
+        Me.epostTextbox.TabIndex = 3
         '
         'etterNavnTextBox
         '
         Me.etterNavnTextBox.Location = New System.Drawing.Point(150, 60)
         Me.etterNavnTextBox.Name = "etterNavnTextBox"
         Me.etterNavnTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.etterNavnTextBox.TabIndex = 2
+        Me.etterNavnTextBox.TabIndex = 1
         '
         'passordTextBox
         '
         Me.passordTextBox.Location = New System.Drawing.Point(151, 298)
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.passordTextBox.TabIndex = 3
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.RadioButton2)
-        Me.Panel1.Controls.Add(Me.RadioButton1)
-        Me.Panel1.Controls.Add(Me.kjønnLabel)
-        Me.Panel1.Location = New System.Drawing.Point(78, 377)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(72, 73)
-        Me.Panel1.TabIndex = 4
-        '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(7, 44)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(58, 17)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Kvinne"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(7, 21)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(52, 17)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Mann"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'kjønnLabel
-        '
-        Me.kjønnLabel.AutoSize = True
-        Me.kjønnLabel.Location = New System.Drawing.Point(4, 5)
-        Me.kjønnLabel.Name = "kjønnLabel"
-        Me.kjønnLabel.Size = New System.Drawing.Size(34, 13)
-        Me.kjønnLabel.TabIndex = 0
-        Me.kjønnLabel.Text = "Kjønn"
+        Me.passordTextBox.TabIndex = 8
         '
         'fornavnLabel
         '
@@ -176,24 +130,9 @@ Partial Class registrerBlodgiver
         Me.gjentaPassordLabel.TabIndex = 10
         Me.gjentaPassordLabel.Text = "Gjenta Passord"
         '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(588, 44)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 11
-        '
-        'fodselsDatoLabel
-        '
-        Me.fodselsDatoLabel.AutoSize = True
-        Me.fodselsDatoLabel.Location = New System.Drawing.Point(591, 25)
-        Me.fodselsDatoLabel.Name = "fodselsDatoLabel"
-        Me.fodselsDatoLabel.Size = New System.Drawing.Size(70, 13)
-        Me.fodselsDatoLabel.TabIndex = 12
-        Me.fodselsDatoLabel.Text = "Fødselsdato: "
-        '
         'personNrTextBox
         '
-        Me.personNrTextBox.Location = New System.Drawing.Point(150, 171)
+        Me.personNrTextBox.Location = New System.Drawing.Point(151, 171)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(100, 20)
         Me.personNrTextBox.TabIndex = 13
@@ -201,7 +140,7 @@ Partial Class registrerBlodgiver
         'personNrLabel
         '
         Me.personNrLabel.AutoSize = True
-        Me.personNrLabel.Location = New System.Drawing.Point(67, 174)
+        Me.personNrLabel.Location = New System.Drawing.Point(68, 174)
         Me.personNrLabel.Name = "personNrLabel"
         Me.personNrLabel.Size = New System.Drawing.Size(84, 13)
         Me.personNrLabel.TabIndex = 14
@@ -209,10 +148,10 @@ Partial Class registrerBlodgiver
         '
         'registrerBrukerKnapp
         '
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(178, 377)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(48, 376)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(161, 71)
-        Me.registrerBrukerKnapp.TabIndex = 15
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(347, 71)
+        Me.registrerBrukerKnapp.TabIndex = 10
         Me.registrerBrukerKnapp.Text = "Registrer bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = True
         '
@@ -221,7 +160,7 @@ Partial Class registrerBlodgiver
         Me.telefonTextBox.Location = New System.Drawing.Point(150, 93)
         Me.telefonTextBox.Name = "telefonTextBox"
         Me.telefonTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.telefonTextBox.TabIndex = 16
+        Me.telefonTextBox.TabIndex = 2
         '
         'telefonLabel
         '
@@ -246,21 +185,21 @@ Partial Class registrerBlodgiver
         Me.fodselsdatoTextBox.Location = New System.Drawing.Point(150, 145)
         Me.fodselsdatoTextBox.Name = "fodselsdatoTextBox"
         Me.fodselsdatoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.fodselsdatoTextBox.TabIndex = 18
+        Me.fodselsdatoTextBox.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(251, 148)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "ddmmåååå"
+        Me.Label1.Text = "dd.mm.åååå"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(251, 174)
+        Me.Label2.Location = New System.Drawing.Point(252, 174)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 21
@@ -280,7 +219,7 @@ Partial Class registrerBlodgiver
         Me.adresseTextBox.Location = New System.Drawing.Point(150, 197)
         Me.adresseTextBox.Name = "adresseTextBox"
         Me.adresseTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.adresseTextBox.TabIndex = 22
+        Me.adresseTextBox.TabIndex = 5
         '
         'postnrLabel
         '
@@ -296,20 +235,41 @@ Partial Class registrerBlodgiver
         Me.postNrTextBox.Location = New System.Drawing.Point(150, 230)
         Me.postNrTextBox.Name = "postNrTextBox"
         Me.postNrTextBox.Size = New System.Drawing.Size(52, 20)
-        Me.postNrTextBox.TabIndex = 24
+        Me.postNrTextBox.TabIndex = 6
         '
         'poststedTextBox
         '
         Me.poststedTextBox.Location = New System.Drawing.Point(208, 230)
         Me.poststedTextBox.Name = "poststedTextBox"
         Me.poststedTextBox.Size = New System.Drawing.Size(131, 20)
-        Me.poststedTextBox.TabIndex = 26
+        Me.poststedTextBox.TabIndex = 7
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(677, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "test"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Personalia
+        '
+        Me.Personalia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Personalia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Personalia.Location = New System.Drawing.Point(48, 12)
+        Me.Personalia.Name = "Personalia"
+        Me.Personalia.Size = New System.Drawing.Size(347, 359)
+        Me.Personalia.TabIndex = 27
+        Me.Personalia.TabStop = False
+        Me.Personalia.Text = "Personalia"
         '
         'registrerBlodgiver
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 532)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.poststedTextBox)
         Me.Controls.Add(Me.postnrLabel)
         Me.Controls.Add(Me.postNrTextBox)
@@ -324,23 +284,19 @@ Partial Class registrerBlodgiver
         Me.Controls.Add(Me.registrerBrukerKnapp)
         Me.Controls.Add(Me.personNrLabel)
         Me.Controls.Add(Me.personNrTextBox)
-        Me.Controls.Add(Me.fodselsDatoLabel)
-        Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.gjentaPassordLabel)
         Me.Controls.Add(Me.gjenntaPassordTextbox)
         Me.Controls.Add(Me.passordLabel)
         Me.Controls.Add(Me.etterNavnLabel)
         Me.Controls.Add(Me.epostLabel)
         Me.Controls.Add(Me.fornavnLabel)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.passordTextBox)
         Me.Controls.Add(Me.etterNavnTextBox)
         Me.Controls.Add(Me.epostTextbox)
         Me.Controls.Add(Me.fornavnTextbox)
+        Me.Controls.Add(Me.Personalia)
         Me.Name = "registrerBlodgiver"
         Me.Text = "nyBruker"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -350,18 +306,12 @@ Partial Class registrerBlodgiver
     Friend WithEvents epostTextbox As TextBox
     Friend WithEvents etterNavnTextBox As TextBox
     Friend WithEvents passordTextBox As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents kjønnLabel As Label
     Friend WithEvents fornavnLabel As Label
     Friend WithEvents epostLabel As Label
     Friend WithEvents etterNavnLabel As Label
     Friend WithEvents passordLabel As Label
     Friend WithEvents gjenntaPassordTextbox As TextBox
     Friend WithEvents gjentaPassordLabel As Label
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents fodselsDatoLabel As Label
     Friend WithEvents personNrTextBox As TextBox
     Friend WithEvents personNrLabel As Label
     Friend WithEvents registrerBrukerKnapp As Button
@@ -376,4 +326,6 @@ Partial Class registrerBlodgiver
     Friend WithEvents postnrLabel As Label
     Friend WithEvents postNrTextBox As TextBox
     Friend WithEvents poststedTextBox As TextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Personalia As GroupBox
 End Class

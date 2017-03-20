@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ansattStartSide.Designer.vb">
+      <DependentUpon>ansattStartSide.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattStartSide.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="blodgiverMinSide.Designer.vb">
       <DependentUpon>blodgiverMinSide.vb</DependentUpon>
@@ -120,8 +126,12 @@
     <Compile Include="registrerBlodgiver.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tilkoblingsdata.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ansattStartSide.resx">
+      <DependentUpon>ansattStartSide.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="blodgiverMinSide.resx">
       <DependentUpon>blodgiverMinSide.vb</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +167,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="createTables.txt" />
     <Content Include="gjoremol.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
