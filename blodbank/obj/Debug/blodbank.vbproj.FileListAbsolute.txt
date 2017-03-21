@@ -36,3 +36,6 @@ C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\b
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattBestilling.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattProduktoversikt.resources

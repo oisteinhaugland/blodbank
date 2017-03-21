@@ -86,6 +86,71 @@ CREATE TABLE Blod_bestillinger (
 	PRIMARY KEY (blodbestilling_id)
 )
 
+CREATE TABLE egenerklering_spm (
+	bruker_id int,
+	spm1 TINYINT(1),
+	spm2 TINYINT(1),
+	spm3 TINYINT(1),
+	spm4 TINYINT(1),
+	spm5 TINYINT(1),
+	spm6 TINYINT(1),
+	spm7 TINYINT(1),
+	spm8 TINYINT(1),
+	spm9 TINYINT(1),
+	spm10 TINYINT(1),
+	spm11 TINYINT(1),
+	spm12 TINYINT(1),
+	spm13 TINYINT(1),
+	spm14 TINYINT(1),
+	spm15 TINYINT(1),
+	spm16 TINYINT(1),
+	spm17 TINYINT(1),
+	spm18 TINYINT(1),
+	spm19 TINYINT(1),
+	spm20 TINYINT(1),
+	spm21 TINYINT(1),
+	spm22 TINYINT(1),
+	spm23 TINYINT(1),
+	spm24 TINYINT(1),
+	spm25 TINYINT(1),
+	spm26 TINYINT(1),
+	spm27 TINYINT(1),
+	spm28 TINYINT(1),
+	spm29 TINYINT(1),
+	spm30 TINYINT(1),
+	spm31 TINYINT(1),
+	spm32 TINYINT(1),
+	spm33 TINYINT(1),
+	spm34 TINYINT(1),
+	spm35 TINYINT(1),
+	spm36 TINYINT(1),
+	spm37 TINYINT(1),
+	spm38 TINYINT(1),
+	spm39 TINYINT(1),
+	spm40 TINYINT(1),
+	spm41 TINYINT(1),
+	spm42 TINYINT(1),
+	spm43 TINYINT(1),
+	spm44 TINYINT(1),
+	spm45 TINYINT(1),
+	spm46 TINYINT(1),
+	spm47 TINYINT(1),
+	spm48 TINYINT(1),
+	spm49 TINYINT(1),
+	spm50 TINYINT(1),
+	spm51 TINYINT(1),
+	spm52 TINYINT(1),
+	spm53 TINYINT(1),
+	spm54 TINYINT(1),
+	spm55 TINYINT(1),
+	spm56 TINYINT(1),
+	spm57 TINYINT(1),
+	spm58 TINYINT(1),
+	spm59 TINYINT(1),
+	PRIMARY KEY (bruker_id)
+)
+
+
 
 
 ####################################################
@@ -125,3 +190,121 @@ VALUES (
 
 	
 	INSERT INTO Ansatt (fornavn,etternavn,fodseldato,adresse,post_nr,post_sted,telefon,epost,lederstatus,passord) VALUES("Bob","Lunde","1990-06-03","Torkjelsvegen 5", 5208, "Os", 56308612, "1337@gmail.com",0,"qwerty")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vennligst besvar JA NEI
+-Har du fått informasjon om blodgivning?
+-Føler du deg frisk nå?
+-Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige blodgivning og til nå?
+-Veier du 50 kg eller mer?
+-Har du åpne sår, eksem eller hudsykdom?
+-Har du piercing i slimhinne?
+
+Har du i løpet av de siste fire uker JA NEI
+- brukt medisiner?
+- vært syk eller hatt feber?
+- hatt løs avføring?
+- fått vaksine?
+- vært hos tannlege eller tannpleier?
+
+Har du i løpet av de siste seks måneder JA NEI
+- vært til legeundersøkelse eller på sykehus, eller fått behandling for noen sykdom?
+- fått behandling med sprøyter?
+- hatt kjønnssykdom, eller fått behandling for kjønnssykdom?
+- hatt seksuell kontakt med person med HIVinfeksjon eller hepatitt B eller hepatitt C, eller med person som har hatt positiv test for en av disse sykdommene?
+- hatt seksuell kontakt med person som bruker eller har brukt dopingmidler eller narkotiske midler som sprøyter?
+- hatt seksuell kontakt med prostituerte eller tidligere prostituerte?
+- blitt tatovert, fått piercing eller tatt hull i ørene?
+
+
+Snu arket!
+Har du i løpet av de siste seks måneder JA NEI
+- fått akupunktur?
+- stukket eller skåret deg på gjenstander som var forurenset med blod eller kroppsvæsker,
+- bodd i samme husstand som en person som har hepatitt B?
+- fått blodsøl på slimhinner eller skadet hud?
+- blitt bitt av flått?
+- hatt seksualpartner som har bodd mer enn ett år sammenhengende utenfor Vest-Europa ?
+- hatt seksualpartner som har vært i Afrika?
+- hatt seksuell kontakt med en person som har fått blod eller blodprodukter utenfor Norden?
+- hatt ny seksualpartner?
+- vært utenfor Vest-Europa?
+
+Har du i løpet av de siste to år JA NEI
+- hatt sjeldne eller alvorlige infeksjonssykdommer?
+
+
+Har du på noe tidspunkt gjennom livet JA NEI
+- hatt, hjerte-, lever-, eller lungesykdom?
+- hatt kreft?
+- hatt blødningstendens?
+- hatt allergi mot mat eller medisiner?
+- hatt malaria?
+- hatt tropesykdommer?
+- hatt hepatitt (gulsott), HIV-infeksjon eller AIDS?
+- hatt positiv prøve for hepatitt (gulsott) eller HIVinfeksjon?
+- fått blodoverføring?
+- fått veksthormon?
+- fått hornhinnetransplantat?
+- hatt syfilis?
+- hatt alvorlig sykdom som ikke er nevnt her?
+- brukt dopingmidler eller narkotiske midler som sprøyter?
+- mottatt penger eller narkotika som gjenytelse for sex?
+
+
+Besvares av kvinner JA NEI
+- Er du gravid?
+- Har du vært gravid i løpet av de siste tolv måneder, eller ammer du nå?
+- Hvis du har gitt blod tidligere, har du vært gravid siden forrige blodgivning?
+- Har du i løpet av de siste seks måneder hatt seksuell kontakt med en mann som du vet har hatt seksuell kontakt med andre menn?
+
+Besvares av menn JA NEI
+-Har eller har du hatt seksuell kontakt med andre menn?
+
+Besvar også JA NEI
+- Har du brukt narkotika en eller flere ganger de siste 12 måneder?
+- Har du eller noen i familien hatt Creutzfeldt-Jakob sykdom eller variant CJD?
+- Har du oppholdt deg i Storbritannia i mer enn ett år til sammen i perioden mellom 1980 og 1996?
+- Har du i løpet av de siste tre år vært i områder der malaria forekommer?
+- Har du oppholdt deg sammenhengende i minst seks måneder i områder der malaria forekommer?
+- Har du oppholdt deg i Afrika i mer enn fem år til sammen?
+- Er du eller din mor født i Amerika sør for USA?
+- Godtar du at anonymiserte prøver av ditt blod kan brukes til forskning? Du er like velkommen som blodgiver enten du svarer ja eller nei. Blodbanken kan gi informasjon om aktuelle forskningsprosjekter.
+- Har du deltatt i medikamentforsøk de siste 12 måneder?
+- Jeg samtykker i at mitt plasma føres ut av Norge for legemiddelproduksjon

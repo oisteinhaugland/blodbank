@@ -287,6 +287,16 @@ Partial Class blodgiver_egenerklering
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton119 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton120 = New System.Windows.Forms.RadioButton()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel60 = New System.Windows.Forms.Panel()
+        Me.RadioButton121 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton122 = New System.Windows.Forms.RadioButton()
+        Me.Label63 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.sendEgenerklering = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage9.SuspendLayout()
         Me.GroupBox11.SuspendLayout()
@@ -367,6 +377,8 @@ Partial Class blodgiver_egenerklering
         Me.Panel11.SuspendLayout()
         Me.Panel12.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.GroupBox10.SuspendLayout()
+        Me.Panel60.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -376,7 +388,7 @@ Partial Class blodgiver_egenerklering
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1198, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1097, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -411,7 +423,7 @@ Partial Class blodgiver_egenerklering
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(28, 71)
+        Me.Label3.Location = New System.Drawing.Point(29, 52)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(0, 19)
         Me.Label3.TabIndex = 6
@@ -426,17 +438,20 @@ Partial Class blodgiver_egenerklering
         '
         'TabPage9
         '
+        Me.TabPage9.Controls.Add(Me.sendEgenerklering)
+        Me.TabPage9.Controls.Add(Me.CheckBox1)
         Me.TabPage9.Controls.Add(Me.GroupBox11)
         Me.TabPage9.Location = New System.Drawing.Point(4, 28)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(1084, 801)
+        Me.TabPage9.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "TabPage9"
         Me.TabPage9.UseVisualStyleBackColor = True
         '
         'GroupBox11
         '
+        Me.GroupBox11.Controls.Add(Me.Panel60)
         Me.GroupBox11.Controls.Add(Me.Panel58)
         Me.GroupBox11.Controls.Add(Me.Panel59)
         Me.GroupBox11.Controls.Add(Me.Panel37)
@@ -449,7 +464,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox11.Controls.Add(Me.Panel57)
         Me.GroupBox11.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox11.Name = "GroupBox11"
-        Me.GroupBox11.Size = New System.Drawing.Size(1054, 759)
+        Me.GroupBox11.Size = New System.Drawing.Size(1054, 556)
         Me.GroupBox11.TabIndex = 9
         Me.GroupBox11.TabStop = False
         Me.GroupBox11.Text = "Besvar også"
@@ -461,17 +476,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel58.Controls.Add(Me.RadioButton116)
         Me.Panel58.Controls.Add(Me.Label61)
         Me.Panel58.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel58.Location = New System.Drawing.Point(4, 578)
+        Me.Panel58.Location = New System.Drawing.Point(2, 434)
         Me.Panel58.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel58.Name = "Panel58"
-        Me.Panel58.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel58.TabIndex = 10
+        Me.Panel58.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel58.TabIndex = 58
         '
         'RadioButton115
         '
         Me.RadioButton115.AutoSize = True
         Me.RadioButton115.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton115.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton115.Location = New System.Drawing.Point(931, 10)
         Me.RadioButton115.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton115.Name = "RadioButton115"
         Me.RadioButton115.Size = New System.Drawing.Size(53, 27)
@@ -485,7 +500,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton116.AutoSize = True
         Me.RadioButton116.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton116.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton116.Location = New System.Drawing.Point(863, 10)
         Me.RadioButton116.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton116.Name = "RadioButton116"
         Me.RadioButton116.Size = New System.Drawing.Size(43, 27)
@@ -497,10 +512,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label61
         '
-        Me.Label61.Location = New System.Drawing.Point(12, 15)
+        Me.Label61.Location = New System.Drawing.Point(12, 10)
         Me.Label61.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label61.Name = "Label61"
-        Me.Label61.Size = New System.Drawing.Size(800, 35)
+        Me.Label61.Size = New System.Drawing.Size(446, 25)
         Me.Label61.TabIndex = 0
         Me.Label61.Text = "Har du deltatt i medikament forsøk de siste 12 måneder?"
         '
@@ -515,7 +530,7 @@ Partial Class blodgiver_egenerklering
         Me.Panel59.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel59.Name = "Panel59"
         Me.Panel59.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel59.TabIndex = 11
+        Me.Panel59.TabIndex = 59
         '
         'RadioButton117
         '
@@ -563,17 +578,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel37.Controls.Add(Me.RadioButton74)
         Me.Panel37.Controls.Add(Me.Label40)
         Me.Panel37.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel37.Location = New System.Drawing.Point(4, 371)
+        Me.Panel37.Location = New System.Drawing.Point(1, 289)
         Me.Panel37.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel37.Name = "Panel37"
-        Me.Panel37.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel37.TabIndex = 7
+        Me.Panel37.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel37.TabIndex = 55
         '
         'RadioButton73
         '
         Me.RadioButton73.AutoSize = True
         Me.RadioButton73.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton73.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton73.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton73.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton73.Name = "RadioButton73"
         Me.RadioButton73.Size = New System.Drawing.Size(53, 27)
@@ -587,7 +602,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton74.AutoSize = True
         Me.RadioButton74.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton74.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton74.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton74.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton74.Name = "RadioButton74"
         Me.RadioButton74.Size = New System.Drawing.Size(43, 27)
@@ -599,10 +614,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label40
         '
-        Me.Label40.Location = New System.Drawing.Point(12, 15)
+        Me.Label40.Location = New System.Drawing.Point(12, 10)
         Me.Label40.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(800, 35)
+        Me.Label40.Size = New System.Drawing.Size(405, 20)
         Me.Label40.TabIndex = 0
         Me.Label40.Text = "Har du oppholdt deg i Afrika i mer enn fem år til sammen?"
         '
@@ -613,17 +628,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel51.Controls.Add(Me.RadioButton102)
         Me.Panel51.Controls.Add(Me.Label54)
         Me.Panel51.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel51.Location = New System.Drawing.Point(4, 303)
+        Me.Panel51.Location = New System.Drawing.Point(1, 234)
         Me.Panel51.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel51.Name = "Panel51"
-        Me.Panel51.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel51.TabIndex = 6
+        Me.Panel51.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel51.TabIndex = 54
         '
         'RadioButton101
         '
         Me.RadioButton101.AutoSize = True
         Me.RadioButton101.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton101.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton101.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton101.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton101.Name = "RadioButton101"
         Me.RadioButton101.Size = New System.Drawing.Size(53, 27)
@@ -637,7 +652,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton102.AutoSize = True
         Me.RadioButton102.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton102.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton102.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton102.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton102.Name = "RadioButton102"
         Me.RadioButton102.Size = New System.Drawing.Size(43, 27)
@@ -649,10 +664,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label54
         '
-        Me.Label54.Location = New System.Drawing.Point(12, 15)
+        Me.Label54.Location = New System.Drawing.Point(12, 10)
         Me.Label54.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label54.Name = "Label54"
-        Me.Label54.Size = New System.Drawing.Size(800, 35)
+        Me.Label54.Size = New System.Drawing.Size(661, 20)
         Me.Label54.TabIndex = 0
         Me.Label54.Text = "Har du oppholdt deg sammenhengende i minst seks måneder i områder der malaria for" &
     "ekommer?"
@@ -664,17 +679,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel52.Controls.Add(Me.RadioButton104)
         Me.Panel52.Controls.Add(Me.Label55)
         Me.Panel52.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel52.Location = New System.Drawing.Point(4, 439)
+        Me.Panel52.Location = New System.Drawing.Point(1, 339)
         Me.Panel52.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel52.Name = "Panel52"
-        Me.Panel52.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel52.TabIndex = 8
+        Me.Panel52.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel52.TabIndex = 56
         '
         'RadioButton103
         '
         Me.RadioButton103.AutoSize = True
         Me.RadioButton103.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton103.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton103.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton103.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton103.Name = "RadioButton103"
         Me.RadioButton103.Size = New System.Drawing.Size(53, 27)
@@ -688,7 +703,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton104.AutoSize = True
         Me.RadioButton104.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton104.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton104.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton104.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton104.Name = "RadioButton104"
         Me.RadioButton104.Size = New System.Drawing.Size(43, 27)
@@ -700,10 +715,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label55
         '
-        Me.Label55.Location = New System.Drawing.Point(12, 15)
+        Me.Label55.Location = New System.Drawing.Point(12, 10)
         Me.Label55.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label55.Name = "Label55"
-        Me.Label55.Size = New System.Drawing.Size(800, 35)
+        Me.Label55.Size = New System.Drawing.Size(336, 20)
         Me.Label55.TabIndex = 0
         Me.Label55.Text = "Er du eller din mor født i Amerika sør for USA?"
         '
@@ -714,17 +729,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel53.Controls.Add(Me.RadioButton106)
         Me.Panel53.Controls.Add(Me.Label56)
         Me.Panel53.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel53.Location = New System.Drawing.Point(4, 508)
+        Me.Panel53.Location = New System.Drawing.Point(1, 386)
         Me.Panel53.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel53.Name = "Panel53"
-        Me.Panel53.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel53.TabIndex = 9
+        Me.Panel53.Size = New System.Drawing.Size(1040, 41)
+        Me.Panel53.TabIndex = 57
         '
         'RadioButton105
         '
         Me.RadioButton105.AutoSize = True
         Me.RadioButton105.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton105.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton105.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton105.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton105.Name = "RadioButton105"
         Me.RadioButton105.Size = New System.Drawing.Size(53, 27)
@@ -738,7 +753,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton106.AutoSize = True
         Me.RadioButton106.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton106.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton106.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton106.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton106.Name = "RadioButton106"
         Me.RadioButton106.Size = New System.Drawing.Size(43, 27)
@@ -750,10 +765,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label56
         '
-        Me.Label56.Location = New System.Drawing.Point(12, 15)
+        Me.Label56.Location = New System.Drawing.Point(12, 1)
         Me.Label56.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label56.Name = "Label56"
-        Me.Label56.Size = New System.Drawing.Size(800, 40)
+        Me.Label56.Size = New System.Drawing.Size(764, 39)
         Me.Label56.TabIndex = 0
         Me.Label56.Text = "Godtar du at anonymiserte prøver av ditt blod kan brukes til forskning? Du er lik" &
     "e velkommen som blodgiver enten du svarer ja eller nei. Blodbanken kan gi inform" &
@@ -766,17 +781,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel54.Controls.Add(Me.RadioButton108)
         Me.Panel54.Controls.Add(Me.Label57)
         Me.Panel54.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel54.Location = New System.Drawing.Point(4, 96)
+        Me.Panel54.Location = New System.Drawing.Point(0, 78)
         Me.Panel54.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel54.Name = "Panel54"
-        Me.Panel54.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel54.TabIndex = 3
+        Me.Panel54.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel54.TabIndex = 51
         '
         'RadioButton107
         '
         Me.RadioButton107.AutoSize = True
         Me.RadioButton107.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton107.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton107.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton107.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton107.Name = "RadioButton107"
         Me.RadioButton107.Size = New System.Drawing.Size(53, 27)
@@ -790,7 +805,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton108.AutoSize = True
         Me.RadioButton108.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton108.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton108.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton108.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton108.Name = "RadioButton108"
         Me.RadioButton108.Size = New System.Drawing.Size(43, 27)
@@ -802,10 +817,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label57
         '
-        Me.Label57.Location = New System.Drawing.Point(12, 15)
+        Me.Label57.Location = New System.Drawing.Point(12, 10)
         Me.Label57.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label57.Name = "Label57"
-        Me.Label57.Size = New System.Drawing.Size(800, 35)
+        Me.Label57.Size = New System.Drawing.Size(534, 20)
         Me.Label57.TabIndex = 0
         Me.Label57.Text = "Har du eller noen i familien hatt Creutzfeldt-Jakob sykdom eller variant CJD?"
         '
@@ -816,17 +831,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel55.Controls.Add(Me.RadioButton110)
         Me.Panel55.Controls.Add(Me.Label58)
         Me.Panel55.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel55.Location = New System.Drawing.Point(4, 28)
+        Me.Panel55.Location = New System.Drawing.Point(1, 28)
         Me.Panel55.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel55.Name = "Panel55"
-        Me.Panel55.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel55.TabIndex = 1
+        Me.Panel55.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel55.TabIndex = 50
         '
         'RadioButton109
         '
         Me.RadioButton109.AutoSize = True
         Me.RadioButton109.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton109.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton109.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton109.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton109.Name = "RadioButton109"
         Me.RadioButton109.Size = New System.Drawing.Size(53, 27)
@@ -840,7 +855,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton110.AutoSize = True
         Me.RadioButton110.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton110.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton110.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton110.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton110.Name = "RadioButton110"
         Me.RadioButton110.Size = New System.Drawing.Size(43, 27)
@@ -852,10 +867,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label58
         '
-        Me.Label58.Location = New System.Drawing.Point(12, 15)
+        Me.Label58.Location = New System.Drawing.Point(12, 10)
         Me.Label58.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label58.Name = "Label58"
-        Me.Label58.Size = New System.Drawing.Size(800, 35)
+        Me.Label58.Size = New System.Drawing.Size(447, 20)
         Me.Label58.TabIndex = 0
         Me.Label58.Text = "Har du brukt narkotika en eller flere ganger de siste 12 måneder?"
         '
@@ -866,17 +881,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel56.Controls.Add(Me.RadioButton112)
         Me.Panel56.Controls.Add(Me.Label59)
         Me.Panel56.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel56.Location = New System.Drawing.Point(4, 164)
+        Me.Panel56.Location = New System.Drawing.Point(0, 130)
         Me.Panel56.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel56.Name = "Panel56"
-        Me.Panel56.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel56.TabIndex = 4
+        Me.Panel56.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel56.TabIndex = 52
         '
         'RadioButton111
         '
         Me.RadioButton111.AutoSize = True
         Me.RadioButton111.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton111.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton111.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton111.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton111.Name = "RadioButton111"
         Me.RadioButton111.Size = New System.Drawing.Size(53, 27)
@@ -890,7 +905,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton112.AutoSize = True
         Me.RadioButton112.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton112.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton112.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton112.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton112.Name = "RadioButton112"
         Me.RadioButton112.Size = New System.Drawing.Size(43, 27)
@@ -902,10 +917,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label59
         '
-        Me.Label59.Location = New System.Drawing.Point(12, 15)
+        Me.Label59.Location = New System.Drawing.Point(12, 10)
         Me.Label59.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label59.Name = "Label59"
-        Me.Label59.Size = New System.Drawing.Size(800, 35)
+        Me.Label59.Size = New System.Drawing.Size(662, 20)
         Me.Label59.TabIndex = 0
         Me.Label59.Text = "Har du oppholdt deg i Storbritannia i mer enn ett år til sammen i perioden mellom" &
     " 1980 og 1996?"
@@ -917,17 +932,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel57.Controls.Add(Me.RadioButton114)
         Me.Panel57.Controls.Add(Me.Label60)
         Me.Panel57.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel57.Location = New System.Drawing.Point(4, 233)
+        Me.Panel57.Location = New System.Drawing.Point(0, 182)
         Me.Panel57.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel57.Name = "Panel57"
-        Me.Panel57.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel57.TabIndex = 5
+        Me.Panel57.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel57.TabIndex = 53
         '
         'RadioButton113
         '
         Me.RadioButton113.AutoSize = True
         Me.RadioButton113.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton113.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton113.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton113.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton113.Name = "RadioButton113"
         Me.RadioButton113.Size = New System.Drawing.Size(53, 27)
@@ -941,7 +956,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton114.AutoSize = True
         Me.RadioButton114.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton114.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton114.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton114.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton114.Name = "RadioButton114"
         Me.RadioButton114.Size = New System.Drawing.Size(43, 27)
@@ -953,10 +968,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label60
         '
-        Me.Label60.Location = New System.Drawing.Point(12, 15)
+        Me.Label60.Location = New System.Drawing.Point(12, 10)
         Me.Label60.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label60.Name = "Label60"
-        Me.Label60.Size = New System.Drawing.Size(800, 40)
+        Me.Label60.Size = New System.Drawing.Size(505, 20)
         Me.Label60.TabIndex = 0
         Me.Label60.Text = "Har du i løpet av de siste tre år vært i område der malaria forekommer?"
         '
@@ -966,7 +981,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage8.Location = New System.Drawing.Point(4, 28)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1084, 801)
+        Me.TabPage8.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "TabPage8"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -991,14 +1006,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel39.Location = New System.Drawing.Point(4, 28)
         Me.Panel39.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel39.Name = "Panel39"
-        Me.Panel39.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel39.TabIndex = 1
+        Me.Panel39.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel39.TabIndex = 49
         '
         'RadioButton77
         '
         Me.RadioButton77.AutoSize = True
         Me.RadioButton77.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton77.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton77.Location = New System.Drawing.Point(931, 7)
         Me.RadioButton77.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton77.Name = "RadioButton77"
         Me.RadioButton77.Size = New System.Drawing.Size(53, 27)
@@ -1012,7 +1027,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton78.AutoSize = True
         Me.RadioButton78.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton78.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton78.Location = New System.Drawing.Point(863, 7)
         Me.RadioButton78.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton78.Name = "RadioButton78"
         Me.RadioButton78.Size = New System.Drawing.Size(43, 27)
@@ -1024,10 +1039,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label42
         '
-        Me.Label42.Location = New System.Drawing.Point(12, 15)
+        Me.Label42.Location = New System.Drawing.Point(12, 8)
         Me.Label42.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(800, 35)
+        Me.Label42.Size = New System.Drawing.Size(800, 25)
         Me.Label42.TabIndex = 0
         Me.Label42.Text = "Har eller har du hatt seksuell kontakt med andre menn?"
         '
@@ -1037,7 +1052,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage7.Location = New System.Drawing.Point(4, 28)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1084, 801)
+        Me.TabPage7.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "TabPage7"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -1062,17 +1077,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel38.Controls.Add(Me.RadioButton76)
         Me.Panel38.Controls.Add(Me.Label41)
         Me.Panel38.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel38.Location = New System.Drawing.Point(4, 96)
+        Me.Panel38.Location = New System.Drawing.Point(4, 71)
         Me.Panel38.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel38.Name = "Panel38"
-        Me.Panel38.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel38.TabIndex = 3
+        Me.Panel38.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel38.TabIndex = 46
         '
         'RadioButton75
         '
         Me.RadioButton75.AutoSize = True
         Me.RadioButton75.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton75.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton75.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton75.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton75.Name = "RadioButton75"
         Me.RadioButton75.Size = New System.Drawing.Size(53, 27)
@@ -1086,7 +1101,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton76.AutoSize = True
         Me.RadioButton76.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton76.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton76.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton76.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton76.Name = "RadioButton76"
         Me.RadioButton76.Size = New System.Drawing.Size(43, 27)
@@ -1098,10 +1113,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label41
         '
-        Me.Label41.Location = New System.Drawing.Point(12, 15)
+        Me.Label41.Location = New System.Drawing.Point(12, 8)
         Me.Label41.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(800, 35)
+        Me.Label41.Size = New System.Drawing.Size(800, 25)
         Me.Label41.TabIndex = 0
         Me.Label41.Text = "Har du vært gravid i løpet av de siste tolv måneder, eller ammer du nå?"
         '
@@ -1115,14 +1130,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel40.Location = New System.Drawing.Point(4, 28)
         Me.Panel40.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel40.Name = "Panel40"
-        Me.Panel40.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel40.TabIndex = 1
+        Me.Panel40.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel40.TabIndex = 45
         '
         'RadioButton79
         '
         Me.RadioButton79.AutoSize = True
         Me.RadioButton79.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton79.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton79.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton79.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton79.Name = "RadioButton79"
         Me.RadioButton79.Size = New System.Drawing.Size(53, 27)
@@ -1136,7 +1151,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton80.AutoSize = True
         Me.RadioButton80.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton80.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton80.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton80.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton80.Name = "RadioButton80"
         Me.RadioButton80.Size = New System.Drawing.Size(43, 27)
@@ -1148,10 +1163,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label43
         '
-        Me.Label43.Location = New System.Drawing.Point(12, 15)
+        Me.Label43.Location = New System.Drawing.Point(12, 8)
         Me.Label43.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(800, 35)
+        Me.Label43.Size = New System.Drawing.Size(800, 25)
         Me.Label43.TabIndex = 0
         Me.Label43.Text = "Er du gravid?"
         '
@@ -1162,17 +1177,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel41.Controls.Add(Me.RadioButton82)
         Me.Panel41.Controls.Add(Me.Label44)
         Me.Panel41.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel41.Location = New System.Drawing.Point(4, 164)
+        Me.Panel41.Location = New System.Drawing.Point(4, 114)
         Me.Panel41.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel41.Name = "Panel41"
-        Me.Panel41.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel41.TabIndex = 4
+        Me.Panel41.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel41.TabIndex = 47
         '
         'RadioButton81
         '
         Me.RadioButton81.AutoSize = True
         Me.RadioButton81.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton81.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton81.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton81.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton81.Name = "RadioButton81"
         Me.RadioButton81.Size = New System.Drawing.Size(53, 27)
@@ -1186,7 +1201,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton82.AutoSize = True
         Me.RadioButton82.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton82.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton82.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton82.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton82.Name = "RadioButton82"
         Me.RadioButton82.Size = New System.Drawing.Size(43, 27)
@@ -1198,10 +1213,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label44
         '
-        Me.Label44.Location = New System.Drawing.Point(12, 15)
+        Me.Label44.Location = New System.Drawing.Point(12, 8)
         Me.Label44.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(800, 35)
+        Me.Label44.Size = New System.Drawing.Size(800, 25)
         Me.Label44.TabIndex = 0
         Me.Label44.Text = "Hvis du har gitt blod tidligere, har du vært gravid siden forrige blodgivning?"
         '
@@ -1212,17 +1227,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel42.Controls.Add(Me.RadioButton84)
         Me.Panel42.Controls.Add(Me.Label45)
         Me.Panel42.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel42.Location = New System.Drawing.Point(4, 233)
+        Me.Panel42.Location = New System.Drawing.Point(4, 157)
         Me.Panel42.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel42.Name = "Panel42"
-        Me.Panel42.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel42.TabIndex = 5
+        Me.Panel42.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel42.TabIndex = 48
         '
         'RadioButton83
         '
         Me.RadioButton83.AutoSize = True
         Me.RadioButton83.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton83.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton83.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton83.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton83.Name = "RadioButton83"
         Me.RadioButton83.Size = New System.Drawing.Size(53, 27)
@@ -1236,7 +1251,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton84.AutoSize = True
         Me.RadioButton84.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton84.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton84.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton84.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton84.Name = "RadioButton84"
         Me.RadioButton84.Size = New System.Drawing.Size(43, 27)
@@ -1248,10 +1263,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label45
         '
-        Me.Label45.Location = New System.Drawing.Point(12, 15)
+        Me.Label45.Location = New System.Drawing.Point(10, 1)
         Me.Label45.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(800, 40)
+        Me.Label45.Size = New System.Drawing.Size(800, 38)
         Me.Label45.TabIndex = 0
         Me.Label45.Text = "Har du i løpet av de siste seks måneder hatt seksuell kontakt med en mann som du " &
     "vet har hatt seksuell kontakt med andre menn?"
@@ -1262,7 +1277,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage6.Location = New System.Drawing.Point(4, 28)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1084, 801)
+        Me.TabPage6.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "TabPage6"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -1277,7 +1292,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox6.Controls.Add(Me.Panel34)
         Me.GroupBox6.Controls.Add(Me.Panel35)
         Me.GroupBox6.Controls.Add(Me.Panel36)
-        Me.GroupBox6.Location = New System.Drawing.Point(0, 3)
+        Me.GroupBox6.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(1054, 633)
         Me.GroupBox6.TabIndex = 8
@@ -1291,17 +1306,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel49.Controls.Add(Me.RadioButton98)
         Me.Panel49.Controls.Add(Me.Label52)
         Me.Panel49.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel49.Location = New System.Drawing.Point(4, 508)
+        Me.Panel49.Location = New System.Drawing.Point(1, 378)
         Me.Panel49.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel49.Name = "Panel49"
-        Me.Panel49.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel49.TabIndex = 9
+        Me.Panel49.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel49.TabIndex = 44
         '
         'RadioButton97
         '
         Me.RadioButton97.AutoSize = True
         Me.RadioButton97.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton97.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton97.Location = New System.Drawing.Point(931, 9)
         Me.RadioButton97.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton97.Name = "RadioButton97"
         Me.RadioButton97.Size = New System.Drawing.Size(53, 27)
@@ -1315,7 +1330,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton98.AutoSize = True
         Me.RadioButton98.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton98.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton98.Location = New System.Drawing.Point(863, 9)
         Me.RadioButton98.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton98.Name = "RadioButton98"
         Me.RadioButton98.Size = New System.Drawing.Size(43, 27)
@@ -1327,10 +1342,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label52
         '
-        Me.Label52.Location = New System.Drawing.Point(12, 15)
+        Me.Label52.Location = New System.Drawing.Point(12, 9)
         Me.Label52.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label52.Name = "Label52"
-        Me.Label52.Size = New System.Drawing.Size(800, 35)
+        Me.Label52.Size = New System.Drawing.Size(800, 25)
         Me.Label52.TabIndex = 0
         Me.Label52.Text = "- mottatt penger eller narkotika som gjenytelse for sex?"
         '
@@ -1341,17 +1356,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel50.Controls.Add(Me.RadioButton100)
         Me.Panel50.Controls.Add(Me.Label53)
         Me.Panel50.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel50.Location = New System.Drawing.Point(4, 440)
+        Me.Panel50.Location = New System.Drawing.Point(4, 328)
         Me.Panel50.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel50.Name = "Panel50"
-        Me.Panel50.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel50.TabIndex = 8
+        Me.Panel50.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel50.TabIndex = 43
         '
         'RadioButton99
         '
         Me.RadioButton99.AutoSize = True
         Me.RadioButton99.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton99.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton99.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton99.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton99.Name = "RadioButton99"
         Me.RadioButton99.Size = New System.Drawing.Size(53, 27)
@@ -1365,7 +1380,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton100.AutoSize = True
         Me.RadioButton100.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton100.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton100.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton100.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton100.Name = "RadioButton100"
         Me.RadioButton100.Size = New System.Drawing.Size(43, 27)
@@ -1377,10 +1392,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label53
         '
-        Me.Label53.Location = New System.Drawing.Point(12, 15)
+        Me.Label53.Location = New System.Drawing.Point(12, 10)
         Me.Label53.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label53.Name = "Label53"
-        Me.Label53.Size = New System.Drawing.Size(800, 35)
+        Me.Label53.Size = New System.Drawing.Size(800, 20)
         Me.Label53.TabIndex = 0
         Me.Label53.Text = "- brukt dopingmidler eller narkotiske midler som sprøyter eller ved sniffing?"
         '
@@ -1391,17 +1406,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel31.Controls.Add(Me.RadioButton62)
         Me.Panel31.Controls.Add(Me.Label34)
         Me.Panel31.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel31.Location = New System.Drawing.Point(4, 370)
+        Me.Panel31.Location = New System.Drawing.Point(4, 278)
         Me.Panel31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel31.Name = "Panel31"
-        Me.Panel31.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel31.TabIndex = 7
+        Me.Panel31.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel31.TabIndex = 42
         '
         'RadioButton61
         '
         Me.RadioButton61.AutoSize = True
         Me.RadioButton61.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton61.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton61.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton61.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton61.Name = "RadioButton61"
         Me.RadioButton61.Size = New System.Drawing.Size(53, 27)
@@ -1415,7 +1430,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton62.AutoSize = True
         Me.RadioButton62.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton62.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton62.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton62.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton62.Name = "RadioButton62"
         Me.RadioButton62.Size = New System.Drawing.Size(43, 27)
@@ -1427,10 +1442,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label34
         '
-        Me.Label34.Location = New System.Drawing.Point(12, 15)
+        Me.Label34.Location = New System.Drawing.Point(6, 8)
         Me.Label34.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(800, 35)
+        Me.Label34.Size = New System.Drawing.Size(800, 20)
         Me.Label34.TabIndex = 0
         Me.Label34.Text = "- hatt alvorlig sykdom som ikke er nevnt her?"
         '
@@ -1441,17 +1456,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel32.Controls.Add(Me.RadioButton64)
         Me.Panel32.Controls.Add(Me.Label35)
         Me.Panel32.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel32.Location = New System.Drawing.Point(4, 96)
+        Me.Panel32.Location = New System.Drawing.Point(4, 78)
         Me.Panel32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel32.Name = "Panel32"
-        Me.Panel32.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel32.TabIndex = 3
+        Me.Panel32.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel32.TabIndex = 38
         '
         'RadioButton63
         '
         Me.RadioButton63.AutoSize = True
         Me.RadioButton63.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton63.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton63.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton63.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton63.Name = "RadioButton63"
         Me.RadioButton63.Size = New System.Drawing.Size(53, 27)
@@ -1465,7 +1480,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton64.AutoSize = True
         Me.RadioButton64.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton64.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton64.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton64.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton64.Name = "RadioButton64"
         Me.RadioButton64.Size = New System.Drawing.Size(43, 27)
@@ -1477,10 +1492,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label35
         '
-        Me.Label35.Location = New System.Drawing.Point(12, 15)
+        Me.Label35.Location = New System.Drawing.Point(12, 8)
         Me.Label35.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(800, 35)
+        Me.Label35.Size = New System.Drawing.Size(800, 20)
         Me.Label35.TabIndex = 0
         Me.Label35.Text = "- fått blodoverføring?"
         '
@@ -1491,17 +1506,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel33.Controls.Add(Me.RadioButton66)
         Me.Panel33.Controls.Add(Me.Label36)
         Me.Panel33.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel33.Location = New System.Drawing.Point(4, 302)
+        Me.Panel33.Location = New System.Drawing.Point(4, 228)
         Me.Panel33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel33.Name = "Panel33"
-        Me.Panel33.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel33.TabIndex = 6
+        Me.Panel33.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel33.TabIndex = 41
         '
         'RadioButton65
         '
         Me.RadioButton65.AutoSize = True
         Me.RadioButton65.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton65.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton65.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton65.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton65.Name = "RadioButton65"
         Me.RadioButton65.Size = New System.Drawing.Size(53, 27)
@@ -1515,7 +1530,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton66.AutoSize = True
         Me.RadioButton66.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton66.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton66.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton66.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton66.Name = "RadioButton66"
         Me.RadioButton66.Size = New System.Drawing.Size(43, 27)
@@ -1527,10 +1542,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label36
         '
-        Me.Label36.Location = New System.Drawing.Point(12, 15)
+        Me.Label36.Location = New System.Drawing.Point(12, 8)
         Me.Label36.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(800, 35)
+        Me.Label36.Size = New System.Drawing.Size(800, 20)
         Me.Label36.TabIndex = 0
         Me.Label36.Text = "- hatt syfilis?"
         '
@@ -1544,14 +1559,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel34.Location = New System.Drawing.Point(4, 28)
         Me.Panel34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel34.Name = "Panel34"
-        Me.Panel34.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel34.TabIndex = 1
+        Me.Panel34.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel34.TabIndex = 37
         '
         'RadioButton67
         '
         Me.RadioButton67.AutoSize = True
         Me.RadioButton67.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton67.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton67.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton67.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton67.Name = "RadioButton67"
         Me.RadioButton67.Size = New System.Drawing.Size(53, 27)
@@ -1565,7 +1580,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton68.AutoSize = True
         Me.RadioButton68.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton68.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton68.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton68.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton68.Name = "RadioButton68"
         Me.RadioButton68.Size = New System.Drawing.Size(43, 27)
@@ -1577,10 +1592,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label37
         '
-        Me.Label37.Location = New System.Drawing.Point(12, 15)
+        Me.Label37.Location = New System.Drawing.Point(12, 8)
         Me.Label37.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(800, 35)
+        Me.Label37.Size = New System.Drawing.Size(800, 20)
         Me.Label37.TabIndex = 0
         Me.Label37.Text = "- hatt positiv prøve for hepatitt (gulsott) eller HIVinfeksjon"
         '
@@ -1591,17 +1606,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel35.Controls.Add(Me.RadioButton70)
         Me.Panel35.Controls.Add(Me.Label38)
         Me.Panel35.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel35.Location = New System.Drawing.Point(4, 164)
+        Me.Panel35.Location = New System.Drawing.Point(4, 128)
         Me.Panel35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel35.Name = "Panel35"
-        Me.Panel35.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel35.TabIndex = 4
+        Me.Panel35.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel35.TabIndex = 39
         '
         'RadioButton69
         '
         Me.RadioButton69.AutoSize = True
         Me.RadioButton69.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton69.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton69.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton69.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton69.Name = "RadioButton69"
         Me.RadioButton69.Size = New System.Drawing.Size(53, 27)
@@ -1615,7 +1630,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton70.AutoSize = True
         Me.RadioButton70.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton70.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton70.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton70.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton70.Name = "RadioButton70"
         Me.RadioButton70.Size = New System.Drawing.Size(43, 27)
@@ -1627,10 +1642,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label38
         '
-        Me.Label38.Location = New System.Drawing.Point(12, 15)
+        Me.Label38.Location = New System.Drawing.Point(12, 8)
         Me.Label38.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(800, 35)
+        Me.Label38.Size = New System.Drawing.Size(800, 20)
         Me.Label38.TabIndex = 0
         Me.Label38.Text = "- fått veksthormon?"
         '
@@ -1641,17 +1656,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel36.Controls.Add(Me.RadioButton72)
         Me.Panel36.Controls.Add(Me.Label39)
         Me.Panel36.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel36.Location = New System.Drawing.Point(4, 233)
+        Me.Panel36.Location = New System.Drawing.Point(4, 178)
         Me.Panel36.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel36.Name = "Panel36"
-        Me.Panel36.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel36.TabIndex = 5
+        Me.Panel36.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel36.TabIndex = 40
         '
         'RadioButton71
         '
         Me.RadioButton71.AutoSize = True
         Me.RadioButton71.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton71.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton71.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton71.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton71.Name = "RadioButton71"
         Me.RadioButton71.Size = New System.Drawing.Size(53, 27)
@@ -1665,7 +1680,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton72.AutoSize = True
         Me.RadioButton72.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton72.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton72.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton72.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton72.Name = "RadioButton72"
         Me.RadioButton72.Size = New System.Drawing.Size(43, 27)
@@ -1677,10 +1692,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label39
         '
-        Me.Label39.Location = New System.Drawing.Point(12, 15)
+        Me.Label39.Location = New System.Drawing.Point(12, 8)
         Me.Label39.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(800, 35)
+        Me.Label39.Size = New System.Drawing.Size(800, 20)
         Me.Label39.TabIndex = 0
         Me.Label39.Text = "- fått hornhinnetransplantat?"
         '
@@ -1691,7 +1706,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage5.Location = New System.Drawing.Point(4, 28)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1084, 768)
+        Me.TabPage5.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "TabPage5"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -1707,7 +1722,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox8.Controls.Add(Me.Panel30)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 107)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(1054, 537)
+        Me.GroupBox8.Size = New System.Drawing.Size(1054, 273)
         Me.GroupBox8.TabIndex = 9
         Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Har du på noe tidspunkt gjennom livet"
@@ -1722,8 +1737,8 @@ Partial Class blodgiver_egenerklering
         Me.Panel44.Location = New System.Drawing.Point(7, 436)
         Me.Panel44.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel44.Name = "Panel44"
-        Me.Panel44.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel44.TabIndex = 14
+        Me.Panel44.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel44.TabIndex = 36
         '
         'RadioButton87
         '
@@ -1772,8 +1787,8 @@ Partial Class blodgiver_egenerklering
         Me.Panel48.Location = New System.Drawing.Point(7, 368)
         Me.Panel48.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel48.Name = "Panel48"
-        Me.Panel48.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel48.TabIndex = 13
+        Me.Panel48.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel48.TabIndex = 35
         '
         'RadioButton95
         '
@@ -1819,17 +1834,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel25.Controls.Add(Me.RadioButton50)
         Me.Panel25.Controls.Add(Me.Label28)
         Me.Panel25.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel25.Location = New System.Drawing.Point(8, 298)
+        Me.Panel25.Location = New System.Drawing.Point(7, 196)
         Me.Panel25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel25.Name = "Panel25"
-        Me.Panel25.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel25.TabIndex = 12
+        Me.Panel25.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel25.TabIndex = 34
         '
         'RadioButton49
         '
         Me.RadioButton49.AutoSize = True
         Me.RadioButton49.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton49.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton49.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton49.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton49.Name = "RadioButton49"
         Me.RadioButton49.Size = New System.Drawing.Size(53, 27)
@@ -1843,7 +1858,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton50.AutoSize = True
         Me.RadioButton50.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton50.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton50.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton50.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton50.Name = "RadioButton50"
         Me.RadioButton50.Size = New System.Drawing.Size(43, 27)
@@ -1855,10 +1870,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label28
         '
-        Me.Label28.Location = New System.Drawing.Point(12, 15)
+        Me.Label28.Location = New System.Drawing.Point(12, 7)
         Me.Label28.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(800, 35)
+        Me.Label28.Size = New System.Drawing.Size(800, 30)
         Me.Label28.TabIndex = 0
         Me.Label28.Text = "- hatt malaria?"
         '
@@ -1872,14 +1887,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel26.Location = New System.Drawing.Point(8, 24)
         Me.Panel26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel26.Name = "Panel26"
-        Me.Panel26.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel26.TabIndex = 8
+        Me.Panel26.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel26.TabIndex = 30
         '
         'RadioButton51
         '
         Me.RadioButton51.AutoSize = True
         Me.RadioButton51.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton51.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton51.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton51.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton51.Name = "RadioButton51"
         Me.RadioButton51.Size = New System.Drawing.Size(53, 27)
@@ -1893,7 +1908,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton52.AutoSize = True
         Me.RadioButton52.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton52.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton52.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton52.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton52.Name = "RadioButton52"
         Me.RadioButton52.Size = New System.Drawing.Size(43, 27)
@@ -1905,10 +1920,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label29
         '
-        Me.Label29.Location = New System.Drawing.Point(12, 15)
+        Me.Label29.Location = New System.Drawing.Point(12, 7)
         Me.Label29.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(800, 35)
+        Me.Label29.Size = New System.Drawing.Size(800, 30)
         Me.Label29.TabIndex = 0
         Me.Label29.Text = "- hatt, hjerte-, lever-, eller lungesykdom?"
         '
@@ -1919,17 +1934,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel27.Controls.Add(Me.RadioButton54)
         Me.Panel27.Controls.Add(Me.Label30)
         Me.Panel27.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel27.Location = New System.Drawing.Point(8, 230)
+        Me.Panel27.Location = New System.Drawing.Point(8, 153)
         Me.Panel27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel27.Name = "Panel27"
-        Me.Panel27.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel27.TabIndex = 11
+        Me.Panel27.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel27.TabIndex = 33
         '
         'RadioButton53
         '
         Me.RadioButton53.AutoSize = True
         Me.RadioButton53.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton53.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton53.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton53.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton53.Name = "RadioButton53"
         Me.RadioButton53.Size = New System.Drawing.Size(53, 27)
@@ -1943,7 +1958,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton54.AutoSize = True
         Me.RadioButton54.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton54.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton54.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton54.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton54.Name = "RadioButton54"
         Me.RadioButton54.Size = New System.Drawing.Size(43, 27)
@@ -1955,10 +1970,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label30
         '
-        Me.Label30.Location = New System.Drawing.Point(12, 15)
+        Me.Label30.Location = New System.Drawing.Point(12, 7)
         Me.Label30.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(800, 35)
+        Me.Label30.Size = New System.Drawing.Size(800, 30)
         Me.Label30.TabIndex = 0
         Me.Label30.Text = "- hatt allergi mot mat eller medisiner?"
         '
@@ -1969,17 +1984,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel29.Controls.Add(Me.RadioButton58)
         Me.Panel29.Controls.Add(Me.Label32)
         Me.Panel29.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel29.Location = New System.Drawing.Point(8, 92)
+        Me.Panel29.Location = New System.Drawing.Point(8, 67)
         Me.Panel29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel29.Name = "Panel29"
-        Me.Panel29.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel29.TabIndex = 9
+        Me.Panel29.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel29.TabIndex = 31
         '
         'RadioButton57
         '
         Me.RadioButton57.AutoSize = True
         Me.RadioButton57.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton57.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton57.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton57.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton57.Name = "RadioButton57"
         Me.RadioButton57.Size = New System.Drawing.Size(53, 27)
@@ -1993,7 +2008,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton58.AutoSize = True
         Me.RadioButton58.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton58.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton58.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton58.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton58.Name = "RadioButton58"
         Me.RadioButton58.Size = New System.Drawing.Size(43, 27)
@@ -2005,10 +2020,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label32
         '
-        Me.Label32.Location = New System.Drawing.Point(12, 15)
+        Me.Label32.Location = New System.Drawing.Point(12, 7)
         Me.Label32.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(800, 35)
+        Me.Label32.Size = New System.Drawing.Size(800, 30)
         Me.Label32.TabIndex = 0
         Me.Label32.Text = "- hatt kreft?"
         '
@@ -2019,17 +2034,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel30.Controls.Add(Me.RadioButton60)
         Me.Panel30.Controls.Add(Me.Label33)
         Me.Panel30.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel30.Location = New System.Drawing.Point(8, 161)
+        Me.Panel30.Location = New System.Drawing.Point(8, 110)
         Me.Panel30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel30.Name = "Panel30"
-        Me.Panel30.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel30.TabIndex = 10
+        Me.Panel30.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel30.TabIndex = 32
         '
         'RadioButton59
         '
         Me.RadioButton59.AutoSize = True
         Me.RadioButton59.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton59.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton59.Location = New System.Drawing.Point(931, 5)
         Me.RadioButton59.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton59.Name = "RadioButton59"
         Me.RadioButton59.Size = New System.Drawing.Size(53, 27)
@@ -2043,7 +2058,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton60.AutoSize = True
         Me.RadioButton60.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton60.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton60.Location = New System.Drawing.Point(863, 5)
         Me.RadioButton60.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton60.Name = "RadioButton60"
         Me.RadioButton60.Size = New System.Drawing.Size(43, 27)
@@ -2055,10 +2070,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label33
         '
-        Me.Label33.Location = New System.Drawing.Point(12, 15)
+        Me.Label33.Location = New System.Drawing.Point(12, 7)
         Me.Label33.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(800, 35)
+        Me.Label33.Size = New System.Drawing.Size(800, 30)
         Me.Label33.TabIndex = 0
         Me.Label33.Text = "- hatt blødningstendens?"
         '
@@ -2067,7 +2082,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox5.Controls.Add(Me.Panel28)
         Me.GroupBox5.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(1054, 98)
+        Me.GroupBox5.Size = New System.Drawing.Size(1054, 75)
         Me.GroupBox5.TabIndex = 8
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Har du i løpet av de siste to år"
@@ -2082,14 +2097,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel28.Location = New System.Drawing.Point(4, 28)
         Me.Panel28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel28.Name = "Panel28"
-        Me.Panel28.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel28.TabIndex = 1
+        Me.Panel28.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel28.TabIndex = 29
         '
         'RadioButton55
         '
         Me.RadioButton55.AutoSize = True
         Me.RadioButton55.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton55.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton55.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton55.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton55.Name = "RadioButton55"
         Me.RadioButton55.Size = New System.Drawing.Size(53, 27)
@@ -2103,7 +2118,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton56.AutoSize = True
         Me.RadioButton56.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton56.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton56.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton56.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton56.Name = "RadioButton56"
         Me.RadioButton56.Size = New System.Drawing.Size(43, 27)
@@ -2115,7 +2130,7 @@ Partial Class blodgiver_egenerklering
         '
         'Label31
         '
-        Me.Label31.Location = New System.Drawing.Point(12, 15)
+        Me.Label31.Location = New System.Drawing.Point(12, 9)
         Me.Label31.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(800, 27)
@@ -2128,7 +2143,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage4.Location = New System.Drawing.Point(4, 28)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1084, 801)
+        Me.TabPage4.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -2144,9 +2159,9 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox4.Controls.Add(Me.Panel22)
         Me.GroupBox4.Controls.Add(Me.Panel23)
         Me.GroupBox4.Controls.Add(Me.Panel24)
-        Me.GroupBox4.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1054, 658)
+        Me.GroupBox4.Size = New System.Drawing.Size(1054, 432)
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Har du i løpet at de siste seks måneder"
@@ -2158,17 +2173,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel45.Controls.Add(Me.RadioButton90)
         Me.Panel45.Controls.Add(Me.Label48)
         Me.Panel45.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel45.Location = New System.Drawing.Point(4, 573)
+        Me.Panel45.Location = New System.Drawing.Point(4, 372)
         Me.Panel45.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel45.Name = "Panel45"
-        Me.Panel45.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel45.TabIndex = 10
+        Me.Panel45.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel45.TabIndex = 28
         '
         'RadioButton89
         '
         Me.RadioButton89.AutoSize = True
         Me.RadioButton89.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton89.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton89.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton89.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton89.Name = "RadioButton89"
         Me.RadioButton89.Size = New System.Drawing.Size(53, 27)
@@ -2182,7 +2197,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton90.AutoSize = True
         Me.RadioButton90.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton90.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton90.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton90.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton90.Name = "RadioButton90"
         Me.RadioButton90.Size = New System.Drawing.Size(43, 27)
@@ -2194,10 +2209,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label48
         '
-        Me.Label48.Location = New System.Drawing.Point(12, 15)
+        Me.Label48.Location = New System.Drawing.Point(12, 10)
         Me.Label48.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(800, 35)
+        Me.Label48.Size = New System.Drawing.Size(800, 25)
         Me.Label48.TabIndex = 0
         Me.Label48.Text = "- vært utenfor Vest-Europa?"
         '
@@ -2208,17 +2223,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel46.Controls.Add(Me.RadioButton92)
         Me.Panel46.Controls.Add(Me.Label49)
         Me.Panel46.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel46.Location = New System.Drawing.Point(4, 435)
+        Me.Panel46.Location = New System.Drawing.Point(4, 286)
         Me.Panel46.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel46.Name = "Panel46"
-        Me.Panel46.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel46.TabIndex = 8
+        Me.Panel46.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel46.TabIndex = 26
         '
         'RadioButton91
         '
         Me.RadioButton91.AutoSize = True
         Me.RadioButton91.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton91.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton91.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton91.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton91.Name = "RadioButton91"
         Me.RadioButton91.Size = New System.Drawing.Size(53, 27)
@@ -2232,7 +2247,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton92.AutoSize = True
         Me.RadioButton92.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton92.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton92.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton92.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton92.Name = "RadioButton92"
         Me.RadioButton92.Size = New System.Drawing.Size(43, 27)
@@ -2244,10 +2259,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label49
         '
-        Me.Label49.Location = New System.Drawing.Point(12, 15)
+        Me.Label49.Location = New System.Drawing.Point(12, 10)
         Me.Label49.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(800, 35)
+        Me.Label49.Size = New System.Drawing.Size(800, 25)
         Me.Label49.TabIndex = 0
         Me.Label49.Text = "- hatt seksuell kontakt med en person som har fått blod eller blodprodukter utenf" &
     "or Norden?"
@@ -2259,17 +2274,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel47.Controls.Add(Me.RadioButton94)
         Me.Panel47.Controls.Add(Me.Label50)
         Me.Panel47.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel47.Location = New System.Drawing.Point(4, 504)
+        Me.Panel47.Location = New System.Drawing.Point(4, 329)
         Me.Panel47.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel47.Name = "Panel47"
-        Me.Panel47.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel47.TabIndex = 9
+        Me.Panel47.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel47.TabIndex = 27
         '
         'RadioButton93
         '
         Me.RadioButton93.AutoSize = True
         Me.RadioButton93.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton93.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton93.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton93.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton93.Name = "RadioButton93"
         Me.RadioButton93.Size = New System.Drawing.Size(53, 27)
@@ -2283,7 +2298,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton94.AutoSize = True
         Me.RadioButton94.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton94.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton94.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton94.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton94.Name = "RadioButton94"
         Me.RadioButton94.Size = New System.Drawing.Size(43, 27)
@@ -2295,10 +2310,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label50
         '
-        Me.Label50.Location = New System.Drawing.Point(12, 15)
+        Me.Label50.Location = New System.Drawing.Point(12, 10)
         Me.Label50.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label50.Name = "Label50"
-        Me.Label50.Size = New System.Drawing.Size(800, 35)
+        Me.Label50.Size = New System.Drawing.Size(800, 25)
         Me.Label50.TabIndex = 0
         Me.Label50.Text = "- hatt ny seksualpartner?"
         '
@@ -2309,17 +2324,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel19.Controls.Add(Me.RadioButton38)
         Me.Panel19.Controls.Add(Me.Label22)
         Me.Panel19.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel19.Location = New System.Drawing.Point(4, 370)
+        Me.Panel19.Location = New System.Drawing.Point(4, 243)
         Me.Panel19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel19.Name = "Panel19"
-        Me.Panel19.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel19.TabIndex = 7
+        Me.Panel19.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel19.TabIndex = 25
         '
         'RadioButton37
         '
         Me.RadioButton37.AutoSize = True
         Me.RadioButton37.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton37.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton37.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton37.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton37.Name = "RadioButton37"
         Me.RadioButton37.Size = New System.Drawing.Size(53, 27)
@@ -2333,7 +2348,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton38.AutoSize = True
         Me.RadioButton38.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton38.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton38.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton38.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton38.Name = "RadioButton38"
         Me.RadioButton38.Size = New System.Drawing.Size(43, 27)
@@ -2345,10 +2360,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label22
         '
-        Me.Label22.Location = New System.Drawing.Point(12, 15)
+        Me.Label22.Location = New System.Drawing.Point(12, 10)
         Me.Label22.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(800, 35)
+        Me.Label22.Size = New System.Drawing.Size(800, 25)
         Me.Label22.TabIndex = 0
         Me.Label22.Text = "- hatt seksualpartner som har vært i Afrika?"
         '
@@ -2359,17 +2374,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel20.Controls.Add(Me.RadioButton40)
         Me.Panel20.Controls.Add(Me.Label23)
         Me.Panel20.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel20.Location = New System.Drawing.Point(4, 96)
+        Me.Panel20.Location = New System.Drawing.Point(4, 71)
         Me.Panel20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel20.Name = "Panel20"
-        Me.Panel20.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel20.TabIndex = 3
+        Me.Panel20.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel20.TabIndex = 21
         '
         'RadioButton39
         '
         Me.RadioButton39.AutoSize = True
         Me.RadioButton39.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton39.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton39.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton39.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton39.Name = "RadioButton39"
         Me.RadioButton39.Size = New System.Drawing.Size(53, 27)
@@ -2383,7 +2398,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton40.AutoSize = True
         Me.RadioButton40.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton40.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton40.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton40.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton40.Name = "RadioButton40"
         Me.RadioButton40.Size = New System.Drawing.Size(43, 27)
@@ -2395,10 +2410,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label23
         '
-        Me.Label23.Location = New System.Drawing.Point(12, 15)
+        Me.Label23.Location = New System.Drawing.Point(12, 8)
         Me.Label23.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(800, 35)
+        Me.Label23.Size = New System.Drawing.Size(800, 25)
         Me.Label23.TabIndex = 0
         Me.Label23.Text = "- bodd i samme husstand som en person som har hepatitt B?"
         '
@@ -2409,17 +2424,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel21.Controls.Add(Me.RadioButton42)
         Me.Panel21.Controls.Add(Me.Label24)
         Me.Panel21.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel21.Location = New System.Drawing.Point(4, 302)
+        Me.Panel21.Location = New System.Drawing.Point(4, 200)
         Me.Panel21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel21.Name = "Panel21"
-        Me.Panel21.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel21.TabIndex = 6
+        Me.Panel21.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel21.TabIndex = 24
         '
         'RadioButton41
         '
         Me.RadioButton41.AutoSize = True
         Me.RadioButton41.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton41.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton41.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton41.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton41.Name = "RadioButton41"
         Me.RadioButton41.Size = New System.Drawing.Size(53, 27)
@@ -2433,7 +2448,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton42.AutoSize = True
         Me.RadioButton42.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton42.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton42.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton42.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton42.Name = "RadioButton42"
         Me.RadioButton42.Size = New System.Drawing.Size(43, 27)
@@ -2445,10 +2460,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label24
         '
-        Me.Label24.Location = New System.Drawing.Point(12, 15)
+        Me.Label24.Location = New System.Drawing.Point(12, 10)
         Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(800, 35)
+        Me.Label24.Size = New System.Drawing.Size(800, 25)
         Me.Label24.TabIndex = 0
         Me.Label24.Text = "- hatt seksualpartner som har bodd mer enn ett år sammenhengende utenfor Vest-Eur" &
     "opa ?"
@@ -2463,14 +2478,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel22.Location = New System.Drawing.Point(4, 28)
         Me.Panel22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel22.Name = "Panel22"
-        Me.Panel22.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel22.TabIndex = 1
+        Me.Panel22.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel22.TabIndex = 20
         '
         'RadioButton43
         '
         Me.RadioButton43.AutoSize = True
         Me.RadioButton43.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton43.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton43.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton43.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton43.Name = "RadioButton43"
         Me.RadioButton43.Size = New System.Drawing.Size(53, 27)
@@ -2484,7 +2499,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton44.AutoSize = True
         Me.RadioButton44.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton44.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton44.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton44.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton44.Name = "RadioButton44"
         Me.RadioButton44.Size = New System.Drawing.Size(43, 27)
@@ -2496,10 +2511,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label25
         '
-        Me.Label25.Location = New System.Drawing.Point(12, 15)
+        Me.Label25.Location = New System.Drawing.Point(12, 9)
         Me.Label25.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(800, 35)
+        Me.Label25.Size = New System.Drawing.Size(800, 25)
         Me.Label25.TabIndex = 0
         Me.Label25.Text = "- stukket eller skåret deg på gjenstander som var forurenset med blod eller kropp" &
     "svæsker?"
@@ -2511,17 +2526,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel23.Controls.Add(Me.RadioButton46)
         Me.Panel23.Controls.Add(Me.Label26)
         Me.Panel23.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel23.Location = New System.Drawing.Point(4, 164)
+        Me.Panel23.Location = New System.Drawing.Point(4, 114)
         Me.Panel23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel23.Name = "Panel23"
-        Me.Panel23.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel23.TabIndex = 4
+        Me.Panel23.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel23.TabIndex = 22
         '
         'RadioButton45
         '
         Me.RadioButton45.AutoSize = True
         Me.RadioButton45.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton45.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton45.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton45.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton45.Name = "RadioButton45"
         Me.RadioButton45.Size = New System.Drawing.Size(53, 27)
@@ -2535,7 +2550,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton46.AutoSize = True
         Me.RadioButton46.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton46.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton46.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton46.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton46.Name = "RadioButton46"
         Me.RadioButton46.Size = New System.Drawing.Size(43, 27)
@@ -2547,10 +2562,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label26
         '
-        Me.Label26.Location = New System.Drawing.Point(12, 15)
+        Me.Label26.Location = New System.Drawing.Point(12, 10)
         Me.Label26.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(800, 35)
+        Me.Label26.Size = New System.Drawing.Size(800, 25)
         Me.Label26.TabIndex = 0
         Me.Label26.Text = "- fått blodsøl på slimhinner eller skadet hud?"
         '
@@ -2561,17 +2576,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel24.Controls.Add(Me.RadioButton48)
         Me.Panel24.Controls.Add(Me.Label27)
         Me.Panel24.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel24.Location = New System.Drawing.Point(4, 233)
+        Me.Panel24.Location = New System.Drawing.Point(4, 157)
         Me.Panel24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel24.Name = "Panel24"
-        Me.Panel24.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel24.TabIndex = 5
+        Me.Panel24.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel24.TabIndex = 23
         '
         'RadioButton47
         '
         Me.RadioButton47.AutoSize = True
         Me.RadioButton47.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton47.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton47.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton47.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton47.Name = "RadioButton47"
         Me.RadioButton47.Size = New System.Drawing.Size(53, 27)
@@ -2585,7 +2600,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton48.AutoSize = True
         Me.RadioButton48.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton48.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton48.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton48.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton48.Name = "RadioButton48"
         Me.RadioButton48.Size = New System.Drawing.Size(43, 27)
@@ -2597,10 +2612,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label27
         '
-        Me.Label27.Location = New System.Drawing.Point(12, 15)
+        Me.Label27.Location = New System.Drawing.Point(12, 10)
         Me.Label27.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(800, 35)
+        Me.Label27.Size = New System.Drawing.Size(800, 25)
         Me.Label27.TabIndex = 0
         Me.Label27.Text = "- blitt bitt av flått?"
         '
@@ -2610,7 +2625,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1084, 768)
+        Me.TabPage3.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "TabPage3"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -2639,17 +2654,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel2.Controls.Add(Me.RadioButton4)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel2.Location = New System.Drawing.Point(3, 503)
+        Me.Panel2.Location = New System.Drawing.Point(3, 328)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel2.TabIndex = 9
+        Me.Panel2.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel2.TabIndex = 19
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton3.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(53, 27)
@@ -2663,7 +2678,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton4.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(43, 27)
@@ -2675,10 +2690,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label10
         '
-        Me.Label10.Location = New System.Drawing.Point(12, 15)
+        Me.Label10.Location = New System.Drawing.Point(13, 9)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(800, 35)
+        Me.Label10.Size = New System.Drawing.Size(800, 22)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "- fått akupunktur?"
         '
@@ -2689,17 +2704,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel43.Controls.Add(Me.RadioButton86)
         Me.Panel43.Controls.Add(Me.Label46)
         Me.Panel43.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel43.Location = New System.Drawing.Point(3, 435)
+        Me.Panel43.Location = New System.Drawing.Point(3, 285)
         Me.Panel43.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel43.Name = "Panel43"
-        Me.Panel43.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel43.TabIndex = 8
+        Me.Panel43.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel43.TabIndex = 18
         '
         'RadioButton85
         '
         Me.RadioButton85.AutoSize = True
         Me.RadioButton85.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton85.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton85.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton85.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton85.Name = "RadioButton85"
         Me.RadioButton85.Size = New System.Drawing.Size(53, 27)
@@ -2713,7 +2728,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton86.AutoSize = True
         Me.RadioButton86.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton86.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton86.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton86.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton86.Name = "RadioButton86"
         Me.RadioButton86.Size = New System.Drawing.Size(43, 27)
@@ -2725,10 +2740,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label46
         '
-        Me.Label46.Location = New System.Drawing.Point(12, 15)
+        Me.Label46.Location = New System.Drawing.Point(7, 9)
         Me.Label46.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(800, 35)
+        Me.Label46.Size = New System.Drawing.Size(800, 22)
         Me.Label46.TabIndex = 0
         Me.Label46.Text = "- blitt tatovert, fått piercing eller tatt hull i ørene?"
         '
@@ -2739,17 +2754,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel13.Controls.Add(Me.RadioButton26)
         Me.Panel13.Controls.Add(Me.Label16)
         Me.Panel13.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel13.Location = New System.Drawing.Point(4, 370)
+        Me.Panel13.Location = New System.Drawing.Point(4, 242)
         Me.Panel13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel13.TabIndex = 7
+        Me.Panel13.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel13.TabIndex = 17
         '
         'RadioButton25
         '
         Me.RadioButton25.AutoSize = True
         Me.RadioButton25.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton25.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton25.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton25.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton25.Name = "RadioButton25"
         Me.RadioButton25.Size = New System.Drawing.Size(53, 27)
@@ -2763,7 +2778,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton26.AutoSize = True
         Me.RadioButton26.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton26.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton26.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton26.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton26.Name = "RadioButton26"
         Me.RadioButton26.Size = New System.Drawing.Size(43, 27)
@@ -2775,10 +2790,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label16
         '
-        Me.Label16.Location = New System.Drawing.Point(12, 15)
+        Me.Label16.Location = New System.Drawing.Point(12, 9)
         Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(800, 35)
+        Me.Label16.Size = New System.Drawing.Size(800, 28)
         Me.Label16.TabIndex = 0
         Me.Label16.Text = "- hatt seksuell kontakt med prostituerte eller tidligere prostituerte?"
         '
@@ -2789,17 +2804,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel14.Controls.Add(Me.RadioButton28)
         Me.Panel14.Controls.Add(Me.Label17)
         Me.Panel14.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel14.Location = New System.Drawing.Point(4, 96)
+        Me.Panel14.Location = New System.Drawing.Point(4, 70)
         Me.Panel14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel14.TabIndex = 3
+        Me.Panel14.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel14.TabIndex = 13
         '
         'RadioButton27
         '
         Me.RadioButton27.AutoSize = True
         Me.RadioButton27.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton27.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton27.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton27.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton27.Name = "RadioButton27"
         Me.RadioButton27.Size = New System.Drawing.Size(53, 27)
@@ -2813,7 +2828,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton28.AutoSize = True
         Me.RadioButton28.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton28.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton28.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton28.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton28.Name = "RadioButton28"
         Me.RadioButton28.Size = New System.Drawing.Size(43, 27)
@@ -2825,10 +2840,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label17
         '
-        Me.Label17.Location = New System.Drawing.Point(12, 15)
+        Me.Label17.Location = New System.Drawing.Point(15, 9)
         Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(800, 35)
+        Me.Label17.Size = New System.Drawing.Size(800, 28)
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "- fått behandling med sprøyter?"
         '
@@ -2839,17 +2854,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel15.Controls.Add(Me.RadioButton30)
         Me.Panel15.Controls.Add(Me.Label18)
         Me.Panel15.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel15.Location = New System.Drawing.Point(7, 302)
+        Me.Panel15.Location = New System.Drawing.Point(4, 199)
         Me.Panel15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel15.TabIndex = 6
+        Me.Panel15.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel15.TabIndex = 16
         '
         'RadioButton29
         '
         Me.RadioButton29.AutoSize = True
         Me.RadioButton29.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton29.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton29.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton29.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton29.Name = "RadioButton29"
         Me.RadioButton29.Size = New System.Drawing.Size(53, 27)
@@ -2863,7 +2878,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton30.AutoSize = True
         Me.RadioButton30.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton30.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton30.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton30.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton30.Name = "RadioButton30"
         Me.RadioButton30.Size = New System.Drawing.Size(43, 27)
@@ -2875,10 +2890,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label18
         '
-        Me.Label18.Location = New System.Drawing.Point(12, 15)
+        Me.Label18.Location = New System.Drawing.Point(10, 1)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(800, 35)
+        Me.Label18.Size = New System.Drawing.Size(800, 38)
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "- hatt seksuell kontakt med person som bruker eller har brukt dopingmidler eller " &
     "narkotiske midler som sprøyter eller ved sniffing?"
@@ -2893,14 +2908,14 @@ Partial Class blodgiver_egenerklering
         Me.Panel16.Location = New System.Drawing.Point(4, 28)
         Me.Panel16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel16.Name = "Panel16"
-        Me.Panel16.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel16.TabIndex = 1
+        Me.Panel16.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel16.TabIndex = 12
         '
         'RadioButton31
         '
         Me.RadioButton31.AutoSize = True
         Me.RadioButton31.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton31.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton31.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton31.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton31.Name = "RadioButton31"
         Me.RadioButton31.Size = New System.Drawing.Size(53, 27)
@@ -2914,7 +2929,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton32.AutoSize = True
         Me.RadioButton32.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton32.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton32.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton32.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton32.Name = "RadioButton32"
         Me.RadioButton32.Size = New System.Drawing.Size(43, 27)
@@ -2926,10 +2941,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label19
         '
-        Me.Label19.Location = New System.Drawing.Point(12, 15)
+        Me.Label19.Location = New System.Drawing.Point(12, 9)
         Me.Label19.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(800, 35)
+        Me.Label19.Size = New System.Drawing.Size(800, 28)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "- vært til legeundersøkelse eller på sykehus, eller fått behandling for noen sykd" &
     "om? "
@@ -2941,17 +2956,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel17.Controls.Add(Me.RadioButton34)
         Me.Panel17.Controls.Add(Me.Label20)
         Me.Panel17.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel17.Location = New System.Drawing.Point(4, 164)
+        Me.Panel17.Location = New System.Drawing.Point(4, 113)
         Me.Panel17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel17.Name = "Panel17"
-        Me.Panel17.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel17.TabIndex = 4
+        Me.Panel17.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel17.TabIndex = 14
         '
         'RadioButton33
         '
         Me.RadioButton33.AutoSize = True
         Me.RadioButton33.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton33.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton33.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton33.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton33.Name = "RadioButton33"
         Me.RadioButton33.Size = New System.Drawing.Size(53, 27)
@@ -2965,7 +2980,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton34.AutoSize = True
         Me.RadioButton34.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton34.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton34.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton34.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton34.Name = "RadioButton34"
         Me.RadioButton34.Size = New System.Drawing.Size(43, 27)
@@ -2977,10 +2992,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label20
         '
-        Me.Label20.Location = New System.Drawing.Point(12, 15)
+        Me.Label20.Location = New System.Drawing.Point(12, 9)
         Me.Label20.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(800, 35)
+        Me.Label20.Size = New System.Drawing.Size(800, 22)
         Me.Label20.TabIndex = 0
         Me.Label20.Text = "- hatt kjønnssykdom, eller fått behandling for kjønnssykdom?"
         '
@@ -2991,17 +3006,17 @@ Partial Class blodgiver_egenerklering
         Me.Panel18.Controls.Add(Me.RadioButton36)
         Me.Panel18.Controls.Add(Me.Label21)
         Me.Panel18.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel18.Location = New System.Drawing.Point(4, 233)
+        Me.Panel18.Location = New System.Drawing.Point(4, 156)
         Me.Panel18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel18.Name = "Panel18"
-        Me.Panel18.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel18.TabIndex = 5
+        Me.Panel18.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel18.TabIndex = 15
         '
         'RadioButton35
         '
         Me.RadioButton35.AutoSize = True
         Me.RadioButton35.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton35.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton35.Location = New System.Drawing.Point(931, 4)
         Me.RadioButton35.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton35.Name = "RadioButton35"
         Me.RadioButton35.Size = New System.Drawing.Size(53, 27)
@@ -3015,7 +3030,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton36.AutoSize = True
         Me.RadioButton36.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton36.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton36.Location = New System.Drawing.Point(863, 4)
         Me.RadioButton36.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton36.Name = "RadioButton36"
         Me.RadioButton36.Size = New System.Drawing.Size(43, 27)
@@ -3027,10 +3042,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label21
         '
-        Me.Label21.Location = New System.Drawing.Point(12, 15)
+        Me.Label21.Location = New System.Drawing.Point(11, 1)
         Me.Label21.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(800, 35)
+        Me.Label21.Size = New System.Drawing.Size(800, 38)
         Me.Label21.TabIndex = 0
         Me.Label21.Text = "- hatt seksuell kontakt med person med HIV infeksjon eller hepatitt B eller hepat" &
     "itt C, eller med person som har hatt positiv test for en av disse sykdommene?"
@@ -3041,7 +3056,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1084, 521)
+        Me.TabPage1.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -3054,7 +3069,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox1.Controls.Add(Me.Panel1)
         Me.GroupBox1.Controls.Add(Me.Panel4)
         Me.GroupBox1.Controls.Add(Me.Panel5)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 6)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 6)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1054, 453)
         Me.GroupBox1.TabIndex = 7
@@ -3067,18 +3082,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel7.Controls.Add(Me.RadioButton13)
         Me.Panel7.Controls.Add(Me.RadioButton14)
         Me.Panel7.Controls.Add(Me.Label9)
-        Me.Panel7.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel7.Location = New System.Drawing.Point(4, 370)
-        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel7.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Panel7.Location = New System.Drawing.Point(3, 239)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel7.TabIndex = 7
+        Me.Panel7.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel7.TabIndex = 6
         '
         'RadioButton13
         '
         Me.RadioButton13.AutoSize = True
         Me.RadioButton13.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton13.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton13.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton13.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton13.Name = "RadioButton13"
         Me.RadioButton13.Size = New System.Drawing.Size(53, 27)
@@ -3092,7 +3107,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton14.AutoSize = True
         Me.RadioButton14.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton14.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton14.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton14.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton14.Name = "RadioButton14"
         Me.RadioButton14.Size = New System.Drawing.Size(43, 27)
@@ -3104,10 +3119,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label9
         '
-        Me.Label9.Location = New System.Drawing.Point(12, 15)
+        Me.Label9.Location = New System.Drawing.Point(12, 11)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(800, 35)
+        Me.Label9.Size = New System.Drawing.Size(800, 18)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Har du piercing i slimhinne?"
         '
@@ -3117,18 +3132,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel3.Controls.Add(Me.RadioButton5)
         Me.Panel3.Controls.Add(Me.RadioButton6)
         Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.Location = New System.Drawing.Point(4, 96)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel3.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Panel3.Location = New System.Drawing.Point(4, 70)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel3.TabIndex = 3
+        Me.Panel3.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel3.TabIndex = 2
         '
         'RadioButton5
         '
         Me.RadioButton5.AutoSize = True
         Me.RadioButton5.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton5.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(53, 27)
@@ -3142,7 +3157,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton6.AutoSize = True
         Me.RadioButton6.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton6.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(43, 27)
@@ -3154,10 +3169,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label5
         '
-        Me.Label5.Location = New System.Drawing.Point(12, 15)
+        Me.Label5.Location = New System.Drawing.Point(12, 11)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(800, 35)
+        Me.Label5.Size = New System.Drawing.Size(800, 18)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Føler du deg frisk nå?"
         '
@@ -3167,18 +3182,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel6.Controls.Add(Me.RadioButton11)
         Me.Panel6.Controls.Add(Me.RadioButton12)
         Me.Panel6.Controls.Add(Me.Label8)
-        Me.Panel6.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel6.Location = New System.Drawing.Point(4, 302)
-        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel6.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Panel6.Location = New System.Drawing.Point(3, 196)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel6.TabIndex = 6
+        Me.Panel6.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel6.TabIndex = 5
         '
         'RadioButton11
         '
         Me.RadioButton11.AutoSize = True
         Me.RadioButton11.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton11.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton11.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton11.Name = "RadioButton11"
         Me.RadioButton11.Size = New System.Drawing.Size(53, 27)
@@ -3192,7 +3207,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton12.AutoSize = True
         Me.RadioButton12.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton12.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton12.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton12.Name = "RadioButton12"
         Me.RadioButton12.Size = New System.Drawing.Size(43, 27)
@@ -3204,10 +3219,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label8
         '
-        Me.Label8.Location = New System.Drawing.Point(12, 15)
+        Me.Label8.Location = New System.Drawing.Point(12, 11)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(800, 35)
+        Me.Label8.Size = New System.Drawing.Size(800, 18)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Har du åpne sår, eksem eller hudsykdom?"
         '
@@ -3217,18 +3232,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel1.Controls.Add(Me.RadioButton2)
         Me.Panel1.Controls.Add(Me.RadioButton1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.Panel1.Location = New System.Drawing.Point(4, 28)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1040, 60)
+        Me.Panel1.Size = New System.Drawing.Size(1040, 40)
         Me.Panel1.TabIndex = 1
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton2.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(53, 27)
@@ -3242,7 +3257,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton1.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(43, 27)
@@ -3254,10 +3269,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(12, 15)
+        Me.Label2.Location = New System.Drawing.Point(12, 11)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(800, 35)
+        Me.Label2.Size = New System.Drawing.Size(800, 18)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Har du fått informasjon om blodgivning?"
         '
@@ -3267,18 +3282,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel4.Controls.Add(Me.RadioButton7)
         Me.Panel4.Controls.Add(Me.RadioButton8)
         Me.Panel4.Controls.Add(Me.Label6)
-        Me.Panel4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(4, 164)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel4.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Panel4.Location = New System.Drawing.Point(4, 112)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel4.TabIndex = 4
+        Me.Panel4.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel4.TabIndex = 3
         '
         'RadioButton7
         '
         Me.RadioButton7.AutoSize = True
         Me.RadioButton7.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton7.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton7.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton7.Name = "RadioButton7"
         Me.RadioButton7.Size = New System.Drawing.Size(53, 27)
@@ -3292,7 +3307,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton8.AutoSize = True
         Me.RadioButton8.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton8.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton8.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton8.Name = "RadioButton8"
         Me.RadioButton8.Size = New System.Drawing.Size(43, 27)
@@ -3304,10 +3319,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label6
         '
-        Me.Label6.Location = New System.Drawing.Point(12, 15)
+        Me.Label6.Location = New System.Drawing.Point(12, 11)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(800, 35)
+        Me.Label6.Size = New System.Drawing.Size(800, 18)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Hvis du har gitt blod tidligere, har du vært frisk i perioden fra forrige blodgiv" &
     "ning og til nå?"
@@ -3318,18 +3333,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel5.Controls.Add(Me.RadioButton9)
         Me.Panel5.Controls.Add(Me.RadioButton10)
         Me.Panel5.Controls.Add(Me.Label7)
-        Me.Panel5.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel5.Location = New System.Drawing.Point(4, 233)
-        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel5.Font = New System.Drawing.Font("Calibri", 11.0!)
+        Me.Panel5.Location = New System.Drawing.Point(3, 154)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel5.TabIndex = 5
+        Me.Panel5.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel5.TabIndex = 4
         '
         'RadioButton9
         '
         Me.RadioButton9.AutoSize = True
         Me.RadioButton9.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton9.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton9.Location = New System.Drawing.Point(931, 6)
         Me.RadioButton9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton9.Name = "RadioButton9"
         Me.RadioButton9.Size = New System.Drawing.Size(53, 27)
@@ -3343,7 +3358,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton10.AutoSize = True
         Me.RadioButton10.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton10.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton10.Location = New System.Drawing.Point(863, 6)
         Me.RadioButton10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton10.Name = "RadioButton10"
         Me.RadioButton10.Size = New System.Drawing.Size(43, 27)
@@ -3355,10 +3370,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label7
         '
-        Me.Label7.Location = New System.Drawing.Point(12, 15)
+        Me.Label7.Location = New System.Drawing.Point(12, 11)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(800, 35)
+        Me.Label7.Size = New System.Drawing.Size(800, 18)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Veier du 50 kg eller mer?"
         '
@@ -3368,7 +3383,7 @@ Partial Class blodgiver_egenerklering
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1084, 521)
+        Me.TabPage2.Size = New System.Drawing.Size(1084, 456)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "TabPage2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -3382,7 +3397,7 @@ Partial Class blodgiver_egenerklering
         Me.GroupBox2.Controls.Add(Me.Panel12)
         Me.GroupBox2.Location = New System.Drawing.Point(6, 6)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1054, 389)
+        Me.GroupBox2.Size = New System.Drawing.Size(1054, 271)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Har du i løpet at de siste fire uker"
@@ -3393,18 +3408,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel8.Controls.Add(Me.RadioButton15)
         Me.Panel8.Controls.Add(Me.RadioButton16)
         Me.Panel8.Controls.Add(Me.Label11)
-        Me.Panel8.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel8.Location = New System.Drawing.Point(4, 96)
+        Me.Panel8.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Panel8.Location = New System.Drawing.Point(4, 71)
         Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel8.TabIndex = 3
+        Me.Panel8.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel8.TabIndex = 8
         '
         'RadioButton15
         '
         Me.RadioButton15.AutoSize = True
         Me.RadioButton15.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton15.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton15.Location = New System.Drawing.Point(931, 8)
         Me.RadioButton15.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton15.Name = "RadioButton15"
         Me.RadioButton15.Size = New System.Drawing.Size(53, 27)
@@ -3418,7 +3433,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton16.AutoSize = True
         Me.RadioButton16.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton16.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton16.Location = New System.Drawing.Point(863, 8)
         Me.RadioButton16.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton16.Name = "RadioButton16"
         Me.RadioButton16.Size = New System.Drawing.Size(43, 27)
@@ -3430,10 +3445,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label11
         '
-        Me.Label11.Location = New System.Drawing.Point(12, 15)
+        Me.Label11.Location = New System.Drawing.Point(12, 8)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(800, 35)
+        Me.Label11.Size = New System.Drawing.Size(800, 25)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "- vært syk eller hatt feber?"
         '
@@ -3443,18 +3458,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel9.Controls.Add(Me.RadioButton17)
         Me.Panel9.Controls.Add(Me.RadioButton18)
         Me.Panel9.Controls.Add(Me.Label12)
-        Me.Panel9.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel9.Location = New System.Drawing.Point(4, 302)
+        Me.Panel9.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Panel9.Location = New System.Drawing.Point(4, 200)
         Me.Panel9.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel9.TabIndex = 6
+        Me.Panel9.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel9.TabIndex = 11
         '
         'RadioButton17
         '
         Me.RadioButton17.AutoSize = True
         Me.RadioButton17.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton17.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton17.Location = New System.Drawing.Point(931, 8)
         Me.RadioButton17.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton17.Name = "RadioButton17"
         Me.RadioButton17.Size = New System.Drawing.Size(53, 27)
@@ -3468,7 +3483,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton18.AutoSize = True
         Me.RadioButton18.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton18.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton18.Location = New System.Drawing.Point(863, 8)
         Me.RadioButton18.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton18.Name = "RadioButton18"
         Me.RadioButton18.Size = New System.Drawing.Size(43, 27)
@@ -3480,10 +3495,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label12
         '
-        Me.Label12.Location = New System.Drawing.Point(12, 15)
+        Me.Label12.Location = New System.Drawing.Point(12, 8)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(800, 35)
+        Me.Label12.Size = New System.Drawing.Size(800, 25)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "- vært hos tannlege eller tannpleier?"
         '
@@ -3493,18 +3508,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel10.Controls.Add(Me.RadioButton19)
         Me.Panel10.Controls.Add(Me.RadioButton20)
         Me.Panel10.Controls.Add(Me.Label13)
-        Me.Panel10.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel10.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.Panel10.Location = New System.Drawing.Point(4, 28)
         Me.Panel10.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel10.TabIndex = 1
+        Me.Panel10.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel10.TabIndex = 7
         '
         'RadioButton19
         '
         Me.RadioButton19.AutoSize = True
         Me.RadioButton19.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton19.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton19.Location = New System.Drawing.Point(931, 8)
         Me.RadioButton19.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton19.Name = "RadioButton19"
         Me.RadioButton19.Size = New System.Drawing.Size(53, 27)
@@ -3518,7 +3533,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton20.AutoSize = True
         Me.RadioButton20.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton20.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton20.Location = New System.Drawing.Point(863, 8)
         Me.RadioButton20.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton20.Name = "RadioButton20"
         Me.RadioButton20.Size = New System.Drawing.Size(43, 27)
@@ -3530,10 +3545,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label13
         '
-        Me.Label13.Location = New System.Drawing.Point(12, 15)
+        Me.Label13.Location = New System.Drawing.Point(12, 8)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(800, 35)
+        Me.Label13.Size = New System.Drawing.Size(800, 25)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "- brukt medisiner?"
         '
@@ -3543,18 +3558,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel11.Controls.Add(Me.RadioButton21)
         Me.Panel11.Controls.Add(Me.RadioButton22)
         Me.Panel11.Controls.Add(Me.Label14)
-        Me.Panel11.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel11.Location = New System.Drawing.Point(4, 164)
+        Me.Panel11.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Panel11.Location = New System.Drawing.Point(4, 114)
         Me.Panel11.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel11.TabIndex = 4
+        Me.Panel11.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel11.TabIndex = 9
         '
         'RadioButton21
         '
         Me.RadioButton21.AutoSize = True
         Me.RadioButton21.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton21.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton21.Location = New System.Drawing.Point(931, 8)
         Me.RadioButton21.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton21.Name = "RadioButton21"
         Me.RadioButton21.Size = New System.Drawing.Size(53, 27)
@@ -3568,7 +3583,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton22.AutoSize = True
         Me.RadioButton22.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton22.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton22.Location = New System.Drawing.Point(863, 8)
         Me.RadioButton22.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton22.Name = "RadioButton22"
         Me.RadioButton22.Size = New System.Drawing.Size(43, 27)
@@ -3580,10 +3595,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label14
         '
-        Me.Label14.Location = New System.Drawing.Point(12, 15)
+        Me.Label14.Location = New System.Drawing.Point(12, 8)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(800, 35)
+        Me.Label14.Size = New System.Drawing.Size(800, 25)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "- hatt løs avføring?"
         '
@@ -3593,18 +3608,18 @@ Partial Class blodgiver_egenerklering
         Me.Panel12.Controls.Add(Me.RadioButton23)
         Me.Panel12.Controls.Add(Me.RadioButton24)
         Me.Panel12.Controls.Add(Me.Label15)
-        Me.Panel12.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel12.Location = New System.Drawing.Point(4, 233)
+        Me.Panel12.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.Panel12.Location = New System.Drawing.Point(4, 157)
         Me.Panel12.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(1040, 60)
-        Me.Panel12.TabIndex = 5
+        Me.Panel12.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel12.TabIndex = 10
         '
         'RadioButton23
         '
         Me.RadioButton23.AutoSize = True
         Me.RadioButton23.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton23.Location = New System.Drawing.Point(931, 15)
+        Me.RadioButton23.Location = New System.Drawing.Point(931, 8)
         Me.RadioButton23.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton23.Name = "RadioButton23"
         Me.RadioButton23.Size = New System.Drawing.Size(53, 27)
@@ -3618,7 +3633,7 @@ Partial Class blodgiver_egenerklering
         '
         Me.RadioButton24.AutoSize = True
         Me.RadioButton24.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton24.Location = New System.Drawing.Point(863, 15)
+        Me.RadioButton24.Location = New System.Drawing.Point(863, 8)
         Me.RadioButton24.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButton24.Name = "RadioButton24"
         Me.RadioButton24.Size = New System.Drawing.Size(43, 27)
@@ -3630,10 +3645,10 @@ Partial Class blodgiver_egenerklering
         '
         'Label15
         '
-        Me.Label15.Location = New System.Drawing.Point(12, 15)
+        Me.Label15.Location = New System.Drawing.Point(12, 8)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(800, 35)
+        Me.Label15.Size = New System.Drawing.Size(800, 25)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "- fått vaksine?"
         '
@@ -3648,10 +3663,10 @@ Partial Class blodgiver_egenerklering
         Me.TabControl1.Controls.Add(Me.TabPage7)
         Me.TabControl1.Controls.Add(Me.TabPage8)
         Me.TabControl1.Controls.Add(Me.TabPage9)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 71)
+        Me.TabControl1.Location = New System.Drawing.Point(5, 62)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1092, 800)
+        Me.TabControl1.Size = New System.Drawing.Size(1092, 663)
         Me.TabControl1.TabIndex = 10
         '
         'Button2
@@ -3672,11 +3687,124 @@ Partial Class blodgiver_egenerklering
         Me.Button1.Text = "Neste side"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'GroupBox10
+        '
+        Me.GroupBox10.Controls.Add(Me.RadioButton120)
+        Me.GroupBox10.Controls.Add(Me.RadioButton119)
+        Me.GroupBox10.Location = New System.Drawing.Point(704, 28)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(188, 48)
+        Me.GroupBox10.TabIndex = 15
+        Me.GroupBox10.TabStop = False
+        Me.GroupBox10.Text = "Velg Kjønn"
+        '
+        'RadioButton119
+        '
+        Me.RadioButton119.AutoSize = True
+        Me.RadioButton119.Location = New System.Drawing.Point(18, 23)
+        Me.RadioButton119.Name = "RadioButton119"
+        Me.RadioButton119.Size = New System.Drawing.Size(64, 23)
+        Me.RadioButton119.TabIndex = 0
+        Me.RadioButton119.TabStop = True
+        Me.RadioButton119.Text = "Mann"
+        Me.RadioButton119.UseVisualStyleBackColor = True
+        '
+        'RadioButton120
+        '
+        Me.RadioButton120.AutoSize = True
+        Me.RadioButton120.Location = New System.Drawing.Point(103, 23)
+        Me.RadioButton120.Name = "RadioButton120"
+        Me.RadioButton120.Size = New System.Drawing.Size(69, 23)
+        Me.RadioButton120.TabIndex = 1
+        Me.RadioButton120.TabStop = True
+        Me.RadioButton120.Text = "Kvinne"
+        Me.RadioButton120.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(898, 37)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(176, 37)
+        Me.Button3.TabIndex = 16
+        Me.Button3.Text = "Bekreft kjønn"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Panel60
+        '
+        Me.Panel60.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel60.Controls.Add(Me.RadioButton121)
+        Me.Panel60.Controls.Add(Me.RadioButton122)
+        Me.Panel60.Controls.Add(Me.Label63)
+        Me.Panel60.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel60.Location = New System.Drawing.Point(2, 484)
+        Me.Panel60.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Panel60.Name = "Panel60"
+        Me.Panel60.Size = New System.Drawing.Size(1040, 40)
+        Me.Panel60.TabIndex = 60
+        '
+        'RadioButton121
+        '
+        Me.RadioButton121.AutoSize = True
+        Me.RadioButton121.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton121.Location = New System.Drawing.Point(931, 10)
+        Me.RadioButton121.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RadioButton121.Name = "RadioButton121"
+        Me.RadioButton121.Size = New System.Drawing.Size(53, 27)
+        Me.RadioButton121.TabIndex = 8
+        Me.RadioButton121.TabStop = True
+        Me.RadioButton121.Tag = "0"
+        Me.RadioButton121.Text = "Nei"
+        Me.RadioButton121.UseVisualStyleBackColor = True
+        '
+        'RadioButton122
+        '
+        Me.RadioButton122.AutoSize = True
+        Me.RadioButton122.Font = New System.Drawing.Font("Calibri Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton122.Location = New System.Drawing.Point(863, 10)
+        Me.RadioButton122.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.RadioButton122.Name = "RadioButton122"
+        Me.RadioButton122.Size = New System.Drawing.Size(43, 27)
+        Me.RadioButton122.TabIndex = 7
+        Me.RadioButton122.TabStop = True
+        Me.RadioButton122.Tag = "1"
+        Me.RadioButton122.Text = "Ja"
+        Me.RadioButton122.UseVisualStyleBackColor = True
+        '
+        'Label63
+        '
+        Me.Label63.Location = New System.Drawing.Point(12, 10)
+        Me.Label63.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label63.Name = "Label63"
+        Me.Label63.Size = New System.Drawing.Size(532, 25)
+        Me.Label63.TabIndex = 0
+        Me.Label63.Text = "- Jeg samtykker i at mitt plasma føres ut av Norge for legemiddelproduksjon"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(10, 566)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(369, 23)
+        Me.CheckBox1.TabIndex = 17
+        Me.CheckBox1.Text = "Jeg bekrefter herved at all gitt informasjon er korrekt"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'sendEgenerklering
+        '
+        Me.sendEgenerklering.Location = New System.Drawing.Point(9, 590)
+        Me.sendEgenerklering.Name = "sendEgenerklering"
+        Me.sendEgenerklering.Size = New System.Drawing.Size(370, 35)
+        Me.sendEgenerklering.TabIndex = 18
+        Me.sendEgenerklering.Text = "Send egenerklæring"
+        Me.sendEgenerklering.UseVisualStyleBackColor = True
+        '
         'blodgiver_egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1198, 774)
+        Me.ClientSize = New System.Drawing.Size(1097, 782)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.GroupBox10)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TabControl1)
@@ -3690,6 +3818,7 @@ Partial Class blodgiver_egenerklering
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.TabPage9.ResumeLayout(False)
+        Me.TabPage9.PerformLayout()
         Me.GroupBox11.ResumeLayout(False)
         Me.Panel58.ResumeLayout(False)
         Me.Panel58.PerformLayout()
@@ -3827,6 +3956,10 @@ Partial Class blodgiver_egenerklering
         Me.Panel12.ResumeLayout(False)
         Me.Panel12.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
+        Me.Panel60.ResumeLayout(False)
+        Me.Panel60.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4097,4 +4230,14 @@ Partial Class blodgiver_egenerklering
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents GroupBox10 As GroupBox
+    Friend WithEvents RadioButton120 As RadioButton
+    Friend WithEvents RadioButton119 As RadioButton
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Panel60 As Panel
+    Friend WithEvents RadioButton121 As RadioButton
+    Friend WithEvents RadioButton122 As RadioButton
+    Friend WithEvents Label63 As Label
+    Friend WithEvents sendEgenerklering As Button
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

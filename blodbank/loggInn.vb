@@ -29,8 +29,8 @@ Public Class loggInn
             Dim telefon = rad("telefon")
             Dim personnummer = rad("personnummer")
 
-
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
+
                 innlogget_bruker = brukernavn
                 innlogget_fornavn = fornavn
                 innlogget_etternavn = etternavn
@@ -100,7 +100,6 @@ Public Class loggInn
 
 
 
-
     End Function
 
     Private Sub loggInnKnapp_Click_1(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
@@ -134,6 +133,16 @@ Public Class loggInn
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         hashtest.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        blodgiverMinSide.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        ansattStartSide.Show()
     End Sub
 End Class
 

@@ -30,6 +30,8 @@ Partial Class loggInn
         Me.registrerBrukerKnapp = New System.Windows.Forms.Button()
         Me.glemtPassordKnapp = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'loggInnKnapp
@@ -100,11 +102,31 @@ Partial Class loggInn
         Me.Button1.Text = "HashTest"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(518, 218)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(162, 54)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "midlertidig logg inn (blogiver)"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(518, 291)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(162, 54)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "midlertidig logg inn (ansatt)"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'loggInn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(823, 543)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.glemtPassordKnapp)
         Me.Controls.Add(Me.registrerBrukerKnapp)
@@ -128,4 +150,6 @@ Partial Class loggInn
     Friend WithEvents registrerBrukerKnapp As Button
     Friend WithEvents glemtPassordKnapp As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

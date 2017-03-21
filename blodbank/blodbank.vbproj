@@ -73,6 +73,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ansattBestilling.Designer.vb">
+      <DependentUpon>ansattBestilling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattBestilling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ansattInnkalling.Designer.vb">
+      <DependentUpon>ansattInnkalling.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattInnkalling.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ansattProduktoversikt.Designer.vb">
+      <DependentUpon>ansattProduktoversikt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattProduktoversikt.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ansattStartSide.Designer.vb">
       <DependentUpon>ansattStartSide.vb</DependentUpon>
     </Compile>
@@ -135,6 +153,15 @@
     <Compile Include="tilkoblingsdata.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ansattBestilling.resx">
+      <DependentUpon>ansattBestilling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ansattInnkalling.resx">
+      <DependentUpon>ansattInnkalling.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ansattProduktoversikt.resx">
+      <DependentUpon>ansattProduktoversikt.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ansattStartSide.resx">
       <DependentUpon>ansattStartSide.vb</DependentUpon>
     </EmbeddedResource>
