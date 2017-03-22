@@ -36,58 +36,60 @@ Partial Class ansattInnkalling
         Me.Label2 = New System.Windows.Forms.Label()
         Me.blodInfoKnapp = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegistrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(696, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1044, 33)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'HjemToolStripMenuItem
         '
         Me.HjemToolStripMenuItem.Name = "HjemToolStripMenuItem"
-        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(48, 22)
+        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(66, 29)
         Me.HjemToolStripMenuItem.Text = "Hjem"
         '
         'ProduktoversiktToolStripMenuItem
         '
         Me.ProduktoversiktToolStripMenuItem.Name = "ProduktoversiktToolStripMenuItem"
-        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(149, 29)
         Me.ProduktoversiktToolStripMenuItem.Text = "Produktoversikt"
         '
         'InnkallingToolStripMenuItem
         '
         Me.InnkallingToolStripMenuItem.Name = "InnkallingToolStripMenuItem"
-        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(71, 22)
+        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(100, 29)
         Me.InnkallingToolStripMenuItem.Text = "Innkalling"
         '
         'BestillingToolStripMenuItem
         '
         Me.BestillingToolStripMenuItem.Name = "BestillingToolStripMenuItem"
-        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(67, 22)
+        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(94, 29)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
         'HasteInnkallingKnapp
         '
-        Me.HasteInnkallingKnapp.Location = New System.Drawing.Point(202, 340)
+        Me.HasteInnkallingKnapp.Location = New System.Drawing.Point(303, 523)
+        Me.HasteInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.HasteInnkallingKnapp.Name = "HasteInnkallingKnapp"
-        Me.HasteInnkallingKnapp.Size = New System.Drawing.Size(171, 59)
+        Me.HasteInnkallingKnapp.Size = New System.Drawing.Size(256, 91)
         Me.HasteInnkallingKnapp.TabIndex = 10
         Me.HasteInnkallingKnapp.Text = "Send hasteinnkalling"
         Me.HasteInnkallingKnapp.UseVisualStyleBackColor = True
         '
         'NormalInnkallingKnapp
         '
-        Me.NormalInnkallingKnapp.Location = New System.Drawing.Point(10, 340)
+        Me.NormalInnkallingKnapp.Location = New System.Drawing.Point(15, 523)
+        Me.NormalInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.NormalInnkallingKnapp.Name = "NormalInnkallingKnapp"
-        Me.NormalInnkallingKnapp.Size = New System.Drawing.Size(171, 59)
+        Me.NormalInnkallingKnapp.Size = New System.Drawing.Size(256, 91)
         Me.NormalInnkallingKnapp.TabIndex = 9
         Me.NormalInnkallingKnapp.Text = "Send normal inkkaling (e-post)"
         Me.NormalInnkallingKnapp.UseVisualStyleBackColor = True
@@ -95,49 +97,54 @@ Partial Class ansattInnkalling
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 36)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(21, 55)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(52, 13)
+        Me.Label1.Size = New System.Drawing.Size(76, 20)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Innkalling"
         '
         'klareBlodgivere
         '
         Me.klareBlodgivere.FormattingEnabled = True
-        Me.klareBlodgivere.Location = New System.Drawing.Point(11, 75)
+        Me.klareBlodgivere.ItemHeight = 20
+        Me.klareBlodgivere.Location = New System.Drawing.Point(16, 115)
+        Me.klareBlodgivere.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.klareBlodgivere.Name = "klareBlodgivere"
-        Me.klareBlodgivere.Size = New System.Drawing.Size(254, 173)
+        Me.klareBlodgivere.Size = New System.Drawing.Size(379, 264)
         Me.klareBlodgivere.TabIndex = 12
         '
         'timeDato
         '
-        Me.timeDato.Location = New System.Drawing.Point(23, 269)
+        Me.timeDato.Location = New System.Drawing.Point(34, 414)
+        Me.timeDato.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.timeDato.Name = "timeDato"
-        Me.timeDato.Size = New System.Drawing.Size(200, 20)
+        Me.timeDato.Size = New System.Drawing.Size(298, 26)
         Me.timeDato.TabIndex = 13
         '
         'TidTekst
         '
-        Me.TidTekst.Location = New System.Drawing.Point(101, 306)
+        Me.TidTekst.Location = New System.Drawing.Point(152, 471)
+        Me.TidTekst.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TidTekst.Name = "TidTekst"
-        Me.TidTekst.Size = New System.Drawing.Size(100, 20)
+        Me.TidTekst.Size = New System.Drawing.Size(148, 26)
         Me.TidTekst.TabIndex = 14
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(32, 309)
+        Me.Label2.Location = New System.Drawing.Point(48, 475)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(54, 13)
+        Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Tidspunkt"
         '
         'blodInfoKnapp
         '
-        Me.blodInfoKnapp.Location = New System.Drawing.Point(324, 167)
+        Me.blodInfoKnapp.Location = New System.Drawing.Point(486, 257)
+        Me.blodInfoKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.blodInfoKnapp.Name = "blodInfoKnapp"
-        Me.blodInfoKnapp.Size = New System.Drawing.Size(229, 81)
+        Me.blodInfoKnapp.Size = New System.Drawing.Size(344, 125)
         Me.blodInfoKnapp.TabIndex = 16
         Me.blodInfoKnapp.Text = "Hent blogiverinformajson"
         Me.blodInfoKnapp.UseVisualStyleBackColor = True
@@ -145,17 +152,24 @@ Partial Class ansattInnkalling
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(14, 58)
+        Me.Label3.Location = New System.Drawing.Point(21, 89)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.Size = New System.Drawing.Size(101, 20)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Velg Blogiver"
         '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(184, 29)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
+        '
         'ansattInnkalling
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(696, 434)
+        Me.ClientSize = New System.Drawing.Size(1044, 668)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.blodInfoKnapp)
         Me.Controls.Add(Me.Label2)
@@ -166,7 +180,6 @@ Partial Class ansattInnkalling
         Me.Controls.Add(Me.HasteInnkallingKnapp)
         Me.Controls.Add(Me.NormalInnkallingKnapp)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ansattInnkalling"
         Me.Text = "ansattInnkalling"
         Me.MenuStrip1.ResumeLayout(False)
@@ -190,4 +203,5 @@ Partial Class ansattInnkalling
     Friend WithEvents Label2 As Label
     Friend WithEvents blodInfoKnapp As Button
     Friend WithEvents Label3 As Label
+    Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
 End Class

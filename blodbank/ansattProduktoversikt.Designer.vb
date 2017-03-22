@@ -30,13 +30,14 @@ Partial Class ansattProduktoversikt
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegistrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(935, 33)
@@ -94,6 +95,12 @@ Partial Class ansattProduktoversikt
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Lagerstatus:"
         '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(184, 29)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
+        '
         'ansattProduktoversikt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -120,4 +127,5 @@ Partial Class ansattProduktoversikt
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
 End Class

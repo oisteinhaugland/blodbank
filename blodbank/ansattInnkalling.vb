@@ -14,10 +14,10 @@
         Me.Hide()
     End Sub
 
-    Private Sub ansattInnkalling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
+        registrer_blodgiving.Show()
+        Me.Hide()
     End Sub
-
     Private Sub blodInfoKnapp_Click(sender As Object, e As EventArgs) Handles blodInfoKnapp.Click
 
         Dim ansattInnkallingTable As New DataTable
@@ -45,4 +45,6 @@
         MsgBox(blodgiver & " er innkalt til time hos blodbanken. Din time er " & dato & ", klokken " & tidspunkt & ". Vennligst bekreft blabla...")
         ' Sendes på mail
     End Sub
+
+
 End Class

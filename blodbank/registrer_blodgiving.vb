@@ -1,4 +1,4 @@
-﻿Public Class ansattBestilling
+﻿Public Class registrer_blodgiving
     Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
         ansattStartSide.Show()
         Me.Hide()
@@ -14,8 +14,8 @@
         Me.Hide()
     End Sub
 
-    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
-        registrer_blodgiving.Show()
+    Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
+        ansattBestilling.Show()
         Me.Hide()
     End Sub
 End Class

@@ -34,6 +34,7 @@ Partial Class ansattStartSide
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -100,7 +101,7 @@ Partial Class ansattStartSide
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegistrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1170, 33)
@@ -140,6 +141,12 @@ Partial Class ansattStartSide
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Hjem"
         '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(184, 29)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
+        '
         'ansattStartSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -176,4 +183,5 @@ Partial Class ansattStartSide
     Friend WithEvents InnkallingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
+    Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -13,4 +13,9 @@
         ansattBestilling.Show()
         Me.Hide()
     End Sub
+
+    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
+        registrer_blodgiving.Show()
+        Me.Hide()
+    End Sub
 End Class

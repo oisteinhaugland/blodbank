@@ -27,6 +27,7 @@ Partial Class ansattBestilling
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
@@ -35,7 +36,7 @@ Partial Class ansattBestilling
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegistrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(952, 33)
@@ -65,6 +66,12 @@ Partial Class ansattBestilling
         Me.BestillingToolStripMenuItem.Name = "BestillingToolStripMenuItem"
         Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(94, 29)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
+        '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(184, 29)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
         '
         'Label1
         '
@@ -108,4 +115,5 @@ Partial Class ansattBestilling
     Friend WithEvents HjemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents Button1 As Button
+    Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
 End Class
