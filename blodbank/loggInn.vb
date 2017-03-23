@@ -29,6 +29,7 @@ Public Class loggInn
             Dim telefon = rad("telefon")
             Dim personnummer = rad("personnummer")
 
+
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
 
                 innlogget_bruker = brukernavn
@@ -49,6 +50,13 @@ Public Class loggInn
                 loggetInn = True
             End If
         Next
+
+        Dim kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+        If (kjønn Mod 2) = 0 Then
+            innlogget_kjønn = "Kvinne"
+        Else
+            innlogget_kjønn = "Mann"
+        End If
 
         If loggetInn Then
             Return True

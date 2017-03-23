@@ -1,22 +1,3 @@
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe.config
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.pdb
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.xml
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.dll
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.xml
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
-C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\bin\Debug\blodbank.exe.config
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.exe
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.xml
@@ -36,6 +17,25 @@ C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\b
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.exe
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.pdb
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\blodbank.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.dll
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\bin\Debug\MySql.Data.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattBestilling.resources
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
 C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattProduktoversikt.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodbank\obj\Debug\blodbank.pdb

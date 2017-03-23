@@ -7,12 +7,14 @@
         label_innlogget_adresse.Text = innlogget_adresse
         label_innlogget_blodtype.Text = innlogget_blodtype
         label_innlogget_fodselsdato.Text = innlogget_fodseldato
-
         label_innlogget_forrige_blodtapp.Text = innlogget_forrige_blodtapp
         label_innlogget_karantene.Text = innlogget_karantene
         label_innlogget_post_nr.Text = innlogget_post_nr
         label_innlogget_post_sted.Text = innlogget_post_sted
         label_innlogget_telefon.Text = innlogget_telefon
+        label_innlogget_kjønn.Text = innlogget_kjønn
+
+
     End Sub
 
 
@@ -22,8 +24,6 @@
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(247, 247, 247)
         fyllBrukerInformasjon()
-
-
     End Sub
 
 

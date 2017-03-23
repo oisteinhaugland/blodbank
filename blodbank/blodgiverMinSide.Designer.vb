@@ -49,6 +49,8 @@ Partial Class blodgiverMinSide
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.label_innlogget_kjønn = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -290,11 +292,31 @@ Partial Class blodgiverMinSide
         Me.Label13.TabIndex = 24
         Me.Label13.Text = "Telefon"
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(38, 290)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(34, 13)
+        Me.Label10.TabIndex = 25
+        Me.Label10.Text = "Kjønn"
+        '
+        'label_innlogget_kjønn
+        '
+        Me.label_innlogget_kjønn.AutoSize = True
+        Me.label_innlogget_kjønn.Location = New System.Drawing.Point(119, 290)
+        Me.label_innlogget_kjønn.Name = "label_innlogget_kjønn"
+        Me.label_innlogget_kjønn.Size = New System.Drawing.Size(24, 13)
+        Me.label_innlogget_kjønn.TabIndex = 26
+        Me.label_innlogget_kjønn.Text = "test"
+        '
         'blodgiverMinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(719, 483)
+        Me.Controls.Add(Me.label_innlogget_kjønn)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label4)
@@ -356,4 +378,6 @@ Partial Class blodgiverMinSide
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents label_innlogget_kjønn As Label
 End Class

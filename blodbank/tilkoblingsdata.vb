@@ -25,6 +25,7 @@ Module tilkoblingsdata
     Public innlogget_post_sted As String
     Public innlogget_telefon As Integer
     Public innlogget_personnummer As Integer
+    Public innlogget_kjønn As String
 
 
     'Funksjon for å kjøre SQL spørringer

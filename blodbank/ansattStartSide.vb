@@ -24,5 +24,6 @@
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
         ansattBestilling.Show()
         Me.Hide()
+
     End Sub
 End Class
