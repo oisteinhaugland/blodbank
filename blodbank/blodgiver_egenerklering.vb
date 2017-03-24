@@ -13,18 +13,13 @@
         Dim radiobtnTag
         Dim tagVerdier As String
 
-
-
-
-
         For Each tabb In egenerkleringTabControl.Controls 'for hver tab
             If tabb.Enabled = True Then 'hvis tab er aktiv 
                 tabcounter += 1
                 For Each ctrl As Control In tabb.Controls 'for hver control
                     If TypeOf ctrl Is GroupBox Then 'hvis controllen er en groupbox
                         groupboxcounter += 1
-                        For Each Panel As Panel In ctrl.Controls
-                            ' for hver panel i groupbox
+                        For Each Panel As Panel In ctrl.Controls ' for hver panel i groupbox
                             spmcounter += 1
                             Dim control As Control
                             For Each control In Panel.Controls.OfType(Of RadioButton)
@@ -33,7 +28,6 @@
                                     antallchecekd += 1
                                     radiobtnTag = radiobtn.Tag
                                     tagVerdier &= radiobtnTag & ","
-
                                 End If
                             Next
                         Next
@@ -42,26 +36,7 @@
             End If
         Next
 
-        tagVerdier = tagVerdier.Substring(0, tagVerdier.Length - 1) 'tar vekk siste komma
         'Dim check = "Antall tabs: " & tabcounter & vbCrLf & "Antall spm: " & spmcounter & vbCrLf & "Antall Groupboxes: " & groupboxcounter & vbCrLf & "Antall spm checked: " & antallchecekd
-
-        Select Case innlogget_kjønn
-            Case "Mann"
-                Try
-                    sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES (" & innlogget_blodgiver_id & "," & tagVerdier)
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-            Case "Kvinne"
-                Try
-                    sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES (" & innlogget_blodgiver_id & "," & tagVerdier)
-                Catch ex As Exception
-                    MsgBox(ex.Message)
-                End Try
-
-
-        End Select
-
 
 
         MsgBox(tagVerdier)
@@ -69,6 +44,22 @@
         If antallchecekd <> spmcounter Then
             Return False
         Else
+            tagVerdier = tagVerdier.Substring(0, tagVerdier.Length - 1) 'tar vekk siste komma
+
+            Select Case innlogget_kjønn
+                Case "Mann"
+                    Try
+                        sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+                Case "Kvinne"
+                    Try
+                        sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                    Catch ex As Exception
+                        MsgBox(ex.Message)
+                    End Try
+            End Select
             Return True
         End If
     End Function
