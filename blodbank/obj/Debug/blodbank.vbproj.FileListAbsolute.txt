@@ -62,3 +62,7 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattBestillinger.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattRegBlodgiving.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
