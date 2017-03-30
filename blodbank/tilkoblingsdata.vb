@@ -65,6 +65,10 @@ Module tilkoblingsdata
     End Function
 
 
+    Public Function konverterDatoFormatTilMySql(dato As String) As String
+        Dim innskrevetDato As Date = dato
+        Return innskrevetDato.ToString("yyyy-MM-dd")
+    End Function
 
 
 

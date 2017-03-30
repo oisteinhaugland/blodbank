@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ansattBestilling.Designer.vb">
-      <DependentUpon>ansattBestilling.vb</DependentUpon>
+    <Compile Include="ansattBestillinger.Designer.vb">
+      <DependentUpon>ansattBestillinger.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattBestilling.vb">
+    <Compile Include="ansattBestillinger.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ansattInnkalling.Designer.vb">
@@ -91,6 +91,12 @@
     <Compile Include="ansattProduktoversikt.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ansattRegBlodgiving.Designer.vb">
+      <DependentUpon>ansattRegBlodgiving.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ansattRegBlodgiving.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ansattStartSide.Designer.vb">
       <DependentUpon>ansattStartSide.vb</DependentUpon>
     </Compile>
@@ -98,6 +104,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Bestillingsinfo.vb" />
     <Compile Include="blodgiverMinSide.Designer.vb">
       <DependentUpon>blodgiverMinSide.vb</DependentUpon>
     </Compile>
@@ -153,14 +160,17 @@
     <Compile Include="tilkoblingsdata.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ansattBestilling.resx">
-      <DependentUpon>ansattBestilling.vb</DependentUpon>
+    <EmbeddedResource Include="ansattBestillinger.resx">
+      <DependentUpon>ansattBestillinger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ansattInnkalling.resx">
       <DependentUpon>ansattInnkalling.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ansattProduktoversikt.resx">
       <DependentUpon>ansattProduktoversikt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ansattRegBlodgiving.resx">
+      <DependentUpon>ansattRegBlodgiving.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ansattStartSide.resx">
       <DependentUpon>ansattStartSide.vb</DependentUpon>
@@ -191,6 +201,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

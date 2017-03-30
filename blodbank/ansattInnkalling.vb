@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        ansattBestilling.Show()
+        ansattBestillinger.Show()
         Me.Hide()
     End Sub
 
@@ -44,5 +44,10 @@
 
         MsgBox(blodgiver & " er innkalt til time hos blodbanken. Din time er " & dato & ", klokken " & tidspunkt & ". Vennligst bekreft blabla...")
         ' Sendes på mail
+    End Sub
+
+    Private Sub RegisrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisrerBlodgivingToolStripMenuItem.Click
+        Me.Hide()
+        ansattRegBlodgiving.Show()
     End Sub
 End Class

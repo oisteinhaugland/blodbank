@@ -61,7 +61,7 @@ Partial Class blodgiverMinSide
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(719, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(961, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -115,7 +115,7 @@ Partial Class blodgiverMinSide
         'navnLabel
         '
         Me.navnLabel.AutoSize = True
-        Me.navnLabel.Location = New System.Drawing.Point(35, 109)
+        Me.navnLabel.Location = New System.Drawing.Point(37, 122)
         Me.navnLabel.Name = "navnLabel"
         Me.navnLabel.Size = New System.Drawing.Size(52, 13)
         Me.navnLabel.TabIndex = 4
@@ -314,7 +314,7 @@ Partial Class blodgiverMinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 483)
+        Me.ClientSize = New System.Drawing.Size(961, 483)
         Me.Controls.Add(Me.label_innlogget_kjønn)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label13)

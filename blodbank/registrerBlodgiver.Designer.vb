@@ -52,28 +52,28 @@ Partial Class registrerBlodgiver
         '
         'fornavnTextbox
         '
-        Me.fornavnTextbox.Location = New System.Drawing.Point(150, 34)
+        Me.fornavnTextbox.Location = New System.Drawing.Point(153, 34)
         Me.fornavnTextbox.Name = "fornavnTextbox"
         Me.fornavnTextbox.Size = New System.Drawing.Size(100, 20)
         Me.fornavnTextbox.TabIndex = 0
         '
         'epostTextbox
         '
-        Me.epostTextbox.Location = New System.Drawing.Point(150, 119)
+        Me.epostTextbox.Location = New System.Drawing.Point(153, 119)
         Me.epostTextbox.Name = "epostTextbox"
         Me.epostTextbox.Size = New System.Drawing.Size(100, 20)
         Me.epostTextbox.TabIndex = 3
         '
         'etterNavnTextBox
         '
-        Me.etterNavnTextBox.Location = New System.Drawing.Point(150, 60)
+        Me.etterNavnTextBox.Location = New System.Drawing.Point(153, 60)
         Me.etterNavnTextBox.Name = "etterNavnTextBox"
         Me.etterNavnTextBox.Size = New System.Drawing.Size(100, 20)
         Me.etterNavnTextBox.TabIndex = 1
         '
         'passordTextBox
         '
-        Me.passordTextBox.Location = New System.Drawing.Point(151, 298)
+        Me.passordTextBox.Location = New System.Drawing.Point(154, 298)
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(100, 20)
         Me.passordTextBox.TabIndex = 9
@@ -116,7 +116,7 @@ Partial Class registrerBlodgiver
         '
         'gjenntaPassordTextbox
         '
-        Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(151, 325)
+        Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(154, 325)
         Me.gjenntaPassordTextbox.Name = "gjenntaPassordTextbox"
         Me.gjenntaPassordTextbox.Size = New System.Drawing.Size(100, 20)
         Me.gjenntaPassordTextbox.TabIndex = 10
@@ -132,7 +132,7 @@ Partial Class registrerBlodgiver
         '
         'personNrTextBox
         '
-        Me.personNrTextBox.Location = New System.Drawing.Point(151, 171)
+        Me.personNrTextBox.Location = New System.Drawing.Point(154, 171)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(100, 20)
         Me.personNrTextBox.TabIndex = 5
@@ -157,7 +157,7 @@ Partial Class registrerBlodgiver
         '
         'telefonTextBox
         '
-        Me.telefonTextBox.Location = New System.Drawing.Point(150, 93)
+        Me.telefonTextBox.Location = New System.Drawing.Point(153, 93)
         Me.telefonTextBox.Name = "telefonTextBox"
         Me.telefonTextBox.Size = New System.Drawing.Size(100, 20)
         Me.telefonTextBox.TabIndex = 2
@@ -182,7 +182,7 @@ Partial Class registrerBlodgiver
         '
         'fodselsdatoTextBox
         '
-        Me.fodselsdatoTextBox.Location = New System.Drawing.Point(150, 145)
+        Me.fodselsdatoTextBox.Location = New System.Drawing.Point(153, 145)
         Me.fodselsdatoTextBox.Name = "fodselsdatoTextBox"
         Me.fodselsdatoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.fodselsdatoTextBox.TabIndex = 4
@@ -190,7 +190,7 @@ Partial Class registrerBlodgiver
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(251, 148)
+        Me.Label1.Location = New System.Drawing.Point(254, 148)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 20
@@ -199,7 +199,7 @@ Partial Class registrerBlodgiver
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(252, 174)
+        Me.Label2.Location = New System.Drawing.Point(255, 174)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 21
@@ -216,7 +216,7 @@ Partial Class registrerBlodgiver
         '
         'adresseTextBox
         '
-        Me.adresseTextBox.Location = New System.Drawing.Point(150, 197)
+        Me.adresseTextBox.Location = New System.Drawing.Point(153, 197)
         Me.adresseTextBox.Name = "adresseTextBox"
         Me.adresseTextBox.Size = New System.Drawing.Size(100, 20)
         Me.adresseTextBox.TabIndex = 6
@@ -232,14 +232,14 @@ Partial Class registrerBlodgiver
         '
         'postNrTextBox
         '
-        Me.postNrTextBox.Location = New System.Drawing.Point(150, 230)
+        Me.postNrTextBox.Location = New System.Drawing.Point(153, 230)
         Me.postNrTextBox.Name = "postNrTextBox"
         Me.postNrTextBox.Size = New System.Drawing.Size(52, 20)
         Me.postNrTextBox.TabIndex = 7
         '
         'poststedTextBox
         '
-        Me.poststedTextBox.Location = New System.Drawing.Point(208, 230)
+        Me.poststedTextBox.Location = New System.Drawing.Point(211, 230)
         Me.poststedTextBox.Name = "poststedTextBox"
         Me.poststedTextBox.Size = New System.Drawing.Size(131, 20)
         Me.poststedTextBox.TabIndex = 8

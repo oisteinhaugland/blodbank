@@ -10,7 +10,12 @@
     End Sub
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        ansattBestilling.Show()
+        ansattBestillinger.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
+        Me.Hide()
+        ansattRegBlodgiving.Show()
     End Sub
 End Class

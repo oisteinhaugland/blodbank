@@ -10,7 +10,7 @@ Public Class loggInn
         Dim tabell As New DataTable
         tabell = selectBlogiver()
         Dim loggetInn As Boolean = False
-
+        Dim kjønn
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
@@ -48,10 +48,15 @@ Public Class loggInn
                 innlogget_telefon = telefon
                 innlogget_personnummer = personnummer
                 loggetInn = True
+
+
+                kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
             End If
         Next
 
-        Dim kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+
+
+
         If (kjønn Mod 2) = 0 Then
             innlogget_kjønn = "Kvinne"
         Else
@@ -112,12 +117,13 @@ Public Class loggInn
 
     Private Sub loggInnKnapp_Click_1(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
 
-        If loggInnBlodgiver() Then
+
+        If loggInnAnsatt() Then
+            Me.Hide()
+            ansattStartSide.Show() '
+        ElseIf loggInnBlodgiver() Then
             Me.Hide()
             blodgiverMinSide.Show()
-        ElseIf loggInnAnsatt() Then
-            Me.Hide()
-            ansattStartSide.Show()
         Else
             MsgBox(melding_logg_inn_feil)
         End If

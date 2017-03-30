@@ -78,6 +78,9 @@ Public Class registrerBlodgiver
         End If
 
 
+
+
+
         Dim datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
         Dim fodselsdatoformatMatch As Match = Regex.Match((fodselsdatoTextBox.Text), datoFormat)
         If fodselsdatoformatMatch.Success Then
@@ -123,9 +126,6 @@ Public Class registrerBlodgiver
     End Sub
 
 
-
-
-
     Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
@@ -141,4 +141,23 @@ Public Class registrerBlodgiver
 
     End Sub
 
+    Private Sub postNrTextBox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles postNrTextBox.KeyPress,
+        telefonTextBox.KeyPress, personNrTextBox.KeyPress, fodselsdatoTextBox.KeyPress
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub fornavnTextbox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles fornavnTextbox.KeyPress,
+        etterNavnTextBox.KeyPress, poststedTextBox.KeyPress
+
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+        End If
+
+    End Sub
 End Class
+
+
+
+
