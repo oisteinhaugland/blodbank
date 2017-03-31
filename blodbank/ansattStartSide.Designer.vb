@@ -33,8 +33,8 @@ Partial Class ansattStartSide
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -127,6 +127,12 @@ Partial Class ansattStartSide
         Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(67, 22)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -136,12 +142,6 @@ Partial Class ansattStartSide
         Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Hjem"
-        '
-        'RegistrerBlodgivingToolStripMenuItem
-        '
-        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
-        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
         '
         'ansattStartSide
         '

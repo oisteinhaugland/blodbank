@@ -6,11 +6,137 @@ Public Class loggInn
     Public melding_logg_inn_feil As String = "Feil brukernavn eller passord, vennligst prøv igjen."
 
 
+
+
+    Public Function fucuck(bruker, pwd)
+        Dim brukernavn = ""
+        Dim passord = ""
+        Dim fornavn
+        Dim etternavn
+        Dim adresse
+        Dim blodgiver_id
+        Dim blodtype
+        Dim epost
+        Dim fodseldato
+        Dim godkjent_egenerklering
+        Dim karantene
+        Dim post_nr
+        Dim post_sted
+        Dim telefon
+        Dim personnummer
+
+
+        'Dim forrige_blodtapp
+
+        'Try
+        '    Dim ny_tabbel = sql_sporring("SELECT * FROM 
+        '    `Blodgivning` inner join Blodgiver AS b
+        '    on b.blodgiver_id = Blodgivning.` blodgiver_id` where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+        '    order by ` blogivning_dato` DESC limit 1")
+
+        '    For Each row In ny_tabbel.Rows
+        '        forrige_blodtapp = row("forrige_blodtapp")
+        '    Next
+
+        'Catch ex As Exception
+        '    forrige_blodtapp = "Aldri gitt blod"
+        'End Try
+
+
+
+
+
+
+        Dim sporring = "SELECT * FROM Blodgiver WHERE epost ='" & bruker & "' AND passord = '" & pwd & "'"
+        Dim sql As New MySqlCommand(sporring, db_oppkobling)
+
+        Try
+            db_oppkobling.Open()
+            Dim leser = sql.ExecuteReader()
+            While leser.Read()
+                brukernavn = leser("epost")
+                passord = leser("passord")
+                fornavn = leser("fornavn")
+                etternavn = leser("etternavn")
+                adresse = leser("adresse")
+                blodgiver_id = leser("blodgiver_id")
+                blodtype = leser("blodtype")
+                epost = leser("epost")
+                fodseldato = leser("fodseldato")
+                godkjent_egenerklering = leser("godkjent_egenerklering")
+                karantene = leser("karantene")
+                post_nr = leser("post_nr")
+                post_sted = leser("post_sted")
+                telefon = leser("telefon")
+                personnummer = leser("personnummer")
+            End While
+
+            db_oppkobling.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            db_oppkobling.Close()
+        End Try
+
+
+
+        Dim forrige_blodtapp As String
+
+
+        If brukernavn <> String.Empty Then
+
+
+            innlogget_bruker = brukernavn
+            innlogget_fornavn = fornavn
+            innlogget_etternavn = etternavn
+            innlogget_adresse = adresse
+            innlogget_blodgiver_id = blodgiver_id
+            innlogget_blodtype = blodtype
+            innlogget_epost = epost
+            innlogget_fodseldato = fodseldato
+            innlogget_godkjent_egenerklering = godkjent_egenerklering
+            innlogget_karantene = karantene
+            innlogget_post_nr = post_nr
+            innlogget_post_sted = post_sted
+            innlogget_telefon = telefon
+            innlogget_personnummer = personnummer
+
+
+            Try
+                Dim ny_tabbel = sql_sporring("SELECT * FROM 
+                        Blodgivning inner join Blodgiver AS b
+                        on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+                        order by blodgivning_dato DESC limit 1")
+
+                For Each row In ny_tabbel.Rows
+                    forrige_blodtapp = row("blodgivning_dato")
+                Next
+
+            Catch ex As Exception
+                forrige_blodtapp = "Aldri gitt blod"
+            End Try
+
+            innlogget_forrige_blodtapp = forrige_blodtapp
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+
+
     Public Function loggInnBlodgiver()
         Dim tabell As New DataTable
         tabell = selectBlogiver()
         Dim loggetInn As Boolean = False
         Dim kjønn
+
+        'select * from Blogiver where brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord i stedet for å teste alle.
+
+
+
+
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
@@ -21,7 +147,11 @@ Public Class loggInn
             Dim blodtype = rad("blodtype")
             Dim epost = rad("epost")
             Dim fodseldato = rad("fodseldato")
+<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
             'Dim forrige_blodtapp = rad("forrige_blodtapp")
+=======
+
+>>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
             Dim godkjent_egenerklering = rad("godkjent_egenerklering")
             Dim karantene = rad("karantene")
             Dim post_nr = rad("post_nr")
@@ -29,17 +159,40 @@ Public Class loggInn
             Dim telefon = rad("telefon")
             Dim personnummer = rad("personnummer")
 
+            Dim forrige_blodtapp
 
-            If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
+            'Try
+            '    Dim ny_tabbel = sql_sporring("SELECT * FROM 
+            '    `Blodgivning` inner join Blodgiver AS b
+            '    on b.blodgiver_id = Blodgivning.` blodgiver_id` where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+            '    order by ` blogivning_dato` DESC limit 1")
+
+            '    For Each row In ny_tabbel.Rows
+            '        forrige_blodtapp = row("forrige_blodtapp")
+            '    Next
+
+            'Catch ex As Exception
+            '    forrige_blodtapp = "Aldri gitt blod"
+            'End Try
+
+
+
+
+
+
+
+            If brukernavn <> String.Empty Then
+
 
                 innlogget_bruker = brukernavn
                 innlogget_fornavn = fornavn
                 innlogget_etternavn = etternavn
                 innlogget_adresse = adresse
                 innlogget_blodgiver_id = blodgiver_id
-                'innlogget_blodtype = blodtype
+                innlogget_blodtype = blodtype
                 innlogget_epost = epost
                 innlogget_fodseldato = fodseldato
+<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
                 'innlogget_forrige_blodtapp = forrige_blodtapp
                 innlogget_godkjent_egenerklering = godkjent_egenerklering
                 innlogget_karantene = karantene
@@ -49,6 +202,33 @@ Public Class loggInn
                     innlogget_telefon = telefon
                     innlogget_personnummer = personnummer
                     loggetInn = True
+=======
+                innlogget_godkjent_egenerklering = godkjent_egenerklering
+                innlogget_karantene = karantene
+                innlogget_post_nr = post_nr
+                innlogget_post_sted = post_sted
+                innlogget_telefon = telefon
+                innlogget_personnummer = personnummer
+
+
+                Try
+                    Dim ny_tabbel = sql_sporring("SELECT * FROM 
+                        Blodgivning inner join Blodgiver AS b
+                        on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+                        order by blodgivning_dato DESC limit 1")
+
+                    For Each row In ny_tabbel.Rows
+                        forrige_blodtapp = row("blodgivning_dato")
+                    Next
+
+                Catch ex As Exception
+                    forrige_blodtapp = "Aldri gitt blod"
+                End Try
+
+                innlogget_forrige_blodtapp = forrige_blodtapp
+
+                loggetInn = True
+>>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
 
 
                     kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
@@ -79,6 +259,7 @@ Public Class loggInn
         For Each rad In tabell.Rows
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
+            Dim ansatt_id = rad("ansatt_id")
             'Dim fornavn = rad("fornavn")
             'Dim etternavn = rad("etternavn")
             'Dim adresse = rad("adresse")
@@ -92,6 +273,7 @@ Public Class loggInn
 
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
                 innlogget_bruker = brukernavn
+                innlogget_ansatt_id = ansatt_id
                 'innlogget_fornavn = fornavn
                 'innlogget_etternavn = etternavn
                 'innlogget_adresse = adresse
@@ -122,7 +304,8 @@ Public Class loggInn
         If loggInnAnsatt() Then
             Me.Hide()
             ansattStartSide.Show() '
-        ElseIf loggInnBlodgiver() Then
+        ElseIf fucuck(brukerNavnTextbox.Text, passordTextBox.text) Then
+            'loggInnBlodgiver() Then
             Me.Hide()
             blodgiverMinSide.Show()
         Else

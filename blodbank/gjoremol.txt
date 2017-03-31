@@ -4,6 +4,10 @@
 ##ikke la personer registreres hvis de allerede r i databsen check
 
 
+##leading zero problemmer med personnummer. lagre som varchar og string
+lagre som string varchar
+
+
 For torsdag 16.03:
 ##Legg til legg til bruker funksjonalitet CHECK
 	#skjekk om email allerede er registrert i databsen

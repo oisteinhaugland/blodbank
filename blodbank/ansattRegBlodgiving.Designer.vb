@@ -36,12 +36,13 @@ Partial Class ansattRegBlodgiving
         Me.Label6 = New System.Windows.Forms.Label()
         Me.LagreBlodtapp = New System.Windows.Forms.Button()
         Me.IDtekst = New System.Windows.Forms.TextBox()
-        Me.blodtypeTekst = New System.Windows.Forms.TextBox()
         Me.plasmaTekst = New System.Windows.Forms.TextBox()
         Me.blodlegemeTekst = New System.Windows.Forms.TextBox()
         Me.blodplateTekst = New System.Windows.Forms.TextBox()
         Me.TappeDato = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.blodTypeBox = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -156,13 +157,6 @@ Partial Class ansattRegBlodgiving
         Me.IDtekst.Size = New System.Drawing.Size(100, 20)
         Me.IDtekst.TabIndex = 17
         '
-        'blodtypeTekst
-        '
-        Me.blodtypeTekst.Location = New System.Drawing.Point(195, 131)
-        Me.blodtypeTekst.Name = "blodtypeTekst"
-        Me.blodtypeTekst.Size = New System.Drawing.Size(100, 20)
-        Me.blodtypeTekst.TabIndex = 18
-        '
         'plasmaTekst
         '
         Me.plasmaTekst.Location = New System.Drawing.Point(195, 164)
@@ -200,17 +194,36 @@ Partial Class ansattRegBlodgiving
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "Registrer blodtapp"
         '
+        'blodTypeBox
+        '
+        Me.blodTypeBox.FormattingEnabled = True
+        Me.blodTypeBox.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", ""})
+        Me.blodTypeBox.Location = New System.Drawing.Point(195, 133)
+        Me.blodTypeBox.Name = "blodTypeBox"
+        Me.blodTypeBox.Size = New System.Drawing.Size(100, 21)
+        Me.blodTypeBox.TabIndex = 24
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(485, 157)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'ansattRegBlodgiving
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(654, 459)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.blodTypeBox)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TappeDato)
         Me.Controls.Add(Me.blodplateTekst)
         Me.Controls.Add(Me.blodlegemeTekst)
         Me.Controls.Add(Me.plasmaTekst)
-        Me.Controls.Add(Me.blodtypeTekst)
         Me.Controls.Add(Me.IDtekst)
         Me.Controls.Add(Me.LagreBlodtapp)
         Me.Controls.Add(Me.Label6)
@@ -243,10 +256,11 @@ Partial Class ansattRegBlodgiving
     Friend WithEvents Label6 As Label
     Friend WithEvents LagreBlodtapp As Button
     Friend WithEvents IDtekst As TextBox
-    Friend WithEvents blodtypeTekst As TextBox
     Friend WithEvents plasmaTekst As TextBox
     Friend WithEvents blodlegemeTekst As TextBox
     Friend WithEvents blodplateTekst As TextBox
     Friend WithEvents TappeDato As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents blodTypeBox As ComboBox
+    Friend WithEvents Button1 As Button
 End Class

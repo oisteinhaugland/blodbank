@@ -2,12 +2,6 @@
 
 Public Class registrerBlodgiver
 
-    Private Function konverterDatoFormatTilMySql(dato As String) As String
-        Dim innskrevetDato As Date = dato
-        Return innskrevetDato.ToString("yyyy-MM-dd")
-    End Function
-
-
     Private Sub registrer_bruker()
         Dim errors = 1
         Dim Fornavn As String = fornavnTextbox.Text
@@ -29,11 +23,7 @@ Public Class registrerBlodgiver
             Exit Sub
         End If
 
-
-        Dim epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
-        Dim email_format_match As Match = Regex.Match((epostTextbox.Text), epostFormat)
-
-        If email_format_match.Success Then
+        If formatSkjekk(epostTextbox.Text, epostFormat) Then
             Dim kolonner As New DataTable
             kolonner = sql_sporring("Select fornavn from Blodgiver where epost ='" & epostTextbox.Text & "'")
             Dim count = 0
@@ -52,13 +42,8 @@ Public Class registrerBlodgiver
         End If
 
 
-
-
-        Dim Personnummer As Integer
-        Dim personnummerformat As String = "^(\d){5}$"
-        Dim personnummer_format_match As Match = Regex.Match((personNrTextBox.Text), personnummerformat)
-
-        If personnummer_format_match.Success Then
+        Dim Personnummer As String
+        If formatSkjekk(personNrTextBox.Text, personnummerformat) Then
             Dim kolonner As New DataTable
             kolonner = sql_sporring("Select fornavn from Blodgiver where personnummer =" & personNrTextBox.Text)
             Dim count = 0
@@ -67,7 +52,6 @@ Public Class registrerBlodgiver
             Next
             If count = 0 Then
                 Personnummer = personNrTextBox.Text
-
             Else
                 MsgBox("Du kan ikke registrere deg igjen")
                 Exit Sub
@@ -79,11 +63,7 @@ Public Class registrerBlodgiver
 
 
 
-
-
-        Dim datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
-        Dim fodselsdatoformatMatch As Match = Regex.Match((fodselsdatoTextBox.Text), datoFormat)
-        If fodselsdatoformatMatch.Success Then
+        If formatSkjekk(fodselsdatoTextBox.Text, datoFormat) Then
             Dim Fodselsnummer As String = konverterDatoFormatTilMySql(fodselsdatoTextBox.Text)
         Else
             MsgBox("Fødseslsdato Ikke riktig datoformat. Vennligst fyll inn dd.mm.åååå")
