@@ -116,6 +116,8 @@ Module tilkoblingsdata
     End Function
 >>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
 
+
+
     'Public innlogget_karantene As date
 
     'SELECT * FROM `Blodgivning` inner join Blodgiver AS b on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = VARIABEL order by blogivning_dato DESC LIMIT 1

@@ -13,11 +13,7 @@
         label_innlogget_post_sted.Text = innlogget_post_sted
         label_innlogget_telefon.Text = innlogget_telefon
         label_innlogget_kjønn.Text = innlogget_kjønn
-
-
     End Sub
-
-
 
     Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
@@ -40,7 +36,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         loggInn.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub label_innlogget_forrige_blodtapp_Click(sender As Object, e As EventArgs) Handles label_innlogget_forrige_blodtapp.Click

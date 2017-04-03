@@ -82,7 +82,7 @@ Partial Class blodgiver_timebestilling
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(231, 207)
+        Me.Button1.Location = New System.Drawing.Point(272, 77)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(116, 32)
@@ -92,7 +92,7 @@ Partial Class blodgiver_timebestilling
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(231, 243)
+        Me.Button2.Location = New System.Drawing.Point(272, 113)
         Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(116, 30)
