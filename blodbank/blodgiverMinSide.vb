@@ -43,5 +43,9 @@
         Me.Hide()
     End Sub
 
+    Private Sub label_innlogget_forrige_blodtapp_Click(sender As Object, e As EventArgs) Handles label_innlogget_forrige_blodtapp.Click
+
+    End Sub
+
 
 End Class

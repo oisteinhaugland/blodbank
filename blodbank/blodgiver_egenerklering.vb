@@ -1,6 +1,16 @@
 ﻿Public Class blodgiver_egenerklering
     'Varibel for navigering av tabsider
     Dim sideIndeks = 0
+    Dim karanteneTable As New DataTable
+    Dim dagensDato As Date
+    Dim karantene30 As Boolean
+    Dim karantene180 As Boolean
+    Dim karantene365 As Boolean
+    Dim karantene1 As Boolean
+
+
+
+    Dim karantenelist As List(Of Karantene)
 
 
     'Funksjon som valider og sender egenerklæring til db hvis den er godkjent
@@ -64,14 +74,99 @@
         End If
     End Function
 
+    'Public Sub karantene()
 
+
+    '    'Dim dagensDato As Date
+    '    'dagensDato = DateTime.Today
+    '    dagensDato = konverterDatoFormatTilMySql(dagensDato)
+    '    Dim karanteneDato1 As Date
+    '    karanteneDato1 = konverterDatoFormatTilMySql(dagensDato.AddDays(1))
+    '    Dim karanteneDato2 As Date
+    '    karanteneDato2 = konverterDatoFormatTilMySql(dagensDato.AddDays(30))
+    '    Dim karanteneDato3 As Date
+    '    karanteneDato3 = konverterDatoFormatTilMySql(dagensDato.AddDays(180))
+    '    Dim karanteneDato4 As Date
+    '    karanteneDato4 = konverterDatoFormatTilMySql(dagensDato.AddDays(365))
+
+    '    karanteneTable = sql_sporring("SELECT * FROM Blodgiver WHERE blodgiver_id =" & innlogget_blodgiver_id)
+    '    For Each rad In karanteneTable.Rows
+    '        karantenelist.Add(New Karantene(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
+
+    '    Next
+    '    '1 dag: Tannlege
+    '    If RadioButton18.Checked Then
+    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato1 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
+    '    End If
+
+    '    '30 dagers karantene: Syk, Akupunktur, Flåttbitt
+    '    If RadioButton16.Checked Or RadioButton4.Checked Or RadioButton48.Checked Then
+    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato2 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
+    '    End If
+    '    '180 dagers karantene: Piercing, Narkotika, Prostituerte, Ny seksual partner
+    '    If RadioButton30.Checked Or RadioButton26.Checked Or RadioButton86.Checked Or RadioButton94.Checked Or RadioButton84.Checked Or RadioButton78.Checked Then
+    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato3 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
+    '    End If
+    '    '365 dagers karantene: Engangsbrukt av Narkotika, 
+    '    If RadioButton100.Checked Then
+    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato4)
+    '    End If
+
+    'End Sub
 
     Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
+        karantenelist = New List(Of Karantene)
+
+        'Lager datovariabler som samsvarer med SQL
+        Dim dagensDato As Date
+        konverterDatoFormatKarantene(Date.Today)
+        dagensDato = Date.Today
+
+
+        'Karantene lengde
+        If RadioButton100.Checked Then
+            karantene365 = True
+        End If
+        If RadioButton16.Checked Or RadioButton4.Checked Or RadioButton48.Checked Then
+            karantene30 = True
+        End If
+
+        If RadioButton30.Checked Or RadioButton26.Checked Or RadioButton86.Checked Or RadioButton94.Checked Or RadioButton84.Checked Or RadioButton78.Checked Then
+            karantene180 = True
+
+        End If
+
+        If RadioButton18.Checked Then
+            karantene1 = True
+        End If
+
+        karanteneTable = sql_sporring("SELECT * FROM Blodgiver")
+        For Each rad In karanteneTable.Rows
+            karantenelist.Add(New Karantene(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
+
+            If karantene1 = True Then
+                sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+            End If
+            If karantene30 = True Then
+                sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(30)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+            End If
+            If karantene180 = True Then
+                sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(180)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+            End If
+            If karantene365 = True Then
+                sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(365)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+            End If
+
+        Next
+
+
         If validerEgenerkleringOgSendTilDB() Then
             MsgBox("Takk for din registrering")
         Else
             MsgBox("Egenerklæringen er ikke fylt ut.")
         End If
+
+
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
@@ -158,6 +253,7 @@
 
     End Sub
 
-
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        sql_sporring("UPDATE Blodgiver SET godkjent_egenerklering = 0 WHERE blodgiver_id =" & innlogget_blodgiver_id)
+    End Sub
 End Class

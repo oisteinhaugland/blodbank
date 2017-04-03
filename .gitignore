@@ -286,3 +286,6 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+.vs/blodbank/v14/.suo
+blodbank/obj/Debug/blodbank.vbproj.FileListAbsolute.txt
+blodbank/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
