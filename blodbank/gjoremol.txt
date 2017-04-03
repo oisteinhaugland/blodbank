@@ -1,4 +1,18 @@
 ﻿
+fiks logg inn, det vises tydeligvis ikke riktig person etter logg ut lenger.
+fiks mappestrukturen i prosjektet
+
+
+
+
+1. lagre enhetene i søkeresultatet i en klasse
+2. for hver enhet i klassen 
+	a. oppdater lageret til ikke på lager
+	b. oppdater bestilling som behandlet
+		a. hvis hele bestillingen ble godkjent.
+		b. update bestilling mendge til gjenstående mengde.
+
+
 #
 ##legg til personnummer check
 ##ikke la personer registreres hvis de allerede r i databsen check

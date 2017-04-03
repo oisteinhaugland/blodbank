@@ -5,7 +5,8 @@ Module tilkoblingsdata
     Private team_passord As String = "M2oHUQ17"
     Private team_brukernavn As String = "g_oops_05"
     Private tjener_navn As String = "mysql.stud.iie.ntnu.no"
-    Public db_oppkobling As New MySqlConnection("Server=" & tjener_navn & ";" &
+    Public db_oppkobling As New MySqlConnection(
+                            "Server=" & tjener_navn & ";" &
                             "Database=" & team_brukernavn & ";" &
                             "Uid=" & team_brukernavn & ";" &
                             "Pwd=" & team_passord & ";" &
@@ -34,13 +35,12 @@ Module tilkoblingsdata
     Public innlogget_telefon As Integer
     Public innlogget_personnummer As Integer
     Public innlogget_kjønn As String
-
     Public innlogget_fodseldato As String
     Public innlogget_forrige_blodtapp As String
     Public innlogget_karantene As Date
-
     Public innlogget_ansatt_id As Integer
 
+    'Regular Expressions for validering
     Public datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
     Public personnummerformat As String = "^(\d){5}$"
     Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
@@ -48,6 +48,7 @@ Module tilkoblingsdata
     Public blodgiverIdFormat As String = "^(\d){0,4}$"
     Public blodtypeFormat As String = "^(\){0,4}$"
 
+    'lagringsvarabler for ulike egenskaper
     Public plasmaHoldbarhet
     Public blodlegemerHoldbarhet
     Public blodplaterHoldbarhet
