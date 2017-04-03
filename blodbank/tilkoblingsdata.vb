@@ -16,10 +16,10 @@ Module tilkoblingsdata
     Public innlogget_blodgiver_id As Integer
     Public innlogget_blodtype As String
     Public innlogget_epost As String
-    Public innlogget_fodseldato As Date '
+    Public innlogget_fodseldato As String
     Public innlogget_forrige_blodtapp As Date
     Public innlogget_godkjent_egenerklering As Boolean
-    Public innlogget_karantene As Integer
+    Public innlogget_karantene As Date
     Public innlogget_passord As String
     Public innlogget_post_nr As Integer
     Public innlogget_post_sted As String
@@ -34,7 +34,8 @@ Module tilkoblingsdata
         db_tilkobling_str = "Server=" & tjener_navn & ";" &
                             "Database=" & team_brukernavn & ";" &
                             "Uid=" & team_brukernavn & ";" &
-                            "Pwd=" & team_passord & ";"
+                            "Pwd=" & team_passord & ";" &
+                            "Convert Zero Datetime=True"
         db_oppkobling.ConnectionString = db_tilkobling_str
 
         Dim data_tabell As New DataTable
@@ -68,6 +69,11 @@ Module tilkoblingsdata
     Public Function konverterDatoFormatTilMySql(dato As String) As String
         Dim innskrevetDato As Date = dato
         Return innskrevetDato.ToString("yyyy-MM-dd")
+    End Function
+
+    Public Function konverterDatoFormatKarantene(dato As String) As String
+        Dim karanteneDato As Date = dato
+        Return karanteneDato.ToString("yyyy-MM-dd")
     End Function
 
 

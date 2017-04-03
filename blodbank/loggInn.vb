@@ -21,7 +21,7 @@ Public Class loggInn
             Dim blodtype = rad("blodtype")
             Dim epost = rad("epost")
             Dim fodseldato = rad("fodseldato")
-            Dim forrige_blodtapp = rad("forrige_blodtapp")
+            'Dim forrige_blodtapp = rad("forrige_blodtapp")
             Dim godkjent_egenerklering = rad("godkjent_egenerklering")
             Dim karantene = rad("karantene")
             Dim post_nr = rad("post_nr")
@@ -41,17 +41,18 @@ Public Class loggInn
                 innlogget_epost = epost
                 innlogget_fodseldato = fodseldato
                 'innlogget_forrige_blodtapp = forrige_blodtapp
-                'innlogget_godkjent_egenerklering = godkjent_egenerklering
-                'innlogget_karantene = karantene
+                innlogget_godkjent_egenerklering = godkjent_egenerklering
+                innlogget_karantene = karantene
+
                 innlogget_post_nr = post_nr
-                innlogget_post_sted = post_sted
-                innlogget_telefon = telefon
-                innlogget_personnummer = personnummer
-                loggetInn = True
+                    innlogget_post_sted = post_sted
+                    innlogget_telefon = telefon
+                    innlogget_personnummer = personnummer
+                    loggetInn = True
 
 
-                kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
-            End If
+                    kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+                End If
         Next
 
 

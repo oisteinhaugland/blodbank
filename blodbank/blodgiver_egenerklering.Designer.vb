@@ -289,6 +289,7 @@ Partial Class blodgiver_egenerklering
         Me.RadioButton121 = New System.Windows.Forms.RadioButton()
         Me.RadioButton122 = New System.Windows.Forms.RadioButton()
         Me.Label63 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.egenerkleringTabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -3132,6 +3133,7 @@ Partial Class blodgiver_egenerklering
         '
         'TabPage9
         '
+        Me.TabPage9.Controls.Add(Me.Button3)
         Me.TabPage9.Controls.Add(Me.Button4)
         Me.TabPage9.Controls.Add(Me.sendEgenerklering)
         Me.TabPage9.Controls.Add(Me.CheckBox1)
@@ -3167,7 +3169,7 @@ Partial Class blodgiver_egenerklering
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(10, 566)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(369, 23)
+        Me.CheckBox1.Size = New System.Drawing.Size(376, 23)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Jeg bekrefter herved at all gitt informasjon er korrekt"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -3695,6 +3697,15 @@ Partial Class blodgiver_egenerklering
         Me.Label63.TabIndex = 0
         Me.Label63.Text = "- Jeg samtykker i at mitt plasma føres ut av Norge for legemiddelproduksjon"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(839, 580)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(175, 45)
+        Me.Button3.TabIndex = 66
+        Me.Button3.Text = "Reset erklæring i DB"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'blodgiver_egenerklering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -4122,4 +4133,5 @@ Partial Class blodgiver_egenerklering
     Friend WithEvents RadioButton118 As RadioButton
     Friend WithEvents Label51 As Label
     Friend WithEvents GroupBox8 As GroupBox
+    Friend WithEvents Button3 As Button
 End Class

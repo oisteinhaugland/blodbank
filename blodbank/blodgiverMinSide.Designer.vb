@@ -51,6 +51,11 @@ Partial Class blodgiverMinSide
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.label_innlogget_kjønn = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,17 +91,18 @@ Partial Class blodgiverMinSide
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 44)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label1.Location = New System.Drawing.Point(26, 56)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(85, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Min side"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(412, 69)
+        Me.Label2.Location = New System.Drawing.Point(403, 185)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(266, 13)
@@ -105,7 +111,7 @@ Partial Class blodgiverMinSide
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(403, 356)
+        Me.Button1.Location = New System.Drawing.Point(394, 302)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(304, 115)
         Me.Button1.TabIndex = 3
@@ -115,7 +121,7 @@ Partial Class blodgiverMinSide
         'navnLabel
         '
         Me.navnLabel.AutoSize = True
-        Me.navnLabel.Location = New System.Drawing.Point(37, 122)
+        Me.navnLabel.Location = New System.Drawing.Point(29, 121)
         Me.navnLabel.Name = "navnLabel"
         Me.navnLabel.Size = New System.Drawing.Size(52, 13)
         Me.navnLabel.TabIndex = 4
@@ -124,7 +130,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_fornavn
         '
         Me.label_innlogget_fornavn.AutoSize = True
-        Me.label_innlogget_fornavn.Location = New System.Drawing.Point(116, 128)
+        Me.label_innlogget_fornavn.Location = New System.Drawing.Point(107, 123)
         Me.label_innlogget_fornavn.Name = "label_innlogget_fornavn"
         Me.label_innlogget_fornavn.Size = New System.Drawing.Size(30, 13)
         Me.label_innlogget_fornavn.TabIndex = 5
@@ -133,7 +139,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_etternavn
         '
         Me.label_innlogget_etternavn.AutoSize = True
-        Me.label_innlogget_etternavn.Location = New System.Drawing.Point(116, 143)
+        Me.label_innlogget_etternavn.Location = New System.Drawing.Point(107, 136)
         Me.label_innlogget_etternavn.Name = "label_innlogget_etternavn"
         Me.label_innlogget_etternavn.Size = New System.Drawing.Size(36, 13)
         Me.label_innlogget_etternavn.TabIndex = 6
@@ -142,7 +148,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_adresse
         '
         Me.label_innlogget_adresse.AutoSize = True
-        Me.label_innlogget_adresse.Location = New System.Drawing.Point(116, 158)
+        Me.label_innlogget_adresse.Location = New System.Drawing.Point(107, 153)
         Me.label_innlogget_adresse.Name = "label_innlogget_adresse"
         Me.label_innlogget_adresse.Size = New System.Drawing.Size(36, 13)
         Me.label_innlogget_adresse.TabIndex = 7
@@ -151,7 +157,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_blodtype
         '
         Me.label_innlogget_blodtype.AutoSize = True
-        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(116, 173)
+        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(107, 170)
         Me.label_innlogget_blodtype.Name = "label_innlogget_blodtype"
         Me.label_innlogget_blodtype.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_blodtype.TabIndex = 8
@@ -160,7 +166,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_fodselsdato
         '
         Me.label_innlogget_fodselsdato.AutoSize = True
-        Me.label_innlogget_fodselsdato.Location = New System.Drawing.Point(116, 189)
+        Me.label_innlogget_fodselsdato.Location = New System.Drawing.Point(107, 187)
         Me.label_innlogget_fodselsdato.Name = "label_innlogget_fodselsdato"
         Me.label_innlogget_fodselsdato.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_fodselsdato.TabIndex = 9
@@ -169,7 +175,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_forrige_blodtapp
         '
         Me.label_innlogget_forrige_blodtapp.AutoSize = True
-        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(116, 205)
+        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(107, 204)
         Me.label_innlogget_forrige_blodtapp.Name = "label_innlogget_forrige_blodtapp"
         Me.label_innlogget_forrige_blodtapp.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_forrige_blodtapp.TabIndex = 10
@@ -178,7 +184,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_karantene
         '
         Me.label_innlogget_karantene.AutoSize = True
-        Me.label_innlogget_karantene.Location = New System.Drawing.Point(116, 222)
+        Me.label_innlogget_karantene.Location = New System.Drawing.Point(107, 221)
         Me.label_innlogget_karantene.Name = "label_innlogget_karantene"
         Me.label_innlogget_karantene.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_karantene.TabIndex = 11
@@ -187,7 +193,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_post_nr
         '
         Me.label_innlogget_post_nr.AutoSize = True
-        Me.label_innlogget_post_nr.Location = New System.Drawing.Point(116, 239)
+        Me.label_innlogget_post_nr.Location = New System.Drawing.Point(107, 238)
         Me.label_innlogget_post_nr.Name = "label_innlogget_post_nr"
         Me.label_innlogget_post_nr.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_post_nr.TabIndex = 12
@@ -196,7 +202,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_post_sted
         '
         Me.label_innlogget_post_sted.AutoSize = True
-        Me.label_innlogget_post_sted.Location = New System.Drawing.Point(116, 256)
+        Me.label_innlogget_post_sted.Location = New System.Drawing.Point(107, 255)
         Me.label_innlogget_post_sted.Name = "label_innlogget_post_sted"
         Me.label_innlogget_post_sted.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_post_sted.TabIndex = 13
@@ -205,7 +211,7 @@ Partial Class blodgiverMinSide
         'label_innlogget_telefon
         '
         Me.label_innlogget_telefon.AutoSize = True
-        Me.label_innlogget_telefon.Location = New System.Drawing.Point(116, 273)
+        Me.label_innlogget_telefon.Location = New System.Drawing.Point(107, 272)
         Me.label_innlogget_telefon.Name = "label_innlogget_telefon"
         Me.label_innlogget_telefon.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_telefon.TabIndex = 14
@@ -214,7 +220,7 @@ Partial Class blodgiverMinSide
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(37, 256)
+        Me.Label3.Location = New System.Drawing.Point(28, 255)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(51, 13)
         Me.Label3.TabIndex = 23
@@ -223,7 +229,7 @@ Partial Class blodgiverMinSide
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(37, 239)
+        Me.Label4.Location = New System.Drawing.Point(28, 238)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 13)
         Me.Label4.TabIndex = 22
@@ -232,7 +238,7 @@ Partial Class blodgiverMinSide
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(37, 222)
+        Me.Label5.Location = New System.Drawing.Point(28, 221)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
         Me.Label5.TabIndex = 21
@@ -241,16 +247,16 @@ Partial Class blodgiverMinSide
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(-2, 205)
+        Me.Label6.Location = New System.Drawing.Point(29, 204)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 13)
+        Me.Label6.Size = New System.Drawing.Size(68, 13)
         Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Tid siden sist blodtapp"
+        Me.Label6.Text = "Sist blodtapp"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(37, 188)
+        Me.Label7.Location = New System.Drawing.Point(28, 187)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 13)
         Me.Label7.TabIndex = 19
@@ -259,7 +265,7 @@ Partial Class blodgiverMinSide
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(37, 171)
+        Me.Label8.Location = New System.Drawing.Point(29, 170)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 13)
         Me.Label8.TabIndex = 18
@@ -268,7 +274,7 @@ Partial Class blodgiverMinSide
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(37, 154)
+        Me.Label9.Location = New System.Drawing.Point(29, 153)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 13)
         Me.Label9.TabIndex = 17
@@ -277,7 +283,7 @@ Partial Class blodgiverMinSide
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(37, 137)
+        Me.Label11.Location = New System.Drawing.Point(29, 136)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(53, 13)
         Me.Label11.TabIndex = 16
@@ -286,7 +292,7 @@ Partial Class blodgiverMinSide
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(42, 273)
+        Me.Label13.Location = New System.Drawing.Point(28, 272)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(43, 13)
         Me.Label13.TabIndex = 24
@@ -295,7 +301,7 @@ Partial Class blodgiverMinSide
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(38, 290)
+        Me.Label10.Location = New System.Drawing.Point(29, 289)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(34, 13)
         Me.Label10.TabIndex = 25
@@ -304,17 +310,70 @@ Partial Class blodgiverMinSide
         'label_innlogget_kjønn
         '
         Me.label_innlogget_kjønn.AutoSize = True
-        Me.label_innlogget_kjønn.Location = New System.Drawing.Point(119, 290)
+        Me.label_innlogget_kjønn.Location = New System.Drawing.Point(107, 289)
         Me.label_innlogget_kjønn.Name = "label_innlogget_kjønn"
         Me.label_innlogget_kjønn.Size = New System.Drawing.Size(24, 13)
         Me.label_innlogget_kjønn.TabIndex = 26
         Me.label_innlogget_kjønn.Text = "test"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
+        Me.Label12.Location = New System.Drawing.Point(401, 56)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(205, 25)
+        Me.Label12.TabIndex = 27
+        Me.Label12.Text = "Takk for at du gir blod!"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(403, 121)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(102, 13)
+        Me.Label14.TabIndex = 28
+        Me.Label14.Text = "Antall blodgivninger:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label15.Location = New System.Drawing.Point(403, 98)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(64, 17)
+        Me.Label15.TabIndex = 29
+        Me.Label15.Text = "Statistikk"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(403, 134)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(27, 13)
+        Me.Label16.TabIndex = 30
+        Me.Label16.Text = "osv."
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label17.Location = New System.Drawing.Point(29, 98)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(134, 17)
+        Me.Label17.TabIndex = 31
+        Me.Label17.Text = "Personopplysninger"
         '
         'blodgiverMinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 483)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.label_innlogget_kjønn)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label13)
@@ -380,4 +439,9 @@ Partial Class blodgiverMinSide
     Friend WithEvents Label13 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents label_innlogget_kjønn As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
 End Class
