@@ -130,6 +130,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Karantene.vb" />
+    <Compile Include="lager.vb" />
     <Compile Include="loggInn.vb">
       <SubType>Form</SubType>
     </Compile>
