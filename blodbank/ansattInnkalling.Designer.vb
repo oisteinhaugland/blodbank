@@ -22,7 +22,6 @@ Partial Class ansattInnkalling
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HjemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,9 +37,7 @@ Partial Class ansattInnkalling
         Me.Label2 = New System.Windows.Forms.Label()
         Me.blodInfoKnapp = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -161,23 +158,11 @@ Partial Class ansattInnkalling
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Blodgivere med godkjent egenerklering"
         '
-        'DataGridView1
-        '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(446, 239)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(454, 160)
-        Me.DataGridView1.TabIndex = 18
-        '
         'ansattInnkalling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(973, 554)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.blodInfoKnapp)
         Me.Controls.Add(Me.Label2)
@@ -193,7 +178,6 @@ Partial Class ansattInnkalling
         Me.Text = "ansattInnkalling"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -214,5 +198,4 @@ Partial Class ansattInnkalling
     Friend WithEvents blodInfoKnapp As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents RegisrerBlodgivingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataGridView1 As DataGridView
 End Class
