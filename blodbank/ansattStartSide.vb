@@ -31,4 +31,11 @@
         Me.Hide()
         ansattRegBlodgiving.Show()
     End Sub
+
+    Private Sub innkallingKnapp_Click(sender As Object, e As EventArgs) Handles innkallingKnapp.Click
+        Me.Hide()
+        ansattInnkalling.Show()
+
+
+    End Sub
 End Class

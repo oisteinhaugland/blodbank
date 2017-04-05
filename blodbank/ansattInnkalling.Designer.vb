@@ -37,6 +37,7 @@ Partial Class ansattInnkalling
         Me.Label2 = New System.Windows.Forms.Label()
         Me.blodInfoKnapp = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.valLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,7 +88,7 @@ Partial Class ansattInnkalling
         Me.HasteInnkallingKnapp.Name = "HasteInnkallingKnapp"
         Me.HasteInnkallingKnapp.Size = New System.Drawing.Size(171, 59)
         Me.HasteInnkallingKnapp.TabIndex = 10
-        Me.HasteInnkallingKnapp.Text = "Send hasteinnkalling"
+        Me.HasteInnkallingKnapp.Text = "Hasteinnkalling"
         Me.HasteInnkallingKnapp.UseVisualStyleBackColor = True
         '
         'NormalInnkallingKnapp
@@ -96,7 +97,7 @@ Partial Class ansattInnkalling
         Me.NormalInnkallingKnapp.Name = "NormalInnkallingKnapp"
         Me.NormalInnkallingKnapp.Size = New System.Drawing.Size(171, 59)
         Me.NormalInnkallingKnapp.TabIndex = 9
-        Me.NormalInnkallingKnapp.Text = "Send normal inkkaling (e-post)"
+        Me.NormalInnkallingKnapp.Text = "Send normal innkaling (e-post)"
         Me.NormalInnkallingKnapp.UseVisualStyleBackColor = True
         '
         'Label1
@@ -146,7 +147,7 @@ Partial Class ansattInnkalling
         Me.blodInfoKnapp.Name = "blodInfoKnapp"
         Me.blodInfoKnapp.Size = New System.Drawing.Size(229, 81)
         Me.blodInfoKnapp.TabIndex = 16
-        Me.blodInfoKnapp.Text = "Hent blogiverinformajson"
+        Me.blodInfoKnapp.Text = "Hent blodgiverinformajson"
         Me.blodInfoKnapp.UseVisualStyleBackColor = True
         '
         'Label3
@@ -158,11 +159,24 @@ Partial Class ansattInnkalling
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Blodgivere med godkjent egenerklering"
         '
+        'valLabel
+        '
+        Me.valLabel.AutoSize = True
+        Me.valLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.valLabel.ForeColor = System.Drawing.Color.Red
+        Me.valLabel.Location = New System.Drawing.Point(207, 309)
+        Me.valLabel.Name = "valLabel"
+        Me.valLabel.Size = New System.Drawing.Size(13, 17)
+        Me.valLabel.TabIndex = 18
+        Me.valLabel.Text = "*"
+        Me.valLabel.Visible = False
+        '
         'ansattInnkalling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(696, 434)
+        Me.Controls.Add(Me.valLabel)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.blodInfoKnapp)
         Me.Controls.Add(Me.Label2)
@@ -198,4 +212,5 @@ Partial Class ansattInnkalling
     Friend WithEvents blodInfoKnapp As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents RegisrerBlodgivingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents valLabel As Label
 End Class

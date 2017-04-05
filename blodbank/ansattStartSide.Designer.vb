@@ -24,8 +24,7 @@ Partial Class ansattStartSide
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.innkallingKnapp = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -33,8 +32,9 @@ Partial Class ansattStartSide
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ProduktoversiktKnapp = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,23 +56,14 @@ Partial Class ansattStartSide
         Me.Button1.Text = "Logg ut"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'innkallingKnapp
         '
-        Me.Button2.Location = New System.Drawing.Point(121, 170)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(171, 59)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Hasteinnkalling"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(313, 170)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(171, 59)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Normal Innkalling"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.innkallingKnapp.Location = New System.Drawing.Point(121, 170)
+        Me.innkallingKnapp.Name = "innkallingKnapp"
+        Me.innkallingKnapp.Size = New System.Drawing.Size(171, 59)
+        Me.innkallingKnapp.TabIndex = 3
+        Me.innkallingKnapp.Text = "Innkalling"
+        Me.innkallingKnapp.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -127,6 +118,12 @@ Partial Class ansattStartSide
         Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(67, 22)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
+        'RegistrerBlodgivingToolStripMenuItem
+        '
+        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -137,22 +134,25 @@ Partial Class ansattStartSide
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Hjem"
         '
-        'RegistrerBlodgivingToolStripMenuItem
+        'ProduktoversiktKnapp
         '
-        Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
-        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
+        Me.ProduktoversiktKnapp.Location = New System.Drawing.Point(313, 170)
+        Me.ProduktoversiktKnapp.Name = "ProduktoversiktKnapp"
+        Me.ProduktoversiktKnapp.Size = New System.Drawing.Size(171, 59)
+        Me.ProduktoversiktKnapp.TabIndex = 8
+        Me.ProduktoversiktKnapp.Text = "Produktoversikt"
+        Me.ProduktoversiktKnapp.UseVisualStyleBackColor = True
         '
         'ansattStartSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(780, 482)
+        Me.Controls.Add(Me.ProduktoversiktKnapp)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.innkallingKnapp)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -168,8 +168,7 @@ Partial Class ansattStartSide
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents innkallingKnapp As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
@@ -179,4 +178,5 @@ Partial Class ansattStartSide
     Friend WithEvents BestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label2 As Label
     Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProduktoversiktKnapp As Button
 End Class

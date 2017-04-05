@@ -74,45 +74,6 @@
         End If
     End Function
 
-    'Public Sub karantene()
-
-
-    '    'Dim dagensDato As Date
-    '    'dagensDato = DateTime.Today
-    '    dagensDato = konverterDatoFormatTilMySql(dagensDato)
-    '    Dim karanteneDato1 As Date
-    '    karanteneDato1 = konverterDatoFormatTilMySql(dagensDato.AddDays(1))
-    '    Dim karanteneDato2 As Date
-    '    karanteneDato2 = konverterDatoFormatTilMySql(dagensDato.AddDays(30))
-    '    Dim karanteneDato3 As Date
-    '    karanteneDato3 = konverterDatoFormatTilMySql(dagensDato.AddDays(180))
-    '    Dim karanteneDato4 As Date
-    '    karanteneDato4 = konverterDatoFormatTilMySql(dagensDato.AddDays(365))
-
-    '    karanteneTable = sql_sporring("SELECT * FROM Blodgiver WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    For Each rad In karanteneTable.Rows
-    '        karantenelist.Add(New Karantene(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
-
-    '    Next
-    '    '1 dag: Tannlege
-    '    If RadioButton18.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato1 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-
-    '    '30 dagers karantene: Syk, Akupunktur, Flåttbitt
-    '    If RadioButton16.Checked Or RadioButton4.Checked Or RadioButton48.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato2 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-    '    '180 dagers karantene: Piercing, Narkotika, Prostituerte, Ny seksual partner
-    '    If RadioButton30.Checked Or RadioButton26.Checked Or RadioButton86.Checked Or RadioButton94.Checked Or RadioButton84.Checked Or RadioButton78.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato3 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-    '    '365 dagers karantene: Engangsbrukt av Narkotika, 
-    '    If RadioButton100.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato4)
-    '    End If
-
-    'End Sub
 
     Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
         karantenelist = New List(Of Karantene)
