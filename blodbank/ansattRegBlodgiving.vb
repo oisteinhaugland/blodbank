@@ -8,8 +8,9 @@ Public Class ansattRegBlodgiving
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(247, 247, 247)
-        blodTypeBox.SelectedIndex = 0
-        blodTypeBox.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
+        ComboBox1.SelectedIndex = 0
+
     End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
@@ -48,26 +49,13 @@ Public Class ansattRegBlodgiving
         Dim feilmelding1 = "Registrer feil mengde. Feltet kan ikke stå tomt og kan ikke være større enn 9."
         Dim feilmelding2 = "Datoformatet er ikke riktig. Vennligst følg formatet dd.mm.åååå"
         If formatSkjekk(IDtekst.Text, blodgiverIdFormat) Then blodgiverID = IDtekst.Text
-        blodtype = blodTypeBox.SelectedIndex
+        Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & IDtekst.Text)
         Dim blodtype_id
-        Select Case blodtype
-            Case 0
-                blodtype_id = 1
-            Case 1
-                blodtype_id = 2
-            Case 2
-                blodtype_id = 3
-            Case 3
-                blodtype_id = 4
-            Case 4
-                blodtype_id = 5
-            Case 5
-                blodtype_id = 6
-            Case 6
-                blodtype_id = 7
-            Case 7
-                blodtype_id = 8
-        End Select
+        For Each row In blodgiver.Rows
+            blodtype_id = row("blodtype_id")
+        Next
+
+
 
 
         If formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
@@ -75,7 +63,13 @@ Public Class ansattRegBlodgiving
         If formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
 
+
+
+
         If validert And validertDato Then
+
+            Dim brukere = sql_sporring("SELECT blodgiver_id FROM Blodgiver ")
+
             Try
                 sql_sporring("INSERT INTO Blodgivning(blodgiver_id, blodlegemer_mengde, blodplater_mengde, plasma_mengde, blodgivning_dato, blodtype_id, ansatt_id)
         values ('" & blodgiverID & "',
@@ -152,11 +146,47 @@ Public Class ansattRegBlodgiving
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        plasmaHoldbarhet = DateAdd(DateInterval.Day, 365, Today.Date)
-        blodplaterHoldbarhet = DateAdd(DateInterval.Day, 7, Today.Date)
-        blodlegemerHoldbarhet = DateAdd(DateInterval.Day, 25, Today.Date)
+        'plasmaHoldbarhet = DateAdd(DateInterval.Day, 365, Today.Date)
+        'blodplaterHoldbarhet = DateAdd(DateInterval.Day, 7, Today.Date)
+        'blodlegemerHoldbarhet = DateAdd(DateInterval.Day, 25, Today.Date)
 
-        MsgBox(konverterDatoFormatTilMySql(plasmaHoldbarhet))
+        'MsgBox(konverterDatoFormatTilMySql(plasmaHoldbarhet))
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim id = TextBox1.Text
+        Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & id & " and blodtype_id = NULL")
+
+        Dim blodtype = ComboBox1.SelectedIndex
+        Dim b_id
+        Select Case blodtype
+            Case 0
+                b_id = 0
+            Case 1
+                b_id = 1
+            Case 2
+                b_id = 2
+            Case 3
+                b_id = 3
+            Case 4
+                b_id = 4
+            Case 5
+                b_id = 5
+            Case 6
+                b_id = 6
+            Case 7
+                b_id = 7
+        End Select
+
+        If blodgiver.Rows.Count <> 0 Then
+            sql_sporring("UPDATE Blodgiver SET blodtype_id = " & b_id & " where blodgiver_id = " & id)
+        Else
+            MsgBox("blogiver har allerede registrert blodtype")
+        End If
+
+
+
+
+
+    End Sub
 End Class

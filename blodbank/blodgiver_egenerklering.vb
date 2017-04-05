@@ -10,7 +10,7 @@
 
 
 
-    Dim karantenelist As List(Of Karantene)
+    Dim karantenelist As List(Of Blodgiver)
 
 
     'Funksjon som valider og sender egenerklæring til db hvis den er godkjent
@@ -115,7 +115,7 @@
     'End Sub
 
     Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
-        karantenelist = New List(Of Karantene)
+        karantenelist = New List(Of Blodgiver)
 
         'Lager datovariabler som samsvarer med SQL
         Dim dagensDato As Date
@@ -142,7 +142,7 @@
 
         karanteneTable = sql_sporring("SELECT * FROM Blodgiver")
         For Each rad In karanteneTable.Rows
-            karantenelist.Add(New Karantene(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
+            karantenelist.Add(New Blodgiver(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
 
             If karantene1 = True Then
                 sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)

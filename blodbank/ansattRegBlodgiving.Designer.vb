@@ -29,7 +29,6 @@ Partial Class ansattRegBlodgiving
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -41,8 +40,11 @@ Partial Class ansattRegBlodgiving
         Me.blodplateTekst = New System.Windows.Forms.TextBox()
         Me.TappeDato = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.blodTypeBox = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,19 +98,10 @@ Partial Class ansattRegBlodgiving
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Blodgiver ID:"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(43, 136)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Blodtype:"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(43, 168)
+        Me.Label3.Location = New System.Drawing.Point(43, 134)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(85, 13)
         Me.Label3.TabIndex = 12
@@ -117,7 +110,7 @@ Partial Class ansattRegBlodgiving
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(43, 202)
+        Me.Label4.Location = New System.Drawing.Point(43, 168)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 13)
         Me.Label4.TabIndex = 13
@@ -126,7 +119,7 @@ Partial Class ansattRegBlodgiving
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(43, 233)
+        Me.Label5.Location = New System.Drawing.Point(43, 199)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(98, 13)
         Me.Label5.TabIndex = 14
@@ -135,7 +128,7 @@ Partial Class ansattRegBlodgiving
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(43, 268)
+        Me.Label6.Location = New System.Drawing.Point(43, 234)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(92, 13)
         Me.Label6.TabIndex = 15
@@ -143,9 +136,9 @@ Partial Class ansattRegBlodgiving
         '
         'LagreBlodtapp
         '
-        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 318)
+        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 275)
         Me.LagreBlodtapp.Name = "LagreBlodtapp"
-        Me.LagreBlodtapp.Size = New System.Drawing.Size(239, 69)
+        Me.LagreBlodtapp.Size = New System.Drawing.Size(249, 69)
         Me.LagreBlodtapp.TabIndex = 16
         Me.LagreBlodtapp.Text = "Lagre informasjon"
         Me.LagreBlodtapp.UseVisualStyleBackColor = True
@@ -159,28 +152,28 @@ Partial Class ansattRegBlodgiving
         '
         'plasmaTekst
         '
-        Me.plasmaTekst.Location = New System.Drawing.Point(195, 164)
+        Me.plasmaTekst.Location = New System.Drawing.Point(195, 130)
         Me.plasmaTekst.Name = "plasmaTekst"
         Me.plasmaTekst.Size = New System.Drawing.Size(100, 20)
         Me.plasmaTekst.TabIndex = 19
         '
         'blodlegemeTekst
         '
-        Me.blodlegemeTekst.Location = New System.Drawing.Point(195, 199)
+        Me.blodlegemeTekst.Location = New System.Drawing.Point(195, 165)
         Me.blodlegemeTekst.Name = "blodlegemeTekst"
         Me.blodlegemeTekst.Size = New System.Drawing.Size(100, 20)
         Me.blodlegemeTekst.TabIndex = 20
         '
         'blodplateTekst
         '
-        Me.blodplateTekst.Location = New System.Drawing.Point(195, 230)
+        Me.blodplateTekst.Location = New System.Drawing.Point(195, 196)
         Me.blodplateTekst.Name = "blodplateTekst"
         Me.blodplateTekst.Size = New System.Drawing.Size(100, 20)
         Me.blodplateTekst.TabIndex = 21
         '
         'TappeDato
         '
-        Me.TappeDato.Location = New System.Drawing.Point(195, 261)
+        Me.TappeDato.Location = New System.Drawing.Point(195, 227)
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(100, 20)
         Me.TappeDato.TabIndex = 22
@@ -194,31 +187,59 @@ Partial Class ansattRegBlodgiving
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "Registrer blodtapp"
         '
-        'blodTypeBox
-        '
-        Me.blodTypeBox.FormattingEnabled = True
-        Me.blodTypeBox.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", ""})
-        Me.blodTypeBox.Location = New System.Drawing.Point(195, 133)
-        Me.blodTypeBox.Name = "blodTypeBox"
-        Me.blodTypeBox.Size = New System.Drawing.Size(100, 21)
-        Me.blodTypeBox.TabIndex = 24
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(485, 157)
+        Me.Button1.Location = New System.Drawing.Point(443, 321)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 25
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
+        Me.ComboBox1.Location = New System.Drawing.Point(397, 160)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 26
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(394, 94)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(144, 13)
+        Me.Label2.TabIndex = 27
+        Me.Label2.Text = "Registrer Blodtype til Blogiver"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(397, 126)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(121, 20)
+        Me.TextBox1.TabIndex = 28
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(397, 199)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(121, 23)
+        Me.Button2.TabIndex = 29
+        Me.Button2.Text = "Registrer"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ansattRegBlodgiving
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(903, 462)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.blodTypeBox)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TappeDato)
         Me.Controls.Add(Me.blodplateTekst)
@@ -230,7 +251,6 @@ Partial Class ansattRegBlodgiving
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "ansattRegBlodgiving"
@@ -249,7 +269,6 @@ Partial Class ansattRegBlodgiving
     Friend WithEvents BestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
@@ -261,6 +280,9 @@ Partial Class ansattRegBlodgiving
     Friend WithEvents blodplateTekst As TextBox
     Friend WithEvents TappeDato As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents blodTypeBox As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
 End Class

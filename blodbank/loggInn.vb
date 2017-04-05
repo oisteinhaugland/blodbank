@@ -18,7 +18,7 @@ Public Class loggInn
             Dim etternavn = rad("etternavn")
             Dim adresse = rad("adresse")
             Dim blodgiver_id = rad("blodgiver_id")
-            Dim blodtype = rad("blodtype")
+            Dim blodtype = rad("blodtype_id")
             Dim epost = rad("epost")
             Dim fodseldato = rad("fodseldato")
 
