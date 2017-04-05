@@ -160,6 +160,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="tilkoblingsdata.vb" />
+    <Compile Include="timebestilling.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ansattBestillinger.resx">

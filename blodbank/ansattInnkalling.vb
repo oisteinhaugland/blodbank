@@ -24,10 +24,7 @@
 
         Dim testdata = sql_sporring("SELECT blodgiver_id, fornavn, etternavn, epost, blodtype FROM Blodgiver WHERE godkjent_egenerklering = '1'")
 
-        With DataGridView1
-            .DataSource = testdata
-            .ReadOnly = True
-        End With
+
 
 
 
@@ -89,6 +86,10 @@
     End Sub
 
     Private Sub timeDato_ValueChanged(sender As Object, e As EventArgs) Handles timeDato.ValueChanged
+
+    End Sub
+
+    Private Sub klareBlodgivere_SelectedIndexChanged(sender As Object, e As EventArgs) Handles klareBlodgivere.SelectedIndexChanged
 
     End Sub
 End Class
