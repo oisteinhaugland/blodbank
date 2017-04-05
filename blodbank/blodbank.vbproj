@@ -129,6 +129,7 @@
     <Compile Include="hashtest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inkalling.vb" />
     <Compile Include="Karantene.vb" />
     <Compile Include="lager.vb" />
     <Compile Include="loggInn.vb">
