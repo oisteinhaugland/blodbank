@@ -27,6 +27,7 @@ Partial Class ansattInnkalling
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegisrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HasteInnkallingKnapp = New System.Windows.Forms.Button()
         Me.NormalInnkallingKnapp = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -36,7 +37,6 @@ Partial Class ansattInnkalling
         Me.Label2 = New System.Windows.Forms.Label()
         Me.blodInfoKnapp = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RegisrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -75,6 +75,12 @@ Partial Class ansattInnkalling
         Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(67, 22)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
+        'RegisrerBlodgivingToolStripMenuItem
+        '
+        Me.RegisrerBlodgivingToolStripMenuItem.Name = "RegisrerBlodgivingToolStripMenuItem"
+        Me.RegisrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.RegisrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
+        '
         'HasteInnkallingKnapp
         '
         Me.HasteInnkallingKnapp.Location = New System.Drawing.Point(202, 340)
@@ -96,7 +102,7 @@ Partial Class ansattInnkalling
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 36)
+        Me.Label1.Location = New System.Drawing.Point(14, 35)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(52, 13)
@@ -108,7 +114,7 @@ Partial Class ansattInnkalling
         Me.klareBlodgivere.FormattingEnabled = True
         Me.klareBlodgivere.Location = New System.Drawing.Point(11, 75)
         Me.klareBlodgivere.Name = "klareBlodgivere"
-        Me.klareBlodgivere.Size = New System.Drawing.Size(254, 173)
+        Me.klareBlodgivere.Size = New System.Drawing.Size(438, 173)
         Me.klareBlodgivere.TabIndex = 12
         '
         'timeDato
@@ -136,7 +142,7 @@ Partial Class ansattInnkalling
         '
         'blodInfoKnapp
         '
-        Me.blodInfoKnapp.Location = New System.Drawing.Point(324, 167)
+        Me.blodInfoKnapp.Location = New System.Drawing.Point(455, 116)
         Me.blodInfoKnapp.Name = "blodInfoKnapp"
         Me.blodInfoKnapp.Size = New System.Drawing.Size(229, 81)
         Me.blodInfoKnapp.TabIndex = 16
@@ -148,15 +154,9 @@ Partial Class ansattInnkalling
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(14, 58)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 13)
+        Me.Label3.Size = New System.Drawing.Size(191, 13)
         Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Velg Blogiver"
-        '
-        'RegisrerBlodgivingToolStripMenuItem
-        '
-        Me.RegisrerBlodgivingToolStripMenuItem.Name = "RegisrerBlodgivingToolStripMenuItem"
-        Me.RegisrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.RegisrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
+        Me.Label3.Text = "Blodgivere med godkjent egenerklering"
         '
         'ansattInnkalling
         '

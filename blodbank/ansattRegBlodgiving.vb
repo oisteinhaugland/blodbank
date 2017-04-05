@@ -4,6 +4,11 @@ Public Class ansattRegBlodgiving
         ansattStartSide.Show()
         Me.Hide()
     End Sub
+    Private Sub ansattRegBlodgiving_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.Location = New Point(0, 0)
+        Me.BackColor = Color.FromArgb(247, 247, 247)
+    End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
         ansattProduktoversikt.Show()
@@ -59,7 +64,4 @@ Public Class ansattRegBlodgiving
         registrerBlodInfo()
     End Sub
 
-    Private Sub ansattRegBlodgiving_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
