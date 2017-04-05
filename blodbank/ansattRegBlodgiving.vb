@@ -8,6 +8,8 @@ Public Class ansattRegBlodgiving
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(247, 247, 247)
+        blodTypeBox.SelectedIndex = 0
+        blodTypeBox.DropDownStyle = ComboBoxStyle.DropDownList
     End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
@@ -148,12 +150,6 @@ Public Class ansattRegBlodgiving
         registrerBlodInfo()
     End Sub
 
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
-=======
-    Private Sub ansattRegBlodgiving_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        blodTypeBox.SelectedIndex = 0
-        blodTypeBox.DropDownStyle = ComboBoxStyle.DropDownList
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         plasmaHoldbarhet = DateAdd(DateInterval.Day, 365, Today.Date)
@@ -162,5 +158,5 @@ Public Class ansattRegBlodgiving
 
         MsgBox(konverterDatoFormatTilMySql(plasmaHoldbarhet))
     End Sub
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
+
 End Class

@@ -209,7 +209,7 @@
         For i = 0 To bestillinger.Count - 1
 
             For indeks = 0 To enheterPåLager.Count - 1
-                sql_sporring("UPDATE Blodlager SET lager_status = 0 WHERE Blodlager.enhet_id =" & enheterPåLager(indeks).enhet_id)
+                sql_sporring("UPDATE Blodlager SET lager_status = 0 WHERE Blodlager.enhet_id =" & enheterPåLager(indeks).hentId)
                 bestillinger(i).antall_enheter_behandlet += 1
             Next
 

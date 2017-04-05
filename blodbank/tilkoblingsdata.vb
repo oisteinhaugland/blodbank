@@ -19,25 +19,28 @@ Module tilkoblingsdata
     Public innlogget_fornavn As String
     Public innlogget_adresse As String
     Public innlogget_blodgiver_id As Integer
+
+
     Public innlogget_blodtype As String
+
     Public innlogget_epost As String
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
+
     Public innlogget_fodseldato As String
     Public innlogget_forrige_blodtapp As Date
     Public innlogget_godkjent_egenerklering As Boolean
     Public innlogget_karantene As Date
-=======
-    Public innlogget_godkjent_egenerklering As Integer
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
+
+    'Public innlogget_godkjent_egenerklering As Integer
+
     Public innlogget_passord As String
     Public innlogget_post_nr As Integer
     Public innlogget_post_sted As String
     Public innlogget_telefon As Integer
     Public innlogget_personnummer As Integer
     Public innlogget_kjønn As String
-    Public innlogget_fodseldato As String
-    Public innlogget_forrige_blodtapp As String
-    Public innlogget_karantene As Date
+    'Public innlogget_fodseldato As String
+    'Public innlogget_forrige_blodtapp As String
+    'Public innlogget_karantene As Date
     Public innlogget_ansatt_id As Integer
 
     'Regular Expressions for validering
@@ -55,16 +58,6 @@ Module tilkoblingsdata
 
     'Funksjon for å kjøre SQL spørringer
     Public Function sql_sporring(ByRef sql As String) As DataTable
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
-        'string for database opptilkobling
-        db_tilkobling_str = "Server=" & tjener_navn & ";" &
-                            "Database=" & team_brukernavn & ";" &
-                            "Uid=" & team_brukernavn & ";" &
-                            "Pwd=" & team_passord & ";" &
-                            "Convert Zero Datetime=True"
-        db_oppkobling.ConnectionString = db_tilkobling_str
-=======
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
 
         Dim data_tabell As New DataTable
 
@@ -85,6 +78,7 @@ Module tilkoblingsdata
 
     End Function
 
+
     Public Function selectBlogiver()
         Return sql_sporring("SELECT * FROM Blodgiver")
     End Function
@@ -99,13 +93,13 @@ Module tilkoblingsdata
         Return innskrevetDato.ToString("yyyy-MM-dd")
     End Function
 
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
+
     Public Function konverterDatoFormatKarantene(dato As String) As String
         Dim karanteneDato As Date = dato
         Return karanteneDato.ToString("yyyy-MM-dd")
     End Function
 
-=======
+
     Public Function formatSkjekk(ByVal text As String, ByVal regularexpression As String)
         Dim match As Match = Regex.Match((text), regularexpression)
         If match.Success Then
@@ -114,7 +108,7 @@ Module tilkoblingsdata
             Return False
         End If
     End Function
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
+
 
 
 

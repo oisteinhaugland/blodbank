@@ -129,11 +129,8 @@
     <Compile Include="hashtest.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< 4d97ceaf48c98ebdda46765b7cbd22202cd5cf7f
     <Compile Include="Karantene.vb" />
-=======
     <Compile Include="lager.vb" />
->>>>>>> hente ut fra lageret og oppdatere bestillinger fungerer.
     <Compile Include="loggInn.vb">
       <SubType>Form</SubType>
     </Compile>

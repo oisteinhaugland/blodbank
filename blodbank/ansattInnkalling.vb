@@ -17,8 +17,17 @@
 
     Private Sub ansattInnkalling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+
+
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(247, 247, 247)
+
+        Dim testdata = sql_sporring("SELECT blodgiver_id, fornavn, etternavn, epost, blodtype FROM Blodgiver WHERE godkjent_egenerklering = '1'")
+
+        With DataGridView1
+            .DataSource = testdata
+            .ReadOnly = True
+        End With
 
 
 
@@ -77,5 +86,9 @@
     Private Sub RegisrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisrerBlodgivingToolStripMenuItem.Click
         Me.Hide()
         ansattRegBlodgiving.Show()
+    End Sub
+
+    Private Sub timeDato_ValueChanged(sender As Object, e As EventArgs) Handles timeDato.ValueChanged
+
     End Sub
 End Class

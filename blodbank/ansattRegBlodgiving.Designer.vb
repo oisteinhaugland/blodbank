@@ -53,7 +53,7 @@ Partial Class ansattRegBlodgiving
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(654, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(903, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -216,7 +216,7 @@ Partial Class ansattRegBlodgiving
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(654, 459)
+        Me.ClientSize = New System.Drawing.Size(903, 462)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.blodTypeBox)
         Me.Controls.Add(Me.Label7)

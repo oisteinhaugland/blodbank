@@ -21,14 +21,9 @@ Public Class loggInn
             Dim blodtype = rad("blodtype")
             Dim epost = rad("epost")
             Dim fodseldato = rad("fodseldato")
-<<<<<<< 00c80874782be96cf329ef344a793b1758ea3fd7
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
-            'Dim forrige_blodtapp = rad("forrige_blodtapp")
-=======
 
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
-=======
->>>>>>> Fikset login
+            'Dim forrige_blodtapp = rad("forrige_blodtapp")
+
             Dim godkjent_egenerklering = rad("godkjent_egenerklering")
             Dim karantene = rad("karantene")
             Dim post_nr = rad("post_nr")
@@ -61,7 +56,7 @@ Public Class loggInn
                 innlogget_blodtype = blodtype
                 innlogget_epost = epost
                 innlogget_fodseldato = fodseldato
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
+
                 'innlogget_forrige_blodtapp = forrige_blodtapp
                 innlogget_godkjent_egenerklering = godkjent_egenerklering
                 innlogget_karantene = karantene
@@ -71,7 +66,7 @@ Public Class loggInn
                     innlogget_telefon = telefon
                     innlogget_personnummer = personnummer
                     loggetInn = True
-=======
+
                 innlogget_godkjent_egenerklering = godkjent_egenerklering
                 innlogget_karantene = karantene
                 innlogget_post_nr = post_nr
@@ -94,19 +89,12 @@ Public Class loggInn
                 End Try
 
                 innlogget_forrige_blodtapp = forrige_blodtapp
-<<<<<<< 00c80874782be96cf329ef344a793b1758ea3fd7
-
-                loggetInn = True
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
 
 
-                    kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
-                End If
-=======
                 kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
                 loggetInn = True
             End If
->>>>>>> Fikset login
+
         Next
         If (kjønn Mod 2) = 0 Then
             innlogget_kjønn = "Kvinne"

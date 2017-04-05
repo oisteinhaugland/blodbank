@@ -36,16 +36,8 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         loggInn.Show()
+        Me.Hide()
         Me.Close()
     End Sub
 
-    Private Sub label_innlogget_forrige_blodtapp_Click(sender As Object, e As EventArgs) Handles label_innlogget_forrige_blodtapp.Click
-<<<<<<< c58c20ae731f138e1aef550ecc348148ee2d3479
-
-    End Sub
-
-=======
->>>>>>> lagre enheter og blodgivninger i db, siste blodtapp på min side
-
-    End Sub
 End Class

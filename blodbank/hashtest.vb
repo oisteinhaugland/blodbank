@@ -29,6 +29,34 @@ Public Class hashtest
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim salt = CreateRandomSalt()
-        hashedPassword.Text = (Hash512(plainPassword.Text, salt)) & vbCrLf & vbCrLf & salt
+        Dim lagretSaltOgPassord = (Hash512(plainPassword.Text, salt))
+
+        hashedPassword.Text = lagretSaltOgPassord & vbCrLf & vbCrLf & salt
+
+        sql_sporring("INSERT INTO `g_oops_05`.`hashtesth`(salt,hashedpassword, bruker_id)VALUES('" & salt & "', '" & lagretSaltOgPassord & "', 1)")
+
+    End Sub
+
+    Private Sub passwordcheck_Click(sender As Object, e As EventArgs) Handles passwordcheck.Click
+        Dim vanligpassord = convertedToPlainpassword.Text
+        Dim fuck As New DataTable
+        Dim brukerSalt
+        Dim brukerHashedPassord
+        fuck = sql_sporring("SELECT * FROM hashtesth where bruker_id = 1")
+        For Each rad In fuck.Rows
+            brukerSalt = rad("salt")
+            brukerHashedPassord = rad("hashedpassword")
+        Next
+
+        Dim skjekkaPassord = Hash512(vanligpassord, brukerSalt)
+
+        If skjekkaPassord = brukerHashedPassord Then
+            MsgBox("it fucking worked?")
+        Else
+            MsgBox("you fucking failed")
+        End If
+
+
+
     End Sub
 End Class

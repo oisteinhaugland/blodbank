@@ -41,7 +41,7 @@ Partial Class blodgiver_timebestilling
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(533, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(809, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -112,7 +112,7 @@ Partial Class blodgiver_timebestilling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 382)
+        Me.ClientSize = New System.Drawing.Size(809, 450)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
