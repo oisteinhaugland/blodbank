@@ -20,8 +20,8 @@
 
     End Sub
 
-    Public Function ny_mengde(a, b)
-        Return a - b
+    Public Function ny_mengde()
+        Return Me.blod_type - Me.antall_enheter_behandlet
     End Function
 
 

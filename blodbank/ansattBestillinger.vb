@@ -25,7 +25,7 @@
         motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
         motatteBestillinger.Items.Add(" ")
 
-        bestillTable = sql_sporring("SELECT * FROM Blod_bestillinger WHERE NOT behandlet = 1")
+        bestillTable = sql_sporring("SELECT * FROM Blod_bestillinger WHERE behandlet = 0")
         Dim counter = 0
         bestillinger = New List(Of Bestillingsinfo)
         For Each rad In bestillTable.Rows
@@ -92,7 +92,7 @@
 
         For i As Integer = 0 To bestillinger.Count - 1
             sql_sporring("UPDATE Blod_bestillinger SET behandlet = 1 WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
-            sql_sporring("")
+
 
             'sql_sporring("SELECT * FROM Blod_bestillinger INNER JOIN BlodLagerEnhet ON ")
             'sql_sporring("UPDATE BlodLagerEnhet AS BLE INNER JOIN Blod_bestillinger AS BB ON BLE.blodtype_id = BB.blod_type AND SET lager_status = 0 WHERE ")
@@ -139,7 +139,6 @@
         vareLagerListBox.Items.Clear()
         enheterPåLager = New List(Of lager)
         For i = 0 To bestillinger.Count - 1
-            bestillinger(i).ny_blod_mendge = bestillinger(i).ny_mengde(bestillinger(i).blod_mengde, bestillinger(i).antall_enheter_behandlet)
 
             enhetTable = sql_sporring("SELECT * FROM Blodlager where lager_status = 1 AND blodtype_id =" & bestillinger(i).blod_type & " and blodegenskap_id =" & bestillinger(i).blod_egenskap & " and holdbarhet >='" & konverterDatoFormatTilMySql(Date.Today).ToString & "' LIMIT " & bestillinger(i).blod_mengde)
 
@@ -211,8 +210,9 @@
             For indeks = 0 To enheterPåLager.Count - 1
                 sql_sporring("UPDATE Blodlager SET lager_status = 0 WHERE Blodlager.enhet_id =" & enheterPåLager(indeks).hentId)
                 bestillinger(i).antall_enheter_behandlet += 1
+                'bestillinger(i).ny_blod_mendge = bestillinger(i).ny_mengde(bestillinger(i).blod_mengde, bestillinger(i).antall_enheter_behandlet)
+                bestillinger(i).ny_blod_mendge = bestillinger(i).ny_mengde
             Next
-
 
             If bestillinger(i).antall_enheter_behandlet = bestillinger(i).blod_mengde Then
                 sql_sporring("UPDATE Blod_bestillinger

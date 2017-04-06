@@ -30,11 +30,10 @@ Partial Class blodgiver_timebestilling
         Me.Kalender = New System.Windows.Forms.MonthCalendar()
         Me.bestillKnapp = New System.Windows.Forms.Button()
         Me.avbestillKnapp = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DineTimer = New System.Windows.Forms.ListBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.HentTimebestilling = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -86,75 +85,67 @@ Partial Class blodgiver_timebestilling
         '
         'bestillKnapp
         '
-        Me.bestillKnapp.Location = New System.Drawing.Point(272, 77)
+        Me.bestillKnapp.Location = New System.Drawing.Point(254, 243)
         Me.bestillKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.bestillKnapp.Name = "bestillKnapp"
-        Me.bestillKnapp.Size = New System.Drawing.Size(116, 32)
+        Me.bestillKnapp.Size = New System.Drawing.Size(85, 43)
         Me.bestillKnapp.TabIndex = 4
-        Me.bestillKnapp.Text = "bestillKnapp"
+        Me.bestillKnapp.Text = "Bestill time"
         Me.bestillKnapp.UseVisualStyleBackColor = True
         '
         'avbestillKnapp
         '
-        Me.avbestillKnapp.Location = New System.Drawing.Point(272, 113)
+        Me.avbestillKnapp.Location = New System.Drawing.Point(352, 243)
         Me.avbestillKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.avbestillKnapp.Name = "avbestillKnapp"
-        Me.avbestillKnapp.Size = New System.Drawing.Size(116, 30)
+        Me.avbestillKnapp.Size = New System.Drawing.Size(211, 43)
         Me.avbestillKnapp.TabIndex = 5
-        Me.avbestillKnapp.Text = "avbestillKnapp"
+        Me.avbestillKnapp.Text = "Avbestilt valgt time"
         Me.avbestillKnapp.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(25, 334)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(220, 20)
-        Me.DateTimePicker1.TabIndex = 6
         '
         'DineTimer
         '
         Me.DineTimer.FormattingEnabled = True
-        Me.DineTimer.Location = New System.Drawing.Point(460, 77)
+        Me.DineTimer.Location = New System.Drawing.Point(352, 78)
         Me.DineTimer.Name = "DineTimer"
-        Me.DineTimer.Size = New System.Drawing.Size(120, 95)
+        Me.DineTimer.Size = New System.Drawing.Size(211, 160)
         Me.DineTimer.TabIndex = 7
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(25, 290)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(220, 21)
-        Me.ComboBox1.TabIndex = 8
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(460, 210)
+        Me.ListBox2.Location = New System.Drawing.Point(254, 78)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(120, 95)
+        Me.ListBox2.Size = New System.Drawing.Size(85, 160)
         Me.ListBox2.TabIndex = 10
         '
         'HentTimebestilling
         '
-        Me.HentTimebestilling.Location = New System.Drawing.Point(277, 148)
+        Me.HentTimebestilling.Location = New System.Drawing.Point(352, 34)
         Me.HentTimebestilling.Name = "HentTimebestilling"
-        Me.HentTimebestilling.Size = New System.Drawing.Size(111, 39)
+        Me.HentTimebestilling.Size = New System.Drawing.Size(211, 39)
         Me.HentTimebestilling.TabIndex = 11
-        Me.HentTimebestilling.Text = "HentTimebestilling"
+        Me.HentTimebestilling.Text = "Hent dine timer"
         Me.HentTimebestilling.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(251, 60)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(68, 13)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Ledige Timer"
         '
         'blodgiver_timebestilling
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(809, 450)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.HentTimebestilling)
         Me.Controls.Add(Me.ListBox2)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DineTimer)
-        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.avbestillKnapp)
         Me.Controls.Add(Me.bestillKnapp)
         Me.Controls.Add(Me.Kalender)
@@ -178,9 +169,8 @@ Partial Class blodgiver_timebestilling
     Friend WithEvents Kalender As MonthCalendar
     Friend WithEvents bestillKnapp As Button
     Friend WithEvents avbestillKnapp As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DineTimer As ListBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents HentTimebestilling As Button
+    Friend WithEvents Label2 As Label
 End Class
