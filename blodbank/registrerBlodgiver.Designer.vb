@@ -22,6 +22,7 @@ Partial Class registrerBlodgiver
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.fornavnTextbox = New System.Windows.Forms.TextBox()
         Me.epostTextbox = New System.Windows.Forms.TextBox()
         Me.etterNavnTextBox = New System.Windows.Forms.TextBox()
@@ -48,6 +49,8 @@ Partial Class registrerBlodgiver
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Personalia = New System.Windows.Forms.GroupBox()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'fornavnTextbox
@@ -264,6 +267,10 @@ Partial Class registrerBlodgiver
         Me.Personalia.TabStop = False
         Me.Personalia.Text = "Personalia"
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'registrerBlodgiver
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -297,6 +304,7 @@ Partial Class registrerBlodgiver
         Me.Controls.Add(Me.Personalia)
         Me.Name = "registrerBlodgiver"
         Me.Text = "nyBruker"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -328,4 +336,5 @@ Partial Class registrerBlodgiver
     Friend WithEvents poststedTextBox As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Personalia As GroupBox
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class
