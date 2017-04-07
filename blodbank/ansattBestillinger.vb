@@ -10,7 +10,7 @@
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(247, 247, 247)
 
-
+        utleveringLabel.Hide()
         motatteBestillinger.Items.Clear()
         motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
         motatteBestillinger.Items.Add(" ")
@@ -90,13 +90,28 @@
 
     Private Sub bekreft_Utlevering_Click(sender As Object, e As EventArgs) Handles bekreft_Utlevering.Click
 
-        For i As Integer = 0 To bestillinger.Count - 1
-            sql_sporring("UPDATE Blod_bestillinger SET behandlet = 1 WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
+        For i = 0 To bestillinger.Count - 1 'for hver bestilling
 
 
-            'sql_sporring("SELECT * FROM Blod_bestillinger INNER JOIN BlodLagerEnhet ON ")
-            'sql_sporring("UPDATE BlodLagerEnhet AS BLE INNER JOIN Blod_bestillinger AS BB ON BLE.blodtype_id = BB.blod_type AND SET lager_status = 0 WHERE ")
+            For indeks = 0 To enheterPåLager.Count - 1 'for hver av de tilgjengelige enhetene på lager
+                If enheterPåLager(indeks).hentBlodType = bestillinger(i).blod_type And enheterPåLager(indeks).hentBlogenskap = bestillinger(i).blod_egenskap Then
+                    bestillinger(i).antall_enheter_behandlet += 1
+                End If
+                sql_sporring("UPDATE Blodlager SET lager_status = 0 WHERE Blodlager.enhet_id =" & enheterPåLager(indeks).hentId)
 
+            Next
+
+            bestillinger(i).ny_blod_mengde = bestillinger(i).ny_mengde(bestillinger(i).blod_mengde, bestillinger(i).antall_enheter_behandlet)
+
+            If bestillinger(i).antall_enheter_behandlet = bestillinger(i).blod_mengde Then
+                sql_sporring("UPDATE Blod_bestillinger
+                SET behandlet = 1
+                WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
+            Else
+                sql_sporring("UPDATE Blod_bestillinger
+                SET blod_mengde = " & bestillinger(i).ny_blod_mengde & "
+                WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
+            End If
         Next
 
         motatteBestillinger.Items.Clear()
@@ -104,7 +119,7 @@
         motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
         motatteBestillinger.Items.Add(" ")
 
-
+        utleveringLabel.Show()
 
     End Sub
 
@@ -180,55 +195,10 @@
                 vareLagerListBox.Items.Add(enhet)
 
             Next
-            'For indeks = 0 To enheterPåLager.Count - 1
-            '    sql_sporring("UPDATE Blodlager
-            '    SET lager_status = 0
-            '    WHERE enhet_id =" & enheterPåLager(indeks).enhet_id)
-            '    bestillinger(i).antall_enheter_behandlet += 1
-            'Next
 
-
-            'If bestillinger(i).antall_enheter_behandlet = bestillinger(i).blod_mengde Then
-            '    sql_sporring("UPDATE Blod_bestillinger
-            '    SET behandlet = 1
-            '    WHERE enhet_id =" & bestillinger(i).blod_bestillings_id)
-            'Else
-            '    sql_sporring("UPDATE Blod_bestillinger
-            '    SET blod_mengde = " & bestillinger(i).ny_blod_mendge & "
-            '    WHERE enhet_id =" & bestillinger(i).blod_bestillings_id)
-            'End If
         Next
 
-
-
-
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        For i = 0 To bestillinger.Count - 1
 
-            For indeks = 0 To enheterPåLager.Count - 1
-                sql_sporring("UPDATE Blodlager SET lager_status = 0 WHERE Blodlager.enhet_id =" & enheterPåLager(indeks).hentId)
-                bestillinger(i).antall_enheter_behandlet += 1
-                'bestillinger(i).ny_blod_mendge = bestillinger(i).ny_mengde(bestillinger(i).blod_mengde, bestillinger(i).antall_enheter_behandlet)
-                bestillinger(i).ny_blod_mendge = bestillinger(i).ny_mengde
-            Next
-
-            If bestillinger(i).antall_enheter_behandlet = bestillinger(i).blod_mengde Then
-                sql_sporring("UPDATE Blod_bestillinger
-                SET behandlet = 1
-                WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
-            Else
-                sql_sporring("UPDATE Blod_bestillinger
-                SET blod_mengde = " & bestillinger(i).ny_blod_mendge & "
-                WHERE blodbestilling_id =" & bestillinger(i).blod_bestillings_id)
-            End If
-        Next
-
-
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        MsgBox("ny mengde:" & bestillinger(1).ny_blod_mendge & vbTab & "vanlig mengde:" & bestillinger(1).blod_mengde)
-    End Sub
 End Class

@@ -117,6 +117,7 @@
         Dim hvisTid = True
 
         If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
+
             'skjekk om tidspunktet er en av radene
             For i = 0 To 6
 
