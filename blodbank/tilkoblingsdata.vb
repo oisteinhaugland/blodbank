@@ -47,6 +47,7 @@ Module tilkoblingsdata
     Public datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
     Public personnummerformat As String = "^(\d){5}$"
     Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
+
     Public registrerMengdeFormat As String = "^(\d)$"
     Public blodgiverIdFormat As String = "^(\d){0,4}$"
     Public blodtypeFormat As String = "^(\){0,4}$"

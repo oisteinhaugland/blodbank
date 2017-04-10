@@ -23,6 +23,14 @@
         Return enhet_id
     End Function
 
+    Public Function hentBlogenskap()
+        Return blod_egenskap
+    End Function
+
+    Public Function hentBlodType()
+        Return blod_type
+    End Function
+
 
 
 

@@ -15,8 +15,6 @@ Public Class hashtest
         Return salt
     End Function
 
-
-
     Public Function Hash512(password As String, salt As String) As String
         Dim convertedToBytes As Byte() = Encoding.UTF8.GetBytes(password & salt)
         Dim hashType As HashAlgorithm = New SHA512Managed()
@@ -25,13 +23,11 @@ Public Class hashtest
         Return hashedResult
     End Function
 
-
-
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim salt = CreateRandomSalt()
         Dim lagretSaltOgPassord = (Hash512(plainPassword.Text, salt))
 
-        hashedPassword.Text = lagretSaltOgPassord & vbCrLf & vbCrLf & salt
+        'hashedPassword.Text = lagretSaltOgPassord & vbCrLf & vbCrLf & salt
 
         sql_sporring("INSERT INTO `g_oops_05`.`hashtesth`(salt,hashedpassword, bruker_id)VALUES('" & salt & "', '" & lagretSaltOgPassord & "', 1)")
 
@@ -43,6 +39,7 @@ Public Class hashtest
         Dim brukerSalt
         Dim brukerHashedPassord
         fuck = sql_sporring("SELECT * FROM hashtesth where bruker_id = 1")
+
         For Each rad In fuck.Rows
             brukerSalt = rad("salt")
             brukerHashedPassord = rad("hashedpassword")
