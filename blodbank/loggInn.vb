@@ -302,7 +302,7 @@ Public Class loggInn
     End Sub
 
     'registrer ny blodgiver nagivasjon
-    Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs) Handles registrerBrukerKnapp.Click
+    Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs)
         registrerBlodgiver.Show()
         Me.Hide()
     End Sub
