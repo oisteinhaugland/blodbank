@@ -132,7 +132,19 @@ Module tilkoblingsdata
 
         Return blodtypeString
     End Function
+    Public Function konverterBlodEgenskapTilTekst(ByVal Egid As Integer)
+        Dim blodegString
+        Select Case Egid
+            Case 1
+                blodegString = "Legemer"
+            Case 2
+                blodegString = "Plater"
+            Case 3
+                blodegString = "Plasma"
+        End Select
+        Return blodegString
 
+    End Function
 
 
     'Public innlogget_karantene As date

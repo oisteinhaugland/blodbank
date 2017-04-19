@@ -39,7 +39,7 @@ Public Class ansattInnkalling
         ansattInnkallingTable = sql_sporring("SELECT Blodgiver.blodgiver_id, fornavn, etternavn, epost, telefon, Blodgiver.blodtype_id, max(blodgivning_dato) as sistBlodgivning  FROM Blodgiver INNER JOIN Blodgivning ON Blodgiver.blodgiver_id = Blodgivning.blodgiver_id WHERE godkjent_egenerklering = '1'  GROUP BY Blodgiver.blodgiver_id")
 
         For Each rad In ansattInnkallingTable.Rows
-
+            'Bruker en funksjon for blodtypekonvertering
             Dim blodtypeStringInk = konverterBlodtypeTilTekst(rad("blodtype_id"))
 
 
@@ -110,7 +110,7 @@ Public Class ansattInnkalling
                 Dim mailTekst As String = "Hei vi melder om innkalling til blodgivertime den " & valgtDato & " kl: " & tidspunkt & ". Gi beskjed dersom du ikke kan komme. " & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
                 Dim innkallingEpost = innkallingListe(klareBlodgivere.SelectedIndex).epost
 
-                'Epost funksjonalitet for innkalling
+                'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
                 epost.sendEpost(innkallingEpost, "Blodgivertime", mailTekst)
 
             Catch error_t As Exception
@@ -180,7 +180,7 @@ Public Class ansattInnkalling
             End Try
             Try
 
-                'Bruker metoden vi har laget i epost klassen.
+                'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
                 Dim mailTekst As String = "Hei vi melder om nødsituasjon som krever en hasteinnkalling til blodgivertime den " & dato2 & " kl: " & tidspunkt & ":00" & ". Bekreft snarest" & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
                 epost.sendEpost(innkallingEpost, "HASTEINNKALLING - BLODBANKEN", mailTekst)
 
@@ -200,7 +200,7 @@ Public Class ansattInnkalling
         Dim tidsPunkt = ""
         Dim hvisTid = True
 
-        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer pÂ den dagen
+        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
             'skjekk om tidspunktet er en av radene
             For i = 0 To 6
 
