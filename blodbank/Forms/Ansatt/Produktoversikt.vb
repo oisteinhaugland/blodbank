@@ -1,9 +1,9 @@
 ﻿
 Imports System.Windows.Forms.DataVisualization.Charting
 
-Public Class ansattProduktoversikt
+Public Class Produktoversikt
     Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
-        ansattStartSide.Show()
+        Startside.Show()
         Me.Hide()
     End Sub
 
@@ -13,13 +13,13 @@ Public Class ansattProduktoversikt
     End Sub
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        ansattBestillinger.Show()
+        Bestillinger.Show()
         Me.Hide()
     End Sub
 
     Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
         Me.Hide()
-        ansattRegBlodgiving.Show()
+        Blodgivning.Show()
     End Sub
 
     Private Sub ansattProduktoversikt_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -4,12 +4,12 @@
     Dim ledigeTimer As New DataTable
 
     Private Sub MinSideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinSideToolStripMenuItem.Click
-        blodgiverMinSide.Show()
+        MinSide.Show()
         Me.Hide()
     End Sub
 
     Private Sub EgenerklæringToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgenerklæringToolStripMenuItem.Click
-        blodgiver_egenerklering.Show()
+        Egenklæring.Show()
         Me.Hide()
     End Sub
 

@@ -1,4 +1,4 @@
-﻿Public Class ansattBestillinger
+﻿Public Class Bestillinger
     Dim bestillinger As List(Of Bestillingsinfo)
     Dim enheterPåLager As List(Of lager)
     Dim bestillTable As New DataTable
@@ -141,7 +141,7 @@
 
     Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
         Me.Hide()
-        ansattRegBlodgiving.Show()
+        Blodgivning.Show()
 
     End Sub
 

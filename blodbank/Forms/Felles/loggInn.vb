@@ -282,11 +282,11 @@ Public Class loggInn
 
         If loggInnAnsatt() Then
             Me.Hide()
-            ansattStartSide.Show() '
+            Startside.Show() '
         ElseIf loggInnBlodgiver(brukerNavnTextbox.Text, passordTextBox.text) Then
             'loggInnBlodgiver() Then
             Me.Hide()
-            blodgiverMinSide.Show()
+            MinSide.Show()
         Else
             MsgBox(melding_logg_inn_feil)
         End If
@@ -314,12 +314,12 @@ Public Class loggInn
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Hide()
-        blodgiverMinSide.Show()
+        MinSide.Show()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
-        ansattStartSide.Show()
+        Startside.Show()
     End Sub
 End Class
 

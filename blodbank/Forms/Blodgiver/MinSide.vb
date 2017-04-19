@@ -1,4 +1,4 @@
-﻿Public Class blodgiverMinSide
+﻿Public Class MinSide
 
     Public Sub fyllBrukerInformasjon()
         label_innlogget_fornavn.Text = innlogget_bruker
@@ -30,7 +30,7 @@
     End Sub
 
     Private Sub EgenerklæringToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgenerklæringToolStripMenuItem.Click
-        blodgiver_egenerklering.Show()
+        Egenklæring.Show()
         Me.Hide()
     End Sub
 

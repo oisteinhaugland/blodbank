@@ -1,4 +1,4 @@
-﻿Public Class blodgiver_egenerklering
+﻿Public Class Egenklæring
     'Varibel for navigering av tabsider
     Dim sideIndeks = 0
     Dim karanteneTable As New DataTable
@@ -204,7 +204,7 @@
     End Sub
 
     Private Sub MinSideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinSideToolStripMenuItem.Click
-        blodgiverMinSide.Show()
+        MinSide.Show()
         Me.Hide()
     End Sub
 

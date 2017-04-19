@@ -1,4 +1,4 @@
-﻿Public Class ansattStartSide
+﻿Public Class Startside
     Dim dagenstimerList As New List(Of timebestilling)
     Dim timespørring As New DataTable
 
@@ -46,7 +46,7 @@
     End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
-        ansattProduktoversikt.Show()
+        Produktoversikt.Show()
         Me.Hide()
     End Sub
 
@@ -56,14 +56,14 @@
     End Sub
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        ansattBestillinger.Show()
+        Bestillinger.Show()
         Me.Hide()
 
     End Sub
 
     Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
         Me.Hide()
-        ansattRegBlodgiving.Show()
+        Blodgivning.Show()
     End Sub
 
 End Class

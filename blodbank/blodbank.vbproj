@@ -74,70 +74,70 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ansattBestillinger.Designer.vb">
-      <DependentUpon>ansattBestillinger.vb</DependentUpon>
+    <Compile Include="Forms\Ansatt\Bestillinger.Designer.vb">
+      <DependentUpon>Bestillinger.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattBestillinger.vb">
+    <Compile Include="Forms\Ansatt\Bestillinger.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ansattInnkalling.Designer.vb">
-      <DependentUpon>ansattInnkalling.vb</DependentUpon>
+    <Compile Include="Forms\Ansatt\Innkalling.Designer.vb">
+      <DependentUpon>Innkalling.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattInnkalling.vb">
+    <Compile Include="Forms\Ansatt\Innkalling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ansattProduktoversikt.Designer.vb">
-      <DependentUpon>ansattProduktoversikt.vb</DependentUpon>
+    <Compile Include="Forms\Ansatt\Produktoversikt.Designer.vb">
+      <DependentUpon>Produktoversikt.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattProduktoversikt.vb">
+    <Compile Include="Forms\Ansatt\Produktoversikt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ansattRegBlodgiving.Designer.vb">
-      <DependentUpon>ansattRegBlodgiving.vb</DependentUpon>
+    <Compile Include="Forms\Ansatt\Blodgivning.Designer.vb">
+      <DependentUpon>Blodgivning.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattRegBlodgiving.vb">
+    <Compile Include="Forms\Ansatt\Blodgivning.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ansattStartSide.Designer.vb">
-      <DependentUpon>ansattStartSide.vb</DependentUpon>
+    <Compile Include="Forms\Ansatt\Startside.Designer.vb">
+      <DependentUpon>Startside.vb</DependentUpon>
     </Compile>
-    <Compile Include="ansattStartSide.vb">
+    <Compile Include="Forms\Ansatt\Startside.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Bestillingsinfo.vb" />
-    <Compile Include="blodgiverMinSide.Designer.vb">
-      <DependentUpon>blodgiverMinSide.vb</DependentUpon>
+    <Compile Include="Logikk\Klasser\Bestillingsinfo.vb" />
+    <Compile Include="Forms\Blodgiver\MinSide.Designer.vb">
+      <DependentUpon>MinSide.vb</DependentUpon>
     </Compile>
-    <Compile Include="blodgiverMinSide.vb">
+    <Compile Include="Forms\Blodgiver\MinSide.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="blodgiver_egenerklering.Designer.vb">
-      <DependentUpon>blodgiver_egenerklering.vb</DependentUpon>
+    <Compile Include="Forms\Blodgiver\Egenklæring.Designer.vb">
+      <DependentUpon>Egenklæring.vb</DependentUpon>
     </Compile>
-    <Compile Include="blodgiver_egenerklering.vb">
+    <Compile Include="Forms\Blodgiver\Egenklæring.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="blodgiver_timebestilling.Designer.vb">
-      <DependentUpon>blodgiver_timebestilling.vb</DependentUpon>
+    <Compile Include="Forms\Blodgiver\Timebestilling.Designer.vb">
+      <DependentUpon>Timebestilling.vb</DependentUpon>
     </Compile>
-    <Compile Include="blodgiver_timebestilling.vb">
+    <Compile Include="Forms\Blodgiver\Timebestilling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="hashtest.Designer.vb">
+    <Compile Include="Testinnhold\hashtest.Designer.vb">
       <DependentUpon>hashtest.vb</DependentUpon>
     </Compile>
-    <Compile Include="hashtest.vb">
+    <Compile Include="Testinnhold\hashtest.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inkalling.vb" />
-    <Compile Include="Karantene.vb" />
-    <Compile Include="lager.vb" />
-    <Compile Include="loggInn.vb">
+    <Compile Include="Logikk\Klasser\Inkalling.vb" />
+    <Compile Include="Logikk\Klasser\Karantene.vb" />
+    <Compile Include="Logikk\Klasser\lager.vb" />
+    <Compile Include="Forms\Felles\LoggInn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loggInn.Designer.vb">
-      <DependentUpon>loggInn.vb</DependentUpon>
+    <Compile Include="Forms\Felles\LoggInn.Designer.vb">
+      <DependentUpon>LoggInn.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -155,45 +155,45 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="registrerBlodgiver.Designer.vb">
-      <DependentUpon>registrerBlodgiver.vb</DependentUpon>
+    <Compile Include="Forms\Felles\RegistrerBlodgiver.Designer.vb">
+      <DependentUpon>RegistrerBlodgiver.vb</DependentUpon>
     </Compile>
-    <Compile Include="registrerBlodgiver.vb">
+    <Compile Include="Forms\Felles\RegistrerBlodgiver.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tilkoblingsdata.vb" />
-    <Compile Include="timebestilling.vb" />
+    <Compile Include="Logikk\Moduler\tilkoblingsdata.vb" />
+    <Compile Include="Logikk\Klasser\timebestilling.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ansattBestillinger.resx">
-      <DependentUpon>ansattBestillinger.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Ansatt\Bestillinger.resx">
+      <DependentUpon>Bestillinger.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ansattInnkalling.resx">
-      <DependentUpon>ansattInnkalling.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Ansatt\Innkalling.resx">
+      <DependentUpon>Innkalling.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ansattProduktoversikt.resx">
-      <DependentUpon>ansattProduktoversikt.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Ansatt\Produktoversikt.resx">
+      <DependentUpon>Produktoversikt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ansattRegBlodgiving.resx">
-      <DependentUpon>ansattRegBlodgiving.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Ansatt\Blodgivning.resx">
+      <DependentUpon>Blodgivning.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ansattStartSide.resx">
-      <DependentUpon>ansattStartSide.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Ansatt\Startside.resx">
+      <DependentUpon>Startside.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="blodgiverMinSide.resx">
-      <DependentUpon>blodgiverMinSide.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Blodgiver\MinSide.resx">
+      <DependentUpon>MinSide.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="blodgiver_egenerklering.resx">
-      <DependentUpon>blodgiver_egenerklering.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Blodgiver\Egenklæring.resx">
+      <DependentUpon>Egenklæring.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="blodgiver_timebestilling.resx">
-      <DependentUpon>blodgiver_timebestilling.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Blodgiver\Timebestilling.resx">
+      <DependentUpon>Timebestilling.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="hashtest.resx">
+    <EmbeddedResource Include="Testinnhold\hashtest.resx">
       <DependentUpon>hashtest.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loggInn.resx">
-      <DependentUpon>loggInn.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Felles\LoggInn.resx">
+      <DependentUpon>LoggInn.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -201,8 +201,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="registrerBlodgiver.resx">
-      <DependentUpon>registrerBlodgiver.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Felles\RegistrerBlodgiver.resx">
+      <DependentUpon>RegistrerBlodgiver.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -218,10 +218,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AA-notater.txt" />
-    <Content Include="createTables.txt" />
-    <Content Include="gjoremol.txt" />
+    <Content Include="Tekstdokumenter\AA-notater.txt" />
+    <Content Include="Tekstdokumenter\createTables.txt" />
+    <Content Include="Tekstdokumenter\gjoremol.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

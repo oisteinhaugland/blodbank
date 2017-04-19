@@ -50,18 +50,12 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\bin\Debug\MySql.Data.xml
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattProduktoversikt.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattBestillinger.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattRegBlodgiving.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe.config
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.exe
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.xml
@@ -85,3 +79,9 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.loggInn.r
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Blodgivning.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources

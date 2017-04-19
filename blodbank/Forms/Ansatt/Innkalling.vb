@@ -6,17 +6,17 @@ Public Class ansattInnkalling
 
 
     Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
-        ansattStartSide.Show()
+        Startside.Show()
         Me.Hide()
     End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
-        ansattProduktoversikt.Show()
+        Produktoversikt.Show()
         Me.Hide()
     End Sub
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        ansattBestillinger.Show()
+        Bestillinger.Show()
         Me.Hide()
     End Sub
 
@@ -174,7 +174,7 @@ Public Class ansattInnkalling
 
     Private Sub RegisrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisrerBlodgivingToolStripMenuItem.Click
         Me.Hide()
-        ansattRegBlodgiving.Show()
+        Blodgivning.Show()
     End Sub
 
     Private Sub HasteinnkallingKnapp_Click(sender As Object, e As EventArgs) Handles HasteInnkallingKnapp.Click
