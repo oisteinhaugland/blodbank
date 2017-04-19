@@ -22,11 +22,8 @@ Partial Class Startside
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Startside))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HjemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,172 +38,189 @@ Partial Class Startside
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(8, 58)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(180, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Info om dagen i dag (timer for dagen)"
-        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(330, 343)
+        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Button1.Font = New System.Drawing.Font("Calibri", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Button1.Location = New System.Drawing.Point(848, 654)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(171, 48)
+        Me.Button1.Size = New System.Drawing.Size(429, 98)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Logg ut"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(330, 213)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(171, 59)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Normal Innkalling"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(330, 148)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(171, 59)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Bestillingsoversikt"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(330, 278)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(171, 59)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Registrer Blodtapp"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.MenuStrip1.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegistrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(780, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1478, 37)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'HjemToolStripMenuItem
         '
         Me.HjemToolStripMenuItem.Name = "HjemToolStripMenuItem"
-        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(48, 22)
+        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(77, 33)
         Me.HjemToolStripMenuItem.Text = "Hjem"
         '
         'ProduktoversiktToolStripMenuItem
         '
         Me.ProduktoversiktToolStripMenuItem.Name = "ProduktoversiktToolStripMenuItem"
-        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(102, 22)
+        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(181, 33)
         Me.ProduktoversiktToolStripMenuItem.Text = "Produktoversikt"
         '
         'InnkallingToolStripMenuItem
         '
         Me.InnkallingToolStripMenuItem.Name = "InnkallingToolStripMenuItem"
-        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(71, 22)
+        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(122, 33)
         Me.InnkallingToolStripMenuItem.Text = "Innkalling"
         '
         'BestillingToolStripMenuItem
         '
         Me.BestillingToolStripMenuItem.Name = "BestillingToolStripMenuItem"
-        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(67, 22)
+        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(114, 33)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
         'RegistrerBlodgivingToolStripMenuItem
         '
         Me.RegistrerBlodgivingToolStripMenuItem.Name = "RegistrerBlodgivingToolStripMenuItem"
-        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
+        Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(220, 33)
+        Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 35)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(70, 100)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 13)
+        Me.Label2.Size = New System.Drawing.Size(99, 44)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Hjem"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(333, 117)
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 18.0!)
+        Me.Label3.Location = New System.Drawing.Point(135, 270)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(71, 13)
+        Me.Label3.Size = New System.Drawing.Size(212, 44)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Dagens dato:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(217, 117)
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 20.0!)
+        Me.Label4.Location = New System.Drawing.Point(720, 154)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 13)
+        Me.Label4.Size = New System.Drawing.Size(292, 49)
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Timer for dagen:"
         '
         'dagensTimer
         '
+        Me.dagensTimer.Font = New System.Drawing.Font("Calibri", 20.0!)
         Me.dagensTimer.FormattingEnabled = True
-        Me.dagensTimer.Location = New System.Drawing.Point(220, 148)
+        Me.dagensTimer.ItemHeight = 49
+        Me.dagensTimer.Location = New System.Drawing.Point(729, 257)
+        Me.dagensTimer.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dagensTimer.Name = "dagensTimer"
-        Me.dagensTimer.Size = New System.Drawing.Size(104, 238)
+        Me.dagensTimer.Size = New System.Drawing.Size(633, 347)
         Me.dagensTimer.TabIndex = 10
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(217, 132)
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 20.0!)
+        Me.Label5.Location = New System.Drawing.Point(720, 203)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 13)
+        Me.Label5.Size = New System.Drawing.Size(57, 49)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Id"
+        Me.Label5.Text = "ID"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(263, 132)
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 20.0!)
+        Me.Label6.Location = New System.Drawing.Point(893, 203)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 13)
+        Me.Label6.Size = New System.Drawing.Size(83, 49)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Tid:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(410, 117)
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 18.0!)
+        Me.Label7.Location = New System.Drawing.Point(352, 270)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 13)
+        Me.Label7.Size = New System.Drawing.Size(115, 44)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Label7"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(318, 84)
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(135, 216)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 13)
+        Me.Label8.Size = New System.Drawing.Size(117, 44)
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Label8"
         '
-        'ansattStartSide
+        'Panel1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(1453, 37)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(25, 907)
+        Me.Panel1.TabIndex = 15
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel2.Location = New System.Drawing.Point(0, 37)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(25, 907)
+        Me.Panel2.TabIndex = 16
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(25, 919)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1428, 25)
+        Me.Panel3.TabIndex = 17
+        '
+        'Startside
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(780, 482)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.ClientSize = New System.Drawing.Size(1478, 944)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -215,27 +229,20 @@ Partial Class Startside
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "ansattStartSide"
-        Me.Text = "ansattStartSide"
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Name = "Startside"
+        Me.Text = "Startside"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HjemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProduktoversiktToolStripMenuItem As ToolStripMenuItem
@@ -250,4 +257,7 @@ Partial Class Startside
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
 End Class
