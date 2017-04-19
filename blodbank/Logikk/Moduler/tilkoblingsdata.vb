@@ -109,7 +109,29 @@ Module tilkoblingsdata
             Return False
         End If
     End Function
+    Public Function konverterBlodtypeTilTekst(ByVal id As Integer)
+        Dim blodtypeString
+        Select Case id
+            Case 1
+                blodtypeString = "A+"
+            Case 2
+                blodtypeString = "A-"
+            Case 3
+                blodtypeString = "B+"
+            Case 4
+                blodtypeString = "B-"
+            Case 5
+                blodtypeString = "AB+"
+            Case 6
+                blodtypeString = "AB-"
+            Case 7
+                blodtypeString = "O+"
+            Case 8
+                blodtypeString = "O-"
+        End Select
 
+        Return blodtypeString
+    End Function
 
 
 
