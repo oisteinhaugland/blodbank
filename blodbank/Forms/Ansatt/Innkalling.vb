@@ -5,6 +5,7 @@ Public Class ansattInnkalling
     Dim innkallingList As New List(Of Innkalling)
 
 
+
     Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
         Startside.Show()
         Me.Hide()
@@ -160,6 +161,8 @@ Public Class ansattInnkalling
                 e_mail.Body = (mailTekst)
                 Smtp_Server.Send(e_mail)
 
+
+
                 'MsgBox(innkallingString & " er innkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er " & dato & ", klokken: " & tidspunkt & "." & vbCrLf)
 
             Catch error_t As Exception
@@ -171,6 +174,7 @@ Public Class ansattInnkalling
         ledigeTimer.Items.Clear()
 
     End Sub
+
 
     Private Sub RegisrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisrerBlodgivingToolStripMenuItem.Click
         Me.Hide()

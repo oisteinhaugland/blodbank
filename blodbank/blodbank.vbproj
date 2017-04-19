@@ -124,6 +124,10 @@
     <Compile Include="Forms\Blodgiver\Timebestilling.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logikk\Klasser\Bruker.vb" />
+    <Compile Include="Logikk\Klasser\Epost.vb" />
+    <Compile Include="Logikk\Klasser\Hash.vb" />
+    <Compile Include="Logikk\Klasser\Validering.vb" />
     <Compile Include="Testinnhold\hashtest.Designer.vb">
       <DependentUpon>hashtest.vb</DependentUpon>
     </Compile>

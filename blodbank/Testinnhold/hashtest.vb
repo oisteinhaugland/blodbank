@@ -26,10 +26,13 @@ Public Class hashtest
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim salt = CreateRandomSalt()
         Dim lagretSaltOgPassord = (Hash512(plainPassword.Text, salt))
+        Dim fsodijf = "Salt:" & vbCrLf & salt & vbCrLf & vbCrLf & "hashedPwd: " & vbCrLf & lagretSaltOgPassord
+
+        hashedPassword.Text = fsodijf
 
         'hashedPassword.Text = lagretSaltOgPassord & vbCrLf & vbCrLf & salt
 
-        sql_sporring("INSERT INTO `g_oops_05`.`hashtesth`(salt,hashedpassword, bruker_id)VALUES('" & salt & "', '" & lagretSaltOgPassord & "', 1)")
+        '        sql_sporring("INSERT INTO `g_oops_05`.`hashtesth`(salt,hashedpassword, bruker_id)VALUES('" & salt & "', '" & lagretSaltOgPassord & "', 1)")
 
     End Sub
 
@@ -54,6 +57,10 @@ Public Class hashtest
         End If
 
 
+
+    End Sub
+
+    Private Sub hashtest_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

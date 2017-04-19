@@ -1,95 +1,64 @@
-﻿
-Imports System.ComponentModel
-Imports System.Text.RegularExpressions
-
+﻿Imports System.ComponentModel
 
 Public Class registrerBlodgiver
-    Dim hash As New hashtest
-    Private Function konverterDatoFormatTilMySql(dato As String) As String
-        Dim innskrevetDato As Date = dato
-        Return innskrevetDato.ToString("yyyy-MM-dd")
-    End Function
+    Dim v As New Validering
+
+    Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(247, 247, 247)
+        personNrTextBox.MaxLength = 5
+        postNrTextBox.MaxLength = 4
+        telefonTextBox.MaxLength = 8
+        ErrorProvider1.BlinkRate = 0
+    End Sub
 
 
+    'overordnet funksjon for å aktivere validering og registrering.
+    Private Sub validerSkjemaOgRegistrerBruker()
+        Dim validert As Boolean = True
+        'Setter alle tekstboksene i fokus, som gjør at valideringen tar sted.
+        For Each control As Control In Me.Controls
+            If TypeOf control Is TextBox Then
+                control.Focus()
+                GetNextControl(control, True).Focus()
+            End If
+            If ErrorProvider1.GetError(control) <> "" Then
+                validert = False
+            End If
+        Next
 
+        If validert Then
+            registrer_bruker()
+        Else
+            MsgBox("Skjemaet er ikke fylt ut korrekt, vennligst prøv igjen. Hold over utropstegnet for å se detaljer.")
+        End If
+    End Sub
+
+    'Sub som først skjekker en tekstbox mot et regex og setter en feilmelding hvis det ikke stemmer.
+    Private Sub setError(ByRef enTekstbox As TextBox, ByVal etFormat As String, ByVal enFeilmelding As String)
+        If Not v.formatSkjekk(enTekstbox.Text, etFormat) Then 'navn_format_match.Success Then
+            ErrorProvider1.SetError(enTekstbox, enFeilmelding)
+        Else
+            ErrorProvider1.SetError(enTekstbox, "")
+        End If
+    End Sub
 
     Private Sub registrer_bruker()
-
-
-
-        Dim errors = 1
+        Dim Hash As New Hash
         Dim Fornavn As String = fornavnTextbox.Text
         Dim Etternavn As String = etterNavnTextBox.Text
-        Dim post_nr As Integer
         Dim Epost As String = epostTextbox.Text
-        Dim Fodselsdato As String
+        Dim FodselsDato As String = konverterDatoFormatTilMySql(fodselsdatoTextBox.Text)
+        Dim PersonNr As Integer
         Dim Adresse As String = adresseTextBox.Text
-        Dim Post_sted As String = poststedTextBox.Text
-        Dim Passord As String
-        Dim TelefonNr As Integer
-        Dim salt
-        Dim hashedPwd
+        Dim PostNr As Integer = CInt(postNrTextBox.Text)
+        Dim PostSted As String = poststedTextBox.Text
+        Dim TelefonNr As Integer = CInt(telefonTextBox.Text)
+        Dim salt As String = Hash.CreateRandomSalt()
+        Dim hashedPwd As String = Hash.Hash512(passordTextBox.Text, salt)
 
-        If passordTextBox.Text = gjenntaPassordTextbox.Text Then
-
-            salt = hash.CreateRandomSalt()
-            hashedPwd = hash.Hash512(passordTextBox.Text, salt)
-        Else
-
-            ErrorProvider1.SetError(gjenntaPassordTextbox, "Passordet mÂ gjenntas korrekt. Vennligst fyll inn pÂ nytt.")
-            Exit Sub
-        End If
-
-        ErrorProvider1.BlinkRate = 0
-
-        Dim telefonformat As String = "\d+"
-        Dim telefon_format_match As Match = Regex.Match(telefonTextBox.Text, telefonformat)
-        If telefon_format_match.Success Then
-            TelefonNr = CInt(telefonTextBox.Text)
-        Else
-            ErrorProvider1.SetError(telefonTextBox, "Telefonnr mÂ ha minst 8 siffer")
-
-        End If
-
-
-        Dim postNrformat As String = "^(\d){4}"
-        Dim postnr_format_match As Match = Regex.Match(postNrTextBox.Text, postNrformat)
-        If postnr_format_match.Success Then
-            post_nr = CInt(postNrTextBox.Text)
-        Else
-            ErrorProvider1.SetError(poststedTextBox, "Postnummer mÂ vÊre 4 tall")
-        End If
-
-        Dim poststedFormat As String = "\w+"
-        Dim poststed_format_match As Match = Regex.Match(poststedTextBox.Text, poststedFormat)
-        If Not poststed_format_match.Success Then
-            ErrorProvider1.SetError(poststedTextBox, "Vennligst fyll ut felt")
-        End If
-
-
-        Dim navnFormat As String = "\w+"
-        Dim navn_format_match As Match = Regex.Match(fornavnTextbox.Text + etterNavnTextBox.Text, navnFormat)
-        If Not navn_format_match.Success Then
-            ErrorProvider1.SetError(fornavnTextbox, "Vennligst fyll ut felt")
-            ErrorProvider1.SetError(etterNavnTextBox, "Vennligst fyll ut felt")
-        End If
-
-
-        Dim adresseFormat As String = "(\w+)\s(\d+)"
-        Dim adresse_format_match As Match = Regex.Match((adresseTextBox.Text), adresseFormat)
-        If Not adresse_format_match.Success Then
-            ErrorProvider1.SetError(adresseTextBox, "Vennligst fyll ut felt i korrekt format")
-
-        Else
-            ErrorProvider1.SetError(adresseTextBox, "")
-        End If
-
-
-
-        Dim epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
-        Dim email_format_match As Match = Regex.Match((epostTextbox.Text), epostFormat)
-
-        If email_format_match.Success Then
+        'for å skjekke om eposten allerede finnes i databasen
+        If v.formatSkjekk(epostTextbox.Text, v.epostFormat) Then
             Dim kolonner As New DataTable
             kolonner = sql_sporring("Select fornavn from Blodgiver where epost ='" & epostTextbox.Text & "'")
             Dim count = 0
@@ -102,19 +71,10 @@ Public Class registrerBlodgiver
                 MsgBox("Eposten er allerede registret. Vennligst fyll inn en ny.")
                 Exit Sub
             End If
-        Else
-            ErrorProvider1.SetError(epostTextbox, "Eposten har feil format. Vennligst fyll inn en epost.")
-            Exit Sub
         End If
 
-
-
-
-        Dim Personnummer As Integer
-        Dim personnummerformat As String = "^(\d){5}$"
-        Dim personnummer_format_match As Match = Regex.Match((personNrTextBox.Text), personnummerformat)
-
-        If personnummer_format_match.Success Then
+        'for å skjekke om personnummerret allerede finnes i databasen
+        If v.formatSkjekk(personNrTextBox.Text, v.personnummerFormat) Then
             Dim kolonner As New DataTable
             kolonner = sql_sporring("Select fornavn from Blodgiver where personnummer =" & personNrTextBox.Text)
             Dim count = 0
@@ -123,102 +83,117 @@ Public Class registrerBlodgiver
             Next
 
             If count = 0 Then
-                Personnummer = personNrTextBox.Text
+                PersonNr = personNrTextBox.Text
             Else
-                ErrorProvider1.SetError(personNrTextBox, "Personnummer har feilt format. Fyll inn 5 sifre")
+                MsgBox("Du er allerede registrert.")
                 Exit Sub
-
             End If
         End If
 
 
-
-
-        Dim datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
-        Dim fodselsdatoformatMatch As Match = Regex.Match((fodselsdatoTextBox.Text), datoFormat)
-        If fodselsdatoformatMatch.Success Then
-            Dim Fodselsnummer As String = konverterDatoFormatTilMySql(fodselsdatoTextBox.Text)
-        Else
-            ErrorProvider1.SetError(fodselsdatoTextBox, "F¯dseslsdato Ikke riktig datoformat. Vennligst fyll inn dd.mm.ÂÂÂÂ")
-            MsgBox("lol")
-            Exit Sub
-        End If
-
-
-        ' If errors = 0 Then
         Try
-            sql_sporring("insert into Blodgiver(fornavn, etternavn, telefon,epost,fodselsdato,adresse,post_nr,post_sted,salt,hashedPwd,personnummer)
+            sql_sporring("insert into Blodgiver(fornavn, etternavn, telefon,epost,fodseldato,adresse,post_nr,post_sted,salt,hashedPwd,personnummer)
         values ('" & Fornavn & "',
             '" & Etternavn & "',
             " & TelefonNr & ",
             '" & Epost & "',
-             '" & Fodselsdato & "',
+             '" & FodselsDato & "',
             '" & Adresse & "',
-            " & post_nr & ",
-            '" & Post_sted & "', 
+            " & PostNr & ",
+            '" & PostSted & "', 
             '" & salt & "',
             '" & hashedPwd & "',
-            '" & Personnummer & "'
+            '" & PersonNr & "'
         )")
             Dim registreringsmelding As String = "Takk " & Fornavn & ". Din bruker er nå registrert. Vennligst logg inn med brukernavn (Epost) og passord"
             MsgBox(registreringsmelding)
+            loggInn.Show()
+            Me.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        'Else
-        MsgBox("feltene er ikke fylt ut korrekt.")
-        'End If
-
-
     End Sub
 
 
     Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs) Handles registrerBrukerKnapp.Click
-        registrer_bruker()
-        'Me.Close()
-        'loggInn.Show()
+        validerSkjemaOgRegistrerBruker()
     End Sub
 
-
-    Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+    Private Sub avbrytReg(sender As Object, e As EventArgs) Handles avbrytRegistrering.Click
         loggInn.Show()
+        Me.Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub postNrTextBox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles postNrTextBox.KeyPress,
-        telefonTextBox.KeyPress, personNrTextBox.KeyPress, fodselsdatoTextBox.KeyPress
+    'S¯rger for at tekstboks kun tillater tall'
+    Private Sub postNrTextBox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles postNrTextBox.KeyPress, telefonTextBox.KeyPress, personNrTextBox.KeyPress, fodselsdatoTextBox.KeyPress
         If Not Char.IsDigit(e.KeyChar) And Not Char.IsPunctuation(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
             e.Handled = True
         End If
-
-        personNrTextBox.MaxLength = 5
-        postNrTextBox.MaxLength = 4
-
     End Sub
 
-    Private Sub fornavnTextbox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles fornavnTextbox.KeyPress,
-        etterNavnTextBox.KeyPress, poststedTextBox.KeyPress
-
-        If Not Char.IsLetter(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+    'S¯rger for at tekstboks kun tillater bokstaver'
+    Private Sub fornavnTextbox_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles fornavnTextbox.KeyPress, etterNavnTextBox.KeyPress, poststedTextBox.KeyPress
+        If Not Char.IsLetter(e.KeyChar) And Not Char.IsControl(e.KeyChar) And Not Char.IsWhiteSpace(e.KeyChar) Then
             e.Handled = True
         End If
+    End Sub
+    'Validering for epost'
 
+    Private Sub epostTextbox_Validating(sender As Object, e As CancelEventArgs) Handles epostTextbox.Validating
+        setError(epostTextbox, v.epostFormat, "Vennligst fyll inn din epost. Følg vanlig epost format.")
     End Sub
 
+    Private Sub etternavnTextbox_Validating(sender As Object, e As CancelEventArgs) Handles etterNavnTextBox.Validating
+        setError(etterNavnTextBox, v.navnFormat, "Vennligst fyll ut feltet, det må bestå av bokstaver")
+    End Sub
 
+    Private Sub fornavnTextbox_Validating(sender As Object, e As CancelEventArgs) Handles fornavnTextbox.Validating
+        setError(fornavnTextbox, v.navnFormat, "Vennligst fyll ut feltet.det må bestå av bokstaver")
+    End Sub
 
+    'Validering for telefonnr'
+    Private Sub telefonTextBox_Validating(sender As Object, e As CancelEventArgs) Handles telefonTextBox.Validating
+        setError(telefonTextBox, v.telefonformat, "Telefonnummer må bestå av 8 siffer")
+    End Sub
+
+    'Validering for f¯dselsdato'
+    Private Sub fodselsdatoTextBox_Validating(sender As Object, e As CancelEventArgs) Handles fodselsdatoTextBox.Validating
+        setError(fodselsdatoTextBox, v.datoFormat, "Fødseslsdato Ikke riktig datoformat. Vennligst fyll inn dd.mm.åååå")
+    End Sub
+    'validering for personnummer
+    Private Sub personNrTextBox_Validating(sender As Object, e As CancelEventArgs) Handles personNrTextBox.Validating
+        setError(personNrTextBox, v.personnummerFormat, "Personnummer har feilt format. Fyll inn 5 sifre")
+    End Sub
+
+    'Validering for adresse'
+    Private Sub adresseTextBox_Validating(sender As Object, e As CancelEventArgs) Handles adresseTextBox.Validating
+        setError(adresseTextBox, v.adresseFormat, "En adresse består av bostaver etterfulgt av et tall")
+    End Sub
+
+    'Validering for postnr'
+    Private Sub postNrTextBox_Validating(sender As Object, e As CancelEventArgs) Handles postNrTextBox.Validating
+        setError(postNrTextBox, v.postNrformat, "Postnummer består av 4 siffer.")
+    End Sub
+
+    'Validering for poststed'
+    Private Sub poststedTextBox_Validating(sender As Object, e As CancelEventArgs) Handles poststedTextBox.Validating
+        setError(poststedTextBox, v.poststedFormat, "Feltet kan ikke stå tomt. Vennligst fyll ut din Adresse")
+    End Sub
+
+    'Validering for passord'
+    Private Sub gjenntaPassordTextbox_Validating(sender As Object, e As CancelEventArgs) Handles gjenntaPassordTextbox.Validating
+        If gjenntaPassordTextbox.Text = passordTextBox.Text Then
+            setError(gjenntaPassordTextbox, v.passordFormat, "Passordet må være minst 8 tegn og inneholde minst en stor og en liten bokstav og ett tall.")
+        Else
+            setError(gjenntaPassordTextbox, v.passordFormat, "Passordene må være like.")
+        End If
+    End Sub
+
+    Private Sub PassordTextbox_Validating(sender As Object, e As CancelEventArgs) Handles passordTextBox.Validating
+        If gjenntaPassordTextbox.Text = passordTextBox.Text Then
+            setError(passordTextBox, v.passordFormat, "Passordet må være minst 8 tegn og inneholde minst en stor og en liten bokstav og ett tall.")
+        Else
+            setError(passordTextBox, v.passordFormat, "Passordene må være like.")
+        End If
+    End Sub
 End Class
-
-
-
-

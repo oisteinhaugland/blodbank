@@ -29,6 +29,7 @@ Partial Class hashtest
         Me.hashedPassword = New System.Windows.Forms.RichTextBox()
         Me.passwordcheck = New System.Windows.Forms.Button()
         Me.convertedToPlainpassword = New System.Windows.Forms.TextBox()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.SuspendLayout()
         '
         'plainPassword
@@ -89,11 +90,20 @@ Partial Class hashtest
         Me.convertedToPlainpassword.Size = New System.Drawing.Size(189, 20)
         Me.convertedToPlainpassword.TabIndex = 6
         '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Location = New System.Drawing.Point(489, 198)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(120, 94)
+        Me.CheckedListBox1.TabIndex = 7
+        '
         'hashtest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(569, 395)
+        Me.ClientSize = New System.Drawing.Size(667, 499)
+        Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.convertedToPlainpassword)
         Me.Controls.Add(Me.passwordcheck)
         Me.Controls.Add(Me.hashedPassword)
@@ -115,4 +125,5 @@ Partial Class hashtest
     Friend WithEvents hashedPassword As RichTextBox
     Friend WithEvents passwordcheck As Button
     Friend WithEvents convertedToPlainpassword As TextBox
+    Friend WithEvents CheckedListBox1 As CheckedListBox
 End Class

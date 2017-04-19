@@ -38,30 +38,28 @@ Public Class Blodgivning
     Dim blodplater As Integer
     Dim datoTapp As String
     Private Sub registrerBlodInfo()
+        Dim v As New Validering
 
-        plasmaHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 365, Today.Date))
-        blodplaterHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 7, Today.Date))
-        blodlegemerHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 25, Today.Date))
+        Dim plasmaHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 365, Today.Date))
+        Dim blodplaterHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 7, Today.Date))
+        Dim blodlegemerHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 25, Today.Date))
 
 
         Dim validert As Boolean = True
         Dim validertDato As Boolean = True
         Dim feilmelding1 = "Registrer feil mengde. Feltet kan ikke stå tomt og kan ikke være større enn 9."
         Dim feilmelding2 = "Datoformatet er ikke riktig. Vennligst følg formatet dd.mm.åååå"
-        If formatSkjekk(IDtekst.Text, blodgiverIdFormat) Then blodgiverID = IDtekst.Text
+        If v.formatSkjekk(IDtekst.Text, v.blodgiverIdFormat) Then blodgiverID = IDtekst.Text
         Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & IDtekst.Text)
         Dim blodtype_id
         For Each row In blodgiver.Rows
             blodtype_id = row("blodtype_id")
         Next
 
-
-
-
-        If formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
-        If formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
-        If formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
-        If formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
+        If v.formatSkjekk(plasmaTekst.Text, v.registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
+        If v.formatSkjekk(blodlegemeTekst.Text, v.registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
+        If v.formatSkjekk(blodplateTekst.Text, v.registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
+        If v.formatSkjekk(TappeDato.Text, v.datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
 
 
 
@@ -183,10 +181,6 @@ Public Class Blodgivning
         Else
             MsgBox("blogiver har allerede registrert blodtype")
         End If
-
-
-
-
 
     End Sub
 End Class

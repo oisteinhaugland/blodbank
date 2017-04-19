@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-Imports System.Text.RegularExpressions
 Module tilkoblingsdata
     'Tilkoblingsinformasjon til phpMyAdmin Konto team 5
     Private team_passord As String = "M2oHUQ17"
@@ -12,26 +11,19 @@ Module tilkoblingsdata
                             "Pwd=" & team_passord & ";" &
                             "Convert Zero Datetime=True"
                             )
-
     'Brukerinformasjon.
     Public innlogget_bruker As String
     Public innlogget_etternavn As String
     Public innlogget_fornavn As String
     Public innlogget_adresse As String
     Public innlogget_blodgiver_id As Integer
-
-
     Public innlogget_blodtype As String
-
     Public innlogget_epost As String
-
     Public innlogget_fodseldato As String
     Public innlogget_forrige_blodtapp As Date
     Public innlogget_godkjent_egenerklering As Boolean
     Public innlogget_karantene As Date
-
     'Public innlogget_godkjent_egenerklering As Integer
-
     Public innlogget_passord As String
     Public innlogget_post_nr As Integer
     Public innlogget_post_sted As String
@@ -42,20 +34,6 @@ Module tilkoblingsdata
     'Public innlogget_forrige_blodtapp As String
     'Public innlogget_karantene As Date
     Public innlogget_ansatt_id As Integer
-
-    'Regular Expressions for validering
-    Public datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
-    Public personnummerformat As String = "^(\d){5}$"
-    Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
-
-    Public registrerMengdeFormat As String = "^(\d)$"
-    Public blodgiverIdFormat As String = "^(\d){0,4}$"
-    Public blodtypeFormat As String = "^(\){0,4}$"
-
-    'lagringsvarabler for ulike egenskaper
-    Public plasmaHoldbarhet
-    Public blodlegemerHoldbarhet
-    Public blodplaterHoldbarhet
 
     'Funksjon for å kjøre SQL spørringer
     Public Function sql_sporring(ByRef sql As String) As DataTable
@@ -100,21 +78,6 @@ Module tilkoblingsdata
         Return karanteneDato.ToString("yyyy-MM-dd")
     End Function
 
-
-    Public Function formatSkjekk(ByVal text As String, ByVal regularexpression As String)
-        Dim match As Match = Regex.Match((text), regularexpression)
-        If match.Success Then
-            Return True
-        Else
-            Return False
-        End If
-    End Function
-
-
-
-
     'Public innlogget_karantene As date
-
     'SELECT * FROM `Blodgivning` inner join Blodgiver AS b on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = VARIABEL order by blogivning_dato DESC LIMIT 1
-
 End Module

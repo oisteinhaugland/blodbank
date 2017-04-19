@@ -47,15 +47,18 @@ Partial Class registrerBlodgiver
         Me.postnrLabel = New System.Windows.Forms.Label()
         Me.postNrTextBox = New System.Windows.Forms.TextBox()
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.avbrytRegistrering = New System.Windows.Forms.Button()
         Me.Personalia = New System.Windows.Forms.GroupBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'fornavnTextbox
         '
-        Me.fornavnTextbox.Location = New System.Drawing.Point(153, 34)
+        Me.fornavnTextbox.Location = New System.Drawing.Point(153, 33)
         Me.fornavnTextbox.Name = "fornavnTextbox"
         Me.fornavnTextbox.Size = New System.Drawing.Size(100, 20)
         Me.fornavnTextbox.TabIndex = 0
@@ -193,7 +196,7 @@ Partial Class registrerBlodgiver
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(254, 148)
+        Me.Label1.Location = New System.Drawing.Point(308, 148)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 20
@@ -202,7 +205,7 @@ Partial Class registrerBlodgiver
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(255, 174)
+        Me.Label2.Location = New System.Drawing.Point(306, 174)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 21
@@ -247,14 +250,14 @@ Partial Class registrerBlodgiver
         Me.poststedTextBox.Size = New System.Drawing.Size(131, 20)
         Me.poststedTextBox.TabIndex = 8
         '
-        'Button1
+        'avbrytRegistrering
         '
-        Me.Button1.Location = New System.Drawing.Point(401, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(347, 71)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Gå tilbake & Avbryt registrering"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.avbrytRegistrering.Location = New System.Drawing.Point(401, 376)
+        Me.avbrytRegistrering.Name = "avbrytRegistrering"
+        Me.avbrytRegistrering.Size = New System.Drawing.Size(347, 71)
+        Me.avbrytRegistrering.TabIndex = 12
+        Me.avbrytRegistrering.Text = "Avbryt registrering"
+        Me.avbrytRegistrering.UseVisualStyleBackColor = True
         '
         'Personalia
         '
@@ -271,40 +274,56 @@ Partial Class registrerBlodgiver
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'FileSystemWatcher1
+        '
+        Me.FileSystemWatcher1.EnableRaisingEvents = True
+        Me.FileSystemWatcher1.SynchronizingObject = Me
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(538, 137)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 28
+        Me.Button1.Text = "error count"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'registrerBlodgiver
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(775, 532)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.poststedTextBox)
+        Me.Controls.Add(Me.avbrytRegistrering)
         Me.Controls.Add(Me.postnrLabel)
-        Me.Controls.Add(Me.postNrTextBox)
         Me.Controls.Add(Me.adresseLabel)
-        Me.Controls.Add(Me.adresseTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.fødselsdatoLabel)
-        Me.Controls.Add(Me.fodselsdatoTextBox)
         Me.Controls.Add(Me.telefonLabel)
-        Me.Controls.Add(Me.telefonTextBox)
         Me.Controls.Add(Me.registrerBrukerKnapp)
         Me.Controls.Add(Me.personNrLabel)
-        Me.Controls.Add(Me.personNrTextBox)
         Me.Controls.Add(Me.gjentaPassordLabel)
-        Me.Controls.Add(Me.gjenntaPassordTextbox)
         Me.Controls.Add(Me.passordLabel)
         Me.Controls.Add(Me.etterNavnLabel)
         Me.Controls.Add(Me.epostLabel)
         Me.Controls.Add(Me.fornavnLabel)
-        Me.Controls.Add(Me.passordTextBox)
-        Me.Controls.Add(Me.etterNavnTextBox)
-        Me.Controls.Add(Me.epostTextbox)
         Me.Controls.Add(Me.fornavnTextbox)
+        Me.Controls.Add(Me.etterNavnTextBox)
+        Me.Controls.Add(Me.telefonTextBox)
+        Me.Controls.Add(Me.epostTextbox)
+        Me.Controls.Add(Me.fodselsdatoTextBox)
+        Me.Controls.Add(Me.personNrTextBox)
+        Me.Controls.Add(Me.adresseTextBox)
+        Me.Controls.Add(Me.postNrTextBox)
+        Me.Controls.Add(Me.poststedTextBox)
+        Me.Controls.Add(Me.passordTextBox)
+        Me.Controls.Add(Me.gjenntaPassordTextbox)
         Me.Controls.Add(Me.Personalia)
         Me.Name = "registrerBlodgiver"
         Me.Text = "nyBruker"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -334,7 +353,9 @@ Partial Class registrerBlodgiver
     Friend WithEvents postnrLabel As Label
     Friend WithEvents postNrTextBox As TextBox
     Friend WithEvents poststedTextBox As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents avbrytRegistrering As Button
     Friend WithEvents Personalia As GroupBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
+    Friend WithEvents Button1 As Button
 End Class
