@@ -25,7 +25,7 @@ Public Class ansattInnkalling
 
         Label7.Text = "Hasteinkalling skjer etter behov." & vbCrLf & "Funksjonaliteten sender haste e-post." & vbCrLf & "For raske bekreftelser bruk telefon."
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         MonthCalendar1.MinDate = Date.Today
         MonthCalendar1.MaxSelectionCount = 1
 
