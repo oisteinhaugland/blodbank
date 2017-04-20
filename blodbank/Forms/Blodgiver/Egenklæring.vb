@@ -7,9 +7,6 @@
     Dim karantene180 As Boolean
     Dim karantene365 As Boolean
     Dim karantene1 As Boolean
-
-
-
     Dim karantenelist As List(Of Blodgiver)
 
 
@@ -74,6 +71,7 @@
         End If
     End Function
 
+<<<<<<< HEAD
     'Public Sub karantene()
 
 
@@ -115,6 +113,16 @@
     'End Sub
 
     Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
+=======
+    Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
+        karantenelist = New List(Of Blodgiver)
+
+        'Lager datovariabler som samsvarer med SQL
+        Dim dagensDato As Date
+        konverterDatoFormatTilMySql(Date.Today)
+        dagensDato = Date.Today
+
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
 
         If validerEgenerkleringOgSendTilDB() Then
@@ -212,8 +220,8 @@
 
     Private Sub blodgiver_egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
         sendEgenerklering.Enabled = False
 
         If innlogget_karantene <> "00:00:00" Then

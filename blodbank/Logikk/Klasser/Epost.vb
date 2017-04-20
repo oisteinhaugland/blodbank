@@ -1,7 +1,12 @@
 ﻿Imports System.Net.Mail
+<<<<<<< HEAD
 
 Public Class Epost
     Public Sub sendEpost(ByVal mottaker As String, ByVal emne As String, ByVal innhold As String)
+=======
+Public Class Epost
+    Public Sub sendEpost(mottaker, emne, innhold)
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
         Dim Smtp_Server As New SmtpClient
         Dim e_mail As New MailMessage()

@@ -225,6 +225,7 @@ Public Class loggInn
 
 
 
+<<<<<<< HEAD
         'For Each rad In blodGivere.Rows
         '    Dim brukernavn = rad("epost")
         '    Dim passord = rad("passord")
@@ -242,6 +243,45 @@ Public Class loggInn
         '    Dim telefon = rad("telefon")
         '    Dim personnummer = rad("personnummer")
         '    Dim forrige_blodtapp
+=======
+        For Each rad In tabell.Rows
+            Dim brukernavn = rad("epost")
+            Dim passord = rad("passord")
+            Dim fornavn = rad("fornavn")
+            Dim etternavn = rad("etternavn")
+            Dim adresse = rad("adresse")
+            Dim blodgiver_id = rad("blodgiver_id")
+            Dim blodtype = rad("blodtype_id")
+            Dim epost = rad("epost")
+            Dim fodseldato = rad("fodseldato")
+
+            'Dim forrige_blodtapp = rad("forrige_blodtapp")
+
+            Dim godkjent_egenerklering = rad("godkjent_egenerklering")
+            Dim karantene = rad("karantene")
+            Dim post_nr = rad("post_nr")
+            Dim post_sted = rad("post_sted")
+            Dim telefon = rad("telefon")
+            Dim personnummer = rad("personnummer")
+            Dim forrige_blodtapp
+            Dim blodprosent = rad("blodprosent")
+
+            Try
+                Dim ny_tabbel = sql_sporring("SELECT * FROM 
+                `Blodgivning` inner join Blodgiver AS b
+                on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+                order by blodgivning_dato DESC limit 1")
+
+                For Each row In ny_tabbel.Rows
+                    forrige_blodtapp = row("forrige_blodtapp")
+                Next
+
+            Catch ex As Exception
+                forrige_blodtapp = "Aldri gitt blod"
+            End Try
+
+            If brukernavn <> String.Empty Then
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
         '    'spørring som finner siste blodtapp av bruker.
         '    'Try
@@ -250,12 +290,22 @@ Public Class loggInn
         '    '    on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
         '    '    order by blodgivning_dato DESC limit 1")
 
+<<<<<<< HEAD
         '    '    For Each row In ny_tabbel.Rows
         '    '        forrige_blodtapp = row("forrige_blodtapp")
         '    '    Next
         '    'Catch ex As Exception
         '    '    forrige_blodtapp = "Aldri gitt blod"
         '    'End Try
+=======
+                innlogget_godkjent_egenerklering = godkjent_egenerklering
+                innlogget_karantene = karantene
+                innlogget_post_nr = post_nr
+                innlogget_post_sted = post_sted
+                innlogget_telefon = telefon
+                innlogget_personnummer = personnummer
+                innlogget_blodprosent = blodprosent
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
         '    'hvis du fant en bruker med matchende kombinasjon av brukernavn og passord fyll ut informasjon
         '    If brukernavn <> String.Empty Then
@@ -388,7 +438,15 @@ Public Class loggInn
     End Sub
 
     'sett standar possisjon til topp left.
+<<<<<<< HEAD
 
+=======
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.Location = New Point(0, 0)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
+    End Sub
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
     'registrer ny blodgiver nagivasjon
     Private Sub registrerBrukerKnapp_Click(sender As Object, e As EventArgs) Handles registrerBrukerKnapp.Click

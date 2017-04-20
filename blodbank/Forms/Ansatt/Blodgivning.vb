@@ -7,7 +7,7 @@ Public Class Blodgivning
     Private Sub ansattRegBlodgiving_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex = 0
         registrerBlodtypeKnapp.Enabled = False
@@ -38,6 +38,7 @@ Public Class Blodgivning
     Dim blodlegemer As Integer
     Dim blodplater As Integer
     Dim datoTapp As String
+    Dim blodprosent As Integer
     Private Sub registrerBlodInfo()
         Dim v As New Validering
 
@@ -60,10 +61,24 @@ Public Class Blodgivning
             blodtype_id = row("blodtype_id")
         Next
 
+<<<<<<< HEAD
         If v.formatSkjekk(plasmaTekst.Text, v.registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
         If v.formatSkjekk(blodlegemeTekst.Text, v.registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
         If v.formatSkjekk(blodplateTekst.Text, v.registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If v.formatSkjekk(TappeDato.Text, v.datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
+=======
+
+
+
+        If formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
+        If formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
+        If formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
+        If formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
+        If formatSkjekk(blodprosentTekst.Text, registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
+
+
+
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
         If validert And validertDato Then
 
@@ -79,6 +94,7 @@ Public Class Blodgivning
                 '" & blodtype_id & "' ,
                 '" & innlogget_ansatt_id & "' 
                 )")
+                sql_sporring("UPDATE Blodgiver SET blodprosent =" & blodprosent & " WHERE blodgiver_id =" & blodgiverID)
 
                 Dim registrertTapp As String = "Blodtapp for bruker " & blodgiverID & " er nå registrert."
                 MsgBox(registrertTapp)

@@ -119,7 +119,19 @@ Public Class registrerBlodgiver
         validerSkjemaOgRegistrerBruker()
     End Sub
 
+<<<<<<< HEAD
     Private Sub avbrytReg(sender As Object, e As EventArgs) Handles avbrytRegistrering.Click
+=======
+
+    Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.Location = New Point(0, 0)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
         loggInn.Show()
         Me.Close()
     End Sub

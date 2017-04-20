@@ -2,7 +2,8 @@
 Public Class ansattInnkalling
     Dim ansattInnkallingTable As New DataTable
     Dim Norminnkalling As New DataTable
-    Dim innkallingList As New List(Of Innkalling)
+    Dim innkallingListe As New List(Of Innkalling)
+    Dim epost As New Epost
 
 
 
@@ -26,14 +27,9 @@ Public Class ansattInnkalling
 
         Label7.Text = "Hasteinkalling skjer etter behov." & vbCrLf & "Funksjonaliteten sender haste e-post." & vbCrLf & "For raske bekreftelser bruk telefon."
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         MonthCalendar1.MinDate = Date.Today
         MonthCalendar1.MaxSelectionCount = 1
-
-
-        'Dim testdata = sql_sporring("SELECT blodgiver_id, fornavn, etternavn, epost, blodtype_id FROM Blodgiver WHERE godkjent_egenerklering = '1'")
-
-
 
     End Sub
 
@@ -43,34 +39,15 @@ Public Class ansattInnkalling
         Tremnddato = DateAdd(DateInterval.Month, -3, Date.Today)
         ansattInnkallingTable = sql_sporring("SELECT Blodgiver.blodgiver_id, fornavn, etternavn, epost, telefon, Blodgiver.blodtype_id, max(blodgivning_dato) as sistBlodgivning  FROM Blodgiver INNER JOIN Blodgivning ON Blodgiver.blodgiver_id = Blodgivning.blodgiver_id WHERE godkjent_egenerklering = '1'  GROUP BY Blodgiver.blodgiver_id")
 
-        'ansattInnkallingTable = sql_sporring("SELECT * FROM Blodgiver INNER JOIN Blodgivning ON Blodgiver.blodgiver_id = Blodgivning.blodgiver_id WHERE godkjent_egenerklering = '1' AND blodgivning_dato <'" & konverterDatoFormatTilMySql(Tremnddato) & "' GROUP BY Blodgiver.blodgiver_id")
         For Each rad In ansattInnkallingTable.Rows
+            'Bruker en funksjon for blodtypekonvertering
+            Dim blodtypeStringInk = konverterBlodtypeTilTekst(rad("blodtype_id"))
 
-            Dim blodtypeStringInk
-            Select Case rad("blodtype_id")
-                Case 1
-                    blodtypeStringInk = "A+"
-                Case 2
-                    blodtypeStringInk = "A-"
-                Case 3
-                    blodtypeStringInk = "B+"
-                Case 4
-                    blodtypeStringInk = "B-"
-                Case 5
-                    blodtypeStringInk = "AB+"
-                Case 6
-                    blodtypeStringInk = "AB-"
-                Case 7
-                    blodtypeStringInk = "O+"
-                Case 8
-                    blodtypeStringInk = "O-"
-            End Select
 
-            'For Each i In ansattInnkallingTable.Rows
             If rad("sistBlodgivning") < Tremnddato Then
 
-                innkallingList.Add(New Innkalling(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("epost"), rad("telefon"), rad("blodtype_id")))
-                klareBlodgivere.Items.Add(rad("blodgiver_id") & vbTab & rad("fornavn") & vbTab & rad("etternavn") & vbTab & Space(2) & rad("epost") & Space(4) & rad("telefon") & Space(1) & vbTab & blodtypeStringInk)
+                innkallingListe.Add(New Innkalling(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("epost"), rad("telefon"), rad("blodtype_id")))
+                klareBlodgivere.Items.Add(rad("blodgiver_id") & vbTab & vbTab & rad("fornavn") & vbTab & rad("etternavn") & vbTab & Space(2) & rad("epost") & Space(4) & rad("telefon") & Space(1) & vbTab & blodtypeStringInk)
             End If
         Next
 
@@ -84,11 +61,9 @@ Public Class ansattInnkalling
         If klareBlodgivere.SelectedIndex < 0 Then
             MsgBox("Vennligst velg blodgiver")
         Else
-
-
-            innkallingString = innkallingList(index).fornavn & " " & innkallingList(index).etternavn
+            innkallingString = innkallingListe(index).fornavn & " " & innkallingListe(index).etternavn
             For Each rad In Norminnkalling.Rows
-                innkallingList.Add(New Innkalling(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("epost"), rad("telefon"), rad("blodtype_id")))
+                innkallingListe.Add(New Innkalling(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("epost"), rad("telefon"), rad("blodtype_id")))
 
             Next
             Dim datoFormat As String = "dd/MM/yyyy"
@@ -120,7 +95,7 @@ Public Class ansattInnkalling
                     innkallTime = sql_sporring("INSERT INTO Timebestilling(bestilling_dato, bestilling_tidspunkt, blodgiver_id, er_aktiv)
         values('" & konverterDatoFormatTilMySql(valgtDato) & "',
                '" & tidspunkt & "',
-            '" & innkallingList(index).blodgiver_id & "',
+            '" & innkallingListe(index).blodgiver_id & "',
             1
             )")
                     MsgBox(innkallingString & " er innkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er registert for " & valgtDato & ", klokken: " & tidspunkt & ":00." & vbCrLf)
@@ -133,14 +108,10 @@ Public Class ansattInnkalling
             End Try
             Try
 
-                'Selecteditem i listbox for ¬ hente ut fornavn, etternavn og epost
-
-                Dim innkallingEpost = innkallingList(index).epost
-                'Dim dato = Me.timeDato.Value.Date.ToString()
-                'dato = Format(timeDato.Value, "dd/MM/yyyy")
-                'Dim tidspunkt = TidTekst.Text
                 Dim mailTekst As String = "Hei vi melder om innkalling til blodgivertime den " & valgtDato & " kl: " & tidspunkt & ". Gi beskjed dersom du ikke kan komme. " & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
+                Dim innkallingEpost = innkallingListe(klareBlodgivere.SelectedIndex).epost
 
+<<<<<<< HEAD
 
                 'Epost funksjonalitet for innkalling
 
@@ -164,15 +135,16 @@ Public Class ansattInnkalling
 
 
                 'MsgBox(innkallingString & " er innkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er " & dato & ", klokken: " & tidspunkt & "." & vbCrLf)
+=======
+                'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
+                epost.sendEpost(innkallingEpost, "Blodgivertime", mailTekst)
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
             Catch error_t As Exception
-                MsgBox("Vennligst velg blodgiver f¯r innkalling.")
+                MsgBox("Vennligst velg blodgiver før innkalling.")
             End Try
         End If
-
-
         ledigeTimer.Items.Clear()
-
     End Sub
 
 
@@ -190,8 +162,8 @@ Public Class ansattInnkalling
         If klareBlodgivere.SelectedIndex < 0 Then
             MsgBox("Vennligst velg blodgiver")
         Else
-            innkallingStringHast = innkallingList(index2).fornavn & " " & innkallingList(index2).etternavn
-            Dim innkallingEpost = innkallingList(index2).epost
+            innkallingStringHast = innkallingListe(index2).fornavn & " " & innkallingListe(index2).etternavn
+            Dim innkallingEpost = innkallingListe(index2).epost
             Dim dato2 = MonthCalendar1.SelectionRange.Start.ToString(datoFormat)
 
 
@@ -215,7 +187,6 @@ Public Class ansattInnkalling
                     tidspunkt = 15
             End Select
 
-
             Try
 
                 If tidspunkt <> 0 Then
@@ -223,7 +194,7 @@ Public Class ansattInnkalling
                     innkallTimeHast = sql_sporring("INSERT INTO Timebestilling(bestilling_dato, bestilling_tidspunkt, blodgiver_id, er_aktiv)
         values('" & konverterDatoFormatTilMySql(dato2) & "',
                '" & tidspunkt & "',
-            '" & innkallingList(index2).blodgiver_id & "',
+            '" & innkallingListe(index2).blodgiver_id & "',
             1
             )")
                     MsgBox(innkallingStringHast & " er hasteinnkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er " & dato2 & ", klokken: " & tidspunkt & ":00." & vbCrLf)
@@ -237,26 +208,12 @@ Public Class ansattInnkalling
             End Try
             Try
 
-                Dim mailTekst As String = "Hei vi melder om n¯dsituasjon som krever en hasteinnkalling til blodgivertime den " & dato2 & " kl: " & tidspunkt & ". Bekreft snarest" & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
-                Dim Smtp_Server As New SmtpClient
-                Dim e_mail As New MailMessage()
-                Smtp_Server.UseDefaultCredentials = False
-                Smtp_Server.Credentials = New Net.NetworkCredential("blodbank.gruppe05@gmail.com", "blodbank1234")
-                Smtp_Server.Port = 587
-                Smtp_Server.EnableSsl = True
-                Smtp_Server.Host = "smtp.gmail.com"
-
-                e_mail = New MailMessage()
-                e_mail.From = New MailAddress("blodbank.gruppe05@gmail.com")
-                e_mail.To.Add(innkallingEpost)
-                e_mail.Subject = "HASTEINNKALLING - BLODBANKEN"
-                e_mail.IsBodyHtml = False
-                e_mail.Body = (mailTekst)
-                Smtp_Server.Send(e_mail)
-
+                'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
+                Dim mailTekst As String = "Hei vi melder om nødsituasjon som krever en hasteinnkalling til blodgivertime den " & dato2 & " kl: " & tidspunkt & ":00" & ". Bekreft snarest" & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
+                epost.sendEpost(innkallingEpost, "HASTEINNKALLING - BLODBANKEN", mailTekst)
 
             Catch error_t As Exception
-                MsgBox("Vennligst velg blodgiver f¯r innkalling.")
+                MsgBox("Vennligst velg blodgiver før innkalling.")
             End Try
         End If
         ledigeTimer.Items.Clear()
@@ -271,7 +228,7 @@ Public Class ansattInnkalling
         Dim tidsPunkt = ""
         Dim hvisTid = True
 
-        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer pÂ den dagen
+        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
             'skjekk om tidspunktet er en av radene
             For i = 0 To 6
 

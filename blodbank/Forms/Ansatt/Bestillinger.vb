@@ -4,17 +4,13 @@
     Dim bestillTable As New DataTable
     Dim enhetTable As New DataTable
 
-
     Private Sub AnsattBestillinger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
 
         utleveringLabel.Hide()
         motatteBestillinger.Items.Clear()
-        motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
-        motatteBestillinger.Items.Add(" ")
-
 
 
     End Sub
@@ -22,50 +18,19 @@
 
         'Oppdater knapp for å se innkommende bestillinger
         motatteBestillinger.Items.Clear()
-        motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
-        motatteBestillinger.Items.Add(" ")
 
         bestillTable = sql_sporring("SELECT * FROM Blod_bestillinger WHERE behandlet = 0")
         Dim counter = 0
         bestillinger = New List(Of Bestillingsinfo)
         For Each rad In bestillTable.Rows
-            Dim blodegString
-            Select Case rad("blodegenskap_id")
-                Case 1
-                    blodegString = "Legemer"
-                Case 2
-                    blodegString = "Plater"
-                Case 3
-                    blodegString = "Plasma"
-            End Select
 
-            Dim blodtypeString
-            Select Case rad("blod_type")
-                Case 1
-                    blodtypeString = "A+"
-                Case 2
-                    blodtypeString = "A-"
-                Case 3
-                    blodtypeString = "B+"
-                Case 4
-                    blodtypeString = "B-"
-                Case 5
-                    blodtypeString = "AB+"
-                Case 6
-                    blodtypeString = "AB-"
-                Case 7
-                    blodtypeString = "O+"
-                Case 8
-                    blodtypeString = "O-"
-            End Select
+            'Bruker funksjon for blodegenskapkonvertering[Tilkoblingsdata.vb]
+            Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
+            'Bruker en funksjon for blodtypekonvertering [Tilkoblingsdata.vb]
+            Dim blodtypeStringBest = konverterBlodtypeTilTekst(rad("blod_type"))
 
-            motatteBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodegString & vbTab & vbTab & blodtypeString & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
-
-
+            motatteBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodegString & vbTab & vbTab & blodtypeStringBest & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
             bestillinger.Add(New Bestillingsinfo(rad("blodbestilling_id"), rad("blodegenskap_id"), rad("blod_mengde"), rad("ordre_dato"), rad("behandlet"), rad("blod_type")))
-
-
-
         Next
 
     End Sub
@@ -101,6 +66,7 @@
 
             Next
 
+            'Kode for endring i lagermengde ved utlevering
             bestillinger(i).ny_blod_mengde = bestillinger(i).ny_mengde(bestillinger(i).blod_mengde, bestillinger(i).antall_enheter_behandlet)
 
             If bestillinger(i).antall_enheter_behandlet = bestillinger(i).blod_mengde Then
@@ -116,8 +82,6 @@
 
         motatteBestillinger.Items.Clear()
         utleveringLabel.Visible = True
-        motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
-        motatteBestillinger.Items.Add(" ")
 
         utleveringLabel.Show()
 
@@ -133,9 +97,6 @@
         Next
         motatteBestillinger.Items.Clear()
         utleveringLabel.Visible = False
-        motatteBestillinger.Items.Add("Bestillings(id)" & vbTab & "Blodegenskap" & vbTab & "Blodtype" & vbTab & "Blod mengde" & vbTab & "Ordre dato")
-        motatteBestillinger.Items.Add(" ")
-
 
     End Sub
 
@@ -145,9 +106,6 @@
 
     End Sub
 
-    Private Sub motatteBestillinger_SelectedIndexChanged(sender As Object, e As EventArgs) Handles motatteBestillinger.SelectedIndexChanged
-
-    End Sub
 
     Private Sub søkLagerBtn_Click(sender As Object, e As EventArgs) Handles søkLagerBtn.Click
 
@@ -161,35 +119,9 @@
             For Each rad In enhetTable.Rows
                 enheterPåLager.Add(New lager(rad("enhet_id"), rad("blodegenskap_id"), rad("blodtype_id")))
 
-                Dim blodegString
-                Select Case rad("blodegenskap_id")
-                    Case 1
-                        blodegString = "Legemer"
-                    Case 2
-                        blodegString = "Plater"
-                    Case 3
-                        blodegString = "Plasma"
-                End Select
-
-                Dim blodtypeString
-                Select Case rad("blodtype_id")
-                    Case 1
-                        blodtypeString = "A+"
-                    Case 2
-                        blodtypeString = "A-"
-                    Case 3
-                        blodtypeString = "B+"
-                    Case 4
-                        blodtypeString = "B-"
-                    Case 5
-                        blodtypeString = "AB+"
-                    Case 6
-                        blodtypeString = "AB-"
-                    Case 7
-                        blodtypeString = "O+"
-                    Case 8
-                        blodtypeString = "O-"
-                End Select
+                'Bruker funksjoner for blodtype- og blodegenskapskonvertering [Tilkoblingsdata.vb]
+                Dim blodtypeString = konverterBlodtypeTilTekst(rad("blodtype_id"))
+                Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
 
                 Dim enhet As String = rad("enhet_id") & "-" & blodtypeString & "-" & blodegString
                 vareLagerListBox.Items.Add(enhet)
@@ -200,5 +132,23 @@
 
     End Sub
 
+<<<<<<< HEAD
+=======
+    Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
+        ansattInnkalling.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
+        Produktoversikt.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
+        Startside.Show()
+        Me.Hide()
+
+    End Sub
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
 End Class

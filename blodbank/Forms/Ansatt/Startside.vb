@@ -10,12 +10,13 @@
     Private Sub ansattStartSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
 
         dagensTimer.Items.Clear()
         Dim dagensDato As Date = Today.Date
 
-        timespørring = sql_sporring("SELECT * FROM Timebestilling WHERE er_aktiv = 1 AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
+        'timespørring = sql_sporring("SELECT * FROM Timebestilling WHERE er_aktiv = 1 AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
+        timespørring = sql_sporring("SELECT * FROM Timebestilling INNER JOIN Blodgiver ON Timebestilling.blodgiver_id = Blodgiver.blodgiver_id where er_aktiv AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
         For Each rad In timespørring.Rows
 
             Dim tidspunkt
@@ -35,8 +36,11 @@
                 Case 15
                     tidspunkt = Convert.ToString("15:00")
             End Select
-            dagensTimer.Items.Add(rad("timebestilling_id") & vbTab & tidspunkt)
+            dagensTimer.Items.Add(rad("fornavn") & " " & rad("etternavn") & vbTab & tidspunkt)
             dagenstimerList.Add(New timebestilling(rad("timebestilling_id"), rad("bestilling_dato"), rad("bestilling_tidspunkt"), rad("blodgiver_id"), rad("er_aktiv")))
+
+
+
         Next
         Dim velkomst As String = "Velkommen!"
         Label8.Text = velkomst

@@ -15,32 +15,13 @@
 
     Private Sub blodgiver_timebestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
         Kalender.MinDate = Date.Today
         Kalender.MaxSelectionCount = 1
         bestillKnapp.Enabled = False
         avbestillKnapp.Enabled = False
 
-
-        'Dim test As New DataTable
-        'test = sql_sporring("SELECT * FROM Timebestilling Where er_aktiv = 1")
-        'Dim testing(test.Rows.Count) As Date
-
-        'Dim enDato As New List(Of Date)
-
-        'For Each rad In test.Rows
-        '    enDato.Add(rad("bestilling_dato"))
-        'Next
-
-        'MonthCalendar1.BoldedDates = 
-
-
-        'ledigeTidspunkt.Items.Clear()
-        'ledigeTimer = sql_sporring("SELECT bestilling_tidspunkt FROM Timebestilling")
-        'For Each rad In ledigeTimer.Rows
-        '    ledigeTidspunkt.Items.Add(ledigeTimer)
-        'Next
 
     End Sub
 
@@ -186,4 +167,5 @@
     Private Sub DineTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DineTimer.SelectedIndexChanged
         avbestillKnapp.Enabled = True
     End Sub
+
 End Class

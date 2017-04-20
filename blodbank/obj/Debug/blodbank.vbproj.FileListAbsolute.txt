@@ -8,9 +8,6 @@ C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\b
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\bin\Debug\MySql.Data.dll
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\bin\Debug\MySql.Data.xml
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
@@ -62,16 +59,9 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.pdb
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.xml
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.dll
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.xml
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattBestillinger.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattProduktoversikt.resources
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattRegBlodgiving.resources
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattStartSide.resources
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiverMinSide.resources
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiver_egenerklering.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
@@ -84,6 +74,48 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.Ge
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
+<<<<<<< HEAD
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Timebestillinger.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.GlemtPassord.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.RegistrerNyttPassord.resources
+=======
+<<<<<<< HEAD
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Blodgivning.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
+C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
+=======
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Blodgivning.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
+C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe.config
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.exe
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.xml
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.pdb
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.xml
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.dll
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.xml
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Blodgivning.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
+C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
+>>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
