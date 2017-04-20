@@ -136,10 +136,10 @@ Public Class registrerBlodgiver
 
         Dim datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
         Dim fodselsdatoformatMatch As Match = Regex.Match((fodselsdatoTextBox.Text), datoFormat)
-        If fodselsdatoformatMatch.Success Then
+        If fodselsdatoformatMatch.Success And fodselsdatoTextBox.Text > DateAdd(DateInterval.Year, -18, Date.Today) And fodselsdatoTextBox.Text < DateAdd(DateInterval.Year, -65, Date.Today) Then
             Dim Fodselsnummer As String = konverterDatoFormatTilMySql(fodselsdatoTextBox.Text)
         Else
-            ErrorProvider1.SetError(fodselsdatoTextBox, "F¯dseslsdato Ikke riktig datoformat. Vennligst fyll inn dd.mm.ÂÂÂÂ")
+            ErrorProvider1.SetError(fodselsdatoTextBox, "F¯dseslsdato Ikke riktig datoformat eller bruker oppfyller ikke alderskrav. Vennligst fyll inn dd.mm.ÂÂÂÂ")
             MsgBox("lol")
             Exit Sub
         End If

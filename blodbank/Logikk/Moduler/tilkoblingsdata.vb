@@ -54,7 +54,7 @@ Module tilkoblingsdata
     Public blodgiverIdFormat As String = "^(\d){0,4}$"
     Public blodtypeFormat As String = "^(\){0,4}$"
 
-    'lagringsvarabler for ulike egenskaper
+    'lagringsvarabler for ulike egenskaper  
     Public plasmaHoldbarhet
     Public blodlegemerHoldbarhet
     Public blodplaterHoldbarhet
