@@ -131,9 +131,13 @@ Partial Class Startside
         'Label4
         '
         Me.Label4.AutoSize = True
+<<<<<<< HEAD
+        Me.Label4.Location = New System.Drawing.Point(120, 104)
+=======
         Me.Label4.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(8, 41)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(251, 41)
         Me.Label4.TabIndex = 9
@@ -143,16 +147,29 @@ Partial Class Startside
         '
         Me.dagensTimer.Font = New System.Drawing.Font("Calibri", 20.0!)
         Me.dagensTimer.FormattingEnabled = True
+<<<<<<< HEAD
+        Me.dagensTimer.Location = New System.Drawing.Point(123, 133)
+        Me.dagensTimer.Name = "dagensTimer"
+        Me.dagensTimer.Size = New System.Drawing.Size(175, 238)
+=======
         Me.dagensTimer.ItemHeight = 40
         Me.dagensTimer.Location = New System.Drawing.Point(15, 152)
         Me.dagensTimer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dagensTimer.Name = "dagensTimer"
         Me.dagensTimer.Size = New System.Drawing.Size(563, 324)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.dagensTimer.TabIndex = 10
         '
         'Label5
         '
         Me.Label5.AutoSize = True
+<<<<<<< HEAD
+        Me.Label5.Location = New System.Drawing.Point(120, 119)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Blodgiver"
+=======
         Me.Label5.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(19, 95)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -160,13 +177,18 @@ Partial Class Startside
         Me.Label5.Size = New System.Drawing.Size(48, 41)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "ID"
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         '
         'Label6
         '
         Me.Label6.AutoSize = True
+<<<<<<< HEAD
+        Me.Label6.Location = New System.Drawing.Point(220, 117)
+=======
         Me.Label6.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(167, 95)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 41)
         Me.Label6.TabIndex = 12
@@ -194,6 +216,11 @@ Partial Class Startside
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Label8"
         '
+<<<<<<< HEAD
+        'Startside
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+=======
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
@@ -284,6 +311,7 @@ Partial Class Startside
         'Startside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1482, 953)
@@ -295,9 +323,14 @@ Partial Class Startside
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+<<<<<<< HEAD
+        Me.Name = "Startside"
+        Me.Text = "ansattStartSide"
+=======
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Startside"
         Me.Text = "Startside"
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

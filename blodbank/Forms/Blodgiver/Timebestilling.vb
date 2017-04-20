@@ -20,25 +20,6 @@
         Kalender.MinDate = Date.Today
         Kalender.MaxSelectionCount = 1
 
-        'Dim test As New DataTable
-        'test = sql_sporring("SELECT * FROM Timebestilling Where er_aktiv = 1")
-        'Dim testing(test.Rows.Count) As Date
-
-        'Dim enDato As New List(Of Date)
-
-        'For Each rad In test.Rows
-        '    enDato.Add(rad("bestilling_dato"))
-        'Next
-
-        'MonthCalendar1.BoldedDates = 
-
-
-        'ledigeTidspunkt.Items.Clear()
-        'ledigeTimer = sql_sporring("SELECT bestilling_tidspunkt FROM Timebestilling")
-        'For Each rad In ledigeTimer.Rows
-        '    ledigeTidspunkt.Items.Add(ledigeTimer)
-        'Next
-
     End Sub
 
     Private Sub bestillKnapp_Click(sender As Object, e As EventArgs) Handles bestillKnapp.Click
