@@ -149,6 +149,7 @@ Public Class loggInn
             Dim telefon = rad("telefon")
             Dim personnummer = rad("personnummer")
             Dim forrige_blodtapp
+            Dim blodprosent = rad("blodprosent")
 
             Try
                 Dim ny_tabbel = sql_sporring("SELECT * FROM 
@@ -191,6 +192,7 @@ Public Class loggInn
                 innlogget_post_sted = post_sted
                 innlogget_telefon = telefon
                 innlogget_personnummer = personnummer
+                innlogget_blodprosent = blodprosent
 
                 Try
                     Dim ny_tabbel = sql_sporring("SELECT * FROM 

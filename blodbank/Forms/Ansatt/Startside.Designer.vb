@@ -152,7 +152,7 @@ Partial Class Startside
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(217, 117)
+        Me.Label4.Location = New System.Drawing.Point(120, 104)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(84, 13)
         Me.Label4.TabIndex = 9
@@ -161,24 +161,24 @@ Partial Class Startside
         'dagensTimer
         '
         Me.dagensTimer.FormattingEnabled = True
-        Me.dagensTimer.Location = New System.Drawing.Point(220, 148)
+        Me.dagensTimer.Location = New System.Drawing.Point(123, 133)
         Me.dagensTimer.Name = "dagensTimer"
-        Me.dagensTimer.Size = New System.Drawing.Size(104, 238)
+        Me.dagensTimer.Size = New System.Drawing.Size(175, 238)
         Me.dagensTimer.TabIndex = 10
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(217, 132)
+        Me.Label5.Location = New System.Drawing.Point(120, 119)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(16, 13)
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "Id"
+        Me.Label5.Text = "Blodgiver"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(263, 132)
+        Me.Label6.Location = New System.Drawing.Point(220, 117)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(25, 13)
         Me.Label6.TabIndex = 12
@@ -202,7 +202,7 @@ Partial Class Startside
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Label8"
         '
-        'ansattStartSide
+        'Startside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -222,7 +222,7 @@ Partial Class Startside
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "ansattStartSide"
+        Me.Name = "Startside"
         Me.Text = "ansattStartSide"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

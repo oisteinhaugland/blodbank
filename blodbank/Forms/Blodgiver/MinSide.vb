@@ -13,6 +13,8 @@
         label_innlogget_post_sted.Text = innlogget_post_sted
         label_innlogget_telefon.Text = innlogget_telefon
         label_innlogget_kjønn.Text = innlogget_kjønn
+        label_forrige_blodprosent.Text = innlogget_blodprosent & "%"
+
     End Sub
 
     Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -19,6 +19,7 @@ Module tilkoblingsdata
     Public innlogget_fornavn As String
     Public innlogget_adresse As String
     Public innlogget_blodgiver_id As Integer
+    Public innlogget_blodprosent As Integer
 
 
     Public innlogget_blodtype As String
@@ -49,6 +50,7 @@ Module tilkoblingsdata
     Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
 
     Public registrerMengdeFormat As String = "^(\d)$"
+    Public registrerBlodprosentFormat As String = "^0*(?:[1-9][0-9]?|100)$"
     Public blodgiverIdFormat As String = "^(\d){0,4}$"
     Public blodtypeFormat As String = "^(\){0,4}$"
 
@@ -94,11 +96,6 @@ Module tilkoblingsdata
         Return innskrevetDato.ToString("yyyy-MM-dd")
     End Function
 
-
-    Public Function konverterDatoFormatKarantene(dato As String) As String
-        Dim karanteneDato As Date = dato
-        Return karanteneDato.ToString("yyyy-MM-dd")
-    End Function
 
 
     Public Function formatSkjekk(ByVal text As String, ByVal regularexpression As String)

@@ -27,7 +27,6 @@ Partial Class MinSide
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.navnLabel = New System.Windows.Forms.Label()
         Me.label_innlogget_fornavn = New System.Windows.Forms.Label()
@@ -56,6 +55,9 @@ Partial Class MinSide
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.label_forrige_blodprosent = New System.Windows.Forms.Label()
+        Me.label_antall_blodgivninger = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,16 +100,6 @@ Partial Class MinSide
         Me.Label1.Size = New System.Drawing.Size(85, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Min side"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(403, 185)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(266, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Masse tekst og oversikt over blodgiveren, evt statistikk"
         '
         'Button1
         '
@@ -348,11 +340,11 @@ Partial Class MinSide
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(403, 134)
+        Me.Label16.Location = New System.Drawing.Point(405, 136)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(27, 13)
+        Me.Label16.Size = New System.Drawing.Size(100, 13)
         Me.Label16.TabIndex = 30
-        Me.Label16.Text = "osv."
+        Me.Label16.Text = "Forrige blodprosent:"
         '
         'Label17
         '
@@ -364,11 +356,39 @@ Partial Class MinSide
         Me.Label17.TabIndex = 31
         Me.Label17.Text = "Personopplysninger"
         '
-        'blodgiverMinSide
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(405, 153)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(100, 13)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Forrige blodprosent:"
+        '
+        'label_forrige_blodprosent
+        '
+        Me.label_forrige_blodprosent.AutoSize = True
+        Me.label_forrige_blodprosent.Location = New System.Drawing.Point(511, 136)
+        Me.label_forrige_blodprosent.Name = "label_forrige_blodprosent"
+        Me.label_forrige_blodprosent.Size = New System.Drawing.Size(0, 13)
+        Me.label_forrige_blodprosent.TabIndex = 33
+        '
+        'label_antall_blodgivninger
+        '
+        Me.label_antall_blodgivninger.AutoSize = True
+        Me.label_antall_blodgivninger.Location = New System.Drawing.Point(511, 121)
+        Me.label_antall_blodgivninger.Name = "label_antall_blodgivninger"
+        Me.label_antall_blodgivninger.Size = New System.Drawing.Size(0, 13)
+        Me.label_antall_blodgivninger.TabIndex = 34
+        '
+        'MinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 483)
+        Me.Controls.Add(Me.label_antall_blodgivninger)
+        Me.Controls.Add(Me.label_forrige_blodprosent)
+        Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
@@ -397,11 +417,10 @@ Partial Class MinSide
         Me.Controls.Add(Me.label_innlogget_fornavn)
         Me.Controls.Add(Me.navnLabel)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "blodgiverMinSide"
+        Me.Name = "MinSide"
         Me.Text = "blodgiverMinSide"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -415,7 +434,6 @@ Partial Class MinSide
     Friend WithEvents TimebestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents navnLabel As Label
     Friend WithEvents label_innlogget_fornavn As Label
@@ -444,4 +462,7 @@ Partial Class MinSide
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents label_forrige_blodprosent As Label
+    Friend WithEvents label_antall_blodgivninger As Label
 End Class

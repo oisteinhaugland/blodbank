@@ -45,6 +45,8 @@ Partial Class Blodgivning
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.blodprosentTekst = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -128,7 +130,7 @@ Partial Class Blodgivning
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(43, 234)
+        Me.Label6.Location = New System.Drawing.Point(43, 256)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(92, 13)
         Me.Label6.TabIndex = 15
@@ -136,7 +138,7 @@ Partial Class Blodgivning
         '
         'LagreBlodtapp
         '
-        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 275)
+        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 297)
         Me.LagreBlodtapp.Name = "LagreBlodtapp"
         Me.LagreBlodtapp.Size = New System.Drawing.Size(249, 69)
         Me.LagreBlodtapp.TabIndex = 16
@@ -173,7 +175,7 @@ Partial Class Blodgivning
         '
         'TappeDato
         '
-        Me.TappeDato.Location = New System.Drawing.Point(195, 227)
+        Me.TappeDato.Location = New System.Drawing.Point(195, 249)
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(100, 20)
         Me.TappeDato.TabIndex = 22
@@ -230,11 +232,29 @@ Partial Class Blodgivning
         Me.Button2.Text = "Registrer"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'ansattRegBlodgiving
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(43, 228)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 13)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Blodprosent:"
+        '
+        'blodprosentTekst
+        '
+        Me.blodprosentTekst.Location = New System.Drawing.Point(195, 221)
+        Me.blodprosentTekst.Name = "blodprosentTekst"
+        Me.blodprosentTekst.Size = New System.Drawing.Size(100, 20)
+        Me.blodprosentTekst.TabIndex = 31
+        '
+        'Blodgivning
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(903, 462)
+        Me.Controls.Add(Me.blodprosentTekst)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
@@ -253,7 +273,7 @@ Partial Class Blodgivning
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Name = "ansattRegBlodgiving"
+        Me.Name = "Blodgivning"
         Me.Text = "ansattRegBlodgiving"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -285,4 +305,6 @@ Partial Class Blodgivning
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents blodprosentTekst As TextBox
 End Class

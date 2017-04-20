@@ -37,6 +37,7 @@ Public Class Blodgivning
     Dim blodlegemer As Integer
     Dim blodplater As Integer
     Dim datoTapp As String
+    Dim blodprosent As Integer
     Private Sub registrerBlodInfo()
 
         plasmaHoldbarhet = konverterDatoFormatTilMySql(DateAdd(DateInterval.Day, 365, Today.Date))
@@ -62,6 +63,7 @@ Public Class Blodgivning
         If formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
         If formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
+        If formatSkjekk(blodprosentTekst.Text, registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
 
 
 
@@ -80,6 +82,7 @@ Public Class Blodgivning
                 '" & blodtype_id & "' ,
                 '" & innlogget_ansatt_id & "' 
                 )")
+                sql_sporring("UPDATE Blodgiver SET blodprosent =" & blodprosent & " WHERE blodgiver_id =" & blodgiverID)
 
                 Dim registrertTapp As String = "Blodtapp for bruker " & blodgiverID & " er nå registrert."
                 MsgBox(registrertTapp)

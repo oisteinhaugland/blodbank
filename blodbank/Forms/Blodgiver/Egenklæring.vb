@@ -76,7 +76,7 @@
 
         'Lager datovariabler som samsvarer med SQL
         Dim dagensDato As Date
-        konverterDatoFormatKarantene(Date.Today)
+        konverterDatoFormatTilMySql(Date.Today)
         dagensDato = Date.Today
 
 

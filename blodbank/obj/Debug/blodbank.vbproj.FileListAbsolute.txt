@@ -63,7 +63,6 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.pdb
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.exe
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.pdb
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\blodbank.xml
-C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.dll
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\bin\Debug\MySql.Data.xml
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
