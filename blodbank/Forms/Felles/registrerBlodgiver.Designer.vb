@@ -49,23 +49,26 @@ Partial Class registrerBlodgiver
         Me.postNrTextBox = New System.Windows.Forms.TextBox()
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Personalia = New System.Windows.Forms.GroupBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Personalia.SuspendLayout()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'fornavnTextbox
         '
         Me.fornavnTextbox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fornavnTextbox.Location = New System.Drawing.Point(312, 54)
-        Me.fornavnTextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fornavnTextbox.Location = New System.Drawing.Point(4, 4)
+        Me.fornavnTextbox.Margin = New System.Windows.Forms.Padding(4)
         Me.fornavnTextbox.Name = "fornavnTextbox"
         Me.fornavnTextbox.Size = New System.Drawing.Size(184, 28)
         Me.fornavnTextbox.TabIndex = 0
@@ -73,8 +76,8 @@ Partial Class registrerBlodgiver
         'epostTextbox
         '
         Me.epostTextbox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.epostTextbox.Location = New System.Drawing.Point(312, 166)
-        Me.epostTextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.epostTextbox.Location = New System.Drawing.Point(4, 116)
+        Me.epostTextbox.Margin = New System.Windows.Forms.Padding(4)
         Me.epostTextbox.Name = "epostTextbox"
         Me.epostTextbox.Size = New System.Drawing.Size(184, 28)
         Me.epostTextbox.TabIndex = 3
@@ -82,8 +85,8 @@ Partial Class registrerBlodgiver
         'etterNavnTextBox
         '
         Me.etterNavnTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.etterNavnTextBox.Location = New System.Drawing.Point(312, 92)
-        Me.etterNavnTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.etterNavnTextBox.Location = New System.Drawing.Point(4, 42)
+        Me.etterNavnTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.etterNavnTextBox.Name = "etterNavnTextBox"
         Me.etterNavnTextBox.Size = New System.Drawing.Size(184, 28)
         Me.etterNavnTextBox.TabIndex = 1
@@ -91,8 +94,8 @@ Partial Class registrerBlodgiver
         'passordTextBox
         '
         Me.passordTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passordTextBox.Location = New System.Drawing.Point(312, 346)
-        Me.passordTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordTextBox.Location = New System.Drawing.Point(4, 296)
+        Me.passordTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(184, 28)
         Me.passordTextBox.TabIndex = 9
@@ -101,7 +104,7 @@ Partial Class registrerBlodgiver
         '
         Me.fornavnLabel.AutoSize = True
         Me.fornavnLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fornavnLabel.Location = New System.Drawing.Point(101, 51)
+        Me.fornavnLabel.Location = New System.Drawing.Point(28, 4)
         Me.fornavnLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fornavnLabel.Name = "fornavnLabel"
         Me.fornavnLabel.Size = New System.Drawing.Size(107, 29)
@@ -112,7 +115,7 @@ Partial Class registrerBlodgiver
         '
         Me.epostLabel.AutoSize = True
         Me.epostLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.epostLabel.Location = New System.Drawing.Point(101, 163)
+        Me.epostLabel.Location = New System.Drawing.Point(28, 116)
         Me.epostLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.epostLabel.Name = "epostLabel"
         Me.epostLabel.Size = New System.Drawing.Size(88, 29)
@@ -123,7 +126,7 @@ Partial Class registrerBlodgiver
         '
         Me.etterNavnLabel.AutoSize = True
         Me.etterNavnLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.etterNavnLabel.Location = New System.Drawing.Point(101, 89)
+        Me.etterNavnLabel.Location = New System.Drawing.Point(28, 42)
         Me.etterNavnLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.etterNavnLabel.Name = "etterNavnLabel"
         Me.etterNavnLabel.Size = New System.Drawing.Size(123, 29)
@@ -134,7 +137,7 @@ Partial Class registrerBlodgiver
         '
         Me.passordLabel.AutoSize = True
         Me.passordLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passordLabel.Location = New System.Drawing.Point(101, 343)
+        Me.passordLabel.Location = New System.Drawing.Point(28, 296)
         Me.passordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.passordLabel.Name = "passordLabel"
         Me.passordLabel.Size = New System.Drawing.Size(93, 29)
@@ -144,8 +147,8 @@ Partial Class registrerBlodgiver
         'gjenntaPassordTextbox
         '
         Me.gjenntaPassordTextbox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(312, 382)
-        Me.gjenntaPassordTextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(4, 332)
+        Me.gjenntaPassordTextbox.Margin = New System.Windows.Forms.Padding(4)
         Me.gjenntaPassordTextbox.Name = "gjenntaPassordTextbox"
         Me.gjenntaPassordTextbox.Size = New System.Drawing.Size(132, 28)
         Me.gjenntaPassordTextbox.TabIndex = 10
@@ -154,7 +157,7 @@ Partial Class registrerBlodgiver
         '
         Me.gjentaPassordLabel.AutoSize = True
         Me.gjentaPassordLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gjentaPassordLabel.Location = New System.Drawing.Point(101, 379)
+        Me.gjentaPassordLabel.Location = New System.Drawing.Point(28, 332)
         Me.gjentaPassordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.gjentaPassordLabel.Name = "gjentaPassordLabel"
         Me.gjentaPassordLabel.Size = New System.Drawing.Size(164, 29)
@@ -164,8 +167,8 @@ Partial Class registrerBlodgiver
         'personNrTextBox
         '
         Me.personNrTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.personNrTextBox.Location = New System.Drawing.Point(312, 238)
-        Me.personNrTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.personNrTextBox.Location = New System.Drawing.Point(4, 188)
+        Me.personNrTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.personNrTextBox.Name = "personNrTextBox"
         Me.personNrTextBox.Size = New System.Drawing.Size(184, 28)
         Me.personNrTextBox.TabIndex = 5
@@ -174,7 +177,7 @@ Partial Class registrerBlodgiver
         '
         Me.personNrLabel.AutoSize = True
         Me.personNrLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.personNrLabel.Location = New System.Drawing.Point(101, 234)
+        Me.personNrLabel.Location = New System.Drawing.Point(28, 187)
         Me.personNrLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.personNrLabel.Name = "personNrLabel"
         Me.personNrLabel.Size = New System.Drawing.Size(187, 29)
@@ -187,9 +190,9 @@ Partial Class registrerBlodgiver
         Me.registrerBrukerKnapp.Dock = System.Windows.Forms.DockStyle.Right
         Me.registrerBrukerKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.registrerBrukerKnapp.Location = New System.Drawing.Point(252, 4)
-        Me.registrerBrukerKnapp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.registrerBrukerKnapp.Margin = New System.Windows.Forms.Padding(4)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(463, 151)
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(463, 139)
         Me.registrerBrukerKnapp.TabIndex = 11
         Me.registrerBrukerKnapp.Text = "Registrer bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = False
@@ -197,8 +200,8 @@ Partial Class registrerBlodgiver
         'telefonTextBox
         '
         Me.telefonTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.telefonTextBox.Location = New System.Drawing.Point(312, 130)
-        Me.telefonTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.telefonTextBox.Location = New System.Drawing.Point(4, 80)
+        Me.telefonTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.telefonTextBox.Name = "telefonTextBox"
         Me.telefonTextBox.Size = New System.Drawing.Size(184, 28)
         Me.telefonTextBox.TabIndex = 2
@@ -207,7 +210,7 @@ Partial Class registrerBlodgiver
         '
         Me.telefonLabel.AutoSize = True
         Me.telefonLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.telefonLabel.Location = New System.Drawing.Point(101, 127)
+        Me.telefonLabel.Location = New System.Drawing.Point(28, 80)
         Me.telefonLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.telefonLabel.Name = "telefonLabel"
         Me.telefonLabel.Size = New System.Drawing.Size(99, 29)
@@ -218,7 +221,7 @@ Partial Class registrerBlodgiver
         '
         Me.fødselsdatoLabel.AutoSize = True
         Me.fødselsdatoLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fødselsdatoLabel.Location = New System.Drawing.Point(101, 199)
+        Me.fødselsdatoLabel.Location = New System.Drawing.Point(28, 152)
         Me.fødselsdatoLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fødselsdatoLabel.Name = "fødselsdatoLabel"
         Me.fødselsdatoLabel.Size = New System.Drawing.Size(146, 29)
@@ -228,8 +231,8 @@ Partial Class registrerBlodgiver
         'fodselsdatoTextBox
         '
         Me.fodselsdatoTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fodselsdatoTextBox.Location = New System.Drawing.Point(312, 202)
-        Me.fodselsdatoTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fodselsdatoTextBox.Location = New System.Drawing.Point(4, 152)
+        Me.fodselsdatoTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.fodselsdatoTextBox.Name = "fodselsdatoTextBox"
         Me.fodselsdatoTextBox.Size = New System.Drawing.Size(184, 28)
         Me.fodselsdatoTextBox.TabIndex = 4
@@ -238,7 +241,7 @@ Partial Class registrerBlodgiver
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(525, 199)
+        Me.Label1.Location = New System.Drawing.Point(217, 149)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(139, 29)
@@ -249,7 +252,7 @@ Partial Class registrerBlodgiver
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(525, 234)
+        Me.Label2.Location = New System.Drawing.Point(217, 184)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(76, 29)
@@ -260,7 +263,7 @@ Partial Class registrerBlodgiver
         '
         Me.adresseLabel.AutoSize = True
         Me.adresseLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adresseLabel.Location = New System.Drawing.Point(101, 271)
+        Me.adresseLabel.Location = New System.Drawing.Point(28, 224)
         Me.adresseLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.adresseLabel.Name = "adresseLabel"
         Me.adresseLabel.Size = New System.Drawing.Size(94, 29)
@@ -270,8 +273,8 @@ Partial Class registrerBlodgiver
         'adresseTextBox
         '
         Me.adresseTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.adresseTextBox.Location = New System.Drawing.Point(312, 274)
-        Me.adresseTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.adresseTextBox.Location = New System.Drawing.Point(4, 224)
+        Me.adresseTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.adresseTextBox.Name = "adresseTextBox"
         Me.adresseTextBox.Size = New System.Drawing.Size(184, 28)
         Me.adresseTextBox.TabIndex = 6
@@ -280,7 +283,7 @@ Partial Class registrerBlodgiver
         '
         Me.postnrLabel.AutoSize = True
         Me.postnrLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.postnrLabel.Location = New System.Drawing.Point(101, 307)
+        Me.postnrLabel.Location = New System.Drawing.Point(28, 260)
         Me.postnrLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.postnrLabel.Name = "postnrLabel"
         Me.postnrLabel.Size = New System.Drawing.Size(143, 29)
@@ -290,8 +293,8 @@ Partial Class registrerBlodgiver
         'postNrTextBox
         '
         Me.postNrTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.postNrTextBox.Location = New System.Drawing.Point(312, 310)
-        Me.postNrTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.postNrTextBox.Location = New System.Drawing.Point(4, 260)
+        Me.postNrTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.postNrTextBox.Name = "postNrTextBox"
         Me.postNrTextBox.Size = New System.Drawing.Size(73, 28)
         Me.postNrTextBox.TabIndex = 7
@@ -299,8 +302,8 @@ Partial Class registrerBlodgiver
         'poststedTextBox
         '
         Me.poststedTextBox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.poststedTextBox.Location = New System.Drawing.Point(407, 310)
-        Me.poststedTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.poststedTextBox.Location = New System.Drawing.Point(99, 260)
+        Me.poststedTextBox.Margin = New System.Windows.Forms.Padding(4)
         Me.poststedTextBox.Name = "poststedTextBox"
         Me.poststedTextBox.Size = New System.Drawing.Size(173, 28)
         Me.poststedTextBox.TabIndex = 8
@@ -311,48 +314,12 @@ Partial Class registrerBlodgiver
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Button1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(723, 4)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(463, 151)
+        Me.Button1.Size = New System.Drawing.Size(463, 139)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Gå tilbake / Avbryt registrering"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Personalia
-        '
-        Me.Personalia.Controls.Add(Me.fornavnTextbox)
-        Me.Personalia.Controls.Add(Me.epostTextbox)
-        Me.Personalia.Controls.Add(Me.etterNavnTextBox)
-        Me.Personalia.Controls.Add(Me.personNrTextBox)
-        Me.Personalia.Controls.Add(Me.postnrLabel)
-        Me.Personalia.Controls.Add(Me.poststedTextBox)
-        Me.Personalia.Controls.Add(Me.adresseLabel)
-        Me.Personalia.Controls.Add(Me.telefonTextBox)
-        Me.Personalia.Controls.Add(Me.fødselsdatoLabel)
-        Me.Personalia.Controls.Add(Me.fodselsdatoTextBox)
-        Me.Personalia.Controls.Add(Me.telefonLabel)
-        Me.Personalia.Controls.Add(Me.postNrTextBox)
-        Me.Personalia.Controls.Add(Me.personNrLabel)
-        Me.Personalia.Controls.Add(Me.Label1)
-        Me.Personalia.Controls.Add(Me.gjentaPassordLabel)
-        Me.Personalia.Controls.Add(Me.Label2)
-        Me.Personalia.Controls.Add(Me.passordLabel)
-        Me.Personalia.Controls.Add(Me.gjenntaPassordTextbox)
-        Me.Personalia.Controls.Add(Me.etterNavnLabel)
-        Me.Personalia.Controls.Add(Me.adresseTextBox)
-        Me.Personalia.Controls.Add(Me.epostLabel)
-        Me.Personalia.Controls.Add(Me.passordTextBox)
-        Me.Personalia.Controls.Add(Me.fornavnLabel)
-        Me.Personalia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Personalia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Personalia.Location = New System.Drawing.Point(657, 156)
-        Me.Personalia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Personalia.Name = "Personalia"
-        Me.Personalia.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Personalia.Size = New System.Drawing.Size(739, 476)
-        Me.Personalia.TabIndex = 27
-        Me.Personalia.TabStop = False
-        Me.Personalia.Text = "Personalia"
         '
         'ErrorProvider1
         '
@@ -390,24 +357,74 @@ Partial Class registrerBlodgiver
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.registrerBrukerKnapp, 0, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 675)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 629)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.29443!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.70557!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1438, 278)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.67901!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.32099!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1438, 324)
         Me.TableLayoutPanel1.TabIndex = 31
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Panel1.Location = New System.Drawing.Point(650, 147)
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel1.Controls.Add(Me.fornavnTextbox)
+        Me.Panel1.Controls.Add(Me.epostTextbox)
+        Me.Panel1.Controls.Add(Me.passordTextBox)
+        Me.Panel1.Controls.Add(Me.etterNavnTextBox)
+        Me.Panel1.Controls.Add(Me.adresseTextBox)
+        Me.Panel1.Controls.Add(Me.personNrTextBox)
+        Me.Panel1.Controls.Add(Me.gjenntaPassordTextbox)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.poststedTextBox)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.postNrTextBox)
+        Me.Panel1.Controls.Add(Me.telefonTextBox)
+        Me.Panel1.Controls.Add(Me.fodselsdatoTextBox)
+        Me.Panel1.Location = New System.Drawing.Point(722, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(753, 492)
+        Me.Panel1.Size = New System.Drawing.Size(360, 407)
         Me.Panel1.TabIndex = 32
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.Window
+        Me.Panel2.Controls.Add(Me.postnrLabel)
+        Me.Panel2.Controls.Add(Me.fødselsdatoLabel)
+        Me.Panel2.Controls.Add(Me.adresseLabel)
+        Me.Panel2.Controls.Add(Me.fornavnLabel)
+        Me.Panel2.Controls.Add(Me.epostLabel)
+        Me.Panel2.Controls.Add(Me.telefonLabel)
+        Me.Panel2.Controls.Add(Me.etterNavnLabel)
+        Me.Panel2.Controls.Add(Me.personNrLabel)
+        Me.Panel2.Controls.Add(Me.passordLabel)
+        Me.Panel2.Controls.Add(Me.gjentaPassordLabel)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(385, 3)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(331, 407)
+        Me.Panel2.TabIndex = 33
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Panel2, 0, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(22, 216)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1438, 413)
+        Me.TableLayoutPanel2.TabIndex = 32
         '
         'registrerBlodgiver
         '
@@ -415,20 +432,22 @@ Partial Class registrerBlodgiver
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1482, 953)
+        Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Personalia)
-        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "registrerBlodgiver"
         Me.Text = "Registrer bruker"
-        Me.Personalia.ResumeLayout(False)
-        Me.Personalia.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -458,11 +477,12 @@ Partial Class registrerBlodgiver
     Friend WithEvents postNrTextBox As TextBox
     Friend WithEvents poststedTextBox As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Personalia As GroupBox
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
 End Class
