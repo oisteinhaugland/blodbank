@@ -4,6 +4,7 @@
 
 Public Class loggInn
     Dim Hash As New Hash
+    'Public aktivBruker As New List(Of Bruker)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
@@ -13,6 +14,23 @@ Public Class loggInn
 
     Private melding_logg_inn_feil As String = "Feil brukernavn eller passord, vennligst prøv igjen."
 
+
+    'Public Function loggInnGlemtPassord(bruker, pwd)
+    '    Dim glemtPassordBrukerRegistrert As Boolean
+    '    Dim epost = sql_sporring("SELECT * from Blodgiver Where epost ='" & bruker & "' and hashedPwd ='" & pwd & "'")
+    '    If epost.Rows.Count <> 0 Then
+    '        glemtPassordBrukerRegistrert = True
+    '    Else
+    '        glemtPassordBrukerRegistrert = False
+    '    End If
+
+    '    If glemtPassordBrukerRegistrert Then
+    '        Return True
+    '    Else
+    '        Return False
+    '    End If
+    'End Function
+
     Public Function loggInnBlodgiver(bruker, pwd)
         Dim blodGivere As New DataTable
         Dim innloggetBruker As New DataTable
@@ -20,12 +38,8 @@ Public Class loggInn
         Dim vanligpassord = passordTextBox.Text
         Dim registrertSalt
         Dim registrertPwd
-
-
         Dim loggetInn As Boolean = False
-        'tabell = sql_sporring("SELECT * FROM Blodgiver WHERE epost ='" & bruker)
         Dim kjønn
-
 
         'tabell = sql_sporring("SELECT * FROM Blodgiver WHERE epost ='" & bruker & "' AND hashedPwd = '" & pwd & "'")
         blodGivere = sql_sporring("SELECT * FROM Blodgiver WHERE epost ='" & bruker & "'")
@@ -34,19 +48,70 @@ Public Class loggInn
             registrertPwd = rad("hashedPwd")
         Next
 
-        Dim skjekkaPassord = Hash.Hash512(vanligpassord, registrertSalt)
+        Dim innskrevetPassord = Hash.Hash512(vanligpassord, registrertSalt)
+        innloggetBruker = sql_sporring("SELECT * FROM Blodgiver WHERE epost ='" & bruker & "' AND hashedPwd = '" & innskrevetPassord & "'")
 
-        MsgBox(registrertSalt)
-        MsgBox(skjekkaPassord)
-        MsgBox(registrertPwd)
+        If innloggetBruker.Rows.Count <> 0 Then
+            For Each rad In innloggetBruker.Rows
+                Dim brukernavn = rad("epost")
+                Dim passord = rad("passord")
+                Dim fornavn = rad("fornavn")
+                Dim etternavn = rad("etternavn")
+                Dim adresse = rad("adresse")
+                Dim blodgiver_id = rad("blodgiver_id")
+                Dim blodtype = rad("blodtype_id")
+                Dim epost = rad("epost")
+                Dim fodseldato = rad("fodseldato")
+                Dim godkjent_egenerklering = rad("godkjent_egenerklering")
+                Dim karantene = rad("karantene")
+                Dim post_nr = rad("post_nr")
+                Dim post_sted = rad("post_sted")
+                Dim telefon = rad("telefon")
+                Dim personnummer = rad("personnummer")
+                Dim forrige_blodtapp
 
-        Dim test
-        innloggetBruker = sql_sporring("SELECT * FROM Blodgiver WHERE epost ='" & bruker & "' AND hashedPwd = '" & skjekkaPassord & "'")
-        For Each rad In innloggetBruker.Rows
-            test = rad("epost")
-        Next
-        MsgBox(test)
-        If test <> String.Empty Then
+
+
+
+                If brukernavn <> String.Empty Then
+                    'aktivBruker.Clear()
+                    'aktivBruker.Add(New Bruker(blodgiver_id, fornavn, etternavn, fodseldato, adresse, epost, post_nr, post_sted, telefon, personnummer, blodtype, karantene, godkjent_egenerklering))
+
+                    innlogget_bruker = brukernavn
+                    innlogget_fornavn = fornavn
+                    innlogget_etternavn = etternavn
+                    innlogget_adresse = adresse
+                    innlogget_blodgiver_id = blodgiver_id
+                    innlogget_blodtype = blodtype
+                    innlogget_epost = epost
+                    innlogget_fodseldato = fodseldato
+                    innlogget_godkjent_egenerklering = godkjent_egenerklering
+                    innlogget_karantene = karantene
+                    innlogget_post_nr = post_nr
+                    innlogget_post_sted = post_sted
+                    innlogget_telefon = telefon
+                    innlogget_personnummer = personnummer
+
+                    Try
+                        Dim ny_tabbel = sql_sporring("SELECT * FROM 
+                            Blodgivning inner join Blodgiver AS b
+                            on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+                            order by blodgivning_dato DESC limit 1")
+
+                        For Each row In ny_tabbel.Rows
+                            forrige_blodtapp = row("blodgivning_dato")
+                        Next
+
+                    Catch ex As Exception
+                        forrige_blodtapp = "Aldri gitt blod"
+                    End Try
+
+                    innlogget_forrige_blodtapp = forrige_blodtapp
+                    kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+                    loggetInn = True
+                End If
+
+            Next
             loggetInn = True
         Else
             loggetInn = False
@@ -247,11 +312,11 @@ Public Class loggInn
 
 
 
-        'If (kjønn Mod 2) = 0 Then
-        '    innlogget_kjønn = "Kvinne"
-        'Else
-        '    innlogget_kjønn = "Mann"
-        'End If
+        If (kjønn Mod 2) = 0 Then
+            innlogget_kjønn = "Kvinne"
+        Else
+            innlogget_kjønn = "Mann"
+        End If
 
         If loggetInn Then
             Return True
@@ -308,15 +373,17 @@ Public Class loggInn
     End Function
 
     Private Sub loggInnKnapp_Click_1(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
+        'If loggInnGlemtPassord(brukerNavnTextbox.Text, passordTextBox.Text) Then
+        '    RegistrerNyttPassord.Show()
+        '    Me.Hide()
         If loggInnAnsatt() Then
-            Me.Hide()
-            Startside.Show() '
-        ElseIf loggInnBlodgiver(brukerNavnTextbox.Text, passordTextBox.Text) Then
-            'loggInnBlodgiver() Then
-            Me.Hide()
-            MinSide.Show()
-        Else
-            MsgBox(melding_logg_inn_feil)
+                Startside.Show() '
+                Me.Hide()
+            ElseIf loggInnBlodgiver(brukerNavnTextbox.Text, passordTextBox.Text) Then
+                MinSide.Show()
+                Me.Hide()
+            Else
+                MsgBox(melding_logg_inn_feil)
         End If
     End Sub
 
@@ -342,6 +409,11 @@ Public Class loggInn
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
         Startside.Show()
+    End Sub
+
+    Private Sub glemtPassordKnapp_Click(sender As Object, e As EventArgs) Handles glemtPassordKnapp.Click
+        GlemtPassord.Show()
+        Me.Hide()
     End Sub
 End Class
 

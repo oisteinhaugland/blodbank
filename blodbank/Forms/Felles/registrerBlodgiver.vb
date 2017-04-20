@@ -159,6 +159,19 @@ Public Class registrerBlodgiver
     'Validering for f¯dselsdato'
     Private Sub fodselsdatoTextBox_Validating(sender As Object, e As CancelEventArgs) Handles fodselsdatoTextBox.Validating
         setError(fodselsdatoTextBox, v.datoFormat, "Fødseslsdato Ikke riktig datoformat. Vennligst fyll inn dd.mm.åååå")
+
+        Dim expenddt As Date
+        If v.formatSkjekk(fodselsdatoTextBox.Text, v.datoFormat) Then
+            Dim edate = fodselsdatoTextBox.Text
+            expenddt = Date.ParseExact(edate, "dd.MM.yyyy",
+            System.Globalization.DateTimeFormatInfo.InvariantInfo)
+            If expenddt >= DateAdd(DateInterval.Year, -18, Date.Today) Then
+                ErrorProvider1.SetError(fodselsdatoTextBox, "Regitrert fødselsdato er for ung. Du må våre mellom 18 og 65 år.")
+            ElseIf expenddt <= DateAdd(DateInterval.Year, -65, Date.Today) Then
+                ErrorProvider1.SetError(fodselsdatoTextBox, "Regitrert fødselsdato er for gammel. Du må våre mellom 18 og 65 år.")
+            End If
+        End If
+
     End Sub
     'validering for personnummer
     Private Sub personNrTextBox_Validating(sender As Object, e As CancelEventArgs) Handles personNrTextBox.Validating

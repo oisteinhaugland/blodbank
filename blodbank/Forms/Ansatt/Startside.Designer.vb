@@ -57,7 +57,7 @@ Partial Class Startside
         '
         Me.Button1.Location = New System.Drawing.Point(330, 343)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(171, 48)
+        Me.Button1.Size = New System.Drawing.Size(171, 43)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Logg ut"
         Me.Button1.UseVisualStyleBackColor = True
@@ -96,7 +96,7 @@ Partial Class Startside
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(780, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(886, 24)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -202,11 +202,11 @@ Partial Class Startside
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Label8"
         '
-        'ansattStartSide
+        'Startside
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(780, 482)
+        Me.ClientSize = New System.Drawing.Size(886, 541)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -222,7 +222,7 @@ Partial Class Startside
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "ansattStartSide"
+        Me.Name = "Startside"
         Me.Text = "ansattStartSide"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

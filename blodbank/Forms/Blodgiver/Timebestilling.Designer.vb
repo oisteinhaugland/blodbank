@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class blodgiver_timebestilling
+Partial Class Timebestillinger
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -137,7 +137,7 @@ Partial Class blodgiver_timebestilling
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Ledige Timer"
         '
-        'blodgiver_timebestilling
+        'Timebestillinger
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -152,7 +152,7 @@ Partial Class blodgiver_timebestilling
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "blodgiver_timebestilling"
+        Me.Name = "Timebestillinger"
         Me.Text = "blodgiver_timebestilling"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

@@ -43,8 +43,10 @@ Partial Class Blodgivning
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.bGiverIdTextBox = New System.Windows.Forms.TextBox()
+        Me.registrerBlodtypeKnapp = New System.Windows.Forms.Button()
+        Me.blodprosentTextBox = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -128,7 +130,7 @@ Partial Class Blodgivning
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(43, 234)
+        Me.Label6.Location = New System.Drawing.Point(43, 262)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(92, 13)
         Me.Label6.TabIndex = 15
@@ -136,7 +138,7 @@ Partial Class Blodgivning
         '
         'LagreBlodtapp
         '
-        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 275)
+        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 321)
         Me.LagreBlodtapp.Name = "LagreBlodtapp"
         Me.LagreBlodtapp.Size = New System.Drawing.Size(249, 69)
         Me.LagreBlodtapp.TabIndex = 16
@@ -173,7 +175,7 @@ Partial Class Blodgivning
         '
         'TappeDato
         '
-        Me.TappeDato.Location = New System.Drawing.Point(195, 227)
+        Me.TappeDato.Location = New System.Drawing.Point(195, 255)
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(100, 20)
         Me.TappeDato.TabIndex = 22
@@ -214,29 +216,47 @@ Partial Class Blodgivning
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Registrer Blodtype til Blogiver"
         '
-        'TextBox1
+        'bGiverIdTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(397, 126)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(121, 20)
-        Me.TextBox1.TabIndex = 28
+        Me.bGiverIdTextBox.Location = New System.Drawing.Point(397, 126)
+        Me.bGiverIdTextBox.Name = "bGiverIdTextBox"
+        Me.bGiverIdTextBox.Size = New System.Drawing.Size(121, 20)
+        Me.bGiverIdTextBox.TabIndex = 28
         '
-        'Button2
+        'registrerBlodtypeKnapp
         '
-        Me.Button2.Location = New System.Drawing.Point(397, 199)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 23)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "Registrer"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.registrerBlodtypeKnapp.Location = New System.Drawing.Point(397, 199)
+        Me.registrerBlodtypeKnapp.Name = "registrerBlodtypeKnapp"
+        Me.registrerBlodtypeKnapp.Size = New System.Drawing.Size(121, 23)
+        Me.registrerBlodtypeKnapp.TabIndex = 29
+        Me.registrerBlodtypeKnapp.Text = "Registrer"
+        Me.registrerBlodtypeKnapp.UseVisualStyleBackColor = True
         '
-        'ansattRegBlodgiving
+        'blodprosentTextBox
+        '
+        Me.blodprosentTextBox.Location = New System.Drawing.Point(195, 225)
+        Me.blodprosentTextBox.Name = "blodprosentTextBox"
+        Me.blodprosentTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.blodprosentTextBox.TabIndex = 31
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(43, 232)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Blodprosent"
+        '
+        'Blodgivning
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(903, 462)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.blodprosentTextBox)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.registrerBlodtypeKnapp)
+        Me.Controls.Add(Me.bGiverIdTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
@@ -253,7 +273,7 @@ Partial Class Blodgivning
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Name = "ansattRegBlodgiving"
+        Me.Name = "Blodgivning"
         Me.Text = "ansattRegBlodgiving"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -283,6 +303,8 @@ Partial Class Blodgivning
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents bGiverIdTextBox As TextBox
+    Friend WithEvents registrerBlodtypeKnapp As Button
+    Friend WithEvents blodprosentTextBox As TextBox
+    Friend WithEvents Label8 As Label
 End Class

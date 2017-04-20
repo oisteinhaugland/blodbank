@@ -364,7 +364,7 @@ Partial Class MinSide
         Me.Label17.TabIndex = 31
         Me.Label17.Text = "Personopplysninger"
         '
-        'blodgiverMinSide
+        'MinSide
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -401,7 +401,7 @@ Partial Class MinSide
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "blodgiverMinSide"
+        Me.Name = "MinSide"
         Me.Text = "blodgiverMinSide"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

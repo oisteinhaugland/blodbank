@@ -17,7 +17,6 @@
         ordre_dato = o_dato
         behandlet = blod_behandlet
         blod_type = b_type
-
     End Sub
 
     Public Function ny_mengde(a, b)

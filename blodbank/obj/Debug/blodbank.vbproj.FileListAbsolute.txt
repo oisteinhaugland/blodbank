@@ -50,7 +50,6 @@ C:\Users\Øistein\Documents\Visual Studio 2015\Projects\vår2017\blodbank\blodba
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\bin\Debug\MySql.Data.xml
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.vbprojResolveAssemblyReference.cache
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.blodgiver_timebestilling.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.hashtest.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.loggInn.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
@@ -85,3 +84,6 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.Ge
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Timebestillinger.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.GlemtPassord.resources
+\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.RegistrerNyttPassord.resources

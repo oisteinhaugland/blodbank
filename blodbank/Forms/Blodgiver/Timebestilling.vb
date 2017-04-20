@@ -1,4 +1,4 @@
-﻿Public Class blodgiver_timebestilling
+﻿Public Class Timebestillinger
     Dim timebestList As New List(Of timebestilling)
     Dim bestilteTimer As New DataTable
     Dim ledigeTimer As New DataTable
@@ -19,6 +19,9 @@
         Me.BackColor = Color.FromArgb(247, 247, 247)
         Kalender.MinDate = Date.Today
         Kalender.MaxSelectionCount = 1
+        bestillKnapp.Enabled = False
+        avbestillKnapp.Enabled = False
+
 
         'Dim test As New DataTable
         'test = sql_sporring("SELECT * FROM Timebestilling Where er_aktiv = 1")
@@ -78,6 +81,7 @@
             MsgBox(ex.Message)
         End Try
 
+        bestillKnapp.Enabled = False
     End Sub
 
     Private Sub avbestillKnapp_Click(sender As Object, e As EventArgs) Handles avbestillKnapp.Click
@@ -92,6 +96,7 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        avbestillKnapp.Enabled = False
     End Sub
 
     Private Sub HentTimebestilling_Click(sender As Object, e As EventArgs) Handles HentTimebestilling.Click
@@ -170,5 +175,15 @@
                 klokke += 1
             Next
         End If
+
+        bestillKnapp.Enabled = False
+    End Sub
+
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        bestillKnapp.Enabled = True
+    End Sub
+
+    Private Sub DineTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DineTimer.SelectedIndexChanged
+        avbestillKnapp.Enabled = True
     End Sub
 End Class

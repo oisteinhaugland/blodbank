@@ -10,6 +10,7 @@ Public Class Blodgivning
         Me.BackColor = Color.FromArgb(247, 247, 247)
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex = 0
+        registrerBlodtypeKnapp.Enabled = False
 
     End Sub
 
@@ -49,9 +50,12 @@ Public Class Blodgivning
         Dim validertDato As Boolean = True
         Dim feilmelding1 = "Registrer feil mengde. Feltet kan ikke stå tomt og kan ikke være større enn 9."
         Dim feilmelding2 = "Datoformatet er ikke riktig. Vennligst følg formatet dd.mm.åååå"
-        If v.formatSkjekk(IDtekst.Text, v.blodgiverIdFormat) Then blodgiverID = IDtekst.Text
-        Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & IDtekst.Text)
+
+        If v.formatSkjekk(IDtekst.Text, v.blodgiverIdFormat) Then blodgiverID = IDtekst.Text Else validert = False
+
+        Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = '" & IDtekst.Text & "'")
         Dim blodtype_id
+
         For Each row In blodgiver.Rows
             blodtype_id = row("blodtype_id")
         Next
@@ -60,9 +64,6 @@ Public Class Blodgivning
         If v.formatSkjekk(blodlegemeTekst.Text, v.registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
         If v.formatSkjekk(blodplateTekst.Text, v.registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If v.formatSkjekk(TappeDato.Text, v.datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
-
-
-
 
         If validert And validertDato Then
 
@@ -120,9 +121,6 @@ Public Class Blodgivning
                     Next
                 End If
 
-
-
-
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -134,8 +132,6 @@ Public Class Blodgivning
             MsgBox(feilmelding1)
             MsgBox(feilmelding2)
         End If
-
-
     End Sub
 
     Private Sub LagreBlodtapp_Click(sender As Object, e As EventArgs) Handles LagreBlodtapp.Click
@@ -151,8 +147,8 @@ Public Class Blodgivning
         'MsgBox(konverterDatoFormatTilMySql(plasmaHoldbarhet))
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim id = TextBox1.Text
+    Private Sub regBlodtype(sender As Object, e As EventArgs) Handles registrerBlodtypeKnapp.Click
+        Dim id = bGiverIdTextBox.Text
         Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & id & " and blodtype_id = NULL")
 
         Dim blodtype = ComboBox1.SelectedIndex
@@ -181,6 +177,13 @@ Public Class Blodgivning
         Else
             MsgBox("blogiver har allerede registrert blodtype")
         End If
+    End Sub
 
+    Private Sub bGiverIdTextBox_TextChanged(sender As Object, e As EventArgs) Handles bGiverIdTextBox.TextChanged
+        If bGiverIdTextBox.Text <> String.Empty Then
+            registrerBlodtypeKnapp.Enabled = True
+        Else
+            registrerBlodtypeKnapp.Enabled = False
+        End If
     End Sub
 End Class

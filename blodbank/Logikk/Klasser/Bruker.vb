@@ -1,4 +1,5 @@
 ﻿Public Class Bruker
+
     'Brukerinformasjon
     Private blodgiverId As Integer
     Private forNavn As String
@@ -19,7 +20,6 @@
     Private forrigeBlodgivning As Date
     Private godkjentEgenerklering As Boolean
     Private karantene As Date
-
 
     'Hvis ansatt
     Private ansattId As Integer
@@ -53,7 +53,7 @@
         godkjentEgenerklering = egenerkleringResultat
 
 
-        Dim kjønnId = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+        Dim kjønnId = CInt(personNr.ToString.Substring(2, 1))
         If (kjønnId Mod 2) = 0 Then
             kjønn = "Kvinne"
         Else
@@ -62,5 +62,48 @@
 
 
     End Sub
+
+    Public Function hentBgID()
+        Return blodgiverId
+    End Function
+    Public Function hentfNavn()
+        Return forNavn
+    End Function
+    Public Function hentENavn()
+        Return etterNavn
+    End Function
+    Public Function hentAdresse()
+        Return adresse
+    End Function
+    Public Function hentfDato()
+        Return fodselsDato
+    End Function
+    Public Function hentfBlodtapp()
+        Return forrigeBlodgivning
+    End Function
+    Public Function hentKarantene()
+        Return karantene
+    End Function
+    Public Function hentpNr()
+        Return postNr
+    End Function
+    Public Function hentpSted()
+        Return postSted
+    End Function
+
+    Public Function hentTlf()
+        Return telefon
+    End Function
+
+
+    Public Function hentKjønn()
+        Return kjønn
+    End Function
+
+    Public Function hentBTypeId()
+        Return blodTypeId
+    End Function
+
+
 
 End Class

@@ -245,6 +245,7 @@ Partial Class Egenklæring
         Me.RadioButton78 = New System.Windows.Forms.RadioButton()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.sendEgenerklering = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -289,7 +290,6 @@ Partial Class Egenklæring
         Me.RadioButton121 = New System.Windows.Forms.RadioButton()
         Me.RadioButton122 = New System.Windows.Forms.RadioButton()
         Me.Label63 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.egenerkleringTabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -448,7 +448,7 @@ Partial Class Egenklæring
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage7)
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage8)
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage9)
-        Me.egenerkleringTabControl.Location = New System.Drawing.Point(12, 82)
+        Me.egenerkleringTabControl.Location = New System.Drawing.Point(12, 74)
         Me.egenerkleringTabControl.Name = "egenerkleringTabControl"
         Me.egenerkleringTabControl.SelectedIndex = 0
         Me.egenerkleringTabControl.Size = New System.Drawing.Size(1092, 663)
@@ -462,7 +462,7 @@ Partial Class Egenklæring
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
+        Me.TabPage1.Text = "Side 1"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -789,7 +789,7 @@ Partial Class Egenklæring
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "Side 2"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox2
@@ -1064,7 +1064,7 @@ Partial Class Egenklæring
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.Text = "Side 3"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -1495,7 +1495,7 @@ Partial Class Egenklæring
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage4.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage4.TabIndex = 3
-        Me.TabPage4.Text = "TabPage4"
+        Me.TabPage4.Text = "Side 4"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -1978,7 +1978,7 @@ Partial Class Egenklæring
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage5.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage5.TabIndex = 9
-        Me.TabPage5.Text = "TabPage5"
+        Me.TabPage5.Text = "Side 5"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
         'GroupBox8
@@ -2313,7 +2313,7 @@ Partial Class Egenklæring
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage6.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "TabPage6"
+        Me.TabPage6.Text = "Side 6"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
         'GroupBox6
@@ -2843,7 +2843,7 @@ Partial Class Egenklæring
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage7.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "TabPage7"
+        Me.TabPage7.Text = "Side 7"
         Me.TabPage7.UseVisualStyleBackColor = True
         '
         'GroupBox7
@@ -3068,7 +3068,7 @@ Partial Class Egenklæring
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage8.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage8.TabIndex = 7
-        Me.TabPage8.Text = "TabPage8"
+        Me.TabPage8.Text = "Side 8"
         Me.TabPage8.UseVisualStyleBackColor = True
         '
         'GroupBox9
@@ -3143,8 +3143,17 @@ Partial Class Egenklæring
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage9.Size = New System.Drawing.Size(1084, 631)
         Me.TabPage9.TabIndex = 8
-        Me.TabPage9.Text = "TabPage9"
+        Me.TabPage9.Text = "Side 9"
         Me.TabPage9.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(839, 580)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(175, 45)
+        Me.Button3.TabIndex = 66
+        Me.Button3.Text = "Reset erklæring i DB"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -3169,7 +3178,7 @@ Partial Class Egenklæring
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(10, 566)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(376, 23)
+        Me.CheckBox1.Size = New System.Drawing.Size(369, 23)
         Me.CheckBox1.TabIndex = 17
         Me.CheckBox1.Text = "Jeg bekrefter herved at all gitt informasjon er korrekt"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -3697,20 +3706,11 @@ Partial Class Egenklæring
         Me.Label63.TabIndex = 0
         Me.Label63.Text = "- Jeg samtykker i at mitt plasma føres ut av Norge for legemiddelproduksjon"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(839, 580)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(175, 45)
-        Me.Button3.TabIndex = 66
-        Me.Button3.Text = "Reset erklæring i DB"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'blodgiver_egenerklering
+        'Egenklæring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1155, 782)
+        Me.ClientSize = New System.Drawing.Size(1155, 773)
         Me.Controls.Add(Me.egenerkleringTabControl)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -3718,7 +3718,7 @@ Partial Class Egenklæring
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Name = "blodgiver_egenerklering"
+        Me.Name = "Egenklæring"
         Me.Text = "blodgiver_egenerklering"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

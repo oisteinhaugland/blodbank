@@ -66,12 +66,10 @@ Module tilkoblingsdata
         Return sql_sporring("SELECT * FROM Ansatt")
     End Function
 
-
     Public Function konverterDatoFormatTilMySql(dato As String) As String
         Dim innskrevetDato As Date = dato
         Return innskrevetDato.ToString("yyyy-MM-dd")
     End Function
-
 
     Public Function konverterDatoFormatKarantene(dato As String) As String
         Dim karanteneDato As Date = dato
