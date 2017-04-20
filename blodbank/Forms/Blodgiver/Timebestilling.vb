@@ -15,8 +15,8 @@
 
     Private Sub blodgiver_timebestilling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
         Kalender.MinDate = Date.Today
         Kalender.MaxSelectionCount = 1
 
@@ -152,4 +152,5 @@
             Next
         End If
     End Sub
+
 End Class

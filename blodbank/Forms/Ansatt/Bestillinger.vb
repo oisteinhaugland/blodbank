@@ -7,7 +7,7 @@
     Private Sub AnsattBestillinger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
 
         utleveringLabel.Hide()
         motatteBestillinger.Items.Clear()
@@ -132,4 +132,23 @@
 
     End Sub
 
+<<<<<<< HEAD
+=======
+    Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
+        ansattInnkalling.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
+        Produktoversikt.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
+        Startside.Show()
+        Me.Hide()
+
+    End Sub
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
 End Class

@@ -19,8 +19,8 @@
 
     Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(247, 247, 247)
         fyllBrukerInformasjon()
         Dim antBivninger
         antBivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innlogget_blodgiver_id)

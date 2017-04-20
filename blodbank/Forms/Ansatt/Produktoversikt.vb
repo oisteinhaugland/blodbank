@@ -25,7 +25,7 @@ Public Class Produktoversikt
     Private Sub ansattProduktoversikt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.WindowState = FormWindowState.Maximized
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
 
         Dim prodOversikt = sql_sporring("SELECT * FROM Blodlager")
 
