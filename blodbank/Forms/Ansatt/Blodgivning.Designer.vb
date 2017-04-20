@@ -45,6 +45,10 @@ Partial Class Blodgivning
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.blodprosentTekst = New System.Windows.Forms.TextBox()
+=======
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -52,6 +56,7 @@ Partial Class Blodgivning
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -148,9 +153,13 @@ Partial Class Blodgivning
         'Label6
         '
         Me.Label6.AutoSize = True
+<<<<<<< HEAD
+        Me.Label6.Location = New System.Drawing.Point(43, 256)
+=======
         Me.Label6.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(88, 248)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(199, 29)
         Me.Label6.TabIndex = 15
@@ -158,10 +167,14 @@ Partial Class Blodgivning
         '
         'LagreBlodtapp
         '
+<<<<<<< HEAD
+        Me.LagreBlodtapp.Location = New System.Drawing.Point(46, 297)
+=======
         Me.LagreBlodtapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.LagreBlodtapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LagreBlodtapp.Location = New System.Drawing.Point(30, 312)
         Me.LagreBlodtapp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.LagreBlodtapp.Name = "LagreBlodtapp"
         Me.LagreBlodtapp.Size = New System.Drawing.Size(585, 106)
         Me.LagreBlodtapp.TabIndex = 16
@@ -206,9 +219,13 @@ Partial Class Blodgivning
         '
         'TappeDato
         '
+<<<<<<< HEAD
+        Me.TappeDato.Location = New System.Drawing.Point(195, 249)
+=======
         Me.TappeDato.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TappeDato.Location = New System.Drawing.Point(376, 249)
         Me.TappeDato.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(176, 28)
         Me.TappeDato.TabIndex = 22
@@ -267,6 +284,53 @@ Partial Class Blodgivning
         Me.Button2.Size = New System.Drawing.Size(403, 106)
         Me.Button2.TabIndex = 29
         Me.Button2.Text = "Registrer"
+<<<<<<< HEAD
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(43, 228)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(66, 13)
+        Me.Label8.TabIndex = 30
+        Me.Label8.Text = "Blodprosent:"
+        '
+        'blodprosentTekst
+        '
+        Me.blodprosentTekst.Location = New System.Drawing.Point(195, 221)
+        Me.blodprosentTekst.Name = "blodprosentTekst"
+        Me.blodprosentTekst.Size = New System.Drawing.Size(100, 20)
+        Me.blodprosentTekst.TabIndex = 31
+        '
+        'Blodgivning
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(903, 462)
+        Me.Controls.Add(Me.blodprosentTekst)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.TappeDato)
+        Me.Controls.Add(Me.blodplateTekst)
+        Me.Controls.Add(Me.blodlegemeTekst)
+        Me.Controls.Add(Me.plasmaTekst)
+        Me.Controls.Add(Me.IDtekst)
+        Me.Controls.Add(Me.LagreBlodtapp)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Name = "Blodgivning"
+        Me.Text = "ansattRegBlodgiving"
+=======
         Me.Button2.UseVisualStyleBackColor = False
         '
         'GroupBox1
@@ -387,6 +451,7 @@ Partial Class Blodgivning
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Blodgivning"
         Me.Text = "Registrer blodgiving"
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -422,6 +487,10 @@ Partial Class Blodgivning
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
+<<<<<<< HEAD
+    Friend WithEvents Label8 As Label
+    Friend WithEvents blodprosentTekst As TextBox
+=======
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Panel1 As Panel
@@ -429,4 +498,5 @@ Partial Class Blodgivning
     Friend WithEvents Panel3 As Panel
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+>>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
 End Class

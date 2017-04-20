@@ -19,6 +19,7 @@ Module tilkoblingsdata
     Public innlogget_fornavn As String
     Public innlogget_adresse As String
     Public innlogget_blodgiver_id As Integer
+    Public innlogget_blodprosent As Integer
 
 
     Public innlogget_blodtype As String
@@ -49,10 +50,11 @@ Module tilkoblingsdata
     Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
 
     Public registrerMengdeFormat As String = "^(\d)$"
+    Public registrerBlodprosentFormat As String = "^0*(?:[1-9][0-9]?|100)$"
     Public blodgiverIdFormat As String = "^(\d){0,4}$"
     Public blodtypeFormat As String = "^(\){0,4}$"
 
-    'lagringsvarabler for ulike egenskaper
+    'lagringsvarabler for ulike egenskaper  
     Public plasmaHoldbarhet
     Public blodlegemerHoldbarhet
     Public blodplaterHoldbarhet
@@ -95,11 +97,6 @@ Module tilkoblingsdata
     End Function
 
 
-    Public Function konverterDatoFormatKarantene(dato As String) As String
-        Dim karanteneDato As Date = dato
-        Return karanteneDato.ToString("yyyy-MM-dd")
-    End Function
-
 
     Public Function formatSkjekk(ByVal text As String, ByVal regularexpression As String)
         Dim match As Match = Regex.Match((text), regularexpression)
@@ -109,8 +106,42 @@ Module tilkoblingsdata
             Return False
         End If
     End Function
+    Public Function konverterBlodtypeTilTekst(ByVal id As Integer)
+        Dim blodtypeString
+        Select Case id
+            Case 1
+                blodtypeString = "A+"
+            Case 2
+                blodtypeString = "A-"
+            Case 3
+                blodtypeString = "B+"
+            Case 4
+                blodtypeString = "B-"
+            Case 5
+                blodtypeString = "AB+"
+            Case 6
+                blodtypeString = "AB-"
+            Case 7
+                blodtypeString = "O+"
+            Case 8
+                blodtypeString = "O-"
+        End Select
 
+        Return blodtypeString
+    End Function
+    Public Function konverterBlodEgenskapTilTekst(ByVal Egid As Integer)
+        Dim blodegString
+        Select Case Egid
+            Case 1
+                blodegString = "Legemer"
+            Case 2
+                blodegString = "Plater"
+            Case 3
+                blodegString = "Plasma"
+        End Select
+        Return blodegString
 
+    End Function
 
 
     'Public innlogget_karantene As date
