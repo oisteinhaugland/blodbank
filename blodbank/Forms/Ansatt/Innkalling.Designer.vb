@@ -49,9 +49,14 @@ Partial Class ansattInnkalling
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -62,48 +67,49 @@ Partial Class ansattInnkalling
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HjemToolStripMenuItem, Me.ProduktoversiktToolStripMenuItem, Me.InnkallingToolStripMenuItem, Me.BestillingToolStripMenuItem, Me.RegisrerBlodgivingToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1478, 37)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1482, 32)
         Me.MenuStrip1.TabIndex = 8
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'HjemToolStripMenuItem
         '
         Me.HjemToolStripMenuItem.Name = "HjemToolStripMenuItem"
-        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(77, 33)
+        Me.HjemToolStripMenuItem.Size = New System.Drawing.Size(65, 28)
         Me.HjemToolStripMenuItem.Text = "Hjem"
         '
         'ProduktoversiktToolStripMenuItem
         '
         Me.ProduktoversiktToolStripMenuItem.Name = "ProduktoversiktToolStripMenuItem"
-        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(181, 33)
+        Me.ProduktoversiktToolStripMenuItem.Size = New System.Drawing.Size(154, 28)
         Me.ProduktoversiktToolStripMenuItem.Text = "Produktoversikt"
         '
         'InnkallingToolStripMenuItem
         '
         Me.InnkallingToolStripMenuItem.Name = "InnkallingToolStripMenuItem"
-        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(122, 33)
+        Me.InnkallingToolStripMenuItem.Size = New System.Drawing.Size(103, 28)
         Me.InnkallingToolStripMenuItem.Text = "Innkalling"
         '
         'BestillingToolStripMenuItem
         '
         Me.BestillingToolStripMenuItem.Name = "BestillingToolStripMenuItem"
-        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(114, 33)
+        Me.BestillingToolStripMenuItem.Size = New System.Drawing.Size(97, 28)
         Me.BestillingToolStripMenuItem.Text = "Bestilling"
         '
         'RegisrerBlodgivingToolStripMenuItem
         '
         Me.RegisrerBlodgivingToolStripMenuItem.Name = "RegisrerBlodgivingToolStripMenuItem"
-        Me.RegisrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(220, 33)
+        Me.RegisrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(187, 28)
         Me.RegisrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
         '
         'HasteInnkallingKnapp
         '
         Me.HasteInnkallingKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.HasteInnkallingKnapp.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.HasteInnkallingKnapp.Location = New System.Drawing.Point(411, 341)
-        Me.HasteInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.HasteInnkallingKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HasteInnkallingKnapp.Location = New System.Drawing.Point(375, 353)
+        Me.HasteInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4)
         Me.HasteInnkallingKnapp.Name = "HasteInnkallingKnapp"
-        Me.HasteInnkallingKnapp.Size = New System.Drawing.Size(256, 91)
+        Me.HasteInnkallingKnapp.Size = New System.Drawing.Size(322, 106)
         Me.HasteInnkallingKnapp.TabIndex = 10
         Me.HasteInnkallingKnapp.Text = "Send hasteinnkalling"
         Me.HasteInnkallingKnapp.UseVisualStyleBackColor = False
@@ -111,11 +117,11 @@ Partial Class ansattInnkalling
         'NormalInnkallingKnapp
         '
         Me.NormalInnkallingKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.NormalInnkallingKnapp.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.NormalInnkallingKnapp.Location = New System.Drawing.Point(31, 341)
-        Me.NormalInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.NormalInnkallingKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NormalInnkallingKnapp.Location = New System.Drawing.Point(17, 353)
+        Me.NormalInnkallingKnapp.Margin = New System.Windows.Forms.Padding(4)
         Me.NormalInnkallingKnapp.Name = "NormalInnkallingKnapp"
-        Me.NormalInnkallingKnapp.Size = New System.Drawing.Size(360, 91)
+        Me.NormalInnkallingKnapp.Size = New System.Drawing.Size(341, 106)
         Me.NormalInnkallingKnapp.TabIndex = 9
         Me.NormalInnkallingKnapp.Text = "Send normal innkalling (e-post)"
         Me.NormalInnkallingKnapp.UseVisualStyleBackColor = False
@@ -123,10 +129,11 @@ Partial Class ansattInnkalling
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(70, 100)
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(166, 44)
+        Me.Label1.Size = New System.Drawing.Size(137, 108)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Innkalling"
         '
@@ -134,29 +141,29 @@ Partial Class ansattInnkalling
         '
         Me.klareBlodgivere.Font = New System.Drawing.Font("Calibri", 11.0!)
         Me.klareBlodgivere.FormattingEnabled = True
-        Me.klareBlodgivere.ItemHeight = 27
-        Me.klareBlodgivere.Location = New System.Drawing.Point(27, 208)
-        Me.klareBlodgivere.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.klareBlodgivere.ItemHeight = 22
+        Me.klareBlodgivere.Location = New System.Drawing.Point(18, 99)
+        Me.klareBlodgivere.Margin = New System.Windows.Forms.Padding(4)
         Me.klareBlodgivere.Name = "klareBlodgivere"
-        Me.klareBlodgivere.Size = New System.Drawing.Size(655, 247)
+        Me.klareBlodgivere.Size = New System.Drawing.Size(660, 224)
         Me.klareBlodgivere.TabIndex = 12
         '
         'blodInfoKnapp
         '
         Me.blodInfoKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.blodInfoKnapp.Font = New System.Drawing.Font("Calibri", 16.0!)
-        Me.blodInfoKnapp.Location = New System.Drawing.Point(27, 81)
-        Me.blodInfoKnapp.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.blodInfoKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.blodInfoKnapp.Location = New System.Drawing.Point(18, 353)
+        Me.blodInfoKnapp.Margin = New System.Windows.Forms.Padding(4)
         Me.blodInfoKnapp.Name = "blodInfoKnapp"
-        Me.blodInfoKnapp.Size = New System.Drawing.Size(655, 76)
+        Me.blodInfoKnapp.Size = New System.Drawing.Size(660, 106)
         Me.blodInfoKnapp.TabIndex = 16
         Me.blodInfoKnapp.Text = "Hent blodgiverinformajson"
         Me.blodInfoKnapp.UseVisualStyleBackColor = False
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(31, 70)
-        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(14, 14, 14, 14)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(28, 99)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 18
         '
@@ -164,98 +171,99 @@ Partial Class ansattInnkalling
         '
         Me.ledigeTimer.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.ledigeTimer.FormattingEnabled = True
-        Me.ledigeTimer.ItemHeight = 29
-        Me.ledigeTimer.Location = New System.Drawing.Point(411, 72)
-        Me.ledigeTimer.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ledigeTimer.ItemHeight = 24
+        Me.ledigeTimer.Location = New System.Drawing.Point(384, 110)
+        Me.ledigeTimer.Margin = New System.Windows.Forms.Padding(4)
         Me.ledigeTimer.Name = "ledigeTimer"
-        Me.ledigeTimer.Size = New System.Drawing.Size(256, 265)
+        Me.ledigeTimer.Size = New System.Drawing.Size(293, 196)
         Me.ledigeTimer.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(407, 39)
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(370, 58)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(140, 29)
+        Me.Label4.Size = New System.Drawing.Size(144, 29)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Ledige timer:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label5.Location = New System.Drawing.Point(27, 177)
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(30, 58)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 24)
+        Me.Label5.Size = New System.Drawing.Size(34, 29)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "ID"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label6.Location = New System.Drawing.Point(117, 177)
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(95, 56)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(78, 24)
+        Me.Label6.Size = New System.Drawing.Size(95, 29)
         Me.Label6.TabIndex = 23
         Me.Label6.Text = "Fornavn"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label8.Location = New System.Drawing.Point(322, 177)
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(326, 58)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 24)
+        Me.Label8.Size = New System.Drawing.Size(69, 29)
         Me.Label8.TabIndex = 25
         Me.Label8.Text = "Epost"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label9.Location = New System.Drawing.Point(508, 177)
+        Me.Label9.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(422, 58)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(71, 24)
+        Me.Label9.Size = New System.Drawing.Size(87, 29)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "Telefon"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label10.Location = New System.Drawing.Point(212, 177)
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(197, 58)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(91, 24)
+        Me.Label10.Size = New System.Drawing.Size(111, 29)
         Me.Label10.TabIndex = 27
         Me.Label10.Text = "Etternavn"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 10.0!)
-        Me.Label11.Location = New System.Drawing.Point(597, 177)
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(543, 56)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(85, 24)
+        Me.Label11.Size = New System.Drawing.Size(102, 29)
         Me.Label11.TabIndex = 28
         Me.Label11.Text = "Blodtype"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(875, 111)
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(4, 108)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 29)
+        Me.Label7.Size = New System.Drawing.Size(53, 141)
         Me.Label7.TabIndex = 29
         Me.Label7.Text = "Info"
         '
@@ -263,27 +271,30 @@ Partial Class ansattInnkalling
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(1453, 37)
+        Me.Panel1.Location = New System.Drawing.Point(1460, 32)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(25, 907)
+        Me.Panel1.Size = New System.Drawing.Size(22, 921)
         Me.Panel1.TabIndex = 30
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel2.Location = New System.Drawing.Point(0, 37)
+        Me.Panel2.Location = New System.Drawing.Point(0, 32)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(25, 907)
+        Me.Panel2.Size = New System.Drawing.Size(22, 921)
         Me.Panel2.TabIndex = 31
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(25, 919)
+        Me.Panel3.Location = New System.Drawing.Point(22, 933)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1428, 25)
+        Me.Panel3.Size = New System.Drawing.Size(1438, 20)
         Me.Panel3.TabIndex = 32
         '
         'GroupBox1
@@ -296,44 +307,93 @@ Partial Class ansattInnkalling
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(119, 254)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(10, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(710, 478)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(706, 482)
         Me.GroupBox1.TabIndex = 33
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Velg blodgiver med godkjent egenerklæring:"
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.ledigeTimer)
         Me.GroupBox2.Controls.Add(Me.NormalInnkallingKnapp)
         Me.GroupBox2.Controls.Add(Me.HasteInnkallingKnapp)
         Me.GroupBox2.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(863, 254)
+        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(722, 2)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(700, 478)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(713, 482)
         Me.GroupBox2.TabIndex = 34
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Velg dato og tidspunkt:"
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 302)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.17908!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.82092!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1438, 631)
+        Me.TableLayoutPanel1.TabIndex = 22
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 2
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label7, 0, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(22, 32)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.42857!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.57143!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1438, 249)
+        Me.TableLayoutPanel2.TabIndex = 33
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(23, 58)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(144, 29)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Ledige timer:"
+        '
         'ansattInnkalling
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1478, 944)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(1482, 953)
+        Me.Controls.Add(Me.TableLayoutPanel2)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "ansattInnkalling"
         Me.Text = "Innkalling"
         Me.MenuStrip1.ResumeLayout(False)
@@ -342,6 +402,9 @@ Partial Class ansattInnkalling
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -373,4 +436,7 @@ Partial Class ansattInnkalling
     Friend WithEvents Panel3 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents Label2 As Label
 End Class
