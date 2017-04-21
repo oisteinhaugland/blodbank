@@ -56,13 +56,13 @@
             Select Case innlogget_kjønn
                 Case "Mann"
                     Try
-                        sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try
                 Case "Kvinne"
                     Try
-                        sql_sporring("INSERT INTO egenerklering_spm(bruker_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try

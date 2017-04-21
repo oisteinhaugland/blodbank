@@ -25,9 +25,7 @@ Partial Class Bestillinger
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bestillinger))
         Me.motatteBestillinger = New System.Windows.Forms.ListBox()
         Me.bekreft_Utlevering = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HjemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,13 +39,11 @@ Partial Class Bestillinger
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.utleveringLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,17 +68,6 @@ Partial Class Bestillinger
         Me.bekreft_Utlevering.Text = "Bekreft utlevering"
         Me.bekreft_Utlevering.UseVisualStyleBackColor = False
         '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button4.Font = New System.Drawing.Font("Calibri", 16.0!)
-        Me.Button4.Location = New System.Drawing.Point(18, 48)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 37)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "reset"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'Button5
         '
         Me.Button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
@@ -94,17 +79,6 @@ Partial Class Bestillinger
         Me.Button5.TabIndex = 5
         Me.Button5.Text = "Hent ut motatte bestillinger"
         Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 16.0!)
-        Me.Button1.Location = New System.Drawing.Point(108, 48)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 37)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "test"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
@@ -218,7 +192,6 @@ Partial Class Bestillinger
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.05702!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.94298!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -231,17 +204,6 @@ Partial Class Bestillinger
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1160, 614)
         Me.TableLayoutPanel1.TabIndex = 20
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.Button4)
-        Me.Panel4.Controls.Add(Me.Button1)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel4.Location = New System.Drawing.Point(2, 2)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(200, 154)
-        Me.Panel4.TabIndex = 21
         '
         'GroupBox2
         '
@@ -285,7 +247,6 @@ Partial Class Bestillinger
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -295,9 +256,7 @@ Partial Class Bestillinger
 
     Friend WithEvents motatteBestillinger As ListBox
     Friend WithEvents bekreft_Utlevering As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HjemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProduktoversiktToolStripMenuItem As ToolStripMenuItem
@@ -311,7 +270,6 @@ Partial Class Bestillinger
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Panel4 As Panel
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents utleveringLabel As Label
 End Class

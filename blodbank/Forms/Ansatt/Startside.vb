@@ -42,7 +42,8 @@
 
 
         Next
-        Dim velkomst As String = "Velkommen!"
+        Dim velkomst As String = "Velkommen " & innlogget_fornavn & " " & innlogget_etternavn & "!"
+
         Label8.Text = velkomst
         Label7.Text = Today.Date
 
@@ -70,4 +71,11 @@
         Blodgivning.Show()
     End Sub
 
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
 End Class

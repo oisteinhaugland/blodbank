@@ -9,10 +9,10 @@ Public Class loggInn
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         WindowState = FormWindowState.Maximized
 
-
         ' Me.Bounds = My.Computer.Screen.WorkingArea
         Panel8.Left = (Me.ClientSize.Width - Panel8.Width) \ 2
         Panel8.Top = (Me.ClientSize.Height - Panel8.Height) \ 2
+
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
     End Sub
@@ -42,7 +42,7 @@ Public Class loggInn
         If innloggetBruker.Rows.Count <> 0 Then
             For Each rad In innloggetBruker.Rows
                 Dim brukernavn = rad("epost")
-                Dim passord = rad("passord")
+
                 Dim fornavn = rad("fornavn")
                 Dim etternavn = rad("etternavn")
                 Dim adresse = rad("adresse")
@@ -58,9 +58,6 @@ Public Class loggInn
                 Dim personnummer = rad("personnummer")
                 Dim forrige_blodtapp
                 Dim blodprosent = rad("blodprosent")
-
-
-
 
                 If brukernavn <> String.Empty Then
                     'aktivBruker.Clear()
@@ -156,8 +153,8 @@ Public Class loggInn
             Dim brukernavn = rad("epost")
             Dim passord = rad("passord")
             Dim ansatt_id = rad("ansatt_id")
-            'Dim fornavn = rad("fornavn")
-            'Dim etternavn = rad("etternavn")
+            Dim fornavn = rad("fornavn")
+            Dim etternavn = rad("etternavn")
             'Dim adresse = rad("adresse")
             'Dim epost = rad("epost")
             ''Dim fodseldato = rad("fodseldato")
@@ -170,8 +167,8 @@ Public Class loggInn
             If brukerNavnTextbox.Text = brukernavn And passordTextBox.Text = passord Then
                 innlogget_bruker = brukernavn
                 innlogget_ansatt_id = ansatt_id
-                'innlogget_fornavn = fornavn
-                'innlogget_etternavn = etternavn
+                innlogget_fornavn = fornavn
+                innlogget_etternavn = etternavn
                 'innlogget_adresse = adresse
                 'innlogget_epost = epost
                 'innlogget_fodseldato = fodseldato
@@ -221,10 +218,6 @@ Public Class loggInn
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        hashtest.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         MinSide.Show()

@@ -45,6 +45,7 @@ Partial Class Blodgivning
         Me.registrerBlodtypeKnapp = New System.Windows.Forms.Button()
         Me.blodprosentTekst = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -54,7 +55,6 @@ Partial Class Blodgivning
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -225,13 +225,14 @@ Partial Class Blodgivning
         '
         'registrerBlodtypeKnapp
         '
+        Me.registrerBlodtypeKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.registrerBlodtypeKnapp.Location = New System.Drawing.Point(6, 271)
         Me.registrerBlodtypeKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.registrerBlodtypeKnapp.Name = "registrerBlodtypeKnapp"
         Me.registrerBlodtypeKnapp.Size = New System.Drawing.Size(349, 86)
         Me.registrerBlodtypeKnapp.TabIndex = 29
         Me.registrerBlodtypeKnapp.Text = "Registrer"
-        Me.registrerBlodtypeKnapp.UseVisualStyleBackColor = True
+        Me.registrerBlodtypeKnapp.UseVisualStyleBackColor = False
         '
         'blodprosentTekst
         '
@@ -267,6 +268,16 @@ Partial Class Blodgivning
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registrer blodtapping:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(344, 214)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(106, 23)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "dd.mm.åååå"
         '
         'Label9
         '
@@ -378,16 +389,6 @@ Partial Class Blodgivning
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1175, 591)
         Me.TableLayoutPanel2.TabIndex = 36
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(344, 214)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 23)
-        Me.Label2.TabIndex = 33
-        Me.Label2.Text = "dd.mm.åååå"
         '
         'Blodgivning
         '

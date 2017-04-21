@@ -37,7 +37,6 @@ Partial Class loggInn
         Me.passordTextBox = New System.Windows.Forms.TextBox()
         Me.brukernavnLabel = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -108,7 +107,6 @@ Partial Class loggInn
         Me.Panel1.Controls.Add(Me.passordTextBox)
         Me.Panel1.Controls.Add(Me.brukernavnLabel)
         Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Location = New System.Drawing.Point(4, 125)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
@@ -188,25 +186,16 @@ Partial Class loggInn
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(3, 208)
+        Me.Button3.Location = New System.Drawing.Point(8, 75)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(162, 54)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "midlertidig logg inn (ansatt)"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(57, 115)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "HashTest"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(3, 148)
+        Me.Button2.Location = New System.Drawing.Point(8, 15)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(162, 54)
         Me.Button2.TabIndex = 7
@@ -267,7 +256,6 @@ Partial Class loggInn
     Friend WithEvents passordTextBox As TextBox
     Friend WithEvents brukernavnLabel As Label
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox

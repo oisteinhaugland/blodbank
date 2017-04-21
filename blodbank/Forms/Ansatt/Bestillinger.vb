@@ -37,24 +37,6 @@
 
     End Sub
 
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'INSERT settninger for å kunne jobbe med simulerte bestillinger"
-        Dim ordredato_sql1 As String = konverterDatoFormatTilMySql(InputBox(" "))
-        Dim ordredato_sql2 As String = konverterDatoFormatTilMySql(InputBox(" "))
-        Dim ordredato_sql3 As String = konverterDatoFormatTilMySql(InputBox(" "))
-        Dim ordredato_sql4 As String = konverterDatoFormatTilMySql(InputBox(" "))
-        Dim ordredato_sql5 As String = konverterDatoFormatTilMySql(InputBox(" "))
-
-        sql_sporring("INSERT INTO Blod_bestillinger (blodegenskap_id, blod_type, blod_mengde, ordre_dato) VALUES (3, 1, 4,'" & ordredato_sql1 & "')")
-        sql_sporring("INSERT INTO Blod_bestillinger (blodegenskap_id, blod_type, blod_mengde, ordre_dato) VALUES (2, 2, 2,'" & ordredato_sql2 & "')")
-        sql_sporring("INSERT INTO Blod_bestillinger (blodegenskap_id, blod_type, blod_mengde, ordre_dato) VALUES (1, 3, 1,'" & ordredato_sql3 & "')")
-        sql_sporring("INSERT INTO Blod_bestillinger (blodegenskap_id, blod_type, blod_mengde, ordre_dato) VALUES (3, 4, 3,'" & ordredato_sql4 & "')")
-        sql_sporring("INSERT INTO Blod_bestillinger (blodegenskap_id, blod_type, blod_mengde, ordre_dato) VALUES (2, 8, 5,'" & ordredato_sql5 & "')")
-
-
-    End Sub
-
     Private Sub bekreft_Utlevering_Click(sender As Object, e As EventArgs) Handles bekreft_Utlevering.Click
 
         For i = 0 To bestillinger.Count - 1 'for hver bestilling
@@ -87,19 +69,6 @@
 
         utleveringLabel.Show()
         bekreft_Utlevering.Enabled = False
-
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        'Reset knapp for å kunne gjøre det igjen
-
-        bestillTable = sql_sporring("SELECT * FROM Blod_bestillinger")
-        For Each rad In bestillTable.Rows
-
-            sql_sporring("UPDATE Blod_bestillinger SET behandlet = 0 WHERE blodbestilling_id > 0")
-        Next
-        motatteBestillinger.Items.Clear()
-        utleveringLabel.Visible = False
 
     End Sub
 
