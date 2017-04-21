@@ -99,6 +99,7 @@ Partial Class registrerBlodgiver
         Me.passordTextBox.Name = "passordTextBox"
         Me.passordTextBox.Size = New System.Drawing.Size(139, 24)
         Me.passordTextBox.TabIndex = 9
+        Me.passordTextBox.UseSystemPasswordChar = True
         '
         'fornavnLabel
         '
@@ -145,8 +146,9 @@ Partial Class registrerBlodgiver
         Me.gjenntaPassordTextbox.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gjenntaPassordTextbox.Location = New System.Drawing.Point(3, 272)
         Me.gjenntaPassordTextbox.Name = "gjenntaPassordTextbox"
-        Me.gjenntaPassordTextbox.Size = New System.Drawing.Size(100, 24)
+        Me.gjenntaPassordTextbox.Size = New System.Drawing.Size(139, 24)
         Me.gjenntaPassordTextbox.TabIndex = 10
+        Me.gjenntaPassordTextbox.UseSystemPasswordChar = True
         '
         'gjentaPassordLabel
         '
@@ -181,9 +183,9 @@ Partial Class registrerBlodgiver
         Me.registrerBrukerKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.registrerBrukerKnapp.Dock = System.Windows.Forms.DockStyle.Right
         Me.registrerBrukerKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(71, 3)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(211, 3)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(484, 114)
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(344, 97)
         Me.registrerBrukerKnapp.TabIndex = 11
         Me.registrerBrukerKnapp.Text = "Registrer bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = False
@@ -304,7 +306,7 @@ Partial Class registrerBlodgiver
         Me.Button1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(561, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(347, 114)
+        Me.Button1.Size = New System.Drawing.Size(344, 97)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Gå tilbake / Avbryt registrering"
         Me.Button1.UseVisualStyleBackColor = False
@@ -354,8 +356,8 @@ Partial Class registrerBlodgiver
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.67901!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.32099!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.1635!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.8365!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1117, 263)
         Me.TableLayoutPanel1.TabIndex = 31
         '

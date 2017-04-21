@@ -31,6 +31,9 @@ Public Class ansattInnkalling
         MonthCalendar1.MinDate = Date.Today
         MonthCalendar1.MaxSelectionCount = 1
 
+        HasteInnkallingKnapp.Enabled = False
+        NormalInnkallingKnapp.Enabled = False
+
     End Sub
 
     Private Sub blodInfoKnapp_Click(sender As Object, e As EventArgs) Handles blodInfoKnapp.Click
@@ -47,7 +50,7 @@ Public Class ansattInnkalling
             If rad("sistBlodgivning") < Tremnddato Then
 
                 innkallingListe.Add(New Innkalling(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("epost"), rad("telefon"), rad("blodtype_id")))
-                klareBlodgivere.Items.Add(rad("blodgiver_id") & vbTab & vbTab & rad("fornavn") & vbTab & rad("etternavn") & vbTab & Space(2) & rad("epost") & Space(4) & rad("telefon") & Space(1) & vbTab & blodtypeStringInk)
+                klareBlodgivere.Items.Add(rad("blodgiver_id") & vbTab & rad("fornavn") & vbTab & rad("etternavn") & vbTab & Space(2) & rad("epost") & Space(4) & rad("telefon") & Space(1) & vbTab & blodtypeStringInk)
             End If
         Next
 
@@ -72,23 +75,8 @@ Public Class ansattInnkalling
             Dim innkallTime As New DataTable
             Dim temp = ledigeTimer.SelectedItem()
             Dim tidspunkt As Integer
-            Select Case temp
-                Case "09:00"
-                    tidspunkt = 9
-                Case "10:00"
-                    tidspunkt = 10
-                Case "11:00"
-                    tidspunkt = 11
-                Case "12:00"
-                    tidspunkt = 12
-                Case "13:00"
-                    tidspunkt = 13
-                Case "14:00"
-                    tidspunkt = 14
-                Case "15:00"
-                    tidspunkt = 15
-            End Select
 
+            tidspunkt = IntegertilKlokkeSlett(temp)
             Try
                 If tidspunkt <> 0 Then
 
@@ -110,31 +98,6 @@ Public Class ansattInnkalling
 
                 Dim mailTekst As String = "Hei vi melder om innkalling til blodgivertime den " & valgtDato & " kl: " & tidspunkt & ". Gi beskjed dersom du ikke kan komme. " & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
                 Dim innkallingEpost = innkallingListe(klareBlodgivere.SelectedIndex).epost
-
-
-
-                'Epost funksjonalitet for innkalling
-
-
-                Dim Smtp_Server As New SmtpClient
-                Dim e_mail As New MailMessage()
-                Smtp_Server.UseDefaultCredentials = False
-                Smtp_Server.Credentials = New Net.NetworkCredential("blodbank.gruppe05@gmail.com", "blodbank1234")
-                Smtp_Server.Port = 587
-                Smtp_Server.EnableSsl = True
-                Smtp_Server.Host = "smtp.gmail.com"
-
-                e_mail = New MailMessage()
-                e_mail.From = New MailAddress("blodbank.gruppe05@gmail.com")
-                e_mail.To.Add(innkallingEpost)
-                e_mail.Subject = "Blodgivertime"
-                e_mail.IsBodyHtml = False
-                e_mail.Body = (mailTekst)
-                Smtp_Server.Send(e_mail)
-
-
-
-                'MsgBox(innkallingString & " er innkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er " & dato & ", klokken: " & tidspunkt & "." & vbCrLf)
 
                 'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
                 epost.sendEpost(innkallingEpost, "Blodgivertime", mailTekst)
@@ -170,22 +133,7 @@ Public Class ansattInnkalling
             Dim innkallTimeHast As New DataTable
             Dim temp = ledigeTimer.SelectedItem()
             Dim tidspunkt As Integer
-            Select Case temp
-                Case "09:00"
-                    tidspunkt = 9
-                Case "10:00"
-                    tidspunkt = 10
-                Case "11:00"
-                    tidspunkt = 11
-                Case "12:00"
-                    tidspunkt = 12
-                Case "13:00"
-                    tidspunkt = 13
-                Case "14:00"
-                    tidspunkt = 14
-                Case "15:00"
-                    tidspunkt = 15
-            End Select
+            tidspunkt = IntegertilKlokkeSlett(temp)
 
             Try
 
@@ -207,7 +155,6 @@ Public Class ansattInnkalling
                 MsgBox(ex.Message)
             End Try
             Try
-
                 'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
                 Dim mailTekst As String = "Hei vi melder om nødsituasjon som krever en hasteinnkalling til blodgivertime den " & dato2 & " kl: " & tidspunkt & ":00" & ". Bekreft snarest" & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
                 epost.sendEpost(innkallingEpost, "HASTEINNKALLING - BLODBANKEN", mailTekst)
@@ -220,70 +167,14 @@ Public Class ansattInnkalling
 
     End Sub
     Private Sub Kalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
-        Dim valgtDato As String = konverterDatoFormatTilMySql(MonthCalendar1.SelectionRange.Start.ToShortDateString())
-        Dim aktiveTimer = sql_sporring("SELECT er_aktiv, bestilling_tidspunkt FROM Timebestilling where bestilling_dato ='" & valgtDato & "' and er_aktiv = 1")
-
-        Dim klokke As Integer = 9
-        ledigeTimer.Items.Clear()
-        Dim tidsPunkt = ""
-        Dim hvisTid = True
-
-        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
-            'skjekk om tidspunktet er en av radene
-            For i = 0 To 6
-
-                For Each rad In aktiveTimer.Rows
-                    If rad("bestilling_tidspunkt") = klokke Then
-                        hvisTid = False
-                    End If
-                Next
-                Select Case klokke
-                    Case 9
-                        tidsPunkt = "09:00"
-                    Case 10
-                        tidsPunkt = "10:00"
-                    Case 11
-                        tidsPunkt = "11:00"
-                    Case 12
-                        tidsPunkt = "12:00"
-                    Case 13
-                        tidsPunkt = "13:00"
-                    Case 14
-                        tidsPunkt = "14:00"
-                    Case 15
-                        tidsPunkt = "15:00"
-                End Select
-                If hvisTid Then
-                    ledigeTimer.Items.Add(tidsPunkt)
-                End If
-                klokke += 1
-                hvisTid = True
-            Next
-        Else
-            For i = 0 To 6
-                Select Case klokke
-                    Case 9
-                        tidsPunkt = "09:00"
-                    Case 10
-                        tidsPunkt = "10:00"
-                    Case 11
-                        tidsPunkt = "11:00"
-                    Case 12
-                        tidsPunkt = "12:00"
-                    Case 13
-                        tidsPunkt = "13:00"
-                    Case 14
-                        tidsPunkt = "14:00"
-                    Case 15
-                        tidsPunkt = "15:00"
-                End Select
-                ledigeTimer.Items.Add(tidsPunkt)
-                klokke += 1
-            Next
-        End If
+        'bruker metode for timebestilling  fra tilkoblingsdata
+        timebestillingMetode(MonthCalendar1, ledigeTimer)
+        HasteInnkallingKnapp.Enabled = False
+        NormalInnkallingKnapp.Enabled = False
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
+    Private Sub ledigeTimer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ledigeTimer.SelectedIndexChanged
+        HasteInnkallingKnapp.Enabled = True
+        NormalInnkallingKnapp.Enabled = True
     End Sub
 End Class

@@ -14,6 +14,8 @@ Public Class Validering
     Public registrerMengdeFormat As String = "^(\d)$"
     Public blodgiverIdFormat As String = "^(\d){1,}$"
     Public passordFormat As String = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{4,}$"
+    Public registrerBlodprosentFormat As String = "^0*(?:[1-9][0-9]?|100)$"
+
     Public Function formatSkjekk(ByVal text As String, ByVal regularexpression As String)
         Dim match As Match = Regex.Match((text), regularexpression)
         If match.Success Then

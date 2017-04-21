@@ -30,7 +30,6 @@ Partial Class Startside
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dagensTimer = New System.Windows.Forms.ListBox()
@@ -105,23 +104,11 @@ Partial Class Startside
         Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(151, 23)
         Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer blodgiving"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(16, 610)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 29)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Hjem"
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label3.Location = New System.Drawing.Point(56, 157)
+        Me.Label3.Location = New System.Drawing.Point(43, 140)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(142, 29)
         Me.Label3.TabIndex = 8
@@ -131,7 +118,7 @@ Partial Class Startside
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(11, 24)
+        Me.Label4.Location = New System.Drawing.Point(20, 85)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(202, 33)
         Me.Label4.TabIndex = 9
@@ -151,17 +138,17 @@ Partial Class Startside
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(28, 85)
+        Me.Label5.Location = New System.Drawing.Point(20, 121)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(39, 33)
+        Me.Label5.Size = New System.Drawing.Size(73, 33)
         Me.Label5.TabIndex = 11
-        Me.Label5.Text = "ID"
+        Me.Label5.Text = "Navn"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(139, 85)
+        Me.Label6.Location = New System.Drawing.Point(228, 121)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 33)
         Me.Label6.TabIndex = 12
@@ -171,7 +158,7 @@ Partial Class Startside
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 18.0!)
-        Me.Label7.Location = New System.Drawing.Point(194, 157)
+        Me.Label7.Location = New System.Drawing.Point(191, 140)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 29)
         Me.Label7.TabIndex = 13
@@ -285,7 +272,6 @@ Partial Class Startside
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1204, 628)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
@@ -313,7 +299,6 @@ Partial Class Startside
     Friend WithEvents ProduktoversiktToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InnkallingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BestillingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label2 As Label
     Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label

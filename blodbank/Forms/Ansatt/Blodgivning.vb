@@ -61,20 +61,11 @@ Public Class Blodgivning
             blodtype_id = row("blodtype_id")
         Next
 
-
         If v.formatSkjekk(plasmaTekst.Text, v.registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
         If v.formatSkjekk(blodlegemeTekst.Text, v.registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
         If v.formatSkjekk(blodplateTekst.Text, v.registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If v.formatSkjekk(TappeDato.Text, v.datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
-
-
-
-
-        If v.formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
-        If v.formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
-        If v.formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
-        If v.formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
-        If v.formatSkjekk(blodprosentTekst.Text, registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
+        If v.formatSkjekk(blodprosentTekst.Text, v.registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
 
 
         If validert And validertDato Then
@@ -149,15 +140,6 @@ Public Class Blodgivning
 
     Private Sub LagreBlodtapp_Click(sender As Object, e As EventArgs) Handles LagreBlodtapp.Click
         registrerBlodInfo()
-    End Sub
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'plasmaHoldbarhet = DateAdd(DateInterval.Day, 365, Today.Date)
-        'blodplaterHoldbarhet = DateAdd(DateInterval.Day, 7, Today.Date)
-        'blodlegemerHoldbarhet = DateAdd(DateInterval.Day, 25, Today.Date)
-
-        'MsgBox(konverterDatoFormatTilMySql(plasmaHoldbarhet))
     End Sub
 
     Private Sub regBlodtype(sender As Object, e As EventArgs) Handles registrerBlodtypeKnapp.Click

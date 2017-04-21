@@ -10,7 +10,9 @@
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
         utleveringLabel.Hide()
-        motatteBestillinger.Items.Clear()
+        motatteBestillinger.Items.Clear() '
+
+        bekreft_Utlevering.Enabled = False
 
 
     End Sub
@@ -84,6 +86,7 @@
         utleveringLabel.Visible = True
 
         utleveringLabel.Show()
+        bekreft_Utlevering.Enabled = False
 
     End Sub
 
@@ -101,8 +104,8 @@
     End Sub
 
     Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
-        Me.Hide()
         Blodgivning.Show()
+        Me.Hide()
 
     End Sub
 
@@ -115,21 +118,16 @@
 
             enhetTable = sql_sporring("SELECT * FROM Blodlager where lager_status = 1 AND blodtype_id =" & bestillinger(i).blod_type & " and blodegenskap_id =" & bestillinger(i).blod_egenskap & " and holdbarhet >='" & konverterDatoFormatTilMySql(Date.Today).ToString & "' LIMIT " & bestillinger(i).blod_mengde)
 
-
             For Each rad In enhetTable.Rows
                 enheterPåLager.Add(New lager(rad("enhet_id"), rad("blodegenskap_id"), rad("blodtype_id")))
-
                 'Bruker funksjoner for blodtype- og blodegenskapskonvertering [Tilkoblingsdata.vb]
                 Dim blodtypeString = konverterBlodtypeTilTekst(rad("blodtype_id"))
                 Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
-
                 Dim enhet As String = rad("enhet_id") & "-" & blodtypeString & "-" & blodegString
                 vareLagerListBox.Items.Add(enhet)
-
             Next
-
         Next
-
+        bekreft_Utlevering.Enabled = True
     End Sub
 
     Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
@@ -140,13 +138,14 @@
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
         Produktoversikt.Show()
         Me.Hide()
-
     End Sub
 
     Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
         Startside.Show()
         Me.Hide()
-
     End Sub
 
+    Private Sub vareLagerListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles vareLagerListBox.SelectedIndexChanged
+
+    End Sub
 End Class

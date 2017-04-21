@@ -27,7 +27,6 @@ Partial Class Egenklæring
         Me.MinSideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -405,16 +404,6 @@ Partial Class Egenklæring
         Me.EgenerklæringToolStripMenuItem.Name = "EgenerklæringToolStripMenuItem"
         Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(114, 23)
         Me.EgenerklæringToolStripMenuItem.Text = "Egenerklæring"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(40, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(158, 29)
-        Me.Label1.TabIndex = 65
-        Me.Label1.Text = "Egenerklæring"
         '
         'Label3
         '
@@ -3751,7 +3740,6 @@ Partial Class Egenklæring
         Me.Controls.Add(Me.Panel25)
         Me.Controls.Add(Me.egenerkleringTabControl)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -3907,7 +3895,6 @@ Partial Class Egenklæring
     Friend WithEvents MinSideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TimebestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

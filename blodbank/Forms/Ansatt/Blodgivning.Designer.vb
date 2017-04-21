@@ -40,23 +40,21 @@ Partial Class Blodgivning
         Me.blodlegemeTekst = New System.Windows.Forms.TextBox()
         Me.blodplateTekst = New System.Windows.Forms.TextBox()
         Me.TappeDato = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.bGiverIdTextBox = New System.Windows.Forms.TextBox()
         Me.registrerBlodtypeKnapp = New System.Windows.Forms.Button()
         Me.blodprosentTekst = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -110,7 +108,7 @@ Partial Class Blodgivning
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(33, 32)
+        Me.Label1.Location = New System.Drawing.Point(23, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 23)
         Me.Label1.TabIndex = 10
@@ -120,7 +118,7 @@ Partial Class Blodgivning
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(33, 67)
+        Me.Label3.Location = New System.Drawing.Point(23, 67)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(141, 23)
         Me.Label3.TabIndex = 12
@@ -130,7 +128,7 @@ Partial Class Blodgivning
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(33, 101)
+        Me.Label4.Location = New System.Drawing.Point(23, 101)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(186, 23)
         Me.Label4.TabIndex = 13
@@ -140,7 +138,7 @@ Partial Class Blodgivning
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(33, 140)
+        Me.Label5.Location = New System.Drawing.Point(23, 140)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(168, 23)
         Me.Label5.TabIndex = 14
@@ -150,7 +148,7 @@ Partial Class Blodgivning
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(33, 214)
+        Me.Label6.Location = New System.Drawing.Point(23, 214)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(155, 23)
         Me.Label6.TabIndex = 15
@@ -170,7 +168,7 @@ Partial Class Blodgivning
         'IDtekst
         '
         Me.IDtekst.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IDtekst.Location = New System.Drawing.Point(249, 32)
+        Me.IDtekst.Location = New System.Drawing.Point(209, 32)
         Me.IDtekst.Name = "IDtekst"
         Me.IDtekst.Size = New System.Drawing.Size(133, 24)
         Me.IDtekst.TabIndex = 17
@@ -178,7 +176,7 @@ Partial Class Blodgivning
         'plasmaTekst
         '
         Me.plasmaTekst.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.plasmaTekst.Location = New System.Drawing.Point(249, 68)
+        Me.plasmaTekst.Location = New System.Drawing.Point(209, 68)
         Me.plasmaTekst.Name = "plasmaTekst"
         Me.plasmaTekst.Size = New System.Drawing.Size(133, 24)
         Me.plasmaTekst.TabIndex = 19
@@ -186,7 +184,7 @@ Partial Class Blodgivning
         'blodlegemeTekst
         '
         Me.blodlegemeTekst.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.blodlegemeTekst.Location = New System.Drawing.Point(249, 101)
+        Me.blodlegemeTekst.Location = New System.Drawing.Point(209, 101)
         Me.blodlegemeTekst.Name = "blodlegemeTekst"
         Me.blodlegemeTekst.Size = New System.Drawing.Size(133, 24)
         Me.blodlegemeTekst.TabIndex = 20
@@ -194,7 +192,7 @@ Partial Class Blodgivning
         'blodplateTekst
         '
         Me.blodplateTekst.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.blodplateTekst.Location = New System.Drawing.Point(249, 136)
+        Me.blodplateTekst.Location = New System.Drawing.Point(209, 136)
         Me.blodplateTekst.Name = "blodplateTekst"
         Me.blodplateTekst.Size = New System.Drawing.Size(133, 24)
         Me.blodplateTekst.TabIndex = 21
@@ -202,32 +200,10 @@ Partial Class Blodgivning
         'TappeDato
         '
         Me.TappeDato.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TappeDato.Location = New System.Drawing.Point(249, 215)
+        Me.TappeDato.Location = New System.Drawing.Point(209, 215)
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(133, 24)
         Me.TappeDato.TabIndex = 22
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(19, 618)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(200, 29)
-        Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Registrer blodtapp"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 61)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Button1???"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'ComboBox1
         '
@@ -238,16 +214,6 @@ Partial Class Blodgivning
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(165, 37)
         Me.ComboBox1.TabIndex = 26
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(589, 0)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 13)
-        Me.Label2.TabIndex = 27
-        Me.Label2.Text = "Registrer Blodtype til Blogiver"
         '
         'bGiverIdTextBox
         '
@@ -269,7 +235,7 @@ Partial Class Blodgivning
         '
         'blodprosentTekst
         '
-        Me.blodprosentTekst.Location = New System.Drawing.Point(249, 173)
+        Me.blodprosentTekst.Location = New System.Drawing.Point(209, 173)
         Me.blodprosentTekst.Margin = New System.Windows.Forms.Padding(2)
         Me.blodprosentTekst.Name = "blodprosentTekst"
         Me.blodprosentTekst.Size = New System.Drawing.Size(133, 30)
@@ -277,6 +243,7 @@ Partial Class Blodgivning
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.blodprosentTekst)
         Me.GroupBox1.Controls.Add(Me.TappeDato)
@@ -301,6 +268,16 @@ Partial Class Blodgivning
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registrer blodtapping:"
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(23, 180)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(108, 23)
+        Me.Label9.TabIndex = 32
+        Me.Label9.Text = "Blodprosent"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label11)
@@ -318,6 +295,26 @@ Partial Class Blodgivning
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Registrer blodtype til blodgiver"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(15, 100)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(82, 23)
+        Me.Label11.TabIndex = 33
+        Me.Label11.Text = "Blodtype"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(15, 62)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(112, 23)
+        Me.Label10.TabIndex = 32
+        Me.Label10.Text = "Blodgiver ID:"
         '
         'Panel1
         '
@@ -370,9 +367,7 @@ Partial Class Blodgivning
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label2, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox1, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Button1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(19, 27)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
@@ -384,35 +379,15 @@ Partial Class Blodgivning
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1175, 591)
         Me.TableLayoutPanel2.TabIndex = 36
         '
-        'Label9
+        'Label2
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(33, 180)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(108, 23)
-        Me.Label9.TabIndex = 32
-        Me.Label9.Text = "Blodprosent"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(15, 62)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(112, 23)
-        Me.Label10.TabIndex = 32
-        Me.Label10.Text = "Blodgiver ID:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(15, 100)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(82, 23)
-        Me.Label11.TabIndex = 33
-        Me.Label11.Text = "Blodtype"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(344, 214)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(106, 23)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "dd.mm.åååå"
         '
         'Blodgivning
         '
@@ -420,7 +395,6 @@ Partial Class Blodgivning
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1213, 628)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
@@ -437,7 +411,6 @@ Partial Class Blodgivning
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -460,11 +433,7 @@ Partial Class Blodgivning
     Friend WithEvents blodlegemeTekst As TextBox
     Friend WithEvents blodplateTekst As TextBox
     Friend WithEvents TappeDato As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
-
-    Friend WithEvents Label2 As Label
     Friend WithEvents bGiverIdTextBox As TextBox
     Friend WithEvents registrerBlodtypeKnapp As Button
     Friend WithEvents Label8 As Label
@@ -482,4 +451,5 @@ Partial Class Blodgivning
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents Label2 As Label
 End Class

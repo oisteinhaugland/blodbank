@@ -27,7 +27,6 @@ Partial Class Timebestillinger
         Me.MinSideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Kalender = New System.Windows.Forms.MonthCalendar()
         Me.bestillKnapp = New System.Windows.Forms.Button()
         Me.avbestillKnapp = New System.Windows.Forms.Button()
@@ -79,18 +78,6 @@ Partial Class Timebestillinger
         Me.EgenerklæringToolStripMenuItem.Name = "EgenerklæringToolStripMenuItem"
         Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(114, 23)
         Me.EgenerklæringToolStripMenuItem.Text = "Egenerklæring"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(2, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 163)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Timebestilling"
         '
         'Kalender
         '
@@ -203,11 +190,11 @@ Partial Class Timebestillinger
         Me.GroupBox1.Controls.Add(Me.bestillKnapp)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(7, 165)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 91)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(537, 423)
+        Me.GroupBox1.Size = New System.Drawing.Size(537, 497)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Timebestilling"
@@ -229,11 +216,11 @@ Partial Class Timebestillinger
         Me.GroupBox2.Controls.Add(Me.HentTimebestilling)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(548, 165)
+        Me.GroupBox2.Location = New System.Drawing.Point(548, 91)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(543, 423)
+        Me.GroupBox2.Size = New System.Drawing.Size(543, 497)
         Me.GroupBox2.TabIndex = 17
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Avbestill time"
@@ -260,14 +247,13 @@ Partial Class Timebestillinger
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox1, 0, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(16, 27)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.76204!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.23796!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.25424!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.74577!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1093, 590)
         Me.TableLayoutPanel2.TabIndex = 21
         '
@@ -293,7 +279,6 @@ Partial Class Timebestillinger
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -303,7 +288,6 @@ Partial Class Timebestillinger
     Friend WithEvents MinSideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TimebestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label1 As Label
     Friend WithEvents Kalender As MonthCalendar
     Friend WithEvents bestillKnapp As Button
     Friend WithEvents avbestillKnapp As Button

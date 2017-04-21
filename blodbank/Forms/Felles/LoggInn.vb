@@ -7,29 +7,17 @@ Public Class loggInn
     'Public aktivBruker As New List(Of Bruker)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(0, 0)
+        WindowState = FormWindowState.Maximized
+
+
+        ' Me.Bounds = My.Computer.Screen.WorkingArea
+        Panel8.Left = (Me.ClientSize.Width - Panel8.Width) \ 2
+        Panel8.Top = (Me.ClientSize.Height - Panel8.Height) \ 2
         Me.BackColor = Color.FromArgb(255, 255, 255)
+
     End Sub
 
     Private melding_logg_inn_feil As String = "Feil brukernavn eller passord, vennligst prøv igjen."
-
-
-    'Public Function loggInnGlemtPassord(bruker, pwd)
-    '    Dim glemtPassordBrukerRegistrert As Boolean
-    '    Dim epost = sql_sporring("SELECT * from Blodgiver Where epost ='" & bruker & "' and hashedPwd ='" & pwd & "'")
-    '    If epost.Rows.Count <> 0 Then
-    '        glemtPassordBrukerRegistrert = True
-    '    Else
-    '        glemtPassordBrukerRegistrert = False
-    '    End If
-
-    '    If glemtPassordBrukerRegistrert Then
-    '        Return True
-    '    Else
-    '        Return False
-    '    End If
-    'End Function
 
     Public Function loggInnBlodgiver(bruker, pwd)
         Dim blodGivere As New DataTable
@@ -69,6 +57,7 @@ Public Class loggInn
                 Dim telefon = rad("telefon")
                 Dim personnummer = rad("personnummer")
                 Dim forrige_blodtapp
+                Dim blodprosent = rad("blodprosent")
 
 
 
@@ -91,6 +80,7 @@ Public Class loggInn
                     innlogget_post_sted = post_sted
                     innlogget_telefon = telefon
                     innlogget_personnummer = personnummer
+                    innlogget_blodprosent = blodprosent
 
                     Try
                         Dim ny_tabbel = sql_sporring("SELECT * FROM 
@@ -129,6 +119,33 @@ Public Class loggInn
             Return False
         End If
     End Function
+
+    Public Function loggInnLeder(bruker, pwd)
+        Dim tabell As New DataTable
+        tabell = sql_sporring("SELECT * FROM Ansatt WHERE epost ='" & bruker & "'")
+        Dim loggetInn As Boolean = False
+
+        For Each rad In tabell.Rows
+            Dim brukernavn = rad("epost")
+            Dim passord = rad("passord")
+            Dim ansatt_id = rad("ansatt_id")
+            Dim lederstatus = rad("lederstatus")
+
+            If bruker = brukernavn And pwd = passord And lederstatus <> 0 Then
+                innlogget_bruker = brukernavn
+                innlogget_ansatt_id = ansatt_id
+                loggetInn = True
+            End If
+        Next
+
+        If loggetInn Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
 
     Public Function loggInnAnsatt()
         Dim tabell As New DataTable
@@ -171,24 +188,27 @@ Public Class loggInn
             Return False
         End If
 
-
-
-
-
     End Function
 
+
     Private Sub loggInnKnapp_Click_1(sender As Object, e As EventArgs) Handles loggInnKnapp.Click
-        'If loggInnGlemtPassord(brukerNavnTextbox.Text, passordTextBox.Text) Then
-        '    RegistrerNyttPassord.Show()
-        '    Me.Hide()
-        If loggInnAnsatt() Then
-                Startside.Show() '
-                Me.Hide()
-            ElseIf loggInnBlodgiver(brukerNavnTextbox.Text, passordTextBox.Text) Then
-                MinSide.Show()
-                Me.Hide()
-            Else
-                MsgBox(melding_logg_inn_feil)
+        If loggInnLeder(brukerNavnTextbox.Text, passordTextBox.Text) Then
+            Leder.Show()
+            Me.Hide()
+            brukerNavnTextbox.Text = ""
+            passordTextBox.Text = ""
+        ElseIf loggInnAnsatt() Then
+            Startside.Show() '
+            Me.Hide()
+            brukerNavnTextbox.Text = ""
+            passordTextBox.Text = ""
+        ElseIf loggInnBlodgiver(brukerNavnTextbox.Text, passordTextBox.Text) Then
+            MinSide.Show()
+            Me.Hide()
+            brukerNavnTextbox.Text = ""
+            passordTextBox.Text = ""
+        Else
+            MsgBox(melding_logg_inn_feil)
         End If
     End Sub
 
@@ -202,24 +222,26 @@ Public Class loggInn
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
         hashtest.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
         MinSide.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
         Startside.Show()
+        Me.Hide()
     End Sub
 
     Private Sub glemtPassordKnapp_Click(sender As Object, e As EventArgs) Handles glemtPassordKnapp.Click
         GlemtPassord.Show()
         Me.Hide()
     End Sub
+
+
 End Class
 
 

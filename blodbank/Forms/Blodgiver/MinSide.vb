@@ -7,7 +7,7 @@
         label_innlogget_adresse.Text = ""
         label_innlogget_fodselsdato.Text = ""
         label_innlogget_forrige_blodtapp.Text = ""
-        label_innlogget_karantene.Text = ""
+        label_innlogget_karantene1.Text = ""
         label_innlogget_post_nr.Text = ""
         label_innlogget_post_sted.Text = ""
         label_innlogget_telefon.Text = ""

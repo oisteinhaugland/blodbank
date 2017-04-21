@@ -32,22 +32,7 @@
         Dim bestillTime As New DataTable
         Dim temp = ListBox2.SelectedItem()
         Dim tidspunkt As Integer
-        Select Case temp
-            Case "09:00"
-                tidspunkt = 9
-            Case "10:00"
-                tidspunkt = 10
-            Case "11:00"
-                tidspunkt = 11
-            Case "12:00"
-                tidspunkt = 12
-            Case "13:00"
-                tidspunkt = 13
-            Case "14:00"
-                tidspunkt = 14
-            Case "15:00"
-                tidspunkt = 15
-        End Select
+        tidspunkt = IntegertilKlokkeSlett(temp)
 
         Try
             bestillTime = sql_sporring("INSERT INTO Timebestilling(bestilling_dato, bestilling_tidspunkt, blodgiver_id, er_aktiv)
@@ -94,69 +79,7 @@
     End Sub
 
     Private Sub Kalender_DateChanged(sender As Object, e As DateRangeEventArgs) Handles Kalender.DateChanged
-        Dim valgtDato As String = konverterDatoFormatTilMySql(Kalender.SelectionRange.Start.ToShortDateString())
-        Dim aktiveTimer = sql_sporring("SELECT er_aktiv, bestilling_tidspunkt FROM Timebestilling where bestilling_dato ='" & valgtDato & "' and er_aktiv = 1")
-
-        Dim klokke As Integer = 9
-        ListBox2.Items.Clear()
-        Dim tidsPunkt = ""
-        Dim hvisTid = True
-
-        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
-
-            'skjekk om tidspunktet er en av radene
-            For i = 0 To 6
-
-                For Each rad In aktiveTimer.Rows
-                    If rad("bestilling_tidspunkt") = klokke Then
-                        hvisTid = False
-                    End If
-                Next
-                Select Case klokke
-                    Case 9
-                        tidsPunkt = "09:00"
-                    Case 10
-                        tidsPunkt = "10:00"
-                    Case 11
-                        tidsPunkt = "11:00"
-                    Case 12
-                        tidsPunkt = "12:00"
-                    Case 13
-                        tidsPunkt = "13:00"
-                    Case 14
-                        tidsPunkt = "14:00"
-                    Case 15
-                        tidsPunkt = "15:00"
-                End Select
-                If hvisTid Then
-                    ListBox2.Items.Add(tidsPunkt)
-                End If
-                klokke += 1
-                hvisTid = True
-            Next
-        Else
-            For i = 0 To 6
-                Select Case klokke
-                    Case 9
-                        tidsPunkt = "09:00"
-                    Case 10
-                        tidsPunkt = "10:00"
-                    Case 11
-                        tidsPunkt = "11:00"
-                    Case 12
-                        tidsPunkt = "12:00"
-                    Case 13
-                        tidsPunkt = "13:00"
-                    Case 14
-                        tidsPunkt = "14:00"
-                    Case 15
-                        tidsPunkt = "15:00"
-                End Select
-                ListBox2.Items.Add(tidsPunkt)
-                klokke += 1
-            Next
-        End If
-
+        timebestillingMetode(Kalender, ListBox2)
         bestillKnapp.Enabled = False
     End Sub
 

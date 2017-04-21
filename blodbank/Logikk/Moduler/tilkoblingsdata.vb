@@ -17,45 +17,25 @@ Module tilkoblingsdata
     Public innlogget_fornavn As String
     Public innlogget_adresse As String
     Public innlogget_blodgiver_id As Integer
-
     Public innlogget_blodprosent As Integer
-
-
-
     Public innlogget_blodtype As String
     Public innlogget_epost As String
     Public innlogget_fodseldato As String
     Public innlogget_forrige_blodtapp As Date
     Public innlogget_godkjent_egenerklering As Boolean
     Public innlogget_karantene As Date
-    'Public innlogget_godkjent_egenerklering As Integer
     Public innlogget_passord As String
     Public innlogget_post_nr As Integer
     Public innlogget_post_sted As String
     Public innlogget_telefon As Integer
     Public innlogget_personnummer As Integer
     Public innlogget_kjønn As String
+    Public innlogget_ansatt_id As Integer
     'Public innlogget_fodseldato As String
     'Public innlogget_forrige_blodtapp As String
     'Public innlogget_karantene As Date
-    Public innlogget_ansatt_id As Integer
-
-
-    'Regular Expressions for validering
-    Public datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
-    Public personnummerformat As String = "^(\d){5}$"
-    Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
-
-    Public registrerMengdeFormat As String = "^(\d)$"
-    Public registrerBlodprosentFormat As String = "^0*(?:[1-9][0-9]?|100)$"
-    Public blodgiverIdFormat As String = "^(\d){0,4}$"
-    Public blodtypeFormat As String = "^(\){0,4}$"
-
+    'Public innlogget_godkjent_egenerklering As Integer
     'lagringsvarabler for ulike egenskaper  
-    Public plasmaHoldbarhet
-    Public blodlegemerHoldbarhet
-    Public blodplaterHoldbarhet
-
 
     'Funksjon for å kjøre SQL spørringer
     Public Function sql_sporring(ByRef sql As String) As DataTable
@@ -94,6 +74,65 @@ Module tilkoblingsdata
     End Function
 
 
+    Public Function IntegertilKlokkeSlett(ByVal tid As Integer)
+        Dim tidspunkt
+        Select Case tid
+            Case 9
+                tidspunkt = "09:00"
+            Case 10
+                tidspunkt = "10:00"
+            Case 11
+                tidspunkt = "11:00"
+            Case 12
+                tidspunkt = "12:00"
+            Case 13
+                tidspunkt = "13:00"
+            Case 14
+                tidspunkt = "14:00"
+            Case 15
+                tidspunkt = "15:00"
+        End Select
+        Return tidspunkt
+    End Function
+
+
+
+    Public Sub timebestillingMetode(kalender, listbox)
+        Dim valgtDato As String = konverterDatoFormatTilMySql(kalender.SelectionRange.Start.ToShortDateString())
+        Dim aktiveTimer = sql_sporring("SELECT er_aktiv, bestilling_tidspunkt FROM Timebestilling where bestilling_dato ='" & valgtDato & "' and er_aktiv = 1")
+
+        Dim klokke As Integer = 9
+        listbox.Items.Clear()
+        Dim tidsPunkt = ""
+        Dim hvisTid = True
+
+        If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
+
+            'skjekk om tidspunktet er en av radene
+            For i = 0 To 6
+
+                For Each rad In aktiveTimer.Rows
+                    If rad("bestilling_tidspunkt") = klokke Then
+                        hvisTid = False
+                    End If
+                Next
+                tidsPunkt = IntegertilKlokkeSlett(klokke)
+                If hvisTid Then
+                    listbox.Items.Add(tidsPunkt)
+                End If
+                klokke += 1
+                hvisTid = True
+            Next
+        Else
+            For i = 0 To 6
+                tidsPunkt = IntegertilKlokkeSlett(klokke)
+                listbox.Items.Add(tidsPunkt)
+                klokke += 1
+            Next
+        End If
+    End Sub
+
+
     Public Function konverterBlodtypeTilTekst(ByVal id As Integer)
         Dim blodtypeString
         Select Case id
@@ -128,9 +167,7 @@ Module tilkoblingsdata
                 blodegString = "Plasma"
         End Select
         Return blodegString
-
     End Function
-
 
     'Public innlogget_karantene As date
     'SELECT * FROM `Blodgivning` inner join Blodgiver AS b on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = VARIABEL order by blogivning_dato DESC LIMIT 1

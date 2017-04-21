@@ -48,7 +48,7 @@
                 ep.sendEpost(epostSjekk, "Nytt passord - Blodbanken", "Her er ett midlertidig passord for blodbanken. Vennligst logg inn. Du vil bli sendt videre til et skjema der du fyller inn det midlertidige passordet ditt, og registrerer et nytt passord. " & vbCrLf & "Midlertidig passord: " & midlertidigPassord)
                 sql_sporring("Update Blodgiver SET hashedPwd ='" & midlertidigPassord & "'  where epost ='" & epost & "' ")
                 MsgBox("Epost sendt til mail adresse.")
-                GroupBox3.Show()
+                GroupBox3.Enabled = True
             End If
         Else
             MsgBox("Ugyldig e-post")
@@ -58,8 +58,13 @@
     Private Sub GlemtPassord_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
         Me.BackColor = Color.FromArgb(255, 255, 255)
-        GroupBox2.Hide()
-        GroupBox3.Hide()
+        Me.Bounds = My.Computer.Screen.WorkingArea
+        GroupBox3.Left = (Me.ClientSize.Width - GroupBox2.Width) / 1.35
+        GroupBox1.Left = (Me.ClientSize.Width - GroupBox2.Width) / 3.25
+
+        GroupBox2.Left = (Me.ClientSize.Width - GroupBox2.Width) / 2
+        GroupBox2.Enabled = False
+        GroupBox3.Enabled = False
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -81,9 +86,13 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If loggInnGlemtPassord(TextBox4.Text, TextBox5.Text) Then
-            GroupBox2.Show()
+            GroupBox2.Enabled = True
         Else
             MsgBox("Det midlertidige passordet stemte ikke, prøv igjen.")
         End If
+    End Sub
+
+    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs)
+
     End Sub
 End Class
