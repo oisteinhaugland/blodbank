@@ -61,24 +61,21 @@ Public Class Blodgivning
             blodtype_id = row("blodtype_id")
         Next
 
-<<<<<<< HEAD
+
         If v.formatSkjekk(plasmaTekst.Text, v.registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
         If v.formatSkjekk(blodlegemeTekst.Text, v.registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
         If v.formatSkjekk(blodplateTekst.Text, v.registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
         If v.formatSkjekk(TappeDato.Text, v.datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
-=======
 
 
 
-        If formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
-        If formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
-        If formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
-        If formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
-        If formatSkjekk(blodprosentTekst.Text, registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
 
+        If v.formatSkjekk(plasmaTekst.Text, registrerMengdeFormat) Then plasmaMengde = plasmaTekst.Text Else validert = False
+        If v.formatSkjekk(blodlegemeTekst.Text, registrerMengdeFormat) Then blodlegemer = blodlegemeTekst.Text Else validert = False
+        If v.formatSkjekk(blodplateTekst.Text, registrerMengdeFormat) Then blodplater = blodplateTekst.Text Else validert = False
+        If v.formatSkjekk(TappeDato.Text, datoFormat) Then datoTapp = konverterDatoFormatTilMySql(TappeDato.Text) Else validertDato = False
+        If v.formatSkjekk(blodprosentTekst.Text, registrerBlodprosentFormat) Then blodprosent = blodprosentTekst.Text Else validert = False
 
-
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
 
         If validert And validertDato Then
 
@@ -201,5 +198,9 @@ Public Class Blodgivning
         Else
             registrerBlodtypeKnapp.Enabled = False
         End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

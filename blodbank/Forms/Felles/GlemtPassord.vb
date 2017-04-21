@@ -30,7 +30,7 @@
         Me.Close()
     End Sub
 
-    Dim test As New RegistrerNyttPassord
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim epostSjekk = TextBox1.Text
 
@@ -56,6 +56,8 @@
     End Sub
 
     Private Sub GlemtPassord_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         GroupBox2.Hide()
         GroupBox3.Hide()
     End Sub

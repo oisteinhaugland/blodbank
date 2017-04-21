@@ -111,7 +111,7 @@ Public Class ansattInnkalling
                 Dim mailTekst As String = "Hei vi melder om innkalling til blodgivertime den " & valgtDato & " kl: " & tidspunkt & ". Gi beskjed dersom du ikke kan komme. " & vbCrLf & vbCrLf & "Med vennlig hilsen" & vbCrLf & vbCrLf & "Blodbanken ved St. Olavs Hospital"
                 Dim innkallingEpost = innkallingListe(klareBlodgivere.SelectedIndex).epost
 
-<<<<<<< HEAD
+
 
                 'Epost funksjonalitet for innkalling
 
@@ -135,10 +135,10 @@ Public Class ansattInnkalling
 
 
                 'MsgBox(innkallingString & " er innkalt til time hos blodbanken." & vbCrLf & "Epost er sendt. Timen er " & dato & ", klokken: " & tidspunkt & "." & vbCrLf)
-=======
+
                 'Bruker metoden vi har laget i  entitetsklassen for epost funksjonalitet. (Epost.vb)
                 epost.sendEpost(innkallingEpost, "Blodgivertime", mailTekst)
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
+
 
             Catch error_t As Exception
                 MsgBox("Vennligst velg blodgiver før innkalling.")

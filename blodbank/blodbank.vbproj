@@ -130,14 +130,10 @@
     <Compile Include="Forms\Blodgiver\Timebestilling.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Logikk\Klasser\Bruker.vb" />
     <Compile Include="Logikk\Klasser\Epost.vb" />
     <Compile Include="Logikk\Klasser\Hash.vb" />
     <Compile Include="Logikk\Klasser\Validering.vb" />
-=======
-    <Compile Include="Logikk\Klasser\Epost.vb" />
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
     <Compile Include="Testinnhold\hashtest.Designer.vb">
       <DependentUpon>hashtest.vb</DependentUpon>
     </Compile>
@@ -220,6 +216,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Felles\RegistrerBlodgiver.resx">
       <DependentUpon>RegistrerBlodgiver.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

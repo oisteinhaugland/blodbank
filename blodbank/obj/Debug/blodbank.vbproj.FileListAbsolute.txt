@@ -74,19 +74,14 @@ C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.Ge
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
-<<<<<<< HEAD
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.Timebestillinger.resources
 \\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.GlemtPassord.resources
-\\sambaad.stud.ntnu.no\oisteh\Documents\Visual Studio 2015\Projects\blodbank\blodbank\obj\Debug\blodbank.RegistrerNyttPassord.resources
-=======
-<<<<<<< HEAD
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Blodgivning.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Startside.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.MinSide.resources
 C:\Users\Mathias\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Egenklæring.resources
-=======
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Bestillinger.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.ansattInnkalling.resources
 C:\Users\Nora Lervik\Documents\IDRI1005 Objektorientert programmering\Prosjekt\blodbank\blodbank\obj\Debug\blodbank.Produktoversikt.resources
@@ -117,5 +112,3 @@ C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.loggInn.res
 C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.Resources.resources
 C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.registrerBlodgiver.resources
 C:\Users\Frode\Documents\GitHub\blodbank\blodbank\obj\Debug\blodbank.vbproj.GenerateResource.Cache
->>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c

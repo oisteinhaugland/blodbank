@@ -22,22 +22,22 @@
         label_innlogget_fornavn.Text = innlogget_fornavn
         label_innlogget_etternavn.Text = innlogget_etternavn
         label_innlogget_adresse.Text = innlogget_adresse
-<<<<<<< HEAD
-=======
+
+
         label_innlogget_blodtype.Text = konverterBlodtypeTilTekst(innlogget_blodtype)
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
+
         label_innlogget_fodselsdato.Text = innlogget_fodseldato
         label_innlogget_forrige_blodtapp.Text = innlogget_forrige_blodtapp
         label_innlogget_post_nr.Text = innlogget_post_nr
         label_innlogget_post_sted.Text = innlogget_post_sted
         label_innlogget_telefon.Text = innlogget_telefon
         label_innlogget_kjønn.Text = innlogget_kjønn
-<<<<<<< HEAD
+
 
         If innlogget_karantene = "00:00:00" Then
-            label_innlogget_karantene.Text = "Ingen karantene"
+            label_innlogget_karantene1.Text = "Ingen karantene"
         Else
-            label_innlogget_karantene.Text = innlogget_karantene
+            label_innlogget_karantene1.Text = innlogget_karantene
         End If
 
         'label_innlogget_fornavn.Text = b.aktivBruker(0).hentBgID
@@ -73,10 +73,10 @@
 
         End Select
         label_innlogget_blodtype.Text = blodtype
-=======
+
         label_forrige_blodprosent.Text = innlogget_blodprosent & "%"
 
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
+
     End Sub
 
     Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -107,5 +107,9 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         loggInn.Show()
         loggUt()
+    End Sub
+
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+
     End Sub
 End Class

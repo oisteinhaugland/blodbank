@@ -22,7 +22,7 @@ Partial Class Timebestillinger
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(blodgiver_timebestilling))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Timebestillinger))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MinSideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,27 +57,27 @@ Partial Class Timebestillinger
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MinSideToolStripMenuItem, Me.TimebestillingToolStripMenuItem, Me.EgenerklæringToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1482, 32)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1125, 27)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MinSideToolStripMenuItem
         '
         Me.MinSideToolStripMenuItem.Name = "MinSideToolStripMenuItem"
-        Me.MinSideToolStripMenuItem.Size = New System.Drawing.Size(95, 28)
+        Me.MinSideToolStripMenuItem.Size = New System.Drawing.Size(77, 23)
         Me.MinSideToolStripMenuItem.Text = "Min Side"
         '
         'TimebestillingToolStripMenuItem
         '
         Me.TimebestillingToolStripMenuItem.Name = "TimebestillingToolStripMenuItem"
-        Me.TimebestillingToolStripMenuItem.Size = New System.Drawing.Size(138, 28)
+        Me.TimebestillingToolStripMenuItem.Size = New System.Drawing.Size(113, 23)
         Me.TimebestillingToolStripMenuItem.Text = "Timebestilling"
         '
         'EgenerklæringToolStripMenuItem
         '
         Me.EgenerklæringToolStripMenuItem.Name = "EgenerklæringToolStripMenuItem"
-        Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(140, 28)
+        Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(114, 23)
         Me.EgenerklæringToolStripMenuItem.Text = "Egenerklæring"
         '
         'Label1
@@ -85,16 +85,17 @@ Partial Class Timebestillinger
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Label1.Font = New System.Drawing.Font("Calibri", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Location = New System.Drawing.Point(2, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(190, 201)
+        Me.Label1.Size = New System.Drawing.Size(154, 163)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Timebestilling"
         '
         'Kalender
         '
-        Me.Kalender.Location = New System.Drawing.Point(35, 147)
-        Me.Kalender.Margin = New System.Windows.Forms.Padding(8, 7, 8, 7)
+        Me.Kalender.Location = New System.Drawing.Point(26, 119)
+        Me.Kalender.Margin = New System.Windows.Forms.Padding(6)
         Me.Kalender.Name = "Kalender"
         Me.Kalender.TabIndex = 3
         '
@@ -102,10 +103,10 @@ Partial Class Timebestillinger
         '
         Me.bestillKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.bestillKnapp.Font = New System.Drawing.Font("Calibri", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bestillKnapp.Location = New System.Drawing.Point(36, 378)
-        Me.bestillKnapp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.bestillKnapp.Location = New System.Drawing.Point(27, 307)
+        Me.bestillKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.bestillKnapp.Name = "bestillKnapp"
-        Me.bestillKnapp.Size = New System.Drawing.Size(585, 106)
+        Me.bestillKnapp.Size = New System.Drawing.Size(439, 86)
         Me.bestillKnapp.TabIndex = 4
         Me.bestillKnapp.Text = "Bestill time"
         Me.bestillKnapp.UseVisualStyleBackColor = False
@@ -114,10 +115,10 @@ Partial Class Timebestillinger
         '
         Me.avbestillKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.avbestillKnapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.avbestillKnapp.Location = New System.Drawing.Point(31, 378)
-        Me.avbestillKnapp.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.avbestillKnapp.Location = New System.Drawing.Point(23, 307)
+        Me.avbestillKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.avbestillKnapp.Name = "avbestillKnapp"
-        Me.avbestillKnapp.Size = New System.Drawing.Size(555, 106)
+        Me.avbestillKnapp.Size = New System.Drawing.Size(416, 86)
         Me.avbestillKnapp.TabIndex = 5
         Me.avbestillKnapp.Text = "Avbestilt valgt time"
         Me.avbestillKnapp.UseVisualStyleBackColor = False
@@ -126,32 +127,29 @@ Partial Class Timebestillinger
         '
         Me.DineTimer.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.DineTimer.FormattingEnabled = True
-        Me.DineTimer.ItemHeight = 24
-        Me.DineTimer.Location = New System.Drawing.Point(31, 182)
-        Me.DineTimer.Margin = New System.Windows.Forms.Padding(4)
+        Me.DineTimer.ItemHeight = 19
+        Me.DineTimer.Location = New System.Drawing.Point(23, 148)
         Me.DineTimer.Name = "DineTimer"
-        Me.DineTimer.Size = New System.Drawing.Size(555, 172)
+        Me.DineTimer.Size = New System.Drawing.Size(417, 137)
         Me.DineTimer.TabIndex = 7
         '
         'ListBox2
         '
         Me.ListBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 24
-        Me.ListBox2.Location = New System.Drawing.Point(389, 158)
-        Me.ListBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.ListBox2.ItemHeight = 19
+        Me.ListBox2.Location = New System.Drawing.Point(292, 128)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(232, 196)
+        Me.ListBox2.Size = New System.Drawing.Size(175, 156)
         Me.ListBox2.TabIndex = 10
         '
         'HentTimebestilling
         '
         Me.HentTimebestilling.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.HentTimebestilling.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HentTimebestilling.Location = New System.Drawing.Point(31, 56)
-        Me.HentTimebestilling.Margin = New System.Windows.Forms.Padding(4)
+        Me.HentTimebestilling.Location = New System.Drawing.Point(23, 46)
         Me.HentTimebestilling.Name = "HentTimebestilling"
-        Me.HentTimebestilling.Size = New System.Drawing.Size(555, 106)
+        Me.HentTimebestilling.Size = New System.Drawing.Size(416, 86)
         Me.HentTimebestilling.TabIndex = 11
         Me.HentTimebestilling.Text = "Hent dine timer"
         Me.HentTimebestilling.UseVisualStyleBackColor = False
@@ -160,10 +158,9 @@ Partial Class Timebestillinger
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(375, 100)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(281, 81)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(144, 29)
+        Me.Label2.Size = New System.Drawing.Size(114, 23)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Ledige timer:"
         '
@@ -171,30 +168,30 @@ Partial Class Timebestillinger
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel1.Location = New System.Drawing.Point(1460, 32)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Location = New System.Drawing.Point(1109, 27)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(22, 921)
+        Me.Panel1.Size = New System.Drawing.Size(16, 595)
         Me.Panel1.TabIndex = 13
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 933)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 606)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1460, 20)
+        Me.Panel2.Size = New System.Drawing.Size(1109, 16)
         Me.Panel2.TabIndex = 14
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Panel3.Location = New System.Drawing.Point(0, 32)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel3.Location = New System.Drawing.Point(0, 27)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(22, 901)
+        Me.Panel3.Size = New System.Drawing.Size(16, 579)
         Me.Panel3.TabIndex = 15
         '
         'GroupBox1
@@ -206,11 +203,11 @@ Partial Class Timebestillinger
         Me.GroupBox1.Controls.Add(Me.bestillKnapp)
         Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(63, 203)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(7, 165)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(653, 521)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox1.Size = New System.Drawing.Size(537, 423)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Timebestilling"
@@ -219,10 +216,9 @@ Partial Class Timebestillinger
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(41, 100)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(31, 81)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(185, 29)
+        Me.Label3.Size = New System.Drawing.Size(146, 23)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Velg ønsket dato:"
         '
@@ -233,11 +229,11 @@ Partial Class Timebestillinger
         Me.GroupBox2.Controls.Add(Me.HentTimebestilling)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(722, 203)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox2.Location = New System.Drawing.Point(548, 165)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(620, 521)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox2.Size = New System.Drawing.Size(543, 423)
         Me.GroupBox2.TabIndex = 17
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Avbestill time"
@@ -248,12 +244,13 @@ Partial Class Timebestillinger
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 804)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 501)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1438, 129)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1093, 105)
         Me.TableLayoutPanel1.TabIndex = 20
         '
         'TableLayoutPanel2
@@ -265,36 +262,31 @@ Partial Class Timebestillinger
         Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 1)
         Me.TableLayoutPanel2.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(22, 32)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(16, 27)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.76204!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.23796!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1438, 726)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1093, 590)
         Me.TableLayoutPanel2.TabIndex = 21
         '
         'Timebestillinger
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1482, 953)
+        Me.ClientSize = New System.Drawing.Size(1125, 622)
         Me.Controls.Add(Me.TableLayoutPanel2)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
-<<<<<<< HEAD
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Timebestillinger"
-        Me.Text = "blodgiver_timebestilling"
-=======
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "blodgiver_timebestilling"
         Me.Text = "Timebestilling"
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

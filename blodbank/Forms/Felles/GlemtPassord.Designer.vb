@@ -39,9 +39,11 @@ Partial Class GlemtPassord
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -84,9 +86,10 @@ Partial Class GlemtPassord
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(88, 51)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(209, 173)
+        Me.GroupBox1.Size = New System.Drawing.Size(438, 199)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         '
@@ -97,9 +100,10 @@ Partial Class GlemtPassord
         Me.GroupBox2.Controls.Add(Me.TextBox2)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
         Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Location = New System.Drawing.Point(162, 264)
+        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 208)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(304, 173)
+        Me.GroupBox2.Size = New System.Drawing.Size(438, 250)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         '
@@ -160,9 +164,10 @@ Partial Class GlemtPassord
         Me.GroupBox3.Controls.Add(Me.TextBox4)
         Me.GroupBox3.Controls.Add(Me.TextBox5)
         Me.GroupBox3.Controls.Add(Me.Button4)
-        Me.GroupBox3.Location = New System.Drawing.Point(313, 51)
+        Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox3.Location = New System.Drawing.Point(447, 3)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(307, 180)
+        Me.GroupBox3.Size = New System.Drawing.Size(761, 199)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         '
@@ -198,14 +203,29 @@ Partial Class GlemtPassord
         Me.TextBox5.Size = New System.Drawing.Size(160, 20)
         Me.TextBox5.TabIndex = 10
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.74649!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.25351!))
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox3, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.63007!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.36993!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1211, 461)
+        Me.TableLayoutPanel1.TabIndex = 8
+        '
         'GlemtPassord
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(815, 620)
-        Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(1211, 620)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "GlemtPassord"
         Me.Text = "GlemtPassord"
         Me.GroupBox1.ResumeLayout(False)
@@ -214,6 +234,7 @@ Partial Class GlemtPassord
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -235,4 +256,5 @@ Partial Class GlemtPassord
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
 End Class

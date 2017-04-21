@@ -5,7 +5,7 @@ Public Class registrerBlodgiver
 
     Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
         personNrTextBox.MaxLength = 5
         postNrTextBox.MaxLength = 4
         telefonTextBox.MaxLength = 8
@@ -17,7 +17,7 @@ Public Class registrerBlodgiver
     Private Sub validerSkjemaOgRegistrerBruker()
         Dim validert As Boolean = True
         'Setter alle tekstboksene i fokus, som gjør at valideringen tar sted.
-        For Each control As Control In Me.Controls
+        For Each control As Control In Panel1.Controls
             If TypeOf control Is TextBox Then
                 control.Focus()
                 GetNextControl(control, True).Focus()
@@ -119,19 +119,7 @@ Public Class registrerBlodgiver
         validerSkjemaOgRegistrerBruker()
     End Sub
 
-<<<<<<< HEAD
-    Private Sub avbrytReg(sender As Object, e As EventArgs) Handles avbrytRegistrering.Click
-=======
-
-    Private Sub registrerBlodgiver_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(0, 0)
-        Me.BackColor = Color.FromArgb(255, 255, 255)
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
         loggInn.Show()
         Me.Close()
     End Sub
@@ -221,4 +209,10 @@ Public Class registrerBlodgiver
             setError(passordTextBox, v.passordFormat, "Passordene må være like.")
         End If
     End Sub
+
+    Private Sub FileSystemWatcher1_Changed(sender As Object, e As IO.FileSystemEventArgs) Handles FileSystemWatcher1.Changed
+
+    End Sub
+
+
 End Class

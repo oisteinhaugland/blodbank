@@ -1,1 +1,4 @@
 ﻿Blodgivere må ha registrert bestilte timer i db
+
+
+label 8 kan fjernes fra alt.

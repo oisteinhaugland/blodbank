@@ -48,10 +48,9 @@ Partial Class loggInn
         '
         Me.loggInnKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.loggInnKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loggInnKnapp.Location = New System.Drawing.Point(241, 438)
-        Me.loggInnKnapp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.loggInnKnapp.Location = New System.Drawing.Point(181, 356)
         Me.loggInnKnapp.Name = "loggInnKnapp"
-        Me.loggInnKnapp.Size = New System.Drawing.Size(300, 75)
+        Me.loggInnKnapp.Size = New System.Drawing.Size(225, 61)
         Me.loggInnKnapp.TabIndex = 3
         Me.loggInnKnapp.Text = "Logg Inn"
         Me.loggInnKnapp.UseVisualStyleBackColor = False
@@ -59,29 +58,26 @@ Partial Class loggInn
         'brukerNavnTextbox
         '
         Me.brukerNavnTextbox.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brukerNavnTextbox.Location = New System.Drawing.Point(241, 141)
-        Me.brukerNavnTextbox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.brukerNavnTextbox.Location = New System.Drawing.Point(181, 115)
         Me.brukerNavnTextbox.Name = "brukerNavnTextbox"
-        Me.brukerNavnTextbox.Size = New System.Drawing.Size(300, 48)
+        Me.brukerNavnTextbox.Size = New System.Drawing.Size(226, 40)
         Me.brukerNavnTextbox.TabIndex = 1
         '
         'passordTextBox
         '
         Me.passordTextBox.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passordTextBox.Location = New System.Drawing.Point(241, 261)
-        Me.passordTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.passordTextBox.Location = New System.Drawing.Point(181, 212)
         Me.passordTextBox.Name = "passordTextBox"
-        Me.passordTextBox.Size = New System.Drawing.Size(300, 48)
+        Me.passordTextBox.Size = New System.Drawing.Size(226, 40)
         Me.passordTextBox.TabIndex = 2
         '
         'brukernavnLabel
         '
         Me.brukernavnLabel.AutoSize = True
         Me.brukernavnLabel.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.brukernavnLabel.Location = New System.Drawing.Point(234, 84)
-        Me.brukernavnLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.brukernavnLabel.Location = New System.Drawing.Point(176, 68)
         Me.brukernavnLabel.Name = "brukernavnLabel"
-        Me.brukernavnLabel.Size = New System.Drawing.Size(316, 41)
+        Me.brukernavnLabel.Size = New System.Drawing.Size(253, 33)
         Me.brukernavnLabel.TabIndex = 3
         Me.brukernavnLabel.Text = "Skriv inn brukernavn:"
         '
@@ -89,10 +85,9 @@ Partial Class loggInn
         '
         Me.passordLabel.AutoSize = True
         Me.passordLabel.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.passordLabel.Location = New System.Drawing.Point(234, 205)
-        Me.passordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.passordLabel.Location = New System.Drawing.Point(176, 167)
         Me.passordLabel.Name = "passordLabel"
-        Me.passordLabel.Size = New System.Drawing.Size(266, 41)
+        Me.passordLabel.Size = New System.Drawing.Size(213, 33)
         Me.passordLabel.TabIndex = 5
         Me.passordLabel.Text = "Skriv inn passord:"
         '
@@ -100,10 +95,9 @@ Partial Class loggInn
         '
         Me.registrerBrukerKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.registrerBrukerKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(82, 346)
-        Me.registrerBrukerKnapp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(62, 281)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(300, 75)
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(225, 61)
         Me.registrerBrukerKnapp.TabIndex = 4
         Me.registrerBrukerKnapp.Text = "Ny bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = False
@@ -112,40 +106,36 @@ Partial Class loggInn
         '
         Me.glemtPassordKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.glemtPassordKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glemtPassordKnapp.Location = New System.Drawing.Point(400, 346)
-        Me.glemtPassordKnapp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.glemtPassordKnapp.Location = New System.Drawing.Point(300, 281)
         Me.glemtPassordKnapp.Name = "glemtPassordKnapp"
-        Me.glemtPassordKnapp.Size = New System.Drawing.Size(300, 75)
+        Me.glemtPassordKnapp.Size = New System.Drawing.Size(225, 61)
         Me.glemtPassordKnapp.TabIndex = 5
         Me.glemtPassordKnapp.Text = "Glemt passord?"
         Me.glemtPassordKnapp.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(100, 350)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Location = New System.Drawing.Point(75, 284)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 28)
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "HashTest"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(100, 408)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(75, 332)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(216, 66)
+        Me.Button2.Size = New System.Drawing.Size(162, 54)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "midlertidig logg inn (blogiver)"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(100, 498)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button3.Location = New System.Drawing.Point(75, 405)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(216, 66)
+        Me.Button3.Size = New System.Drawing.Size(162, 54)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "midlertidig logg inn (ansatt)"
         Me.Button3.UseVisualStyleBackColor = True
@@ -154,9 +144,10 @@ Partial Class loggInn
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(1460, 0)
+        Me.Panel6.Location = New System.Drawing.Point(941, 0)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(22, 953)
+        Me.Panel6.Size = New System.Drawing.Size(16, 628)
         Me.Panel6.TabIndex = 19
         '
         'Panel5
@@ -164,26 +155,29 @@ Partial Class loggInn
         Me.Panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(22, 953)
+        Me.Panel5.Size = New System.Drawing.Size(16, 628)
         Me.Panel5.TabIndex = 20
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(22, 0)
+        Me.Panel3.Location = New System.Drawing.Point(16, 0)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1438, 25)
+        Me.Panel3.Size = New System.Drawing.Size(925, 20)
         Me.Panel3.TabIndex = 21
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(22, 931)
+        Me.Panel4.Location = New System.Drawing.Point(16, 610)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1438, 22)
+        Me.Panel4.Size = New System.Drawing.Size(925, 18)
         Me.Panel4.TabIndex = 22
         '
         'Panel1
@@ -196,33 +190,36 @@ Partial Class loggInn
         Me.Panel1.Controls.Add(Me.passordTextBox)
         Me.Panel1.Controls.Add(Me.brukernavnLabel)
         Me.Panel1.Location = New System.Drawing.Point(696, 266)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(764, 570)
+        Me.Panel1.Size = New System.Drawing.Size(573, 463)
         Me.Panel1.TabIndex = 24
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel2.Location = New System.Drawing.Point(693, 263)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(770, 576)
+        Me.Panel2.Size = New System.Drawing.Size(578, 468)
         Me.Panel2.TabIndex = 25
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(817, 109)
+        Me.PictureBox1.Location = New System.Drawing.Point(693, 138)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(753, 132)
+        Me.PictureBox1.Size = New System.Drawing.Size(565, 107)
         Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
         '
         'loggInn
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1482, 953)
+        Me.ClientSize = New System.Drawing.Size(957, 628)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -234,7 +231,6 @@ Partial Class loggInn
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "loggInn"
         Me.Text = "Blodbanken"
         Me.Panel1.ResumeLayout(False)

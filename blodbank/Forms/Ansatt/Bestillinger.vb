@@ -132,8 +132,6 @@
 
     End Sub
 
-<<<<<<< HEAD
-=======
     Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
         ansattInnkalling.Show()
         Me.Hide()
@@ -150,5 +148,5 @@
         Me.Hide()
 
     End Sub
->>>>>>> 402e7ebc2bd1c165ccc3a09aaa35212a57b6775d
+
 End Class

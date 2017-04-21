@@ -71,7 +71,7 @@
         End If
     End Function
 
-<<<<<<< HEAD
+
     'Public Sub karantene()
 
 
@@ -112,8 +112,8 @@
 
     'End Sub
 
-    Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
-=======
+
+
     Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
         karantenelist = New List(Of Blodgiver)
 
@@ -122,7 +122,7 @@
         konverterDatoFormatTilMySql(Date.Today)
         dagensDato = Date.Today
 
->>>>>>> c207d5ac913625f424e3f6322c55e2c091e2a93c
+
 
 
         If validerEgenerkleringOgSendTilDB() Then
@@ -130,9 +130,9 @@
             karantenelist = New List(Of Blodgiver)
 
             'Lager datovariabler som samsvarer med SQL
-            Dim dagensDato As Date
-            konverterDatoFormatKarantene(Date.Today)
-            dagensDato = Date.Today
+            'Dim dagensDato As Date
+            'konverterDatoFormatKarantene(Date.Today)
+            'dagensDato = Date.Today
 
 
             'Karantene lengde
