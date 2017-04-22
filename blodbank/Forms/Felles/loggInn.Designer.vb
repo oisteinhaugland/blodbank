@@ -94,7 +94,7 @@ Partial Class loggInn
         Me.Panel8.Margin = New System.Windows.Forms.Padding(50)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Padding = New System.Windows.Forms.Padding(50)
-        Me.Panel8.Size = New System.Drawing.Size(595, 629)
+        Me.Panel8.Size = New System.Drawing.Size(590, 629)
         Me.Panel8.TabIndex = 27
         '
         'Panel1
@@ -111,16 +111,16 @@ Partial Class loggInn
         Me.Panel1.Location = New System.Drawing.Point(4, 125)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(573, 463)
+        Me.Panel1.Size = New System.Drawing.Size(583, 463)
         Me.Panel1.TabIndex = 24
         '
         'registrerBrukerKnapp
         '
         Me.registrerBrukerKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.registrerBrukerKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(181, 348)
+        Me.registrerBrukerKnapp.Location = New System.Drawing.Point(181, 363)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
-        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(225, 61)
+        Me.registrerBrukerKnapp.Size = New System.Drawing.Size(220, 80)
         Me.registrerBrukerKnapp.TabIndex = 4
         Me.registrerBrukerKnapp.Text = "Ny bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = False
@@ -129,9 +129,9 @@ Partial Class loggInn
         '
         Me.glemtPassordKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.glemtPassordKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.glemtPassordKnapp.Location = New System.Drawing.Point(300, 281)
+        Me.glemtPassordKnapp.Location = New System.Drawing.Point(297, 277)
         Me.glemtPassordKnapp.Name = "glemtPassordKnapp"
-        Me.glemtPassordKnapp.Size = New System.Drawing.Size(225, 61)
+        Me.glemtPassordKnapp.Size = New System.Drawing.Size(220, 80)
         Me.glemtPassordKnapp.TabIndex = 5
         Me.glemtPassordKnapp.Text = "Glemt passord?"
         Me.glemtPassordKnapp.UseVisualStyleBackColor = False
@@ -140,9 +140,9 @@ Partial Class loggInn
         '
         Me.loggInnKnapp.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.loggInnKnapp.Font = New System.Drawing.Font("Calibri", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.loggInnKnapp.Location = New System.Drawing.Point(57, 281)
+        Me.loggInnKnapp.Location = New System.Drawing.Point(71, 277)
         Me.loggInnKnapp.Name = "loggInnKnapp"
-        Me.loggInnKnapp.Size = New System.Drawing.Size(225, 61)
+        Me.loggInnKnapp.Size = New System.Drawing.Size(220, 80)
         Me.loggInnKnapp.TabIndex = 3
         Me.loggInnKnapp.Text = "Logg Inn"
         Me.loggInnKnapp.UseVisualStyleBackColor = False
@@ -208,7 +208,7 @@ Partial Class loggInn
         Me.Panel2.Location = New System.Drawing.Point(0, 122)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(581, 469)
+        Me.Panel2.Size = New System.Drawing.Size(589, 469)
         Me.Panel2.TabIndex = 25
         '
         'PictureBox1

@@ -59,8 +59,8 @@
         Me.WindowState = FormWindowState.Maximized
         Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Bounds = My.Computer.Screen.WorkingArea
-        GroupBox3.Left = (Me.ClientSize.Width - GroupBox2.Width) / 1.35
-        GroupBox1.Left = (Me.ClientSize.Width - GroupBox2.Width) / 3.25
+        GroupBox3.Left = ((Me.ClientSize.Width - GroupBox3.Width) / 2) + (GroupBox3.Width / 2)
+        GroupBox1.Left = (Me.ClientSize.Width - GroupBox1.Width) / 2 - (GroupBox2.Width / 2)
 
         GroupBox2.Left = (Me.ClientSize.Width - GroupBox2.Width) / 2
         GroupBox2.Enabled = False

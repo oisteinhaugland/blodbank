@@ -8,6 +8,10 @@ Public Class Blodgivning
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)
+
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
         ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList
         ComboBox1.SelectedIndex = 0
         registrerBlodtypeKnapp.Enabled = False
@@ -183,6 +187,10 @@ Public Class Blodgivning
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
 
     End Sub
 End Class

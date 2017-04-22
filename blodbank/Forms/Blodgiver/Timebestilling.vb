@@ -22,6 +22,10 @@
         bestillKnapp.Enabled = False
         avbestillKnapp.Enabled = False
 
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
+
 
     End Sub
 

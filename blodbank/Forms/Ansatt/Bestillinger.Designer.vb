@@ -38,13 +38,21 @@ Partial Class Bestillinger
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.utleveringLabel = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'motatteBestillinger
@@ -52,7 +60,7 @@ Partial Class Bestillinger
         Me.motatteBestillinger.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.motatteBestillinger.FormattingEnabled = True
         Me.motatteBestillinger.ItemHeight = 19
-        Me.motatteBestillinger.Location = New System.Drawing.Point(15, 125)
+        Me.motatteBestillinger.Location = New System.Drawing.Point(15, 138)
         Me.motatteBestillinger.Name = "motatteBestillinger"
         Me.motatteBestillinger.Size = New System.Drawing.Size(609, 289)
         Me.motatteBestillinger.TabIndex = 0
@@ -61,7 +69,7 @@ Partial Class Bestillinger
         '
         Me.bekreft_Utlevering.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.bekreft_Utlevering.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bekreft_Utlevering.Location = New System.Drawing.Point(21, 314)
+        Me.bekreft_Utlevering.Location = New System.Drawing.Point(21, 332)
         Me.bekreft_Utlevering.Name = "bekreft_Utlevering"
         Me.bekreft_Utlevering.Size = New System.Drawing.Size(287, 88)
         Me.bekreft_Utlevering.TabIndex = 1
@@ -128,7 +136,7 @@ Partial Class Bestillinger
         Me.vareLagerListBox.Font = New System.Drawing.Font("Calibri", 12.0!)
         Me.vareLagerListBox.FormattingEnabled = True
         Me.vareLagerListBox.ItemHeight = 19
-        Me.vareLagerListBox.Location = New System.Drawing.Point(21, 125)
+        Me.vareLagerListBox.Location = New System.Drawing.Point(21, 149)
         Me.vareLagerListBox.Name = "vareLagerListBox"
         Me.vareLagerListBox.Size = New System.Drawing.Size(288, 175)
         Me.vareLagerListBox.TabIndex = 12
@@ -141,7 +149,7 @@ Partial Class Bestillinger
         Me.søkLagerBtn.Name = "søkLagerBtn"
         Me.søkLagerBtn.Size = New System.Drawing.Size(287, 88)
         Me.søkLagerBtn.TabIndex = 13
-        Me.søkLagerBtn.Text = "Hent produkter basert på bestilling"
+        Me.søkLagerBtn.Text = "Vis tilgjengelige produkter"
         Me.søkLagerBtn.UseVisualStyleBackColor = False
         '
         'Panel1
@@ -176,10 +184,14 @@ Partial Class Bestillinger
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.motatteBestillinger)
         Me.GroupBox1.Controls.Add(Me.Button5)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupBox1.Location = New System.Drawing.Point(69, 160)
+        Me.GroupBox1.Location = New System.Drawing.Point(2, 2)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
@@ -187,47 +199,121 @@ Partial Class Bestillinger
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         '
-        'TableLayoutPanel1
+        'Label5
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.05702!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.94298!))
-        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.GroupBox2, 1, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 27)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.89396!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.10604!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1160, 614)
-        Me.TableLayoutPanel1.TabIndex = 20
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label5.Location = New System.Drawing.Point(512, 112)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(99, 23)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Ordre Dato"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(394, 112)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(58, 23)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Antall"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(263, 112)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(82, 23)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Blodtype"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(139, 112)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 23)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Egenskap"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(11, 112)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(113, 23)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Bestillings ID"
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.søkLagerBtn)
         Me.GroupBox2.Controls.Add(Me.vareLagerListBox)
         Me.GroupBox2.Controls.Add(Me.bekreft_Utlevering)
         Me.GroupBox2.Controls.Add(Me.utleveringLabel)
-        Me.GroupBox2.Location = New System.Drawing.Point(710, 160)
+        Me.GroupBox2.Location = New System.Drawing.Point(643, 3)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(338, 451)
+        Me.GroupBox2.Size = New System.Drawing.Size(364, 451)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label8.Location = New System.Drawing.Point(148, 123)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(84, 23)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Egenskap"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label7.Location = New System.Drawing.Point(50, 123)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(82, 23)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Blodtype"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.Label6.Location = New System.Drawing.Point(17, 123)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(27, 23)
+        Me.Label6.TabIndex = 14
+        Me.Label6.Text = "ID"
         '
         'utleveringLabel
         '
         Me.utleveringLabel.AutoSize = True
         Me.utleveringLabel.Font = New System.Drawing.Font("Calibri", 14.0!)
-        Me.utleveringLabel.Location = New System.Drawing.Point(4, 417)
+        Me.utleveringLabel.Location = New System.Drawing.Point(17, 423)
         Me.utleveringLabel.Name = "utleveringLabel"
         Me.utleveringLabel.Size = New System.Drawing.Size(342, 23)
         Me.utleveringLabel.TabIndex = 10
         Me.utleveringLabel.Text = "Utlevering vellykket, varelager er oppdatert"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.GroupBox1)
+        Me.Panel4.Controls.Add(Me.GroupBox2)
+        Me.Panel4.Location = New System.Drawing.Point(35, 42)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1016, 460)
+        Me.Panel4.TabIndex = 6
         '
         'Bestillinger
         '
@@ -235,20 +321,21 @@ Partial Class Bestillinger
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1192, 628)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Panel4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Bestillinger"
         Me.Text = "Bestillinger"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -269,7 +356,15 @@ Partial Class Bestillinger
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents utleveringLabel As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
 End Class

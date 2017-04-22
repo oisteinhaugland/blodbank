@@ -48,8 +48,6 @@ Partial Class Produktoversikt
         Me.chartBlodplater = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
@@ -59,7 +57,6 @@ Partial Class Produktoversikt
         CType(Me.chartBlodlegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.chartBlodplater, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,7 +107,7 @@ Partial Class Produktoversikt
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(32, 10)
+        Me.Label3.Location = New System.Drawing.Point(2, 0)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(107, 23)
@@ -123,10 +120,10 @@ Partial Class Produktoversikt
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.TabControl1.Location = New System.Drawing.Point(36, 47)
+        Me.TabControl1.Location = New System.Drawing.Point(6, 37)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(708, 477)
+        Me.TabControl1.Size = New System.Drawing.Size(794, 518)
         Me.TabControl1.TabIndex = 15
         '
         'TabPage1
@@ -134,8 +131,8 @@ Partial Class Produktoversikt
         Me.TabPage1.Controls.Add(Me.chartPlasma)
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage1.Size = New System.Drawing.Size(700, 445)
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(786, 486)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Plasma"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -152,7 +149,7 @@ Partial Class Produktoversikt
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.chartPlasma.Series.Add(Series1)
-        Me.chartPlasma.Size = New System.Drawing.Size(683, 422)
+        Me.chartPlasma.Size = New System.Drawing.Size(780, 477)
         Me.chartPlasma.TabIndex = 0
         Me.chartPlasma.Text = "Chart1"
         '
@@ -161,8 +158,8 @@ Partial Class Produktoversikt
         Me.TabPage2.Controls.Add(Me.chartBlodlegemer)
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage2.Size = New System.Drawing.Size(700, 445)
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(786, 486)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Blodlegemer"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -179,7 +176,7 @@ Partial Class Produktoversikt
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
         Me.chartBlodlegemer.Series.Add(Series2)
-        Me.chartBlodlegemer.Size = New System.Drawing.Size(716, 448)
+        Me.chartBlodlegemer.Size = New System.Drawing.Size(780, 480)
         Me.chartBlodlegemer.TabIndex = 1
         Me.chartBlodlegemer.Text = "Chart1"
         '
@@ -188,8 +185,8 @@ Partial Class Produktoversikt
         Me.TabPage3.Controls.Add(Me.chartBlodplater)
         Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3, 3, 3, 3)
-        Me.TabPage3.Size = New System.Drawing.Size(700, 445)
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(786, 486)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Blodplater"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -206,7 +203,7 @@ Partial Class Produktoversikt
         Series3.Legend = "Legend1"
         Series3.Name = "Series1"
         Me.chartBlodplater.Series.Add(Series3)
-        Me.chartBlodplater.Size = New System.Drawing.Size(716, 448)
+        Me.chartBlodplater.Size = New System.Drawing.Size(780, 480)
         Me.chartBlodplater.TabIndex = 1
         Me.chartBlodplater.Text = "Chart1"
         '
@@ -215,7 +212,7 @@ Partial Class Produktoversikt
         Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel1.Location = New System.Drawing.Point(941, 27)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(16, 601)
         Me.Panel1.TabIndex = 16
@@ -225,47 +222,19 @@ Partial Class Produktoversikt
         Me.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 27)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(16, 601)
         Me.Panel2.TabIndex = 17
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel3.Location = New System.Drawing.Point(16, 612)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(925, 16)
-        Me.Panel3.TabIndex = 18
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.62895!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.37105!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Panel4, 1, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(16, 27)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.12821!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.8718!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(925, 711)
-        Me.TableLayoutPanel2.TabIndex = 20
         '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.TabControl1)
         Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(171, 109)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel4.Location = New System.Drawing.Point(78, 57)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(574, 599)
+        Me.Panel4.Size = New System.Drawing.Size(807, 560)
         Me.Panel4.TabIndex = 21
         '
         'Produktoversikt
@@ -274,13 +243,12 @@ Partial Class Produktoversikt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(957, 628)
-        Me.Controls.Add(Me.TableLayoutPanel2)
-        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Produktoversikt"
         Me.Text = "Produktoversikt"
         Me.MenuStrip1.ResumeLayout(False)
@@ -292,7 +260,6 @@ Partial Class Produktoversikt
         CType(Me.chartBlodlegemer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.chartBlodplater, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TableLayoutPanel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
@@ -316,7 +283,5 @@ Partial Class Produktoversikt
     Friend WithEvents chartBlodplater As DataVisualization.Charting.Chart
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Panel4 As Panel
 End Class

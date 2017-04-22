@@ -71,7 +71,7 @@ Partial Class GlemtPassord
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(49, 25)
+        Me.Label1.Location = New System.Drawing.Point(49, 36)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(171, 26)
         Me.Label1.TabIndex = 2
@@ -117,7 +117,7 @@ Partial Class GlemtPassord
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 57)
+        Me.Label2.Location = New System.Drawing.Point(22, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(191, 26)
         Me.Label2.TabIndex = 9
@@ -127,7 +127,7 @@ Partial Class GlemtPassord
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(6, 16)
+        Me.Label3.Location = New System.Drawing.Point(22, 18)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(197, 26)
         Me.Label3.TabIndex = 8
@@ -136,7 +136,7 @@ Partial Class GlemtPassord
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(217, 18)
+        Me.TextBox2.Location = New System.Drawing.Point(233, 20)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(160, 27)
         Me.TextBox2.TabIndex = 7
@@ -145,7 +145,7 @@ Partial Class GlemtPassord
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(217, 59)
+        Me.TextBox3.Location = New System.Drawing.Point(233, 61)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(160, 27)
         Me.TextBox3.TabIndex = 6
@@ -155,7 +155,7 @@ Partial Class GlemtPassord
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button3.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(11, 104)
+        Me.Button3.Location = New System.Drawing.Point(27, 106)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(366, 80)
         Me.Button3.TabIndex = 5
@@ -182,7 +182,7 @@ Partial Class GlemtPassord
         Me.GroupBox3.Controls.Add(Me.Button4)
         Me.GroupBox3.Location = New System.Drawing.Point(125, 103)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(368, 316)
+        Me.GroupBox3.Size = New System.Drawing.Size(374, 316)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         '
@@ -190,7 +190,7 @@ Partial Class GlemtPassord
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(42, 130)
+        Me.Label4.Location = New System.Drawing.Point(42, 139)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(225, 26)
         Me.Label4.TabIndex = 13
@@ -200,7 +200,7 @@ Partial Class GlemtPassord
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(42, 25)
+        Me.Label5.Location = New System.Drawing.Point(42, 36)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(94, 26)
         Me.Label5.TabIndex = 12

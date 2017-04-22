@@ -292,6 +292,7 @@ Partial Class Egenklæring
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.Panel27 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.egenerkleringTabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -372,6 +373,7 @@ Partial Class Egenklæring
         Me.Panel53.SuspendLayout()
         Me.Panel58.SuspendLayout()
         Me.Panel60.SuspendLayout()
+        Me.Panel27.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -417,7 +419,7 @@ Partial Class Egenklæring
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(810, 30)
+        Me.Button2.Location = New System.Drawing.Point(781, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(154, 49)
         Me.Button2.TabIndex = 60
@@ -428,7 +430,7 @@ Partial Class Egenklæring
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(970, 30)
+        Me.Button1.Location = New System.Drawing.Point(941, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(156, 49)
         Me.Button1.TabIndex = 61
@@ -446,10 +448,10 @@ Partial Class Egenklæring
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage7)
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage8)
         Me.egenerkleringTabControl.Controls.Add(Me.TabPage9)
-        Me.egenerkleringTabControl.Location = New System.Drawing.Point(38, 64)
+        Me.egenerkleringTabControl.Location = New System.Drawing.Point(6, 31)
         Me.egenerkleringTabControl.Name = "egenerkleringTabControl"
         Me.egenerkleringTabControl.SelectedIndex = 0
-        Me.egenerkleringTabControl.Size = New System.Drawing.Size(1092, 706)
+        Me.egenerkleringTabControl.Size = New System.Drawing.Size(1092, 619)
         Me.egenerkleringTabControl.TabIndex = 0
         '
         'TabPage1
@@ -3139,7 +3141,7 @@ Partial Class Egenklæring
         Me.TabPage9.Location = New System.Drawing.Point(4, 28)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage9.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage9.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage9.TabIndex = 8
         Me.TabPage9.Text = "Side 9"
         Me.TabPage9.UseVisualStyleBackColor = True
@@ -3148,9 +3150,9 @@ Partial Class Egenklæring
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(202, 589)
+        Me.Button3.Location = New System.Drawing.Point(856, 550)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(175, 66)
+        Me.Button3.Size = New System.Drawing.Size(222, 29)
         Me.Button3.TabIndex = 66
         Me.Button3.Text = "Reset erklæring i DB"
         Me.Button3.UseVisualStyleBackColor = False
@@ -3159,9 +3161,9 @@ Partial Class Egenklæring
         '
         Me.Button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(23, 589)
+        Me.Button4.Location = New System.Drawing.Point(677, 550)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(164, 66)
+        Me.Button4.Size = New System.Drawing.Size(211, 29)
         Me.Button4.TabIndex = 19
         Me.Button4.Text = "Fyll Alle svar"
         Me.Button4.UseVisualStyleBackColor = False
@@ -3172,7 +3174,7 @@ Partial Class Egenklæring
         Me.sendEgenerklering.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.sendEgenerklering.Location = New System.Drawing.Point(406, 550)
         Me.sendEgenerklering.Name = "sendEgenerklering"
-        Me.sendEgenerklering.Size = New System.Drawing.Size(448, 40)
+        Me.sendEgenerklering.Size = New System.Drawing.Size(265, 29)
         Me.sendEgenerklering.TabIndex = 18
         Me.sendEgenerklering.Text = "Send egenerklæring"
         Me.sendEgenerklering.UseVisualStyleBackColor = False
@@ -3728,6 +3730,16 @@ Partial Class Egenklæring
         Me.Panel26.Size = New System.Drawing.Size(20, 746)
         Me.Panel26.TabIndex = 67
         '
+        'Panel27
+        '
+        Me.Panel27.Controls.Add(Me.Button2)
+        Me.Panel27.Controls.Add(Me.Button1)
+        Me.Panel27.Controls.Add(Me.egenerkleringTabControl)
+        Me.Panel27.Location = New System.Drawing.Point(26, 30)
+        Me.Panel27.Name = "Panel27"
+        Me.Panel27.Size = New System.Drawing.Size(1105, 660)
+        Me.Panel27.TabIndex = 68
+        '
         'Egenklæring
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 19.0!)
@@ -3735,12 +3747,10 @@ Partial Class Egenklæring
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1276, 773)
         Me.Controls.Add(Me.Panel26)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Panel25)
-        Me.Controls.Add(Me.egenerkleringTabControl)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Panel27)
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Egenklæring"
@@ -3886,6 +3896,7 @@ Partial Class Egenklæring
         Me.Panel58.PerformLayout()
         Me.Panel60.ResumeLayout(False)
         Me.Panel60.PerformLayout()
+        Me.Panel27.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4160,4 +4171,5 @@ Partial Class Egenklæring
     Friend WithEvents Button3 As Button
     Friend WithEvents Panel26 As Panel
     Friend WithEvents Panel25 As Panel
+    Friend WithEvents Panel27 As Panel
 End Class

@@ -53,12 +53,11 @@ Partial Class Blodgivning
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -220,7 +219,7 @@ Partial Class Blodgivning
         Me.bGiverIdTextBox.Location = New System.Drawing.Point(142, 59)
         Me.bGiverIdTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.bGiverIdTextBox.Name = "bGiverIdTextBox"
-        Me.bGiverIdTextBox.Size = New System.Drawing.Size(165, 30)
+        Me.bGiverIdTextBox.Size = New System.Drawing.Size(165, 31)
         Me.bGiverIdTextBox.TabIndex = 28
         '
         'registrerBlodtypeKnapp
@@ -239,7 +238,7 @@ Partial Class Blodgivning
         Me.blodprosentTekst.Location = New System.Drawing.Point(209, 173)
         Me.blodprosentTekst.Margin = New System.Windows.Forms.Padding(2)
         Me.blodprosentTekst.Name = "blodprosentTekst"
-        Me.blodprosentTekst.Size = New System.Drawing.Size(133, 30)
+        Me.blodprosentTekst.Size = New System.Drawing.Size(133, 31)
         Me.blodprosentTekst.TabIndex = 31
         '
         'GroupBox1
@@ -258,13 +257,12 @@ Partial Class Blodgivning
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.IDtekst)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(130, 219)
+        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 2)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(455, 370)
+        Me.GroupBox1.Size = New System.Drawing.Size(469, 370)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registrer blodtapping:"
@@ -296,13 +294,12 @@ Partial Class Blodgivning
         Me.GroupBox2.Controls.Add(Me.registrerBlodtypeKnapp)
         Me.GroupBox2.Controls.Add(Me.bGiverIdTextBox)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(589, 219)
+        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(489, 2)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(452, 370)
+        Me.GroupBox2.Size = New System.Drawing.Size(410, 370)
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Registrer blodtype til blodgiver"
@@ -357,38 +354,14 @@ Partial Class Blodgivning
         Me.Panel3.Size = New System.Drawing.Size(1175, 20)
         Me.Panel3.TabIndex = 34
         '
-        'TableLayoutPanel1
+        'Panel4
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(19, 562)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1175, 46)
-        Me.TableLayoutPanel1.TabIndex = 35
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.GroupBox1, 0, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(19, 27)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.80241!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.19759!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1175, 591)
-        Me.TableLayoutPanel2.TabIndex = 36
+        Me.Panel4.Controls.Add(Me.GroupBox1)
+        Me.Panel4.Controls.Add(Me.GroupBox2)
+        Me.Panel4.Location = New System.Drawing.Point(45, 98)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(905, 382)
+        Me.Panel4.TabIndex = 35
         '
         'Blodgivning
         '
@@ -396,12 +369,11 @@ Partial Class Blodgivning
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1213, 628)
-        Me.Controls.Add(Me.TableLayoutPanel2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Panel4)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Blodgivning"
         Me.Text = "Registrer blodgiving"
@@ -411,7 +383,7 @@ Partial Class Blodgivning
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -447,10 +419,9 @@ Partial Class Blodgivning
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Panel4 As Panel
 End Class

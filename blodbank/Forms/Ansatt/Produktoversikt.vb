@@ -27,6 +27,9 @@ Public Class Produktoversikt
         Me.WindowState = FormWindowState.Maximized
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
         Dim prodOversikt = sql_sporring("SELECT * FROM Blodlager")
 
         Dim antallPlasma As Integer
