@@ -25,6 +25,10 @@ Public Class ansattInnkalling
     Private Sub ansattInnkalling_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.WindowState = FormWindowState.Maximized
 
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
+
         Label7.Text = "Hasteinkalling skjer etter behov." & vbCrLf & "Funksjonaliteten sender haste e-post." & vbCrLf & "For raske bekreftelser bruk telefon."
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)

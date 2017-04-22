@@ -31,28 +31,28 @@ Partial Class MinSide
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.label_innlogget_karantene1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.navnLabel = New System.Windows.Forms.Label()
         Me.label_innlogget_fornavn = New System.Windows.Forms.Label()
         Me.label_innlogget_etternavn = New System.Windows.Forms.Label()
         Me.label_innlogget_kjønn = New System.Windows.Forms.Label()
         Me.label_innlogget_adresse = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.label_innlogget_blodtype = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.label_innlogget_fodselsdato = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.label_innlogget_forrige_blodtapp = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.label_innlogget_post_nr = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.label_innlogget_post_sted = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.label_innlogget_telefon = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.label_innlogget_karantene1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.label_innlogget_blodtype = New System.Windows.Forms.Label()
+        Me.label_innlogget_forrige_blodtapp = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.label_antall_blodgivninger = New System.Windows.Forms.Label()
         Me.label_forrige_blodprosent = New System.Windows.Forms.Label()
@@ -60,12 +60,11 @@ Partial Class MinSide
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -147,36 +146,15 @@ Partial Class MinSide
         Me.GroupBox1.Controls.Add(Me.label_innlogget_telefon)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Right
         Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(94, 97)
+        Me.GroupBox1.Location = New System.Drawing.Point(2, 2)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(412, 388)
+        Me.GroupBox1.Size = New System.Drawing.Size(412, 404)
         Me.GroupBox1.TabIndex = 32
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Personopplysninger:"
-        '
-        'label_innlogget_karantene1
-        '
-        Me.label_innlogget_karantene1.AutoSize = True
-        Me.label_innlogget_karantene1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_innlogget_karantene1.Location = New System.Drawing.Point(162, 151)
-        Me.label_innlogget_karantene1.Name = "label_innlogget_karantene1"
-        Me.label_innlogget_karantene1.Size = New System.Drawing.Size(105, 27)
-        Me.label_innlogget_karantene1.TabIndex = 28
-        Me.label_innlogget_karantene1.Text = "karantene"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(27, 151)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 27)
-        Me.Label2.TabIndex = 27
-        Me.Label2.Text = "Karantene"
         '
         'navnLabel
         '
@@ -238,16 +216,6 @@ Partial Class MinSide
         Me.Label10.TabIndex = 25
         Me.Label10.Text = "Kjønn:"
         '
-        'label_innlogget_blodtype
-        '
-        Me.label_innlogget_blodtype.AutoSize = True
-        Me.label_innlogget_blodtype.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(146, 44)
-        Me.label_innlogget_blodtype.Name = "label_innlogget_blodtype"
-        Me.label_innlogget_blodtype.Size = New System.Drawing.Size(64, 27)
-        Me.label_innlogget_blodtype.TabIndex = 8
-        Me.label_innlogget_blodtype.Text = "btype"
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -278,16 +246,6 @@ Partial Class MinSide
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Post sted:"
         '
-        'label_innlogget_forrige_blodtapp
-        '
-        Me.label_innlogget_forrige_blodtapp.AutoSize = True
-        Me.label_innlogget_forrige_blodtapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(172, 124)
-        Me.label_innlogget_forrige_blodtapp.Name = "label_innlogget_forrige_blodtapp"
-        Me.label_innlogget_forrige_blodtapp.Size = New System.Drawing.Size(101, 27)
-        Me.label_innlogget_forrige_blodtapp.TabIndex = 10
-        Me.label_innlogget_forrige_blodtapp.Text = "fblodtapp"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -307,16 +265,6 @@ Partial Class MinSide
         Me.label_innlogget_post_nr.Size = New System.Drawing.Size(44, 27)
         Me.label_innlogget_post_nr.TabIndex = 12
         Me.label_innlogget_post_nr.Text = "pnr"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(27, 124)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(139, 27)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Sist blodtapp:"
         '
         'label_innlogget_post_sted
         '
@@ -348,16 +296,6 @@ Partial Class MinSide
         Me.label_innlogget_telefon.TabIndex = 14
         Me.label_innlogget_telefon.Text = "tnr"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(27, 44)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(100, 27)
-        Me.Label8.TabIndex = 18
-        Me.Label8.Text = "Blodtype:"
-        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -378,6 +316,66 @@ Partial Class MinSide
         Me.Label9.TabIndex = 17
         Me.Label9.Text = "Adresse:"
         '
+        'label_innlogget_karantene1
+        '
+        Me.label_innlogget_karantene1.AutoSize = True
+        Me.label_innlogget_karantene1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_innlogget_karantene1.Location = New System.Drawing.Point(162, 151)
+        Me.label_innlogget_karantene1.Name = "label_innlogget_karantene1"
+        Me.label_innlogget_karantene1.Size = New System.Drawing.Size(105, 27)
+        Me.label_innlogget_karantene1.TabIndex = 28
+        Me.label_innlogget_karantene1.Text = "karantene"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(27, 151)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 27)
+        Me.Label2.TabIndex = 27
+        Me.Label2.Text = "Karantene"
+        '
+        'label_innlogget_blodtype
+        '
+        Me.label_innlogget_blodtype.AutoSize = True
+        Me.label_innlogget_blodtype.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(146, 44)
+        Me.label_innlogget_blodtype.Name = "label_innlogget_blodtype"
+        Me.label_innlogget_blodtype.Size = New System.Drawing.Size(64, 27)
+        Me.label_innlogget_blodtype.TabIndex = 8
+        Me.label_innlogget_blodtype.Text = "btype"
+        '
+        'label_innlogget_forrige_blodtapp
+        '
+        Me.label_innlogget_forrige_blodtapp.AutoSize = True
+        Me.label_innlogget_forrige_blodtapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(172, 124)
+        Me.label_innlogget_forrige_blodtapp.Name = "label_innlogget_forrige_blodtapp"
+        Me.label_innlogget_forrige_blodtapp.Size = New System.Drawing.Size(101, 27)
+        Me.label_innlogget_forrige_blodtapp.TabIndex = 10
+        Me.label_innlogget_forrige_blodtapp.Text = "fblodtapp"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(27, 124)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(139, 27)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Sist blodtapp:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(27, 44)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(100, 27)
+        Me.Label8.TabIndex = 18
+        Me.Label8.Text = "Blodtype:"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.label_innlogget_karantene1)
@@ -392,13 +390,12 @@ Partial Class MinSide
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.label_innlogget_forrige_blodtapp)
-        Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Left
         Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox2.Location = New System.Drawing.Point(510, 97)
+        Me.GroupBox2.Location = New System.Drawing.Point(427, 2)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(469, 388)
+        Me.GroupBox2.Size = New System.Drawing.Size(469, 404)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Din info:"
@@ -406,20 +403,22 @@ Partial Class MinSide
         'label_antall_blodgivninger
         '
         Me.label_antall_blodgivninger.AutoSize = True
-        Me.label_antall_blodgivninger.Location = New System.Drawing.Point(201, 71)
+        Me.label_antall_blodgivninger.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_antall_blodgivninger.Location = New System.Drawing.Point(227, 71)
         Me.label_antall_blodgivninger.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.label_antall_blodgivninger.Name = "label_antall_blodgivninger"
-        Me.label_antall_blodgivninger.Size = New System.Drawing.Size(148, 23)
+        Me.label_antall_blodgivninger.Size = New System.Drawing.Size(141, 23)
         Me.label_antall_blodgivninger.TabIndex = 34
         Me.label_antall_blodgivninger.Text = "antallBlodgivning"
         '
         'label_forrige_blodprosent
         '
         Me.label_forrige_blodprosent.AutoSize = True
-        Me.label_forrige_blodprosent.Location = New System.Drawing.Point(201, 99)
+        Me.label_forrige_blodprosent.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.label_forrige_blodprosent.Location = New System.Drawing.Point(227, 99)
         Me.label_forrige_blodprosent.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.label_forrige_blodprosent.Name = "label_forrige_blodprosent"
-        Me.label_forrige_blodprosent.Size = New System.Drawing.Size(162, 23)
+        Me.label_forrige_blodprosent.Size = New System.Drawing.Size(156, 23)
         Me.label_forrige_blodprosent.TabIndex = 33
         Me.label_forrige_blodprosent.Text = "forrigeBlodprosent"
         '
@@ -437,10 +436,10 @@ Partial Class MinSide
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Calibri", 14.0!)
+        Me.Label16.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold)
         Me.Label16.Location = New System.Drawing.Point(28, 99)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(168, 23)
+        Me.Label16.Size = New System.Drawing.Size(200, 27)
         Me.Label16.TabIndex = 30
         Me.Label16.Text = "Forrige blodprosent:"
         '
@@ -457,44 +456,21 @@ Partial Class MinSide
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Calibri", 14.0!)
+        Me.Label14.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold)
         Me.Label14.Location = New System.Drawing.Point(28, 71)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(168, 23)
+        Me.Label14.Size = New System.Drawing.Size(201, 27)
         Me.Label14.TabIndex = 28
         Me.Label14.Text = "Antall blodgivninger:"
         '
-        'TableLayoutPanel2
+        'Panel2
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.GroupBox2, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.GroupBox1, 0, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(16, 27)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.54733!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.45267!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1016, 487)
-        Me.TableLayoutPanel2.TabIndex = 38
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(16, 514)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1016, 98)
-        Me.TableLayoutPanel1.TabIndex = 37
+        Me.Panel2.Controls.Add(Me.GroupBox2)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Location = New System.Drawing.Point(55, 64)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(902, 414)
+        Me.Panel2.TabIndex = 37
         '
         'MinSide
         '
@@ -502,12 +478,11 @@ Partial Class MinSide
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1048, 628)
-        Me.Controls.Add(Me.TableLayoutPanel2)
-        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Panel2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MinSide"
@@ -518,7 +493,7 @@ Partial Class MinSide
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -561,6 +536,5 @@ Partial Class MinSide
     Friend WithEvents Label16 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel2 As Panel
 End Class

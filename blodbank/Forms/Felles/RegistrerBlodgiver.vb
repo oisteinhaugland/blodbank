@@ -10,6 +10,13 @@ Public Class registrerBlodgiver
         postNrTextBox.MaxLength = 4
         telefonTextBox.MaxLength = 8
         ErrorProvider1.BlinkRate = 0
+
+
+
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
+
     End Sub
 
 
@@ -17,7 +24,7 @@ Public Class registrerBlodgiver
     Private Sub validerSkjemaOgRegistrerBruker()
         Dim validert As Boolean = True
         'Setter alle tekstboksene i fokus, som gjør at valideringen tar sted.
-        For Each control As Control In Panel1.Controls
+        For Each control As Control In GroupBox1.Controls
             If TypeOf control Is TextBox Then
                 control.Focus()
                 GetNextControl(control, True).Focus()
@@ -214,5 +221,7 @@ Public Class registrerBlodgiver
 
     End Sub
 
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
+    End Sub
 End Class

@@ -84,12 +84,19 @@
         Me.BackColor = Color.FromArgb(255, 255, 255)
         Me.Location = New Point(0, 0)
         fyllBrukerInformasjon()
+
+        Panel2.Left = (Me.ClientSize.Width - Panel2.Width) \ 2
+        Panel2.Top = (Me.ClientSize.Height - Panel2.Height) \ 2
+
+
+
         Dim antBivninger
         antBivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innlogget_blodgiver_id)
 
         For Each rad In antBivninger.Rows
             label_antall_blodgivninger.Text = rad("antallblodgivninger")
         Next
+
 
     End Sub
 
@@ -109,7 +116,11 @@
         loggUt()
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs) Handles TableLayoutPanel2.Paint
+    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
 
     End Sub
 End Class

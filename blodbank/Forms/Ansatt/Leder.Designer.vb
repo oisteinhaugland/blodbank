@@ -22,18 +22,18 @@ Partial Class Leder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea21 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend21 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series21 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea22 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend22 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series22 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea23 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend23 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series23 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea24 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend24 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series24 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.chartLederPlasma = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -73,6 +73,7 @@ Partial Class Leder
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(45, 55)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -82,26 +83,26 @@ Partial Class Leder
         'TabPage1
         '
         Me.TabPage1.Controls.Add(Me.chartLederPlasma)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(820, 458)
+        Me.TabPage1.Size = New System.Drawing.Size(820, 456)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Plasma oversikt"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
         'chartLederPlasma
         '
-        ChartArea21.Name = "ChartArea1"
-        Me.chartLederPlasma.ChartAreas.Add(ChartArea21)
-        Legend21.Name = "Legend1"
-        Me.chartLederPlasma.Legends.Add(Legend21)
+        ChartArea1.Name = "ChartArea1"
+        Me.chartLederPlasma.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Me.chartLederPlasma.Legends.Add(Legend1)
         Me.chartLederPlasma.Location = New System.Drawing.Point(0, 0)
         Me.chartLederPlasma.Name = "chartLederPlasma"
-        Series21.ChartArea = "ChartArea1"
-        Series21.Legend = "Legend1"
-        Series21.Name = "Series1"
-        Me.chartLederPlasma.Series.Add(Series21)
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Me.chartLederPlasma.Series.Add(Series1)
         Me.chartLederPlasma.Size = New System.Drawing.Size(817, 455)
         Me.chartLederPlasma.TabIndex = 0
         Me.chartLederPlasma.Text = "Chart1"
@@ -119,16 +120,16 @@ Partial Class Leder
         '
         'chartLederBlodplater
         '
-        ChartArea22.Name = "ChartArea1"
-        Me.chartLederBlodplater.ChartAreas.Add(ChartArea22)
-        Legend22.Name = "Legend1"
-        Me.chartLederBlodplater.Legends.Add(Legend22)
+        ChartArea2.Name = "ChartArea1"
+        Me.chartLederBlodplater.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Me.chartLederBlodplater.Legends.Add(Legend2)
         Me.chartLederBlodplater.Location = New System.Drawing.Point(1, 0)
         Me.chartLederBlodplater.Name = "chartLederBlodplater"
-        Series22.ChartArea = "ChartArea1"
-        Series22.Legend = "Legend1"
-        Series22.Name = "Series1"
-        Me.chartLederBlodplater.Series.Add(Series22)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Me.chartLederBlodplater.Series.Add(Series2)
         Me.chartLederBlodplater.Size = New System.Drawing.Size(823, 458)
         Me.chartLederBlodplater.TabIndex = 1
         Me.chartLederBlodplater.Text = "Chart2"
@@ -146,16 +147,16 @@ Partial Class Leder
         '
         'chartLederBlodlegemer
         '
-        ChartArea23.Name = "ChartArea1"
-        Me.chartLederBlodlegemer.ChartAreas.Add(ChartArea23)
-        Legend23.Name = "Legend1"
-        Me.chartLederBlodlegemer.Legends.Add(Legend23)
+        ChartArea3.Name = "ChartArea1"
+        Me.chartLederBlodlegemer.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.chartLederBlodlegemer.Legends.Add(Legend3)
         Me.chartLederBlodlegemer.Location = New System.Drawing.Point(1, 0)
         Me.chartLederBlodlegemer.Name = "chartLederBlodlegemer"
-        Series23.ChartArea = "ChartArea1"
-        Series23.Legend = "Legend1"
-        Series23.Name = "Series1"
-        Me.chartLederBlodlegemer.Series.Add(Series23)
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.chartLederBlodlegemer.Series.Add(Series3)
         Me.chartLederBlodlegemer.Size = New System.Drawing.Size(813, 452)
         Me.chartLederBlodlegemer.TabIndex = 1
         Me.chartLederBlodlegemer.Text = "Chart3"
@@ -173,16 +174,16 @@ Partial Class Leder
         '
         'chartKjonn
         '
-        ChartArea24.Name = "ChartArea1"
-        Me.chartKjonn.ChartAreas.Add(ChartArea24)
-        Legend24.Name = "Legend1"
-        Me.chartKjonn.Legends.Add(Legend24)
+        ChartArea4.Name = "ChartArea1"
+        Me.chartKjonn.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.chartKjonn.Legends.Add(Legend4)
         Me.chartKjonn.Location = New System.Drawing.Point(1, 0)
         Me.chartKjonn.Name = "chartKjonn"
-        Series24.ChartArea = "ChartArea1"
-        Series24.Legend = "Legend1"
-        Series24.Name = "Series1"
-        Me.chartKjonn.Series.Add(Series24)
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.chartKjonn.Series.Add(Series4)
         Me.chartKjonn.Size = New System.Drawing.Size(816, 455)
         Me.chartKjonn.TabIndex = 2
         Me.chartKjonn.Text = "Chart3"
@@ -210,7 +211,7 @@ Partial Class Leder
         Me.bestillingerLabel.AutoSize = True
         Me.bestillingerLabel.Location = New System.Drawing.Point(613, 92)
         Me.bestillingerLabel.Name = "bestillingerLabel"
-        Me.bestillingerLabel.Size = New System.Drawing.Size(39, 13)
+        Me.bestillingerLabel.Size = New System.Drawing.Size(43, 15)
         Me.bestillingerLabel.TabIndex = 8
         Me.bestillingerLabel.Text = "Label7"
         '
@@ -219,7 +220,7 @@ Partial Class Leder
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(613, 64)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 13)
+        Me.Label6.Size = New System.Drawing.Size(108, 15)
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "Antall bestillinger:"
         '
@@ -228,7 +229,7 @@ Partial Class Leder
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(436, 48)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.Size = New System.Drawing.Size(59, 15)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Ordedato"
         '
@@ -237,7 +238,7 @@ Partial Class Leder
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(304, 48)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.Size = New System.Drawing.Size(74, 15)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Blodmengde"
         '
@@ -246,7 +247,7 @@ Partial Class Leder
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(195, 48)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 13)
+        Me.Label3.Size = New System.Drawing.Size(83, 15)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Blodegenskap"
         '
@@ -255,7 +256,7 @@ Partial Class Leder
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(141, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
+        Me.Label2.Size = New System.Drawing.Size(55, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Blodtype"
         '
@@ -264,24 +265,26 @@ Partial Class Leder
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(38, 48)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 13)
+        Me.Label1.Size = New System.Drawing.Size(78, 15)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Bestillings Id"
         '
         'ledelseBestillinger
         '
         Me.ledelseBestillinger.FormattingEnabled = True
+        Me.ledelseBestillinger.ItemHeight = 15
         Me.ledelseBestillinger.Location = New System.Drawing.Point(41, 64)
         Me.ledelseBestillinger.Name = "ledelseBestillinger"
-        Me.ledelseBestillinger.Size = New System.Drawing.Size(566, 368)
+        Me.ledelseBestillinger.Size = New System.Drawing.Size(566, 364)
         Me.ledelseBestillinger.TabIndex = 0
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Calibri", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(42, 24)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(193, 13)
+        Me.Label7.Size = New System.Drawing.Size(363, 26)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Velkommen! Her er tilgjengelig statistikk"
         '

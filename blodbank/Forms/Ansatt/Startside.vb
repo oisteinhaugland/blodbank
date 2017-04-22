@@ -12,6 +12,10 @@
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+
+
         dagensTimer.Items.Clear()
         Dim dagensDato As Date = Today.Date
 

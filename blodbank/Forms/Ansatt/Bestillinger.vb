@@ -8,10 +8,12 @@
         Me.WindowState = FormWindowState.Maximized
         Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)
-
+        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
+        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+        søkLagerBtn.Enabled = False
         utleveringLabel.Hide()
         motatteBestillinger.Items.Clear() '
-
+        vareLagerListBox.SelectedIndex = -1
         bekreft_Utlevering.Enabled = False
 
 
@@ -34,7 +36,7 @@
             motatteBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodegString & vbTab & vbTab & blodtypeStringBest & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
             bestillinger.Add(New Bestillingsinfo(rad("blodbestilling_id"), rad("blodegenskap_id"), rad("blod_mengde"), rad("ordre_dato"), rad("behandlet"), rad("blod_type")))
         Next
-
+        søkLagerBtn.Enabled = True
     End Sub
 
     Private Sub bekreft_Utlevering_Click(sender As Object, e As EventArgs) Handles bekreft_Utlevering.Click
@@ -68,6 +70,8 @@
         utleveringLabel.Visible = True
 
         utleveringLabel.Show()
+
+        søkLagerBtn.Enabled = False
         bekreft_Utlevering.Enabled = False
 
     End Sub
@@ -92,7 +96,7 @@
                 'Bruker funksjoner for blodtype- og blodegenskapskonvertering [Tilkoblingsdata.vb]
                 Dim blodtypeString = konverterBlodtypeTilTekst(rad("blodtype_id"))
                 Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
-                Dim enhet As String = rad("enhet_id") & "-" & blodtypeString & "-" & blodegString
+                Dim enhet As String = rad("enhet_id") & "  " & blodtypeString & vbTab & vbTab & blodegString
                 vareLagerListBox.Items.Add(enhet)
             Next
         Next
@@ -114,7 +118,4 @@
         Me.Hide()
     End Sub
 
-    Private Sub vareLagerListBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles vareLagerListBox.SelectedIndexChanged
-
-    End Sub
 End Class

@@ -224,6 +224,10 @@
         Me.Location = New Point(0, 0)
         sendEgenerklering.Enabled = False
 
+        Panel27.Left = (Me.ClientSize.Width - Panel27.Width) \ 2
+        Panel27.Top = (Me.ClientSize.Height - Panel27.Height) \ 2
+
+
         If innlogget_karantene <> "00:00:00" Then
             MsgBox("Advarsel: Du har karantene. Du kan ikke fylle ut egenerklæringskjemaet før karantenen er ferdig.")
             egenerkleringTabControl.Enabled = False
