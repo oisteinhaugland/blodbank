@@ -22,4 +22,5 @@ Public Class Hash
         Dim hashedResult As String = Convert.ToBase64String(hashBytes)
         Return hashedResult
     End Function
+
 End Class

@@ -19,4 +19,5 @@ Public Class Epost
         Smtp_Server.Send(e_mail)
 
     End Sub
+
 End Class

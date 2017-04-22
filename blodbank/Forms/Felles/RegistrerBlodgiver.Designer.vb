@@ -50,13 +50,14 @@ Partial Class registrerBlodgiver
         Me.poststedTextBox = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.avbrytRegistrering = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.FileSystemWatcher2 = New System.IO.FileSystemWatcher()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FileSystemWatcher2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,9 +134,9 @@ Partial Class registrerBlodgiver
         Me.passordLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.passordLabel.Location = New System.Drawing.Point(35, 273)
         Me.passordLabel.Name = "passordLabel"
-        Me.passordLabel.Size = New System.Drawing.Size(72, 23)
+        Me.passordLabel.Size = New System.Drawing.Size(81, 23)
         Me.passordLabel.TabIndex = 8
-        Me.passordLabel.Text = "Passord"
+        Me.passordLabel.Text = "Passord*"
         '
         'gjenntaPassordTextbox
         '
@@ -152,9 +153,9 @@ Partial Class registrerBlodgiver
         Me.gjentaPassordLabel.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.gjentaPassordLabel.Location = New System.Drawing.Point(35, 303)
         Me.gjentaPassordLabel.Name = "gjentaPassordLabel"
-        Me.gjentaPassordLabel.Size = New System.Drawing.Size(129, 23)
+        Me.gjentaPassordLabel.Size = New System.Drawing.Size(138, 23)
         Me.gjentaPassordLabel.TabIndex = 10
-        Me.gjentaPassordLabel.Text = "Gjenta Passord"
+        Me.gjentaPassordLabel.Text = "Gjenta Passord*"
         '
         'personNrTextBox
         '
@@ -294,16 +295,16 @@ Partial Class registrerBlodgiver
         Me.FileSystemWatcher1.EnableRaisingEvents = True
         Me.FileSystemWatcher1.SynchronizingObject = Me
         '
-        'Button1
+        'avbrytRegistrering
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(352, 370)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(344, 97)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Gå tilbake / Avbryt registrering"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.avbrytRegistrering.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.avbrytRegistrering.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.avbrytRegistrering.Location = New System.Drawing.Point(352, 370)
+        Me.avbrytRegistrering.Name = "avbrytRegistrering"
+        Me.avbrytRegistrering.Size = New System.Drawing.Size(344, 97)
+        Me.avbrytRegistrering.TabIndex = 12
+        Me.avbrytRegistrering.Text = "Gå tilbake / Avbryt registrering"
+        Me.avbrytRegistrering.UseVisualStyleBackColor = False
         '
         'Panel5
         '
@@ -343,7 +344,7 @@ Partial Class registrerBlodgiver
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.GroupBox1)
-        Me.Panel4.Controls.Add(Me.Button1)
+        Me.Panel4.Controls.Add(Me.avbrytRegistrering)
         Me.Panel4.Controls.Add(Me.registrerBrukerKnapp)
         Me.Panel4.Location = New System.Drawing.Point(91, 37)
         Me.Panel4.Name = "Panel4"
@@ -383,12 +384,23 @@ Partial Class registrerBlodgiver
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Personalia"
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(16, 612)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1117, 16)
+        Me.Panel1.TabIndex = 35
+        '
         'registrerBlodgiver
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1149, 628)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel5)
@@ -433,7 +445,7 @@ Partial Class registrerBlodgiver
     Friend WithEvents ErrorProvider1 As ErrorProvider
     Friend WithEvents FileSystemWatcher1 As IO.FileSystemWatcher
 
-    Friend WithEvents Button1 As Button
+    Friend WithEvents avbrytRegistrering As Button
 
 
     Friend WithEvents Panel5 As Panel
@@ -442,4 +454,5 @@ Partial Class registrerBlodgiver
     Friend WithEvents FileSystemWatcher2 As IO.FileSystemWatcher
     Friend WithEvents Panel4 As Panel
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Panel1 As Panel
 End Class

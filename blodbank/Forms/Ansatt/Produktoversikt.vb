@@ -2,45 +2,29 @@
 Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class Produktoversikt
-    Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
-        Startside.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
-        ansattInnkalling.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
-        Bestillinger.Show()
-        Me.Hide()
-    End Sub
-
-    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
-        Me.Hide()
-        Blodgivning.Show()
-    End Sub
 
     Private Sub ansattProduktoversikt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'maksimerer vindu og setter farge
         Me.WindowState = FormWindowState.Maximized
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
-        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
-        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+        'midstiller gui
+        guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
+        guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
 
         Dim prodOversikt = sql_sporring("SELECT * FROM Blodlager")
 
+        'antall egenskaper
         Dim antallPlasma As Integer
         Dim antallBlodlegemer As Integer
         Dim antallBlodplater As Integer
 
+        'antall blodtyper av hver egenskap
         Dim PlasmaAntallAp, PlasmaAntallAm, PlasmaAntallBp, PlasmaAntallBm, PlasmaAntallABp, PlasmaAntallABm, PlasmaAntallOp, PlasmaAntallOm As Integer
         Dim BlodLegemerAntallAp, BlodLegemerAntallAm, BlodLegemerAntallBp, BlodLegemerAntallBm, BlodLegemerAntallABp, BlodLegemerAntallABm, BlodLegemerAntallOp, BlodLegemerAntallOm As Integer
         Dim BlodPlaterAntallAp, BlodPlaterAntallAm, BlodPlaterAntallBp, BlodPlaterAntallBm, BlodPlaterAntallABp, BlodPlaterAntallABm, BlodPlaterAntallOp, BlodPlaterAntallOm As Integer
 
-
+        'finn antall plasma
         Dim plasmaOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 3")
         For Each rad In plasmaOversikt.Rows
             Select Case rad("blodtype_id")
@@ -62,6 +46,8 @@ Public Class Produktoversikt
                     PlasmaAntallOm += 1
             End Select
         Next
+
+        'finn antall blodplater
         Dim blodplaterOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 2")
         For Each rad In blodplaterOversikt.Rows
             Select Case rad("blodtype_id")
@@ -84,6 +70,7 @@ Public Class Produktoversikt
             End Select
         Next
 
+        'finn antall blodlegemer
         Dim blodlegemerOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 1")
         For Each rad In blodlegemerOversikt.Rows
             Select Case rad("blodtype_id")
@@ -115,8 +102,9 @@ Public Class Produktoversikt
             Else
                 antallBlodlegemer += 1
             End If
-
         Next
+
+        'Plasma graf
         chartPlasma.Series.Clear()
         chartPlasma.Series.Add("Plasma oversikt")
 
@@ -125,7 +113,6 @@ Public Class Produktoversikt
         pOversikt.SmartLabelStyle.Enabled = False
         pOversikt.LabelAngle = 45
         pOversikt.IsVisibleInLegend = False
-        'pOversikt.ChartType = SeriesChartType.Bar
         pOversikt.XValueType = ChartValueType.String
 
         With pOversikt.Points
@@ -141,7 +128,8 @@ Public Class Produktoversikt
 
         chartPlasma.Series.Add(pOversikt)
         '__________________________________________________________
-        chartBlodplater.Series.Clear()
+        'Blodplater graf
+
         chartBlodplater.Series.Add("Blodplater oversikt")
 
         Dim blodplatOversikt As New Series
@@ -149,7 +137,6 @@ Public Class Produktoversikt
         blodplatOversikt.SmartLabelStyle.Enabled = False
         blodplatOversikt.LabelAngle = 45
         blodplatOversikt.IsVisibleInLegend = False
-        'blodplatOversikt.ChartType = SeriesChartType.Bar
         blodplatOversikt.XValueType = ChartValueType.String
 
         With blodplatOversikt.Points
@@ -165,6 +152,8 @@ Public Class Produktoversikt
 
         chartBlodplater.Series.Add(blodplatOversikt)
         '__________________________________________________________
+        'blodlegemer Graf
+
         chartBlodlegemer.Series.Clear()
         chartBlodlegemer.Series.Add("Blodlegemer oversikt")
 
@@ -173,7 +162,6 @@ Public Class Produktoversikt
         blodlegOversikt.SmartLabelStyle.Enabled = False
         blodlegOversikt.LabelAngle = 45
         blodlegOversikt.IsVisibleInLegend = False
-        'blodlegOversikt.ChartType = SeriesChartType.Bar
         blodlegOversikt.XValueType = ChartValueType.String
 
         With blodlegOversikt.Points
@@ -190,11 +178,32 @@ Public Class Produktoversikt
         chartBlodlegemer.Series.Add(blodlegOversikt)
     End Sub
 
-    Private Sub chartBlodLager_Click(sender As Object, e As EventArgs) Handles chartPlasma.Click
 
+    '####################################################################
+    'NAVIGASJON
+    '####################################################################
+
+    Private Sub HjemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HjemToolStripMenuItem.Click
+        Startside.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub chartBlodlegemer_Click(sender As Object, e As EventArgs) Handles chartBlodlegemer.Click
 
+    Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
+        InnkallingAnsatt.Show()
+        Me.Hide()
     End Sub
+
+
+    Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
+        Bestillinger.Show()
+        Me.Hide()
+    End Sub
+
+
+    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
+        Blodgivning.Show()
+        Me.Hide()
+    End Sub
+
 End Class

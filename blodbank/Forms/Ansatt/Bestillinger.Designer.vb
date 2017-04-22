@@ -25,7 +25,7 @@ Partial Class Bestillinger
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Bestillinger))
         Me.motatteBestillinger = New System.Windows.Forms.ListBox()
         Me.bekreft_Utlevering = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.hentBestillinger = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HjemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,18 +41,18 @@ Partial Class Bestillinger
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelEgeneskap = New System.Windows.Forms.Label()
+        Me.LabelBestillingID = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.utleveringLabel = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.guiPanel = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.guiPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'motatteBestillinger
@@ -76,17 +76,17 @@ Partial Class Bestillinger
         Me.bekreft_Utlevering.Text = "Bekreft utlevering"
         Me.bekreft_Utlevering.UseVisualStyleBackColor = False
         '
-        'Button5
+        'hentBestillinger
         '
-        Me.Button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button5.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(15, 18)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(608, 88)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Hent ut motatte bestillinger"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.hentBestillinger.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.hentBestillinger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.hentBestillinger.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hentBestillinger.Location = New System.Drawing.Point(15, 18)
+        Me.hentBestillinger.Name = "hentBestillinger"
+        Me.hentBestillinger.Size = New System.Drawing.Size(608, 88)
+        Me.hentBestillinger.TabIndex = 5
+        Me.hentBestillinger.Text = "Hent ut motatte bestillinger"
+        Me.hentBestillinger.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
@@ -187,10 +187,10 @@ Partial Class Bestillinger
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.LabelEgeneskap)
+        Me.GroupBox1.Controls.Add(Me.LabelBestillingID)
         Me.GroupBox1.Controls.Add(Me.motatteBestillinger)
-        Me.GroupBox1.Controls.Add(Me.Button5)
+        Me.GroupBox1.Controls.Add(Me.hentBestillinger)
         Me.GroupBox1.Location = New System.Drawing.Point(2, 2)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
@@ -223,31 +223,31 @@ Partial Class Bestillinger
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
-        Me.Label3.Location = New System.Drawing.Point(263, 112)
+        Me.Label3.Location = New System.Drawing.Point(265, 112)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 23)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Blodtype"
         '
-        'Label2
+        'LabelEgeneskap
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(139, 112)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 23)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Egenskap"
+        Me.LabelEgeneskap.AutoSize = True
+        Me.LabelEgeneskap.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.LabelEgeneskap.Location = New System.Drawing.Point(153, 112)
+        Me.LabelEgeneskap.Name = "LabelEgeneskap"
+        Me.LabelEgeneskap.Size = New System.Drawing.Size(84, 23)
+        Me.LabelEgeneskap.TabIndex = 7
+        Me.LabelEgeneskap.Text = "Egenskap"
         '
-        'Label1
+        'LabelBestillingID
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(11, 112)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(113, 23)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Bestillings ID"
+        Me.LabelBestillingID.AutoSize = True
+        Me.LabelBestillingID.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.LabelBestillingID.Location = New System.Drawing.Point(11, 112)
+        Me.LabelBestillingID.Name = "LabelBestillingID"
+        Me.LabelBestillingID.Size = New System.Drawing.Size(113, 23)
+        Me.LabelBestillingID.TabIndex = 6
+        Me.LabelBestillingID.Text = "Bestillings ID"
         '
         'GroupBox2
         '
@@ -306,14 +306,14 @@ Partial Class Bestillinger
         Me.utleveringLabel.TabIndex = 10
         Me.utleveringLabel.Text = "Utlevering vellykket, varelager er oppdatert"
         '
-        'Panel4
+        'guiPanel
         '
-        Me.Panel4.Controls.Add(Me.GroupBox1)
-        Me.Panel4.Controls.Add(Me.GroupBox2)
-        Me.Panel4.Location = New System.Drawing.Point(35, 42)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1016, 460)
-        Me.Panel4.TabIndex = 6
+        Me.guiPanel.Controls.Add(Me.GroupBox1)
+        Me.guiPanel.Controls.Add(Me.GroupBox2)
+        Me.guiPanel.Location = New System.Drawing.Point(35, 42)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Size = New System.Drawing.Size(1016, 460)
+        Me.guiPanel.TabIndex = 6
         '
         'Bestillinger
         '
@@ -325,7 +325,7 @@ Partial Class Bestillinger
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.guiPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Bestillinger"
         Me.Text = "Bestillinger"
@@ -335,7 +335,7 @@ Partial Class Bestillinger
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
+        Me.guiPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -343,7 +343,7 @@ Partial Class Bestillinger
 
     Friend WithEvents motatteBestillinger As ListBox
     Friend WithEvents bekreft_Utlevering As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents hentBestillinger As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents HjemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProduktoversiktToolStripMenuItem As ToolStripMenuItem
@@ -358,12 +358,12 @@ Partial Class Bestillinger
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents utleveringLabel As Label
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents guiPanel As Panel
+    Friend WithEvents LabelBestillingID As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LabelEgeneskap As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label

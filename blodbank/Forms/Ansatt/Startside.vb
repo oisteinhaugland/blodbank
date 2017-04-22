@@ -1,57 +1,67 @@
 ﻿Public Class Startside
-    Dim dagenstimerList As New List(Of timebestilling)
-    Dim timespørring As New DataTable
+    Dim dagensTimerListe As New List(Of Timebestilling)
+    Dim timeSporring As New DataTable
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
-        loggInn.Show()
-    End Sub
+
 
     Private Sub ansattStartSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Maksimerer vindu, setter farge.
         Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)
 
-        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
-        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
+        'midstiller gui
+        guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
+        guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
 
-
+        'tømmer liste
         dagensTimer.Items.Clear()
         Dim dagensDato As Date = Today.Date
 
-        'timespørring = sql_sporring("SELECT * FROM Timebestilling WHERE er_aktiv = 1 AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
-        timespørring = sql_sporring("SELECT * FROM Timebestilling INNER JOIN Blodgiver ON Timebestilling.blodgiver_id = Blodgiver.blodgiver_id where er_aktiv AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
-        For Each rad In timespørring.Rows
-
-            Dim tidspunkt
+        'finner antall timer for dagen, og navnet.
+        timeSporring = sql_sporring("SELECT * FROM Timebestilling INNER JOIN Blodgiver ON Timebestilling.blodgiver_id = Blodgiver.blodgiver_id where er_aktiv AND bestilling_dato ='" & konverterDatoFormatTilMySql(Today.Date) & "'ORDER BY bestilling_tidspunkt")
+        For Each rad In timeSporring.Rows
+            Dim tidsPunkt
             Select Case rad("bestilling_tidspunkt")
                 Case 9
-                    tidspunkt = Convert.ToString("09:00")
+                    tidsPunkt = Convert.ToString("09:00")
                 Case 10
-                    tidspunkt = Convert.ToString("10:00")
+                    tidsPunkt = Convert.ToString("10:00")
                 Case 11
-                    tidspunkt = Convert.ToString("11:00")
+                    tidsPunkt = Convert.ToString("11:00")
                 Case 12
-                    tidspunkt = Convert.ToString("12:00")
+                    tidsPunkt = Convert.ToString("12:00")
                 Case 13
-                    tidspunkt = Convert.ToString("13:00")
+                    tidsPunkt = Convert.ToString("13:00")
                 Case 14
-                    tidspunkt = Convert.ToString("14:00")
+                    tidsPunkt = Convert.ToString("14:00")
                 Case 15
-                    tidspunkt = Convert.ToString("15:00")
+                    tidsPunkt = Convert.ToString("15:00")
             End Select
-            dagensTimer.Items.Add(rad("fornavn") & " " & rad("etternavn") & vbTab & tidspunkt)
-            dagenstimerList.Add(New timebestilling(rad("timebestilling_id"), rad("bestilling_dato"), rad("bestilling_tidspunkt"), rad("blodgiver_id"), rad("er_aktiv")))
-
-
-
+            dagensTimer.Items.Add(rad("fornavn") & " " & rad("etternavn") & vbTab & tidsPunkt)
+            dagensTimerListe.Add(New Timebestilling(rad("timebestilling_id"), rad("bestilling_dato"), rad("bestilling_tidspunkt"), rad("blodgiver_id"), rad("er_aktiv")))
         Next
+
+        'setter velkomsttekst og dagens dato.
         Dim velkomst As String = "Velkommen " & innlogget_fornavn & " " & innlogget_etternavn & "!"
+        LabelVelkommen.Text = velkomst
+        LabelDagensDatoTid.Text = Today.Date
+    End Sub
 
-        Label8.Text = velkomst
-        Label7.Text = Today.Date
 
 
+    '####################################################################
+    'NAVIGASJON
+    '####################################################################
+
+
+    'logger ut
+    Private Sub loggUtBtn_click(sender As Object, e As EventArgs) Handles loggUtBtn.Click
+        loggInn.Show()
+        Me.Close()
+        Produktoversikt.Close()
+        InnkallingAnsatt.Close()
+        Blodgivning.Close()
+        Bestillinger.Close()
     End Sub
 
     Private Sub ProduktoversiktToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduktoversiktToolStripMenuItem.Click
@@ -59,27 +69,22 @@
         Me.Hide()
     End Sub
 
+
     Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
-        ansattInnkalling.Show()
+        InnkallingAnsatt.Show()
         Me.Hide()
     End Sub
+
 
     Private Sub BestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BestillingToolStripMenuItem.Click
         Bestillinger.Show()
         Me.Hide()
-
     End Sub
+
 
     Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
-        Me.Hide()
         Blodgivning.Show()
+        Me.Hide()
     End Sub
 
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
-
-    End Sub
-
-    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
-
-    End Sub
 End Class

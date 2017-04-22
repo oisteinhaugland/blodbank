@@ -27,24 +27,24 @@ Partial Class Timebestillinger
         Me.MinSideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Kalender = New System.Windows.Forms.MonthCalendar()
+        Me.kalenderTimer = New System.Windows.Forms.MonthCalendar()
         Me.bestillKnapp = New System.Windows.Forms.Button()
         Me.avbestillKnapp = New System.Windows.Forms.Button()
-        Me.DineTimer = New System.Windows.Forms.ListBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
-        Me.HentTimebestilling = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dineTimer = New System.Windows.Forms.ListBox()
+        Me.ledigeTimerListBox = New System.Windows.Forms.ListBox()
+        Me.hentTimebestilling = New System.Windows.Forms.Button()
+        Me.LabelLedigeTimer = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.timeBestillingGroupBox = New System.Windows.Forms.GroupBox()
+        Me.LabelOnsketDato = New System.Windows.Forms.Label()
+        Me.avbestillingGroupBox = New System.Windows.Forms.GroupBox()
+        Me.guiPanel = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.timeBestillingGroupBox.SuspendLayout()
+        Me.avbestillingGroupBox.SuspendLayout()
+        Me.guiPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -78,12 +78,12 @@ Partial Class Timebestillinger
         Me.EgenerklæringToolStripMenuItem.Size = New System.Drawing.Size(114, 23)
         Me.EgenerklæringToolStripMenuItem.Text = "Egenerklæring"
         '
-        'Kalender
+        'kalenderTimer
         '
-        Me.Kalender.Location = New System.Drawing.Point(26, 119)
-        Me.Kalender.Margin = New System.Windows.Forms.Padding(6)
-        Me.Kalender.Name = "Kalender"
-        Me.Kalender.TabIndex = 3
+        Me.kalenderTimer.Location = New System.Drawing.Point(26, 119)
+        Me.kalenderTimer.Margin = New System.Windows.Forms.Padding(6)
+        Me.kalenderTimer.Name = "kalenderTimer"
+        Me.kalenderTimer.TabIndex = 3
         '
         'bestillKnapp
         '
@@ -109,46 +109,46 @@ Partial Class Timebestillinger
         Me.avbestillKnapp.Text = "Avbestilt valgt time"
         Me.avbestillKnapp.UseVisualStyleBackColor = False
         '
-        'DineTimer
+        'dineTimer
         '
-        Me.DineTimer.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.DineTimer.FormattingEnabled = True
-        Me.DineTimer.ItemHeight = 19
-        Me.DineTimer.Location = New System.Drawing.Point(23, 148)
-        Me.DineTimer.Name = "DineTimer"
-        Me.DineTimer.Size = New System.Drawing.Size(417, 137)
-        Me.DineTimer.TabIndex = 7
+        Me.dineTimer.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.dineTimer.FormattingEnabled = True
+        Me.dineTimer.ItemHeight = 19
+        Me.dineTimer.Location = New System.Drawing.Point(23, 148)
+        Me.dineTimer.Name = "dineTimer"
+        Me.dineTimer.Size = New System.Drawing.Size(417, 137)
+        Me.dineTimer.TabIndex = 7
         '
-        'ListBox2
+        'ledigeTimerListBox
         '
-        Me.ListBox2.Font = New System.Drawing.Font("Calibri", 12.0!)
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 19
-        Me.ListBox2.Location = New System.Drawing.Point(292, 128)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(175, 156)
-        Me.ListBox2.TabIndex = 10
+        Me.ledigeTimerListBox.Font = New System.Drawing.Font("Calibri", 12.0!)
+        Me.ledigeTimerListBox.FormattingEnabled = True
+        Me.ledigeTimerListBox.ItemHeight = 19
+        Me.ledigeTimerListBox.Location = New System.Drawing.Point(291, 119)
+        Me.ledigeTimerListBox.Name = "ledigeTimerListBox"
+        Me.ledigeTimerListBox.Size = New System.Drawing.Size(175, 156)
+        Me.ledigeTimerListBox.TabIndex = 10
         '
-        'HentTimebestilling
+        'hentTimebestilling
         '
-        Me.HentTimebestilling.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.HentTimebestilling.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HentTimebestilling.Location = New System.Drawing.Point(23, 46)
-        Me.HentTimebestilling.Name = "HentTimebestilling"
-        Me.HentTimebestilling.Size = New System.Drawing.Size(416, 86)
-        Me.HentTimebestilling.TabIndex = 11
-        Me.HentTimebestilling.Text = "Hent dine timer"
-        Me.HentTimebestilling.UseVisualStyleBackColor = False
+        Me.hentTimebestilling.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.hentTimebestilling.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hentTimebestilling.Location = New System.Drawing.Point(23, 46)
+        Me.hentTimebestilling.Name = "hentTimebestilling"
+        Me.hentTimebestilling.Size = New System.Drawing.Size(416, 86)
+        Me.hentTimebestilling.TabIndex = 11
+        Me.hentTimebestilling.Text = "Hent dine timer"
+        Me.hentTimebestilling.UseVisualStyleBackColor = False
         '
-        'Label2
+        'LabelLedigeTimer
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(281, 81)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 23)
-        Me.Label2.TabIndex = 12
-        Me.Label2.Text = "Ledige timer:"
+        Me.LabelLedigeTimer.AutoSize = True
+        Me.LabelLedigeTimer.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLedigeTimer.Location = New System.Drawing.Point(281, 81)
+        Me.LabelLedigeTimer.Name = "LabelLedigeTimer"
+        Me.LabelLedigeTimer.Size = New System.Drawing.Size(114, 23)
+        Me.LabelLedigeTimer.TabIndex = 12
+        Me.LabelLedigeTimer.Text = "Ledige timer:"
         '
         'Panel1
         '
@@ -180,56 +180,56 @@ Partial Class Timebestillinger
         Me.Panel3.Size = New System.Drawing.Size(16, 579)
         Me.Panel3.TabIndex = 15
         '
-        'GroupBox1
+        'timeBestillingGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Kalender)
-        Me.GroupBox1.Controls.Add(Me.ListBox2)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.bestillKnapp)
-        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(2, 2)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(537, 432)
-        Me.GroupBox1.TabIndex = 16
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Timebestilling"
+        Me.timeBestillingGroupBox.Controls.Add(Me.LabelOnsketDato)
+        Me.timeBestillingGroupBox.Controls.Add(Me.kalenderTimer)
+        Me.timeBestillingGroupBox.Controls.Add(Me.ledigeTimerListBox)
+        Me.timeBestillingGroupBox.Controls.Add(Me.LabelLedigeTimer)
+        Me.timeBestillingGroupBox.Controls.Add(Me.bestillKnapp)
+        Me.timeBestillingGroupBox.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.timeBestillingGroupBox.Location = New System.Drawing.Point(2, 2)
+        Me.timeBestillingGroupBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.timeBestillingGroupBox.Name = "timeBestillingGroupBox"
+        Me.timeBestillingGroupBox.Padding = New System.Windows.Forms.Padding(2)
+        Me.timeBestillingGroupBox.Size = New System.Drawing.Size(537, 432)
+        Me.timeBestillingGroupBox.TabIndex = 16
+        Me.timeBestillingGroupBox.TabStop = False
+        Me.timeBestillingGroupBox.Text = "Timebestilling"
         '
-        'Label3
+        'LabelOnsketDato
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(31, 81)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(146, 23)
-        Me.Label3.TabIndex = 13
-        Me.Label3.Text = "Velg ønsket dato:"
+        Me.LabelOnsketDato.AutoSize = True
+        Me.LabelOnsketDato.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelOnsketDato.Location = New System.Drawing.Point(31, 81)
+        Me.LabelOnsketDato.Name = "LabelOnsketDato"
+        Me.LabelOnsketDato.Size = New System.Drawing.Size(146, 23)
+        Me.LabelOnsketDato.TabIndex = 13
+        Me.LabelOnsketDato.Text = "Velg ønsket dato:"
         '
-        'GroupBox2
+        'avbestillingGroupBox
         '
-        Me.GroupBox2.Controls.Add(Me.DineTimer)
-        Me.GroupBox2.Controls.Add(Me.avbestillKnapp)
-        Me.GroupBox2.Controls.Add(Me.HentTimebestilling)
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(543, 2)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(490, 432)
-        Me.GroupBox2.TabIndex = 17
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Avbestill time"
+        Me.avbestillingGroupBox.Controls.Add(Me.dineTimer)
+        Me.avbestillingGroupBox.Controls.Add(Me.avbestillKnapp)
+        Me.avbestillingGroupBox.Controls.Add(Me.hentTimebestilling)
+        Me.avbestillingGroupBox.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.avbestillingGroupBox.Location = New System.Drawing.Point(543, 2)
+        Me.avbestillingGroupBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.avbestillingGroupBox.Name = "avbestillingGroupBox"
+        Me.avbestillingGroupBox.Padding = New System.Windows.Forms.Padding(2)
+        Me.avbestillingGroupBox.Size = New System.Drawing.Size(490, 432)
+        Me.avbestillingGroupBox.TabIndex = 17
+        Me.avbestillingGroupBox.TabStop = False
+        Me.avbestillingGroupBox.Text = "Avbestill time"
         '
-        'Panel4
+        'guiPanel
         '
-        Me.Panel4.Controls.Add(Me.GroupBox1)
-        Me.Panel4.Controls.Add(Me.GroupBox2)
-        Me.Panel4.Location = New System.Drawing.Point(21, 93)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1039, 439)
-        Me.Panel4.TabIndex = 18
+        Me.guiPanel.Controls.Add(Me.timeBestillingGroupBox)
+        Me.guiPanel.Controls.Add(Me.avbestillingGroupBox)
+        Me.guiPanel.Location = New System.Drawing.Point(21, 93)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Size = New System.Drawing.Size(1039, 439)
+        Me.guiPanel.TabIndex = 18
         '
         'Timebestillinger
         '
@@ -241,17 +241,17 @@ Partial Class Timebestillinger
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.guiPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Timebestillinger"
         Me.Text = "Timebestilling"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
+        Me.timeBestillingGroupBox.ResumeLayout(False)
+        Me.timeBestillingGroupBox.PerformLayout()
+        Me.avbestillingGroupBox.ResumeLayout(False)
+        Me.guiPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,18 +261,18 @@ Partial Class Timebestillinger
     Friend WithEvents MinSideToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TimebestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Kalender As MonthCalendar
+    Friend WithEvents kalenderTimer As MonthCalendar
     Friend WithEvents bestillKnapp As Button
     Friend WithEvents avbestillKnapp As Button
-    Friend WithEvents DineTimer As ListBox
-    Friend WithEvents ListBox2 As ListBox
-    Friend WithEvents HentTimebestilling As Button
-    Friend WithEvents Label2 As Label
+    Friend WithEvents dineTimer As ListBox
+    Friend WithEvents ledigeTimerListBox As ListBox
+    Friend WithEvents hentTimebestilling As Button
+    Friend WithEvents LabelLedigeTimer As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents timeBestillingGroupBox As GroupBox
+    Friend WithEvents avbestillingGroupBox As GroupBox
+    Friend WithEvents LabelOnsketDato As Label
+    Friend WithEvents guiPanel As Panel
 End Class

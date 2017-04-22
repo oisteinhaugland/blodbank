@@ -1,10 +1,10 @@
-﻿Public Class timebestilling
+﻿Public Class Timebestilling
 
     Public timebestilling_id As Integer
-        Public bestilling_dato As Date
-        Public bestilling_tidspunkt As Integer
-        Public blodgiver_id As Integer
-        Public er_aktiv As Integer
+    Public bestilling_dato As Date
+    Public bestilling_tidspunkt As Integer
+    Public blodgiver_id As Integer
+    Public er_aktiv As Integer
 
     Public Sub New(ByVal t_id As Integer, ByVal b_dato As Date, ByVal b_tid As Integer, ByVal b_id As Integer, ByVal b_aktiv As Integer)
 

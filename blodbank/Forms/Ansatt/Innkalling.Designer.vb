@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class ansattInnkalling
+Partial Class InnkallingAnsatt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class ansattInnkalling
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ansattInnkalling))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(InnkallingAnsatt))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HjemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduktoversiktToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,27 +33,27 @@ Partial Class ansattInnkalling
         Me.NormalInnkallingKnapp = New System.Windows.Forms.Button()
         Me.klareBlodgivere = New System.Windows.Forms.ListBox()
         Me.blodInfoKnapp = New System.Windows.Forms.Button()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.ledigeTimerKalender = New System.Windows.Forms.MonthCalendar()
         Me.ledigeTimer = New System.Windows.Forms.ListBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.LabelID = New System.Windows.Forms.Label()
+        Me.LabelFornavn = New System.Windows.Forms.Label()
+        Me.LabelEpost = New System.Windows.Forms.Label()
+        Me.LabelTlf = New System.Windows.Forms.Label()
+        Me.LabelEtterNavn = New System.Windows.Forms.Label()
+        Me.LabelBlodtype = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.velgBlogivereGroupBox = New System.Windows.Forms.GroupBox()
+        Me.datoOgTidspunktGroupBox = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.LabelInfo = New System.Windows.Forms.Label()
+        Me.guiPanel = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
+        Me.velgBlogivereGroupBox.SuspendLayout()
+        Me.datoOgTidspunktGroupBox.SuspendLayout()
+        Me.guiPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -142,12 +142,12 @@ Partial Class ansattInnkalling
         Me.blodInfoKnapp.Text = "Hent blodgiverinformajson"
         Me.blodInfoKnapp.UseVisualStyleBackColor = False
         '
-        'MonthCalendar1
+        'ledigeTimerKalender
         '
-        Me.MonthCalendar1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MonthCalendar1.Location = New System.Drawing.Point(21, 80)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 18
+        Me.ledigeTimerKalender.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ledigeTimerKalender.Location = New System.Drawing.Point(21, 80)
+        Me.ledigeTimerKalender.Name = "ledigeTimerKalender"
+        Me.ledigeTimerKalender.TabIndex = 18
         '
         'ledigeTimer
         '
@@ -169,65 +169,65 @@ Partial Class ansattInnkalling
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Ledige timer:"
         '
-        'Label5
+        'LabelID
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(22, 47)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 23)
-        Me.Label5.TabIndex = 22
-        Me.Label5.Text = "ID"
+        Me.LabelID.AutoSize = True
+        Me.LabelID.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelID.Location = New System.Drawing.Point(22, 47)
+        Me.LabelID.Name = "LabelID"
+        Me.LabelID.Size = New System.Drawing.Size(27, 23)
+        Me.LabelID.TabIndex = 22
+        Me.LabelID.Text = "ID"
         '
-        'Label6
+        'LabelFornavn
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(71, 46)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 23)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Fornavn"
+        Me.LabelFornavn.AutoSize = True
+        Me.LabelFornavn.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelFornavn.Location = New System.Drawing.Point(71, 46)
+        Me.LabelFornavn.Name = "LabelFornavn"
+        Me.LabelFornavn.Size = New System.Drawing.Size(74, 23)
+        Me.LabelFornavn.TabIndex = 23
+        Me.LabelFornavn.Text = "Fornavn"
         '
-        'Label8
+        'LabelEpost
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(244, 47)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(54, 23)
-        Me.Label8.TabIndex = 25
-        Me.Label8.Text = "Epost"
+        Me.LabelEpost.AutoSize = True
+        Me.LabelEpost.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelEpost.Location = New System.Drawing.Point(244, 47)
+        Me.LabelEpost.Name = "LabelEpost"
+        Me.LabelEpost.Size = New System.Drawing.Size(54, 23)
+        Me.LabelEpost.TabIndex = 25
+        Me.LabelEpost.Text = "Epost"
         '
-        'Label9
+        'LabelTlf
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(316, 47)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 23)
-        Me.Label9.TabIndex = 26
-        Me.Label9.Text = "Telefon"
+        Me.LabelTlf.AutoSize = True
+        Me.LabelTlf.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTlf.Location = New System.Drawing.Point(316, 47)
+        Me.LabelTlf.Name = "LabelTlf"
+        Me.LabelTlf.Size = New System.Drawing.Size(68, 23)
+        Me.LabelTlf.TabIndex = 26
+        Me.LabelTlf.Text = "Telefon"
         '
-        'Label10
+        'LabelEtterNavn
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(148, 47)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(86, 23)
-        Me.Label10.TabIndex = 27
-        Me.Label10.Text = "Etternavn"
+        Me.LabelEtterNavn.AutoSize = True
+        Me.LabelEtterNavn.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelEtterNavn.Location = New System.Drawing.Point(148, 47)
+        Me.LabelEtterNavn.Name = "LabelEtterNavn"
+        Me.LabelEtterNavn.Size = New System.Drawing.Size(86, 23)
+        Me.LabelEtterNavn.TabIndex = 27
+        Me.LabelEtterNavn.Text = "Etternavn"
         '
-        'Label11
+        'LabelBlodtype
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(407, 46)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(82, 23)
-        Me.Label11.TabIndex = 28
-        Me.Label11.Text = "Blodtype"
+        Me.LabelBlodtype.AutoSize = True
+        Me.LabelBlodtype.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelBlodtype.Location = New System.Drawing.Point(407, 46)
+        Me.LabelBlodtype.Name = "LabelBlodtype"
+        Me.LabelBlodtype.Size = New System.Drawing.Size(82, 23)
+        Me.LabelBlodtype.TabIndex = 28
+        Me.LabelBlodtype.Text = "Blodtype"
         '
         'Panel1
         '
@@ -259,43 +259,43 @@ Partial Class ansattInnkalling
         Me.Panel3.Size = New System.Drawing.Size(1147, 16)
         Me.Panel3.TabIndex = 32
         '
-        'GroupBox1
+        'velgBlogivereGroupBox
         '
-        Me.GroupBox1.Controls.Add(Me.klareBlodgivere)
-        Me.GroupBox1.Controls.Add(Me.blodInfoKnapp)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(2, 2)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox1.Size = New System.Drawing.Size(530, 390)
-        Me.GroupBox1.TabIndex = 33
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Velg blodgiver med godkjent egenerklæring:"
+        Me.velgBlogivereGroupBox.Controls.Add(Me.klareBlodgivere)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.blodInfoKnapp)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelID)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelFornavn)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelEpost)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelBlodtype)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelTlf)
+        Me.velgBlogivereGroupBox.Controls.Add(Me.LabelEtterNavn)
+        Me.velgBlogivereGroupBox.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.velgBlogivereGroupBox.Location = New System.Drawing.Point(2, 2)
+        Me.velgBlogivereGroupBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.velgBlogivereGroupBox.Name = "velgBlogivereGroupBox"
+        Me.velgBlogivereGroupBox.Padding = New System.Windows.Forms.Padding(2)
+        Me.velgBlogivereGroupBox.Size = New System.Drawing.Size(530, 390)
+        Me.velgBlogivereGroupBox.TabIndex = 33
+        Me.velgBlogivereGroupBox.TabStop = False
+        Me.velgBlogivereGroupBox.Text = "Velg blodgiver med godkjent egenerklæring:"
         '
-        'GroupBox2
+        'datoOgTidspunktGroupBox
         '
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.ledigeTimer)
-        Me.GroupBox2.Controls.Add(Me.NormalInnkallingKnapp)
-        Me.GroupBox2.Controls.Add(Me.HasteInnkallingKnapp)
-        Me.GroupBox2.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(541, 2)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox2.Size = New System.Drawing.Size(535, 390)
-        Me.GroupBox2.TabIndex = 34
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Velg dato og tidspunkt:"
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.Label2)
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.ledigeTimer)
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.NormalInnkallingKnapp)
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.HasteInnkallingKnapp)
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.ledigeTimerKalender)
+        Me.datoOgTidspunktGroupBox.Controls.Add(Me.Label4)
+        Me.datoOgTidspunktGroupBox.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.datoOgTidspunktGroupBox.Location = New System.Drawing.Point(541, 2)
+        Me.datoOgTidspunktGroupBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.datoOgTidspunktGroupBox.Name = "datoOgTidspunktGroupBox"
+        Me.datoOgTidspunktGroupBox.Padding = New System.Windows.Forms.Padding(2)
+        Me.datoOgTidspunktGroupBox.Size = New System.Drawing.Size(535, 390)
+        Me.datoOgTidspunktGroupBox.TabIndex = 34
+        Me.datoOgTidspunktGroupBox.TabStop = False
+        Me.datoOgTidspunktGroupBox.Text = "Velg dato og tidspunkt:"
         '
         'Label2
         '
@@ -307,27 +307,27 @@ Partial Class ansattInnkalling
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Ledige timer:"
         '
-        'Label7
+        'LabelInfo
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(550, 394)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(41, 23)
-        Me.Label7.TabIndex = 29
-        Me.Label7.Text = "Info"
+        Me.LabelInfo.AutoSize = True
+        Me.LabelInfo.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelInfo.Location = New System.Drawing.Point(550, 394)
+        Me.LabelInfo.Name = "LabelInfo"
+        Me.LabelInfo.Size = New System.Drawing.Size(41, 23)
+        Me.LabelInfo.TabIndex = 29
+        Me.LabelInfo.Text = "Info"
         '
-        'Panel4
+        'guiPanel
         '
-        Me.Panel4.Controls.Add(Me.Label7)
-        Me.Panel4.Controls.Add(Me.GroupBox1)
-        Me.Panel4.Controls.Add(Me.GroupBox2)
-        Me.Panel4.Location = New System.Drawing.Point(37, 52)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1080, 482)
-        Me.Panel4.TabIndex = 35
+        Me.guiPanel.Controls.Add(Me.LabelInfo)
+        Me.guiPanel.Controls.Add(Me.velgBlogivereGroupBox)
+        Me.guiPanel.Controls.Add(Me.datoOgTidspunktGroupBox)
+        Me.guiPanel.Location = New System.Drawing.Point(37, 52)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Size = New System.Drawing.Size(1080, 482)
+        Me.guiPanel.TabIndex = 35
         '
-        'ansattInnkalling
+        'InnkallingAnsatt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -337,19 +337,19 @@ Partial Class ansattInnkalling
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.guiPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.Name = "ansattInnkalling"
+        Me.Name = "InnkallingAnsatt"
         Me.Text = "Innkalling"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.velgBlogivereGroupBox.ResumeLayout(False)
+        Me.velgBlogivereGroupBox.PerformLayout()
+        Me.datoOgTidspunktGroupBox.ResumeLayout(False)
+        Me.datoOgTidspunktGroupBox.PerformLayout()
+        Me.guiPanel.ResumeLayout(False)
+        Me.guiPanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -365,21 +365,21 @@ Partial Class ansattInnkalling
     Friend WithEvents klareBlodgivere As ListBox
     Friend WithEvents blodInfoKnapp As Button
     Friend WithEvents RegisrerBlodgivingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents ledigeTimerKalender As MonthCalendar
     Friend WithEvents ledigeTimer As ListBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents LabelID As Label
+    Friend WithEvents LabelFornavn As Label
+    Friend WithEvents LabelEpost As Label
+    Friend WithEvents LabelTlf As Label
+    Friend WithEvents LabelEtterNavn As Label
+    Friend WithEvents LabelBlodtype As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents velgBlogivereGroupBox As GroupBox
+    Friend WithEvents datoOgTidspunktGroupBox As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents LabelInfo As Label
+    Friend WithEvents guiPanel As Panel
 End Class

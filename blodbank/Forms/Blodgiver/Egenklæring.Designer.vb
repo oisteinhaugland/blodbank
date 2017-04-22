@@ -28,8 +28,8 @@ Partial Class Egenklæring
         Me.TimebestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EgenerklæringToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.forrigeSideBtn = New System.Windows.Forms.Button()
+        Me.nestSideBtn = New System.Windows.Forms.Button()
         Me.egenerkleringTabControl = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -245,10 +245,8 @@ Partial Class Egenklæring
         Me.RadioButton78 = New System.Windows.Forms.RadioButton()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.sendEgenerklering = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.bekreftInformasjonCheckBox = New System.Windows.Forms.CheckBox()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.Panel55 = New System.Windows.Forms.Panel()
         Me.RadioButton109 = New System.Windows.Forms.RadioButton()
@@ -292,6 +290,7 @@ Partial Class Egenklæring
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Panel25 = New System.Windows.Forms.Panel()
         Me.Panel26 = New System.Windows.Forms.Panel()
+        Me.guiPanel = New System.Windows.Forms.Panel()
         Me.Panel27 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.egenerkleringTabControl.SuspendLayout()
@@ -373,7 +372,7 @@ Partial Class Egenklæring
         Me.Panel53.SuspendLayout()
         Me.Panel58.SuspendLayout()
         Me.Panel60.SuspendLayout()
-        Me.Panel27.SuspendLayout()
+        Me.guiPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -415,27 +414,27 @@ Partial Class Egenklæring
         Me.Label3.Size = New System.Drawing.Size(0, 19)
         Me.Label3.TabIndex = 6
         '
-        'Button2
+        'forrigeSideBtn
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button2.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(781, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(154, 49)
-        Me.Button2.TabIndex = 60
-        Me.Button2.Text = "Forrige Side"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.forrigeSideBtn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.forrigeSideBtn.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.forrigeSideBtn.Location = New System.Drawing.Point(781, 3)
+        Me.forrigeSideBtn.Name = "forrigeSideBtn"
+        Me.forrigeSideBtn.Size = New System.Drawing.Size(154, 49)
+        Me.forrigeSideBtn.TabIndex = 60
+        Me.forrigeSideBtn.Text = "Forrige Side"
+        Me.forrigeSideBtn.UseVisualStyleBackColor = False
         '
-        'Button1
+        'nestSideBtn
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button1.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(941, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 49)
-        Me.Button1.TabIndex = 61
-        Me.Button1.Text = "Neste side"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.nestSideBtn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.nestSideBtn.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nestSideBtn.Location = New System.Drawing.Point(941, 3)
+        Me.nestSideBtn.Name = "nestSideBtn"
+        Me.nestSideBtn.Size = New System.Drawing.Size(156, 49)
+        Me.nestSideBtn.TabIndex = 61
+        Me.nestSideBtn.Text = "Neste side"
+        Me.nestSideBtn.UseVisualStyleBackColor = False
         '
         'egenerkleringTabControl
         '
@@ -460,7 +459,7 @@ Partial Class Egenklæring
         Me.TabPage1.Location = New System.Drawing.Point(4, 28)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage1.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Side 1"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -787,7 +786,7 @@ Partial Class Egenklæring
         Me.TabPage2.Location = New System.Drawing.Point(4, 28)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage2.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Side 2"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -1062,7 +1061,7 @@ Partial Class Egenklæring
         Me.TabPage3.Location = New System.Drawing.Point(4, 28)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage3.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Side 3"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -1493,7 +1492,7 @@ Partial Class Egenklæring
         Me.TabPage4.Location = New System.Drawing.Point(4, 28)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage4.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Side 4"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1976,7 +1975,7 @@ Partial Class Egenklæring
         Me.TabPage5.Location = New System.Drawing.Point(4, 28)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage5.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage5.TabIndex = 9
         Me.TabPage5.Text = "Side 5"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -2311,7 +2310,7 @@ Partial Class Egenklæring
         Me.TabPage6.Location = New System.Drawing.Point(4, 28)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage6.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage6.TabIndex = 5
         Me.TabPage6.Text = "Side 6"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -2841,7 +2840,7 @@ Partial Class Egenklæring
         Me.TabPage7.Location = New System.Drawing.Point(4, 28)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage7.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Side 7"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -3066,7 +3065,7 @@ Partial Class Egenklæring
         Me.TabPage8.Location = New System.Drawing.Point(4, 28)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(1084, 674)
+        Me.TabPage8.Size = New System.Drawing.Size(1084, 587)
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Side 8"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -3133,10 +3132,8 @@ Partial Class Egenklæring
         '
         'TabPage9
         '
-        Me.TabPage9.Controls.Add(Me.Button3)
-        Me.TabPage9.Controls.Add(Me.Button4)
         Me.TabPage9.Controls.Add(Me.sendEgenerklering)
-        Me.TabPage9.Controls.Add(Me.CheckBox1)
+        Me.TabPage9.Controls.Add(Me.bekreftInformasjonCheckBox)
         Me.TabPage9.Controls.Add(Me.GroupBox11)
         Me.TabPage9.Location = New System.Drawing.Point(4, 28)
         Me.TabPage9.Name = "TabPage9"
@@ -3146,48 +3143,26 @@ Partial Class Egenklæring
         Me.TabPage9.Text = "Side 9"
         Me.TabPage9.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button3.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(856, 550)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(222, 29)
-        Me.Button3.TabIndex = 66
-        Me.Button3.Text = "Reset erklæring i DB"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button4.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(677, 550)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(211, 29)
-        Me.Button4.TabIndex = 19
-        Me.Button4.Text = "Fyll Alle svar"
-        Me.Button4.UseVisualStyleBackColor = False
-        '
         'sendEgenerklering
         '
         Me.sendEgenerklering.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.sendEgenerklering.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sendEgenerklering.Location = New System.Drawing.Point(406, 550)
+        Me.sendEgenerklering.Location = New System.Drawing.Point(415, 546)
         Me.sendEgenerklering.Name = "sendEgenerklering"
         Me.sendEgenerklering.Size = New System.Drawing.Size(265, 29)
         Me.sendEgenerklering.TabIndex = 18
         Me.sendEgenerklering.Text = "Send egenerklæring"
         Me.sendEgenerklering.UseVisualStyleBackColor = False
         '
-        'CheckBox1
+        'bekreftInformasjonCheckBox
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(8, 550)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(392, 23)
-        Me.CheckBox1.TabIndex = 17
-        Me.CheckBox1.Text = "Jeg bekrefter herved at all gitt informasjon er korrekt"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.bekreftInformasjonCheckBox.AutoSize = True
+        Me.bekreftInformasjonCheckBox.Location = New System.Drawing.Point(8, 550)
+        Me.bekreftInformasjonCheckBox.Name = "bekreftInformasjonCheckBox"
+        Me.bekreftInformasjonCheckBox.Size = New System.Drawing.Size(392, 23)
+        Me.bekreftInformasjonCheckBox.TabIndex = 17
+        Me.bekreftInformasjonCheckBox.Text = "Jeg bekrefter herved at all gitt informasjon er korrekt"
+        Me.bekreftInformasjonCheckBox.UseVisualStyleBackColor = True
         '
         'GroupBox11
         '
@@ -3716,9 +3691,9 @@ Partial Class Egenklæring
         '
         Me.Panel25.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel25.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel25.Location = New System.Drawing.Point(1256, 27)
+        Me.Panel25.Location = New System.Drawing.Point(1260, 27)
         Me.Panel25.Name = "Panel25"
-        Me.Panel25.Size = New System.Drawing.Size(20, 746)
+        Me.Panel25.Size = New System.Drawing.Size(16, 746)
         Me.Panel25.TabIndex = 66
         '
         'Panel26
@@ -3727,18 +3702,28 @@ Partial Class Egenklæring
         Me.Panel26.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel26.Location = New System.Drawing.Point(0, 27)
         Me.Panel26.Name = "Panel26"
-        Me.Panel26.Size = New System.Drawing.Size(20, 746)
+        Me.Panel26.Size = New System.Drawing.Size(16, 746)
         Me.Panel26.TabIndex = 67
+        '
+        'guiPanel
+        '
+        Me.guiPanel.Controls.Add(Me.forrigeSideBtn)
+        Me.guiPanel.Controls.Add(Me.nestSideBtn)
+        Me.guiPanel.Controls.Add(Me.egenerkleringTabControl)
+        Me.guiPanel.Location = New System.Drawing.Point(26, 30)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Size = New System.Drawing.Size(1105, 660)
+        Me.guiPanel.TabIndex = 68
         '
         'Panel27
         '
-        Me.Panel27.Controls.Add(Me.Button2)
-        Me.Panel27.Controls.Add(Me.Button1)
-        Me.Panel27.Controls.Add(Me.egenerkleringTabControl)
-        Me.Panel27.Location = New System.Drawing.Point(26, 30)
+        Me.Panel27.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel27.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel27.Location = New System.Drawing.Point(16, 757)
+        Me.Panel27.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel27.Name = "Panel27"
-        Me.Panel27.Size = New System.Drawing.Size(1105, 660)
-        Me.Panel27.TabIndex = 68
+        Me.Panel27.Size = New System.Drawing.Size(1244, 16)
+        Me.Panel27.TabIndex = 69
         '
         'Egenklæring
         '
@@ -3746,11 +3731,12 @@ Partial Class Egenklæring
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1276, 773)
+        Me.Controls.Add(Me.Panel27)
         Me.Controls.Add(Me.Panel26)
         Me.Controls.Add(Me.Panel25)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Panel27)
+        Me.Controls.Add(Me.guiPanel)
         Me.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Egenklæring"
@@ -3896,7 +3882,7 @@ Partial Class Egenklæring
         Me.Panel58.PerformLayout()
         Me.Panel60.ResumeLayout(False)
         Me.Panel60.PerformLayout()
-        Me.Panel27.ResumeLayout(False)
+        Me.guiPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -3907,8 +3893,8 @@ Partial Class Egenklæring
     Friend WithEvents TimebestillingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EgenerklæringToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents forrigeSideBtn As Button
+    Friend WithEvents nestSideBtn As Button
     Friend WithEvents egenerkleringTabControl As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents GroupBox1 As GroupBox
@@ -4097,9 +4083,8 @@ Partial Class Egenklæring
     Friend WithEvents RadioButton78 As RadioButton
     Friend WithEvents Label42 As Label
     Friend WithEvents TabPage9 As TabPage
-    Friend WithEvents Button4 As Button
     Friend WithEvents sendEgenerklering As Button
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents bekreftInformasjonCheckBox As CheckBox
     Friend WithEvents GroupBox11 As GroupBox
     Friend WithEvents Panel60 As Panel
     Friend WithEvents RadioButton121 As RadioButton
@@ -4168,8 +4153,8 @@ Partial Class Egenklæring
     Friend WithEvents RadioButton118 As RadioButton
     Friend WithEvents Label51 As Label
     Friend WithEvents GroupBox8 As GroupBox
-    Friend WithEvents Button3 As Button
     Friend WithEvents Panel26 As Panel
     Friend WithEvents Panel25 As Panel
+    Friend WithEvents guiPanel As Panel
     Friend WithEvents Panel27 As Panel
 End Class

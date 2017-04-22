@@ -6,36 +6,35 @@ Public Class Leder
     Dim ledelseTable As New DataTable
 
     Private Sub Leder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
+        'maksimerer og setter farge
         Me.WindowState = FormWindowState.Maximized
-        Me.BackColor = Color.FromArgb(247, 247, 247)
+        Me.BackColor = Color.FromArgb(255, 255, 255)
 
+        'midstiller gui
+        LabelTilgjengeligStats.Left = ((Me.ClientSize.Width - LabelTilgjengeligStats.Width) \ 2)
+        LabelTilgjengeligStats.Top = (Me.ClientSize.Height - statistikkTabControl.Height) \ 2.8
+        LabelTilgjengeligStats.Font = New Font("Calibri", 16, FontStyle.Bold)
 
-
-        Label7.Left = ((Me.ClientSize.Width - Label7.Width) \ 2) - (Label7.Width / 2)
-        Label7.Top = (Me.ClientSize.Height - TabControl1.Height) \ 2.8
-        Label7.Font = New Font("Calibri", 16, FontStyle.Bold)
-
-        TabControl1.Left = (Me.ClientSize.Width - TabControl1.Width) \ 2
-        TabControl1.Top = (Me.ClientSize.Height - TabControl1.Height) \ 2
+        statistikkTabControl.Left = (Me.ClientSize.Width - statistikkTabControl.Width) \ 2
+        statistikkTabControl.Top = (Me.ClientSize.Height - statistikkTabControl.Height) \ 2
         ledelseBestillinger.Items.Clear()
 
-        Button1.Left = ((Me.ClientSize.Width - Button1.Width) \ 2) + Label7.Width - (Button1.Width / 3)
-        Button1.Top = (Me.ClientSize.Height - TabControl1.Height) \ 2.8
+        loggUtBtn.Left = ((Me.ClientSize.Width - loggUtBtn.Width) \ 2) + LabelTilgjengeligStats.Width - (loggUtBtn.Width / 3)
+        loggUtBtn.Top = (Me.ClientSize.Height - statistikkTabControl.Height) \ 2.8
 
 
         Dim prodOversikt = sql_sporring("SELECT * FROM Blodlager")
-
+        'antall egenskaper
         Dim antallPlasma As Integer
         Dim antallBlodlegemer As Integer
         Dim antallBlodplater As Integer
 
+        'antall blodtyper av hver egenskap
         Dim PlasmaAntallAp, PlasmaAntallAm, PlasmaAntallBp, PlasmaAntallBm, PlasmaAntallABp, PlasmaAntallABm, PlasmaAntallOp, PlasmaAntallOm As Integer
         Dim BlodLegemerAntallAp, BlodLegemerAntallAm, BlodLegemerAntallBp, BlodLegemerAntallBm, BlodLegemerAntallABp, BlodLegemerAntallABm, BlodLegemerAntallOp, BlodLegemerAntallOm As Integer
         Dim BlodPlaterAntallAp, BlodPlaterAntallAm, BlodPlaterAntallBp, BlodPlaterAntallBm, BlodPlaterAntallABp, BlodPlaterAntallABm, BlodPlaterAntallOp, BlodPlaterAntallOm As Integer
 
-
+        'finn antall plasma
         Dim plasmaOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 3")
         For Each rad In plasmaOversikt.Rows
             Select Case rad("blodtype_id")
@@ -57,6 +56,8 @@ Public Class Leder
                     PlasmaAntallOm += 1
             End Select
         Next
+
+        'finn antall ¨blodplater
         Dim blodplaterOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 2")
         For Each rad In blodplaterOversikt.Rows
             Select Case rad("blodtype_id")
@@ -79,6 +80,7 @@ Public Class Leder
             End Select
         Next
 
+        'finn antall blodlegemer
         Dim blodlegemerOversikt = sql_sporring("SELECT * FROM Blodlager WHERE blodegenskap_id = 1")
         For Each rad In blodlegemerOversikt.Rows
             Select Case rad("blodtype_id")
@@ -112,6 +114,9 @@ Public Class Leder
             End If
 
         Next
+
+        '__________________________________________________________
+        'plasma oversikt
         chartLederPlasma.Series.Clear()
         chartLederPlasma.Series.Add("Plasma oversikt")
 
@@ -136,6 +141,8 @@ Public Class Leder
 
         chartLederPlasma.Series.Add(pOversikt)
         '__________________________________________________________
+        'blodplater oversikt
+
         chartLederBlodplater.Series.Clear()
         chartLederBlodplater.Series.Add("Blodplater oversikt")
 
@@ -144,7 +151,6 @@ Public Class Leder
         blodplatOversikt.SmartLabelStyle.Enabled = False
         blodplatOversikt.LabelAngle = 45
         blodplatOversikt.IsVisibleInLegend = False
-        'blodplatOversikt.ChartType = SeriesChartType.Bar
         blodplatOversikt.XValueType = ChartValueType.String
 
         With blodplatOversikt.Points
@@ -160,6 +166,8 @@ Public Class Leder
 
         chartLederBlodplater.Series.Add(blodplatOversikt)
         '__________________________________________________________
+        'blodlegemer oversikt 
+
         chartLederBlodlegemer.Series.Clear()
         chartLederBlodlegemer.Series.Add("Blodlegemer oversikt")
 
@@ -168,7 +176,6 @@ Public Class Leder
         blodlegOversikt.SmartLabelStyle.Enabled = False
         blodlegOversikt.LabelAngle = 45
         blodlegOversikt.IsVisibleInLegend = False
-        'blodlegOversikt.ChartType = SeriesChartType.Bar
         blodlegOversikt.XValueType = ChartValueType.String
 
         With blodlegOversikt.Points
@@ -184,28 +191,21 @@ Public Class Leder
 
         chartLederBlodlegemer.Series.Add(blodlegOversikt)
 
-        '  k 'jønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
-        'loggetInn = True
-        'End If
-
-        '       Next
-        '
         Dim antallKvinner As Integer = 0
         Dim antallMenn As Integer = 0
 
-        Dim test = sql_sporring("SELECT personnummer FROM Blodgiver")
-        For Each rad In test.Rows
+        Dim antallPersoner = sql_sporring("SELECT personnummer FROM Blodgiver")
+        For Each rad In antallPersoner.Rows
             Dim temp = rad("personnummer").ToString
-            'MsgBox(temp)
             If temp.Substring(2, 1) Mod 2 = 0 Then
                 antallKvinner += 1
             Else
                 antallMenn += 1
             End If
-
-
         Next
 
+        '__________________________________________________________
+        'antall kjønn chart.
         chartKjonn.Series.Clear()
         chartKjonn.Series.Add("Antall kvinner")
 
@@ -220,8 +220,8 @@ Public Class Leder
             .AddXY("Kvinner", antallKvinner)
             .AddXY("Menn", antallMenn)
         End With
-        chartKjonn.Series.Add(kvinnerOversikt)
 
+        chartKjonn.Series.Add(kvinnerOversikt)
         chartKjonn.Series.Add("Antall menn")
 
         Dim mannOversikt As New Series
@@ -235,53 +235,29 @@ Public Class Leder
 
         End With
         chartKjonn.Series.Add(mannOversikt)
-
-
-
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
-
-
-        'Next
-    End Sub
-
-    Private Sub TabPage5_Click(sender As Object, e As EventArgs) Handles TabPage5.Click
-
-
-    End Sub
-
-    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TabControl1.SelectedIndexChanged
-        If TabControl1.SelectedIndex = 4 Then
-
-
+    Private Sub TabControl1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles statistikkTabControl.SelectedIndexChanged
+        'hent aktive bestillinger
+        If statistikkTabControl.SelectedIndex = 4 Then
             ledelseBestillinger.Items.Clear()
-
-
             ledelseTable = sql_sporring("SELECT * FROM Blod_bestillinger WHERE behandlet = 0")
-            Dim counter = 0
+            Dim teller = 0
 
             For Each rad In ledelseTable.Rows
-
-
                 Dim blodtypeString = konverterBlodtypeTilTekst(rad("blod_type"))
                 Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
-                counter += 1
+                teller += 1
                 ledelseBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodegString & vbTab & vbTab & blodtypeString & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
-
-
-                '            lederbestillinger.Add(New Bestillingsinfo(rad("blodbestilling_id"), rad("blodegenskap_id"), rad("blod_mengde"), rad("ordre_dato"), rad("behandlet"), rad("blod_type")))
             Next
-
-            bestillingerLabel.Text = counter
-            'antBestill = sql_sporring("SELECT COUNT(blodbestilling_id) as antBest FROM Blod_bestillinger WHERE behandlet = 0")
-            'For Each rad In antBestill.Rows
-            '    bestillingerLabel.Text = rad("antBest")
+            bestillingerLabel.Text = teller
         End If
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+    'logg ut
+    Private Sub loggUtBtn_click(sender As Object, e As EventArgs) Handles loggUtBtn.Click
         loggInn.Show()
         Me.Close()
     End Sub

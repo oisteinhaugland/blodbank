@@ -1,6 +1,48 @@
 ﻿Public Class MinSide
-    Dim b As New loggInn
+    'Dim b As New loggInn
 
+    Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'maksimer vindu, sett farge og fyll brukerinfo
+        Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
+        fyllBrukerInformasjon()
+
+        'midstill gui
+        guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
+        guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
+
+        'finn antall blodgivninger til bruker.
+        Dim antallBlodGivninger
+        antallBlodGivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innlogget_blodgiver_id)
+        For Each rad In antallBlodGivninger.Rows
+            label_antall_blodgivninger.Text = rad("antallblodgivninger")
+        Next
+    End Sub
+
+
+    'sub for utfylling av labels
+    Public Sub fyllBrukerInformasjon()
+        label_innlogget_fornavn.Text = innlogget_fornavn
+        label_innlogget_etternavn.Text = innlogget_etternavn
+        label_innlogget_adresse.Text = innlogget_adresse
+        label_innlogget_blodtype.Text = konverterBlodtypeTilTekst(innlogget_blodtype)
+        label_innlogget_fodselsdato.Text = innlogget_fodseldato
+        label_innlogget_forrige_blodtapp.Text = innlogget_forrige_blodtapp
+        label_innlogget_post_nr.Text = innlogget_post_nr
+        label_innlogget_post_sted.Text = innlogget_post_sted
+        label_innlogget_telefon.Text = innlogget_telefon
+        label_innlogget_kjønn.Text = innlogget_kjønn
+        label_forrige_blodprosent.Text = innlogget_blodprosent & "%"
+
+        If innlogget_karantene = "00:00:00" Then
+            label_innlogget_karantene1.Text = "Ingen karantene"
+        Else
+            label_innlogget_karantene1.Text = innlogget_karantene
+        End If
+    End Sub
+
+
+    'Klarer labelene og logg ut.
     Public Sub loggUt()
         label_innlogget_fornavn.Text = ""
         label_innlogget_etternavn.Text = ""
@@ -13,114 +55,34 @@
         label_innlogget_telefon.Text = ""
         label_innlogget_kjønn.Text = ""
 
-        Me.Close()
+        loggInn.Show()
         Egenklæring.Close()
         Timebestillinger.Close()
+        Me.Close()
     End Sub
 
-    Public Sub fyllBrukerInformasjon()
-        label_innlogget_fornavn.Text = innlogget_fornavn
-        label_innlogget_etternavn.Text = innlogget_etternavn
-        label_innlogget_adresse.Text = innlogget_adresse
+
+    '####################################################################
+    'NAVIGASJON
+    '####################################################################
 
 
-        label_innlogget_blodtype.Text = konverterBlodtypeTilTekst(innlogget_blodtype)
-
-        label_innlogget_fodselsdato.Text = innlogget_fodseldato
-        label_innlogget_forrige_blodtapp.Text = innlogget_forrige_blodtapp
-        label_innlogget_post_nr.Text = innlogget_post_nr
-        label_innlogget_post_sted.Text = innlogget_post_sted
-        label_innlogget_telefon.Text = innlogget_telefon
-        label_innlogget_kjønn.Text = innlogget_kjønn
-
-
-        If innlogget_karantene = "00:00:00" Then
-            label_innlogget_karantene1.Text = "Ingen karantene"
-        Else
-            label_innlogget_karantene1.Text = innlogget_karantene
-        End If
-
-        'label_innlogget_fornavn.Text = b.aktivBruker(0).hentBgID
-        'label_innlogget_fornavn.Text = b.aktivBruker(0).hentfNavn
-        'label_innlogget_etternavn.Text = b.aktivBruker(0).hentENavn
-        'label_innlogget_adresse.Text = b.aktivBruker(0).hentAdresse
-        'label_innlogget_fodselsdato.Text = b.aktivBruker(0).hentfDato
-        'label_innlogget_forrige_blodtapp.Text = b.aktivBruker(0).hentfBlodtapp
-        'label_innlogget_karantene.Text = b.aktivBruker(0).hentKarantene
-        'label_innlogget_post_nr.Text = b.aktivBruker(0).hentpNr
-        'label_innlogget_post_sted.Text = b.aktivBruker(0).hentpSted
-        'label_innlogget_telefon.Text = b.aktivBruker(0).hentTlf
-        'label_innlogget_kjønn.Text = b.aktivBruker(0).hentKjønn
-
-        Dim blodtype As String
-        Select Case innlogget_blodtype
-            Case 1
-                blodtype = "A+"
-            Case 2
-                blodtype = "A-"
-            Case 3
-                blodtype = "B+"
-            Case 4
-                blodtype = "B-"
-            Case 5
-                blodtype = "AB+"
-            Case 6
-                blodtype = "AB-"
-            Case 7
-                blodtype = "O+"
-            Case 8
-                blodtype = "O-"
-
-        End Select
-        label_innlogget_blodtype.Text = blodtype
-
-        label_forrige_blodprosent.Text = innlogget_blodprosent & "%"
-
-
-    End Sub
-
-    Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.BackColor = Color.FromArgb(255, 255, 255)
-        Me.Location = New Point(0, 0)
-        fyllBrukerInformasjon()
-
-        Panel2.Left = (Me.ClientSize.Width - Panel2.Width) \ 2
-        Panel2.Top = (Me.ClientSize.Height - Panel2.Height) \ 2
-
-
-
-        Dim antBivninger
-        antBivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innlogget_blodgiver_id)
-
-        For Each rad In antBivninger.Rows
-            label_antall_blodgivninger.Text = rad("antallblodgivninger")
-        Next
-
-
-    End Sub
-
-    'Navigasjon
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         Timebestillinger.Show()
         Me.Hide()
     End Sub
+
 
     Private Sub EgenerklæringToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgenerklæringToolStripMenuItem.Click
         Egenklæring.Show()
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggUtBtn.Click
         loggInn.Show()
         loggUt()
     End Sub
 
-    Private Sub TableLayoutPanel2_Paint(sender As Object, e As PaintEventArgs)
 
-    End Sub
-
-    Private Sub Label14_Click(sender As Object, e As EventArgs) Handles Label14.Click
-
-    End Sub
 End Class

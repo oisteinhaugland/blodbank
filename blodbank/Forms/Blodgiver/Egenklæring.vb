@@ -1,5 +1,4 @@
 ﻿Public Class Egenklæring
-    'Varibel for navigering av tabsider
     Dim sideIndeks = 0
     Dim karanteneTable As New DataTable
     Dim dagensDato As Date
@@ -7,34 +6,58 @@
     Dim karantene180 As Boolean
     Dim karantene365 As Boolean
     Dim karantene1 As Boolean
-    Dim karantenelist As List(Of Blodgiver)
+    Dim karanteneList As List(Of Blodgiver)
 
+    Private Sub blodgiver_egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'maskimerer vindu, setter farge og skruv av send egenerklering knapp.
+        Me.WindowState = FormWindowState.Maximized
+        Me.BackColor = Color.FromArgb(255, 255, 255)
+        sendEgenerklering.Enabled = False
+
+        'midstill gui
+        guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
+        guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
+
+        'hvis du har karantene får du ikke lov til å fylle ut egenerklering.
+        If innlogget_karantene > Date.Today Then
+            MsgBox("Advarsel: Du har karantene. Du kan ikke fylle ut egenerklæringskjemaet før karantenen er ferdig.")
+            egenerkleringTabControl.Enabled = False
+        End If
+
+        'Skrur av irrelevante spørsmål.
+        Select Case innlogget_kjønn
+            Case "Mann"
+                egenerkleringTabControl.TabPages(6).Enabled = False
+            Case "Kvinne"
+                egenerkleringTabControl.TabPages(7).Enabled = False
+        End Select
+    End Sub
 
     'Funksjon som valider og sender egenerklæring til db hvis den er godkjent
     Private Function validerEgenerkleringOgSendTilDB()
-        Dim spmcounter = 0
-        Dim tabcounter = 0
-        Dim groupboxcounter = 0
-        Dim antallchecekd = 0
-        Dim radiobtn As RadioButton
-        Dim radiobtnTag
+        Dim spmTeller = 0
+        Dim tabTeller = 0
+        Dim groupBoxTeller = 0
+        Dim antallAvhuket = 0
+        Dim radioBtn As RadioButton
+        Dim radioBtnTag
         Dim tagVerdier As String
 
         For Each tabb In egenerkleringTabControl.Controls 'for hver tab
             If tabb.Enabled = True Then 'hvis tab er aktiv 
-                tabcounter += 1
+                tabTeller += 1
                 For Each ctrl As Control In tabb.Controls 'for hver control
                     If TypeOf ctrl Is GroupBox Then 'hvis controllen er en groupbox
-                        groupboxcounter += 1
+                        groupBoxTeller += 1
                         For Each Panel As Panel In ctrl.Controls ' for hver panel i groupbox
-                            spmcounter += 1
+                            spmTeller += 1
                             Dim control As Control
-                            For Each control In Panel.Controls.OfType(Of RadioButton)
-                                radiobtn = DirectCast(control, RadioButton)
-                                If radiobtn.Checked Then
-                                    antallchecekd += 1
-                                    radiobtnTag = radiobtn.Tag
-                                    tagVerdier &= radiobtnTag & ","
+                            For Each control In Panel.Controls.OfType(Of RadioButton) 'for hver radiobutton
+                                radioBtn = DirectCast(control, RadioButton)
+                                If radioBtn.Checked Then
+                                    antallAvhuket += 1
+                                    radioBtnTag = radioBtn.Tag
+                                    tagVerdier &= radioBtnTag & ","
                                 End If
                             Next
                         Next
@@ -43,16 +66,13 @@
             End If
         Next
 
-        'Dim check = "Antall tabs: " & tabcounter & vbCrLf & "Antall spm: " & spmcounter & vbCrLf & "Antall Groupboxes: " & groupboxcounter & vbCrLf & "Antall spm checked: " & antallchecekd
 
-
-        'MsgBox(tagVerdier)
-
-        If antallchecekd <> spmcounter Then
+        'hvis du ikke har fylt ut alle spørsmålene, returner false.  
+        If antallAvhuket <> spmTeller Then
             Return False
         Else
             tagVerdier = tagVerdier.Substring(0, tagVerdier.Length - 1) 'tar vekk siste komma
-
+            'insert sprøsmålsverdiene til db.
             Select Case innlogget_kjønn
                 Case "Mann"
                     Try
@@ -72,70 +92,19 @@
     End Function
 
 
-    'Public Sub karantene()
-
-
-    '    'Dim dagensDato As Date
-    '    'dagensDato = DateTime.Today
-    '    dagensDato = konverterDatoFormatTilMySql(dagensDato)
-    '    Dim karanteneDato1 As Date
-    '    karanteneDato1 = konverterDatoFormatTilMySql(dagensDato.AddDays(1))
-    '    Dim karanteneDato2 As Date
-    '    karanteneDato2 = konverterDatoFormatTilMySql(dagensDato.AddDays(30))
-    '    Dim karanteneDato3 As Date
-    '    karanteneDato3 = konverterDatoFormatTilMySql(dagensDato.AddDays(180))
-    '    Dim karanteneDato4 As Date
-    '    karanteneDato4 = konverterDatoFormatTilMySql(dagensDato.AddDays(365))
-
-    '    karanteneTable = sql_sporring("SELECT * FROM Blodgiver WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    For Each rad In karanteneTable.Rows
-    '        karantenelist.Add(New Karantene(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
-
-    '    Next
-    '    '1 dag: Tannlege
-    '    If RadioButton18.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato1 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-
-    '    '30 dagers karantene: Syk, Akupunktur, Flåttbitt
-    '    If RadioButton16.Checked Or RadioButton4.Checked Or RadioButton48.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato2 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-    '    '180 dagers karantene: Piercing, Narkotika, Prostituerte, Ny seksual partner
-    '    If RadioButton30.Checked Or RadioButton26.Checked Or RadioButton86.Checked Or RadioButton94.Checked Or RadioButton84.Checked Or RadioButton78.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato3 & " WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    '    End If
-    '    '365 dagers karantene: Engangsbrukt av Narkotika, 
-    '    If RadioButton100.Checked Then
-    '        sql_sporring("UPDATE Blodgiver SET karantene =" & karanteneDato4)
-    '    End If
-
-    'End Sub
-
-
-
-    Private Sub sendEgenerklering_Click_1(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
-        karantenelist = New List(Of Blodgiver)
+    Private Sub sendEgenerklering_Click(sender As Object, e As EventArgs) Handles sendEgenerklering.Click
+        karanteneList = New List(Of Blodgiver)
 
         'Lager datovariabler som samsvarer med SQL
         Dim dagensDato As Date
         konverterDatoFormatTilMySql(Date.Today)
         dagensDato = Date.Today
 
-
-
-
         If validerEgenerkleringOgSendTilDB() Then
             MsgBox("Takk for din registrering")
-            karantenelist = New List(Of Blodgiver)
+            karanteneList = New List(Of Blodgiver)
 
-            'Lager datovariabler som samsvarer med SQL
-            'Dim dagensDato As Date
-            'konverterDatoFormatKarantene(Date.Today)
-            'dagensDato = Date.Today
-
-
-            'Karantene lengde
+            'Karantener
             If RadioButton100.Checked Then
                 karantene365 = True
             End If
@@ -152,9 +121,9 @@
                 karantene1 = True
             End If
 
-            karanteneTable = sql_sporring("SELECT * FROM Blodgiver")
+            karanteneTable = sql_sporring("SELECT * FROM Blodgiver where blodgiver_id = " & innlogget_blodgiver_id)
             For Each rad In karanteneTable.Rows
-                karantenelist.Add(New Blodgiver(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("passord"), rad("blodtype"), rad("personnummer")))
+                'karanteneList.Add(New Blodgiver(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("blodtype_id"), rad("personnummer")))
 
                 If karantene1 = True Then
                     sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
@@ -172,11 +141,18 @@
         Else
             MsgBox("Egenerklæringen er ikke fylt ut.")
         End If
-
-
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Private Sub bekreftInformasjonCheckBox_click(sender As Object, e As EventArgs) Handles bekreftInformasjonCheckBox.CheckedChanged
+        If bekreftInformasjonCheckBox.Checked Then
+            sendEgenerklering.Enabled = True
+        Else
+            sendEgenerklering.Enabled = False
+        End If
+    End Sub
+
+    Private Sub nestSideBtn_click(sender As Object, e As EventArgs) Handles nestSideBtn.Click
         If sideIndeks <> 9 Then
             sideIndeks += 1
             egenerkleringTabControl.SelectedIndex = sideIndeks
@@ -184,28 +160,24 @@
     End Sub
 
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked Then
-            sendEgenerklering.Enabled = True
-            If innlogget_karantene <> "00:00:00" Then
-                sendEgenerklering.Enabled = False
-            End If
-        Else
-            sendEgenerklering.Enabled = False
-        End If
-    End Sub
-
-
-    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub forrigeSideBtn_click(sender As Object, e As EventArgs) Handles forrigeSideBtn.Click
         If sideIndeks <> 0 Then
             sideIndeks -= 1
             egenerkleringTabControl.SelectedIndex = sideIndeks
         End If
     End Sub
 
+
     Private Sub MyTabControl_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles egenerkleringTabControl.SelectedIndexChanged
         sideIndeks = egenerkleringTabControl.SelectedIndex
     End Sub
+
+
+
+    '####################################################################
+    'NAVIGASJON
+    '####################################################################
+
 
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         Timebestillinger.Show()
@@ -213,70 +185,10 @@
 
     End Sub
 
+
     Private Sub MinSideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinSideToolStripMenuItem.Click
         MinSide.Show()
         Me.Hide()
     End Sub
 
-    Private Sub blodgiver_egenerklering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized
-        Me.BackColor = Color.FromArgb(255, 255, 255)
-        Me.Location = New Point(0, 0)
-        sendEgenerklering.Enabled = False
-
-        Panel27.Left = (Me.ClientSize.Width - Panel27.Width) \ 2
-        Panel27.Top = (Me.ClientSize.Height - Panel27.Height) \ 2
-
-
-        If innlogget_karantene <> "00:00:00" Then
-            MsgBox("Advarsel: Du har karantene. Du kan ikke fylle ut egenerklæringskjemaet før karantenen er ferdig.")
-            egenerkleringTabControl.Enabled = False
-        End If
-
-        Select Case innlogget_kjønn
-            Case "Mann"
-                egenerkleringTabControl.TabPages(6).Enabled = False
-            Case "Kvinne"
-                egenerkleringTabControl.TabPages(7).Enabled = False
-        End Select
-    End Sub
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click 'autofyll
-        Dim spmcounter = 0                'Variabel for telling       
-        Dim tabcounter = 0                'Variabel for telling       
-        Dim groupboxcounter = 0           'Variabel for telling       
-        Dim antallchecekd = 0             'Variabel for telling       
-        Dim radiobtn As RadioButton       'Variabel for telling       
-        Dim radiobtnTag
-        Dim tagVerdier As String
-        For Each tabb In egenerkleringTabControl.Controls 'for hver tab
-            If tabb.Enabled = True Then 'hvis tab er aktiv 
-                tabcounter += 1
-                For Each ctrl As Control In tabb.Controls 'for hver control
-                    If TypeOf ctrl Is GroupBox Then 'hvis controllen er en groupbox
-                        groupboxcounter += 1
-                        For Each panel As Panel In ctrl.Controls ' for hver panel i groupbox
-                            spmcounter += 1
-                            Dim control As Control
-                            For Each control In panel.Controls
-                                If TypeOf control Is RadioButton Then
-                                    radiobtn = DirectCast(control, RadioButton)
-                                    radiobtn.Checked = True
-                                End If
-                            Next
-                        Next
-                    End If
-                Next
-            End If
-        Next
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        sql_sporring("UPDATE Blodgiver SET godkjent_egenerklering = 0 WHERE blodgiver_id =" & innlogget_blodgiver_id)
-    End Sub
-
-    Private Sub TabPage9_Click(sender As Object, e As EventArgs) Handles TabPage9.Click
-
-    End Sub
 End Class

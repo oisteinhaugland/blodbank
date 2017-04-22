@@ -136,13 +136,12 @@
     <Compile Include="Forms\Blodgiver\Timebestilling.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logikk\Klasser\Bruker.vb" />
     <Compile Include="Logikk\Klasser\Epost.vb" />
     <Compile Include="Logikk\Klasser\Hash.vb" />
     <Compile Include="Logikk\Klasser\Validering.vb" />
     <Compile Include="Logikk\Klasser\Innkalling.vb" />
     <Compile Include="Logikk\Klasser\Karantene.vb" />
-    <Compile Include="Logikk\Klasser\lager.vb" />
+    <Compile Include="Logikk\Klasser\Lager.vb" />
     <Compile Include="Forms\Felles\LoggInn.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +149,8 @@
       <DependentUpon>LoggInn.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logikk\Moduler\BrukerInformasjon.vb" />
+    <Compile Include="Logikk\Moduler\FellesFunksjoner.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -171,8 +172,8 @@
     <Compile Include="Forms\Felles\RegistrerBlodgiver.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logikk\Moduler\tilkoblingsdata.vb" />
-    <Compile Include="Logikk\Klasser\timebestilling.vb" />
+    <Compile Include="Logikk\Moduler\Tilkoblingsdata.vb" />
+    <Compile Include="Logikk\Klasser\Timebestilling.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\Ansatt\Bestillinger.resx">
@@ -232,9 +233,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Tekstdokumenter\AA-notater.txt" />
-    <Content Include="Tekstdokumenter\createTables.txt" />
-    <Content Include="Tekstdokumenter\gjoremol.txt" />
+    <Content Include="Tekstdokumenter\EgenerkleringSpormsaal.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

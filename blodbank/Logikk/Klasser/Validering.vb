@@ -3,13 +3,13 @@
 Public Class Validering
 
     'Regex
-    Public telefonformat As String = "(\d+){8}"
-    Public postNrformat As String = "^(\d){4}"
-    Public poststedFormat As String = "(\w+)"
-    Public personnummerFormat As String = "^(\d){5}$"
+    Public tlfFormat As String = "(\d+){8}"
+    Public postNrFormat As String = "^(\d){4}"
+    Public postStedFormat As String = "(\w+)"
+    Public personNrFormat As String = "^(\d){5}$"
     Public adresseFormat As String = "(\w+)\s(\d+)"
     Public navnFormat As String = "(\w+)"
-    Public epostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
+    Public ePostFormat As String = "^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$"
     Public datoFormat As String = "^(\d){2}\.(\d){2}\.(\d){4}$"
     Public registrerMengdeFormat As String = "^(\d)$"
     Public blodgiverIdFormat As String = "^(\d){1,}$"

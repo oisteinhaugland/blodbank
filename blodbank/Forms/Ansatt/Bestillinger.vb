@@ -1,48 +1,61 @@
 ﻿Public Class Bestillinger
     Dim bestillinger As List(Of Bestillingsinfo)
-    Dim enheterPåLager As List(Of lager)
+    Dim enheterPåLager As List(Of Lager)
     Dim bestillTable As New DataTable
     Dim enhetTable As New DataTable
 
+
     Private Sub AnsattBestillinger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'maskimerer og setter farge.
         Me.WindowState = FormWindowState.Maximized
-        Me.Location = New Point(0, 0)
         Me.BackColor = Color.FromArgb(255, 255, 255)
-        Panel4.Left = (Me.ClientSize.Width - Panel4.Width) \ 2
-        Panel4.Top = (Me.ClientSize.Height - Panel4.Height) \ 2
-        søkLagerBtn.Enabled = False
+
+        'midstiller GUI
+        guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
+        guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
+
         utleveringLabel.Hide()
         motatteBestillinger.Items.Clear() '
         vareLagerListBox.SelectedIndex = -1
+
         bekreft_Utlevering.Enabled = False
+        søkLagerBtn.Enabled = False
 
 
     End Sub
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+
+
+    Private Sub hentBestillinger_click(sender As Object, e As EventArgs) Handles hentBestillinger.Click
 
         'Oppdater knapp for å se innkommende bestillinger
         motatteBestillinger.Items.Clear()
 
+        'hent aktive bestillinger
         bestillTable = sql_sporring("SELECT * FROM Blod_bestillinger WHERE behandlet = 0")
-        Dim counter = 0
+
+        Dim teller = 0
         bestillinger = New List(Of Bestillingsinfo)
+
+
         For Each rad In bestillTable.Rows
 
-            'Bruker funksjon for blodegenskapkonvertering[Tilkoblingsdata.vb]
-            Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
-            'Bruker en funksjon for blodtypekonvertering [Tilkoblingsdata.vb]
-            Dim blodtypeStringBest = konverterBlodtypeTilTekst(rad("blod_type"))
+            Dim blodEgenskapString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
+            Dim blodTypeStringBest = konverterBlodtypeTilTekst(rad("blod_type"))
 
-            motatteBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodegString & vbTab & vbTab & blodtypeStringBest & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
+            motatteBestillinger.Items.Add(rad("blodbestilling_id") & vbTab & vbTab & blodEgenskapString & vbTab & vbTab & blodTypeStringBest & vbTab & vbTab & rad("blod_mengde") & vbTab & vbTab & rad("ordre_dato"))
             bestillinger.Add(New Bestillingsinfo(rad("blodbestilling_id"), rad("blodegenskap_id"), rad("blod_mengde"), rad("ordre_dato"), rad("behandlet"), rad("blod_type")))
+
         Next
+
+        'aktiver søk lager.
         søkLagerBtn.Enabled = True
     End Sub
+
 
     Private Sub bekreft_Utlevering_Click(sender As Object, e As EventArgs) Handles bekreft_Utlevering.Click
 
         For i = 0 To bestillinger.Count - 1 'for hver bestilling
-
 
             For indeks = 0 To enheterPåLager.Count - 1 'for hver av de tilgjengelige enhetene på lager
                 If enheterPåLager(indeks).hentBlodType = bestillinger(i).blod_type And enheterPåLager(indeks).hentBlogenskap = bestillinger(i).blod_egenskap Then
@@ -76,35 +89,43 @@
 
     End Sub
 
-    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
-        Blodgivning.Show()
-        Me.Hide()
-
-    End Sub
-
-
+    'Søk lager
     Private Sub søkLagerBtn_Click(sender As Object, e As EventArgs) Handles søkLagerBtn.Click
 
         vareLagerListBox.Items.Clear()
-        enheterPåLager = New List(Of lager)
-        For i = 0 To bestillinger.Count - 1
+        enheterPåLager = New List(Of Lager)
 
+        'for hver bestilling
+        For i = 0 To bestillinger.Count - 1
             enhetTable = sql_sporring("SELECT * FROM Blodlager where lager_status = 1 AND blodtype_id =" & bestillinger(i).blod_type & " and blodegenskap_id =" & bestillinger(i).blod_egenskap & " and holdbarhet >='" & konverterDatoFormatTilMySql(Date.Today).ToString & "' LIMIT " & bestillinger(i).blod_mengde)
 
             For Each rad In enhetTable.Rows
-                enheterPåLager.Add(New lager(rad("enhet_id"), rad("blodegenskap_id"), rad("blodtype_id")))
+                enheterPåLager.Add(New Lager(rad("enhet_id"), rad("blodegenskap_id"), rad("blodtype_id")))
+
                 'Bruker funksjoner for blodtype- og blodegenskapskonvertering [Tilkoblingsdata.vb]
                 Dim blodtypeString = konverterBlodtypeTilTekst(rad("blodtype_id"))
                 Dim blodegString = konverterBlodEgenskapTilTekst(rad("blodegenskap_id"))
                 Dim enhet As String = rad("enhet_id") & "  " & blodtypeString & vbTab & vbTab & blodegString
                 vareLagerListBox.Items.Add(enhet)
+
             Next
         Next
+
         bekreft_Utlevering.Enabled = True
     End Sub
 
+
+    '####################################################################
+    'NAVIGASJON
+    '####################################################################
+
+
+    Private Sub RegistrerBlodgivingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrerBlodgivingToolStripMenuItem.Click
+        Blodgivning.Show()
+        Me.Hide()
+    End Sub
     Private Sub InnkallingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InnkallingToolStripMenuItem.Click
-        ansattInnkalling.Show()
+        InnkallingAnsatt.Show()
         Me.Hide()
     End Sub
 

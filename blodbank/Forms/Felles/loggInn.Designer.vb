@@ -27,7 +27,7 @@ Partial Class loggInn
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.guiPanel = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.registrerBrukerKnapp = New System.Windows.Forms.Button()
         Me.glemtPassordKnapp = New System.Windows.Forms.Button()
@@ -36,23 +36,21 @@ Partial Class loggInn
         Me.brukerNavnTextbox = New System.Windows.Forms.TextBox()
         Me.passordTextBox = New System.Windows.Forms.TextBox()
         Me.brukernavnLabel = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel8.SuspendLayout()
+        Me.logo = New System.Windows.Forms.PictureBox()
+        Me.guiPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel6.Location = New System.Drawing.Point(937, 0)
+        Me.Panel6.Location = New System.Drawing.Point(941, 0)
         Me.Panel6.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(20, 628)
+        Me.Panel6.Size = New System.Drawing.Size(16, 628)
         Me.Panel6.TabIndex = 19
         '
         'Panel5
@@ -62,40 +60,40 @@ Partial Class loggInn
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(20, 628)
+        Me.Panel5.Size = New System.Drawing.Size(16, 628)
         Me.Panel5.TabIndex = 20
         '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(20, 0)
+        Me.Panel3.Location = New System.Drawing.Point(16, 0)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(917, 20)
+        Me.Panel3.Size = New System.Drawing.Size(925, 20)
         Me.Panel3.TabIndex = 21
         '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel4.Location = New System.Drawing.Point(20, 608)
+        Me.Panel4.Location = New System.Drawing.Point(16, 612)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(917, 20)
+        Me.Panel4.Size = New System.Drawing.Size(925, 16)
         Me.Panel4.TabIndex = 22
         '
-        'Panel8
+        'guiPanel
         '
-        Me.Panel8.Controls.Add(Me.Panel1)
-        Me.Panel8.Controls.Add(Me.Panel2)
-        Me.Panel8.Controls.Add(Me.PictureBox1)
-        Me.Panel8.Location = New System.Drawing.Point(217, 50)
-        Me.Panel8.Margin = New System.Windows.Forms.Padding(50)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Padding = New System.Windows.Forms.Padding(50)
-        Me.Panel8.Size = New System.Drawing.Size(590, 629)
-        Me.Panel8.TabIndex = 27
+        Me.guiPanel.Controls.Add(Me.Panel1)
+        Me.guiPanel.Controls.Add(Me.Panel2)
+        Me.guiPanel.Controls.Add(Me.logo)
+        Me.guiPanel.Location = New System.Drawing.Point(217, 50)
+        Me.guiPanel.Margin = New System.Windows.Forms.Padding(50)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Padding = New System.Windows.Forms.Padding(50)
+        Me.guiPanel.Size = New System.Drawing.Size(594, 629)
+        Me.guiPanel.TabIndex = 27
         '
         'Panel1
         '
@@ -106,8 +104,6 @@ Partial Class loggInn
         Me.Panel1.Controls.Add(Me.brukerNavnTextbox)
         Me.Panel1.Controls.Add(Me.passordTextBox)
         Me.Panel1.Controls.Add(Me.brukernavnLabel)
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Location = New System.Drawing.Point(4, 125)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
@@ -184,42 +180,24 @@ Partial Class loggInn
         Me.brukernavnLabel.TabIndex = 3
         Me.brukernavnLabel.Text = "Skriv inn brukernavn:"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(8, 75)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(162, 54)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "midlertidig logg inn (ansatt)"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(8, 15)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(162, 54)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "midlertidig logg inn (blogiver)"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Panel2.Location = New System.Drawing.Point(0, 122)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(589, 469)
+        Me.Panel2.Size = New System.Drawing.Size(591, 469)
         Me.Panel2.TabIndex = 25
         '
-        'PictureBox1
+        'logo
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(117, 11)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(379, 107)
-        Me.PictureBox1.TabIndex = 26
-        Me.PictureBox1.TabStop = False
+        Me.logo.Image = CType(resources.GetObject("logo.Image"), System.Drawing.Image)
+        Me.logo.Location = New System.Drawing.Point(117, 11)
+        Me.logo.Margin = New System.Windows.Forms.Padding(2)
+        Me.logo.Name = "logo"
+        Me.logo.Size = New System.Drawing.Size(379, 107)
+        Me.logo.TabIndex = 26
+        Me.logo.TabStop = False
         '
         'loggInn
         '
@@ -227,7 +205,7 @@ Partial Class loggInn
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(957, 628)
-        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.guiPanel)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel5)
@@ -235,10 +213,10 @@ Partial Class loggInn
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "loggInn"
         Me.Text = "Blodbanken"
-        Me.Panel8.ResumeLayout(False)
+        Me.guiPanel.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -246,7 +224,7 @@ Partial Class loggInn
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel8 As Panel
+    Friend WithEvents guiPanel As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents registrerBrukerKnapp As Button
     Friend WithEvents glemtPassordKnapp As Button
@@ -255,8 +233,6 @@ Partial Class loggInn
     Friend WithEvents brukerNavnTextbox As TextBox
     Friend WithEvents passordTextBox As TextBox
     Friend WithEvents brukernavnLabel As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents logo As PictureBox
 End Class

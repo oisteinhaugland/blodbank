@@ -1,4 +1,5 @@
-﻿Public Class Innkalling
+﻿'entitetsklasse
+Public Class Innkalling
 
     'Public blodgiver_id As Integer
     Public blodgiver_id As Integer

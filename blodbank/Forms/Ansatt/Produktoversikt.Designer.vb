@@ -38,7 +38,7 @@ Partial Class Produktoversikt
         Me.InnkallingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BestillingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrerBlodgivingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelLagerStatus = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.chartPlasma = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -48,7 +48,8 @@ Partial Class Produktoversikt
         Me.chartBlodplater = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.guiPanel = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -57,7 +58,7 @@ Partial Class Produktoversikt
         CType(Me.chartBlodlegemer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.chartBlodplater, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel4.SuspendLayout()
+        Me.guiPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -103,16 +104,16 @@ Partial Class Produktoversikt
         Me.RegistrerBlodgivingToolStripMenuItem.Size = New System.Drawing.Size(152, 23)
         Me.RegistrerBlodgivingToolStripMenuItem.Text = "Registrer Blodgiving"
         '
-        'Label3
+        'LabelLagerStatus
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(2, 0)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 23)
-        Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Lagerstatus:"
+        Me.LabelLagerStatus.AutoSize = True
+        Me.LabelLagerStatus.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelLagerStatus.Location = New System.Drawing.Point(6, 11)
+        Me.LabelLagerStatus.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelLagerStatus.Name = "LabelLagerStatus"
+        Me.LabelLagerStatus.Size = New System.Drawing.Size(107, 23)
+        Me.LabelLagerStatus.TabIndex = 10
+        Me.LabelLagerStatus.Text = "Lagerstatus:"
         '
         'TabControl1
         '
@@ -227,15 +228,25 @@ Partial Class Produktoversikt
         Me.Panel2.Size = New System.Drawing.Size(16, 601)
         Me.Panel2.TabIndex = 17
         '
-        'Panel4
+        'guiPanel
         '
-        Me.Panel4.Controls.Add(Me.TabControl1)
-        Me.Panel4.Controls.Add(Me.Label3)
-        Me.Panel4.Location = New System.Drawing.Point(78, 57)
-        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(807, 560)
-        Me.Panel4.TabIndex = 21
+        Me.guiPanel.Controls.Add(Me.TabControl1)
+        Me.guiPanel.Controls.Add(Me.LabelLagerStatus)
+        Me.guiPanel.Location = New System.Drawing.Point(78, 57)
+        Me.guiPanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.guiPanel.Name = "guiPanel"
+        Me.guiPanel.Size = New System.Drawing.Size(807, 560)
+        Me.guiPanel.TabIndex = 21
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(16, 612)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(925, 16)
+        Me.Panel3.TabIndex = 35
         '
         'Produktoversikt
         '
@@ -243,7 +254,8 @@ Partial Class Produktoversikt
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(957, 628)
-        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.guiPanel)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -260,8 +272,8 @@ Partial Class Produktoversikt
         CType(Me.chartBlodlegemer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         CType(Me.chartBlodplater, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
+        Me.guiPanel.ResumeLayout(False)
+        Me.guiPanel.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,7 +284,7 @@ Partial Class Produktoversikt
     Friend WithEvents ProduktoversiktToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InnkallingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BestillingToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Label3 As Label
+    Friend WithEvents LabelLagerStatus As Label
     Friend WithEvents RegistrerBlodgivingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
@@ -283,5 +295,6 @@ Partial Class Produktoversikt
     Friend WithEvents chartBlodplater As DataVisualization.Charting.Chart
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel4 As Panel
+    Friend WithEvents guiPanel As Panel
+    Friend WithEvents Panel3 As Panel
 End Class
