@@ -136,10 +136,12 @@
                 If karantene365 = True Then
                     sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(365)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
                 End If
+                innloggetKarantene = rad("karantene")
             Next
         Else
             MsgBox("Egenerklæringen er ikke fylt ut.")
         End If
+
     End Sub
 
 
@@ -181,7 +183,6 @@
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         Timebestillinger.Show()
         Me.Hide()
-
     End Sub
 
 

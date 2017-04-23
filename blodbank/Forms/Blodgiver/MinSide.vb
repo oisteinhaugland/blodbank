@@ -70,20 +70,18 @@
 
     Private Sub TimebestillingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TimebestillingToolStripMenuItem.Click
         Timebestillinger.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
 
     Private Sub EgenerklæringToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EgenerklæringToolStripMenuItem.Click
         Egenklæring.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loggUtBtn.Click
-        loggInn.Show()
         loggUt()
     End Sub
-
 
 End Class
