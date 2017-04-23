@@ -72,7 +72,7 @@ Partial Class Bestillinger
         Me.bekreft_Utlevering.Location = New System.Drawing.Point(21, 332)
         Me.bekreft_Utlevering.Name = "bekreft_Utlevering"
         Me.bekreft_Utlevering.Size = New System.Drawing.Size(287, 88)
-        Me.bekreft_Utlevering.TabIndex = 1
+        Me.bekreft_Utlevering.TabIndex = 4
         Me.bekreft_Utlevering.Text = "Bekreft utlevering"
         Me.bekreft_Utlevering.UseVisualStyleBackColor = False
         '
@@ -84,7 +84,7 @@ Partial Class Bestillinger
         Me.hentBestillinger.Location = New System.Drawing.Point(15, 18)
         Me.hentBestillinger.Name = "hentBestillinger"
         Me.hentBestillinger.Size = New System.Drawing.Size(608, 88)
-        Me.hentBestillinger.TabIndex = 5
+        Me.hentBestillinger.TabIndex = 1
         Me.hentBestillinger.Text = "Hent ut motatte bestillinger"
         Me.hentBestillinger.UseVisualStyleBackColor = False
         '
@@ -139,7 +139,7 @@ Partial Class Bestillinger
         Me.vareLagerListBox.Location = New System.Drawing.Point(21, 149)
         Me.vareLagerListBox.Name = "vareLagerListBox"
         Me.vareLagerListBox.Size = New System.Drawing.Size(288, 175)
-        Me.vareLagerListBox.TabIndex = 12
+        Me.vareLagerListBox.TabIndex = 3
         '
         'søkLagerBtn
         '
@@ -148,7 +148,7 @@ Partial Class Bestillinger
         Me.søkLagerBtn.Location = New System.Drawing.Point(21, 18)
         Me.søkLagerBtn.Name = "søkLagerBtn"
         Me.søkLagerBtn.Size = New System.Drawing.Size(287, 88)
-        Me.søkLagerBtn.TabIndex = 13
+        Me.søkLagerBtn.TabIndex = 2
         Me.søkLagerBtn.Text = "Vis tilgjengelige produkter"
         Me.søkLagerBtn.UseVisualStyleBackColor = False
         '

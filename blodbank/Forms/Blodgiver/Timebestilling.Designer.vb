@@ -83,7 +83,7 @@ Partial Class Timebestillinger
         Me.kalenderTimer.Location = New System.Drawing.Point(26, 119)
         Me.kalenderTimer.Margin = New System.Windows.Forms.Padding(6)
         Me.kalenderTimer.Name = "kalenderTimer"
-        Me.kalenderTimer.TabIndex = 3
+        Me.kalenderTimer.TabIndex = 0
         '
         'bestillKnapp
         '
@@ -93,7 +93,7 @@ Partial Class Timebestillinger
         Me.bestillKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.bestillKnapp.Name = "bestillKnapp"
         Me.bestillKnapp.Size = New System.Drawing.Size(439, 86)
-        Me.bestillKnapp.TabIndex = 4
+        Me.bestillKnapp.TabIndex = 2
         Me.bestillKnapp.Text = "Bestill time"
         Me.bestillKnapp.UseVisualStyleBackColor = False
         '
@@ -117,7 +117,7 @@ Partial Class Timebestillinger
         Me.dineTimer.Location = New System.Drawing.Point(23, 148)
         Me.dineTimer.Name = "dineTimer"
         Me.dineTimer.Size = New System.Drawing.Size(417, 137)
-        Me.dineTimer.TabIndex = 7
+        Me.dineTimer.TabIndex = 4
         '
         'ledigeTimerListBox
         '
@@ -127,7 +127,7 @@ Partial Class Timebestillinger
         Me.ledigeTimerListBox.Location = New System.Drawing.Point(291, 119)
         Me.ledigeTimerListBox.Name = "ledigeTimerListBox"
         Me.ledigeTimerListBox.Size = New System.Drawing.Size(175, 156)
-        Me.ledigeTimerListBox.TabIndex = 10
+        Me.ledigeTimerListBox.TabIndex = 1
         '
         'hentTimebestilling
         '
@@ -136,7 +136,7 @@ Partial Class Timebestillinger
         Me.hentTimebestilling.Location = New System.Drawing.Point(23, 46)
         Me.hentTimebestilling.Name = "hentTimebestilling"
         Me.hentTimebestilling.Size = New System.Drawing.Size(416, 86)
-        Me.hentTimebestilling.TabIndex = 11
+        Me.hentTimebestilling.TabIndex = 3
         Me.hentTimebestilling.Text = "Hent dine timer"
         Me.hentTimebestilling.UseVisualStyleBackColor = False
         '

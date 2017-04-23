@@ -117,7 +117,7 @@ Partial Class loggInn
         Me.registrerBrukerKnapp.Location = New System.Drawing.Point(181, 363)
         Me.registrerBrukerKnapp.Name = "registrerBrukerKnapp"
         Me.registrerBrukerKnapp.Size = New System.Drawing.Size(220, 80)
-        Me.registrerBrukerKnapp.TabIndex = 4
+        Me.registrerBrukerKnapp.TabIndex = 5
         Me.registrerBrukerKnapp.Text = "Ny bruker"
         Me.registrerBrukerKnapp.UseVisualStyleBackColor = False
         '
@@ -128,7 +128,7 @@ Partial Class loggInn
         Me.glemtPassordKnapp.Location = New System.Drawing.Point(297, 277)
         Me.glemtPassordKnapp.Name = "glemtPassordKnapp"
         Me.glemtPassordKnapp.Size = New System.Drawing.Size(220, 80)
-        Me.glemtPassordKnapp.TabIndex = 5
+        Me.glemtPassordKnapp.TabIndex = 4
         Me.glemtPassordKnapp.Text = "Glemt passord?"
         Me.glemtPassordKnapp.UseVisualStyleBackColor = False
         '

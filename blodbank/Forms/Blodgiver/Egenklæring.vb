@@ -19,13 +19,13 @@
         guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2
 
         'hvis du har karantene får du ikke lov til å fylle ut egenerklering.
-        If innlogget_karantene > Date.Today Then
+        If innloggetKarantene > Date.Today Then
             MsgBox("Advarsel: Du har karantene. Du kan ikke fylle ut egenerklæringskjemaet før karantenen er ferdig.")
             egenerkleringTabControl.Enabled = False
         End If
 
         'Skrur av irrelevante spørsmål.
-        Select Case innlogget_kjønn
+        Select Case innloggetKjønn
             Case "Mann"
                 egenerkleringTabControl.TabPages(6).Enabled = False
             Case "Kvinne"
@@ -73,16 +73,16 @@
         Else
             tagVerdier = tagVerdier.Substring(0, tagVerdier.Length - 1) 'tar vekk siste komma
             'insert sprøsmålsverdiene til db.
-            Select Case innlogget_kjønn
+            Select Case innloggetKjønn
                 Case "Mann"
                     Try
-                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm49,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innloggetBlodgiverId & "'," & tagVerdier & ")")
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try
                 Case "Kvinne"
                     Try
-                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innlogget_blodgiver_id & "'," & tagVerdier & ")")
+                        sql_sporring("INSERT INTO egenerklering_spm(blodgiver_id,spm1,spm2,spm3, spm4,spm5,spm6,spm7,spm8,spm9,spm10,spm11,spm12,spm13,spm14,spm15,spm16,spm17,spm18,spm19,spm20,spm21,spm22,spm23,spm24,spm25,spm26,spm27,spm28,spm29,spm30,spm31,spm32,spm33,spm34,spm35,spm36,spm37,spm38,spm39,spm40,spm41,spm42,spm43,spm44,spm45,spm46,spm47,spm48,spm50,spm51,spm52,spm53,spm54,spm55,spm56,spm57,spm58,spm59) VALUES ('" & innloggetBlodgiverId & "'," & tagVerdier & ")")
                     Catch ex As Exception
                         MsgBox(ex.Message)
                     End Try
@@ -121,21 +121,21 @@
                 karantene1 = True
             End If
 
-            karanteneTable = sql_sporring("SELECT * FROM Blodgiver where blodgiver_id = " & innlogget_blodgiver_id)
+            karanteneTable = sql_sporring("SELECT * FROM Blodgiver where blodgiver_id = " & innloggetBlodgiverId)
             For Each rad In karanteneTable.Rows
                 'karanteneList.Add(New Blodgiver(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("blodtype_id"), rad("personnummer")))
 
                 If karantene1 = True Then
-                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
                 End If
                 If karantene30 = True Then
-                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(30)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(30)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
                 End If
                 If karantene180 = True Then
-                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(180)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(180)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
                 End If
                 If karantene365 = True Then
-                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(365)) & "' WHERE blodgiver_id =" & innlogget_blodgiver_id)
+                    sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(365)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
                 End If
             Next
         Else

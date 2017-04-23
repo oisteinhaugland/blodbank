@@ -55,7 +55,7 @@ Partial Class GlemtPassord
         Me.tilbakeBtn.Location = New System.Drawing.Point(54, 214)
         Me.tilbakeBtn.Name = "tilbakeBtn"
         Me.tilbakeBtn.Size = New System.Drawing.Size(278, 80)
-        Me.tilbakeBtn.TabIndex = 0
+        Me.tilbakeBtn.TabIndex = 6
         Me.tilbakeBtn.Text = "Tilbake til Logg Inn"
         Me.tilbakeBtn.UseVisualStyleBackColor = False
         '
@@ -65,7 +65,7 @@ Partial Class GlemtPassord
         Me.skrivInnEpostTextBox.Location = New System.Drawing.Point(54, 65)
         Me.skrivInnEpostTextBox.Name = "skrivInnEpostTextBox"
         Me.skrivInnEpostTextBox.Size = New System.Drawing.Size(278, 27)
-        Me.skrivInnEpostTextBox.TabIndex = 1
+        Me.skrivInnEpostTextBox.TabIndex = 4
         '
         'LabelEpost2
         '
@@ -84,7 +84,7 @@ Partial Class GlemtPassord
         Me.sendNyttPassordBtn.Location = New System.Drawing.Point(54, 115)
         Me.sendNyttPassordBtn.Name = "sendNyttPassordBtn"
         Me.sendNyttPassordBtn.Size = New System.Drawing.Size(278, 80)
-        Me.sendNyttPassordBtn.TabIndex = 3
+        Me.sendNyttPassordBtn.TabIndex = 5
         Me.sendNyttPassordBtn.Text = "Send nytt passord til din epost"
         Me.sendNyttPassordBtn.UseVisualStyleBackColor = False
         '
@@ -148,7 +148,7 @@ Partial Class GlemtPassord
         Me.gjenntaNyttPassord.Location = New System.Drawing.Point(233, 61)
         Me.gjenntaNyttPassord.Name = "gjenntaNyttPassord"
         Me.gjenntaNyttPassord.Size = New System.Drawing.Size(160, 27)
-        Me.gjenntaNyttPassord.TabIndex = 6
+        Me.gjenntaNyttPassord.TabIndex = 8
         Me.gjenntaNyttPassord.UseSystemPasswordChar = True
         '
         'registrerNyttPassordBtn
@@ -158,7 +158,7 @@ Partial Class GlemtPassord
         Me.registrerNyttPassordBtn.Location = New System.Drawing.Point(27, 106)
         Me.registrerNyttPassordBtn.Name = "registrerNyttPassordBtn"
         Me.registrerNyttPassordBtn.Size = New System.Drawing.Size(366, 80)
-        Me.registrerNyttPassordBtn.TabIndex = 5
+        Me.registrerNyttPassordBtn.TabIndex = 9
         Me.registrerNyttPassordBtn.Text = "Registrer Passord"
         Me.registrerNyttPassordBtn.UseVisualStyleBackColor = False
         '
@@ -169,7 +169,7 @@ Partial Class GlemtPassord
         Me.loggInnMedNyttPassorBtn.Location = New System.Drawing.Point(47, 214)
         Me.loggInnMedNyttPassorBtn.Name = "loggInnMedNyttPassorBtn"
         Me.loggInnMedNyttPassorBtn.Size = New System.Drawing.Size(278, 80)
-        Me.loggInnMedNyttPassorBtn.TabIndex = 6
+        Me.loggInnMedNyttPassorBtn.TabIndex = 3
         Me.loggInnMedNyttPassorBtn.Text = "Logg inn med nytt passord"
         Me.loggInnMedNyttPassorBtn.UseVisualStyleBackColor = False
         '
@@ -212,7 +212,7 @@ Partial Class GlemtPassord
         Me.epostTextBox.Location = New System.Drawing.Point(47, 65)
         Me.epostTextBox.Name = "epostTextBox"
         Me.epostTextBox.Size = New System.Drawing.Size(160, 27)
-        Me.epostTextBox.TabIndex = 11
+        Me.epostTextBox.TabIndex = 1
         '
         'midlertidigPassordTextBox
         '
@@ -220,7 +220,7 @@ Partial Class GlemtPassord
         Me.midlertidigPassordTextBox.Location = New System.Drawing.Point(47, 168)
         Me.midlertidigPassordTextBox.Name = "midlertidigPassordTextBox"
         Me.midlertidigPassordTextBox.Size = New System.Drawing.Size(160, 27)
-        Me.midlertidigPassordTextBox.TabIndex = 10
+        Me.midlertidigPassordTextBox.TabIndex = 2
         Me.midlertidigPassordTextBox.UseSystemPasswordChar = True
         '
         'Panel5

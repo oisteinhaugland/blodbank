@@ -60,27 +60,27 @@
 
                 'hvis ett brukernavn ble funnet, fyll ut brukerinformasjon.
                 If brukerNavn <> String.Empty Then
-                    innlogget_bruker = brukerNavn
-                    innlogget_fornavn = forNavn
-                    innlogget_etternavn = etterNavn
-                    innlogget_adresse = adresse
-                    innlogget_blodgiver_id = blodgiverId
-                    innlogget_blodtype = blodType
-                    innlogget_epost = ePost
-                    innlogget_fodseldato = fodselDato
-                    innlogget_godkjent_egenerklering = godkjentEgenErklering
-                    innlogget_karantene = karantene
-                    innlogget_post_nr = postNr
-                    innlogget_post_sted = postSted
-                    innlogget_telefon = tlfNr
-                    innlogget_personnummer = personNr
-                    innlogget_blodprosent = blodProsent
+                    BrukerInformasjon.innloggetBruker = brukerNavn
+                    innloggetFornavn = forNavn
+                    innloggetEtternavn = etterNavn
+                    innloggetAdresse = adresse
+                    innloggetBlodgiverId = blodgiverId
+                    innloggetBlodtype = blodType
+                    innloggetEpost = ePost
+                    innloggetFodseldato = fodselDato
+                    innloggetGodkjentEgenerklering = godkjentEgenErklering
+                    innloggetKarantene = karantene
+                    innloggetPostNr = postNr
+                    innloggetPostSted = postSted
+                    innloggetTlf = tlfNr
+                    innloggetPersonNr = personNr
+                    innloggetBlodprosent = blodProsent
 
                     'Finn forrige blodtapping.
                     Try
                         Dim blodTappingTabell = sql_sporring("SELECT * FROM 
                             Blodgivning inner join Blodgiver AS b
-                            on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innlogget_blodgiver_id & "'
+                            on b.blodgiver_id = Blodgivning.blodgiver_id where b.blodgiver_id = '" & innloggetBlodgiverId & "'
                             order by blodgivning_dato DESC limit 1")
 
                         For Each row In blodTappingTabell.Rows
@@ -90,10 +90,10 @@
                         forrigeBlodtapp = "Aldri gitt blod"
                     End Try
 
-                    innlogget_forrige_blodtapp = forrigeBlodtapp
+                    innloggetForrigeBlodtapp = forrigeBlodtapp
 
                     'finner tredje tallet i personnummer
-                    kjønn = CInt(innlogget_personnummer.ToString.Substring(2, 1))
+                    kjønn = CInt(innloggetPersonNr.ToString.Substring(2, 1))
                     loggetInn = True
                 End If
 
@@ -105,9 +105,9 @@
 
         'hvis tallet er partall.
         If (kjønn Mod 2) = 0 Then
-            innlogget_kjønn = "Kvinne"
+            innloggetKjønn = "Kvinne"
         Else
-            innlogget_kjønn = "Mann"
+            innloggetKjønn = "Mann"
         End If
 
         If loggetInn Then
@@ -131,8 +131,8 @@
             Dim lederStatus = rad("lederstatus")
 
             If bruker = brukerNavn And pwd = passord And lederStatus <> 0 Then
-                innlogget_bruker = brukerNavn
-                innlogget_ansatt_id = ansattId
+                innloggetBruker = brukerNavn
+                innloggetAnsattId = ansattId
                 loggetInn = True
             End If
         Next
@@ -159,10 +159,10 @@
             Dim etterNavn = rad("etternavn")
 
             If brukerNavnTextbox.Text = brukerNavn And passordTextBox.Text = passord Then
-                innlogget_bruker = brukerNavn
-                innlogget_ansatt_id = ansattId
-                innlogget_fornavn = forNavn
-                innlogget_etternavn = etterNavn
+                innloggetBruker = brukerNavn
+                innloggetAnsattId = ansattId
+                innloggetFornavn = forNavn
+                innloggetEtternavn = etterNavn
                 loggetInn = True
                 Exit For
             End If

@@ -13,7 +13,7 @@
 
         'finn antall blodgivninger til bruker.
         Dim antallBlodGivninger
-        antallBlodGivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innlogget_blodgiver_id)
+        antallBlodGivninger = sql_sporring("SELECT COUNT(blodgivning_id) as antallblodgivninger FROM Blodgivning INNER JOIN Blodgiver ON Blodgivning.blodgiver_id = Blodgiver.blodgiver_id WHERE Blodgiver.blodgiver_id =" & innloggetBlodgiverId)
         For Each rad In antallBlodGivninger.Rows
             label_antall_blodgivninger.Text = rad("antallblodgivninger")
         Next
@@ -22,22 +22,22 @@
 
     'sub for utfylling av labels
     Public Sub fyllBrukerInformasjon()
-        label_innlogget_fornavn.Text = innlogget_fornavn
-        label_innlogget_etternavn.Text = innlogget_etternavn
-        label_innlogget_adresse.Text = innlogget_adresse
-        label_innlogget_blodtype.Text = konverterBlodtypeTilTekst(innlogget_blodtype)
-        label_innlogget_fodselsdato.Text = innlogget_fodseldato
-        label_innlogget_forrige_blodtapp.Text = innlogget_forrige_blodtapp
-        label_innlogget_post_nr.Text = innlogget_post_nr
-        label_innlogget_post_sted.Text = innlogget_post_sted
-        label_innlogget_telefon.Text = innlogget_telefon
-        label_innlogget_kjønn.Text = innlogget_kjønn
-        label_forrige_blodprosent.Text = innlogget_blodprosent & "%"
+        label_innlogget_fornavn.Text = innloggetFornavn
+        label_innlogget_etternavn.Text = innloggetEtternavn
+        label_innlogget_adresse.Text = innloggetAdresse
+        label_innlogget_blodtype.Text = konverterBlodtypeTilTekst(innloggetBlodtype)
+        label_innlogget_fodselsdato.Text = innloggetFodseldato
+        label_innlogget_forrige_blodtapp.Text = innloggetForrigeBlodtapp
+        label_innlogget_post_nr.Text = innloggetPostNr
+        label_innlogget_post_sted.Text = innloggetPostSted
+        label_innlogget_telefon.Text = innloggetTlf
+        label_innlogget_kjønn.Text = innloggetKjønn
+        label_forrige_blodprosent.Text = innloggetBlodprosent & "%"
 
-        If innlogget_karantene = "00:00:00" Then
+        If innloggetKarantene = "00:00:00" Then
             label_innlogget_karantene1.Text = "Ingen karantene"
         Else
-            label_innlogget_karantene1.Text = innlogget_karantene
+            label_innlogget_karantene1.Text = innloggetKarantene
         End If
     End Sub
 

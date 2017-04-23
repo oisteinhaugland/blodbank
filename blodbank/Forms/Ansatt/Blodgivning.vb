@@ -69,7 +69,7 @@ Public Class Blodgivning
                 '" & plasmaMengde & "',
                 '" & datoTapp & "',
                 '" & blodtype_id & "' ,
-                '" & innlogget_ansatt_id & "' 
+                '" & innloggetAnsattId & "' 
                 )")
                 sql_sporring("UPDATE Blodgiver SET blodprosent =" & blodProsent & " WHERE blodgiver_id =" & blodgiverID)
 

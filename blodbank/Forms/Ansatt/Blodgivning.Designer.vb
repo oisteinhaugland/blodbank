@@ -160,7 +160,7 @@ Partial Class Blodgivning
         Me.LagreBlodtapp.Location = New System.Drawing.Point(11, 271)
         Me.LagreBlodtapp.Name = "LagreBlodtapp"
         Me.LagreBlodtapp.Size = New System.Drawing.Size(439, 86)
-        Me.LagreBlodtapp.TabIndex = 16
+        Me.LagreBlodtapp.TabIndex = 7
         Me.LagreBlodtapp.Text = "Lagre informasjon"
         Me.LagreBlodtapp.UseVisualStyleBackColor = False
         '
@@ -170,7 +170,7 @@ Partial Class Blodgivning
         Me.IDtekst.Location = New System.Drawing.Point(209, 33)
         Me.IDtekst.Name = "IDtekst"
         Me.IDtekst.Size = New System.Drawing.Size(133, 24)
-        Me.IDtekst.TabIndex = 17
+        Me.IDtekst.TabIndex = 1
         '
         'plasmaTekst
         '
@@ -178,7 +178,7 @@ Partial Class Blodgivning
         Me.plasmaTekst.Location = New System.Drawing.Point(209, 68)
         Me.plasmaTekst.Name = "plasmaTekst"
         Me.plasmaTekst.Size = New System.Drawing.Size(133, 24)
-        Me.plasmaTekst.TabIndex = 19
+        Me.plasmaTekst.TabIndex = 2
         '
         'blodlegemeTekst
         '
@@ -186,7 +186,7 @@ Partial Class Blodgivning
         Me.blodlegemeTekst.Location = New System.Drawing.Point(209, 102)
         Me.blodlegemeTekst.Name = "blodlegemeTekst"
         Me.blodlegemeTekst.Size = New System.Drawing.Size(133, 24)
-        Me.blodlegemeTekst.TabIndex = 20
+        Me.blodlegemeTekst.TabIndex = 3
         '
         'blodplateTekst
         '
@@ -194,7 +194,7 @@ Partial Class Blodgivning
         Me.blodplateTekst.Location = New System.Drawing.Point(209, 141)
         Me.blodplateTekst.Name = "blodplateTekst"
         Me.blodplateTekst.Size = New System.Drawing.Size(133, 24)
-        Me.blodplateTekst.TabIndex = 21
+        Me.blodplateTekst.TabIndex = 4
         '
         'TappeDato
         '
@@ -202,7 +202,7 @@ Partial Class Blodgivning
         Me.TappeDato.Location = New System.Drawing.Point(209, 208)
         Me.TappeDato.Name = "TappeDato"
         Me.TappeDato.Size = New System.Drawing.Size(133, 24)
-        Me.TappeDato.TabIndex = 22
+        Me.TappeDato.TabIndex = 6
         '
         'blodTypeComboBox
         '
@@ -212,7 +212,7 @@ Partial Class Blodgivning
         Me.blodTypeComboBox.Location = New System.Drawing.Point(142, 101)
         Me.blodTypeComboBox.Name = "blodTypeComboBox"
         Me.blodTypeComboBox.Size = New System.Drawing.Size(165, 31)
-        Me.blodTypeComboBox.TabIndex = 26
+        Me.blodTypeComboBox.TabIndex = 9
         '
         'bGiverIdTextBox
         '
@@ -220,7 +220,7 @@ Partial Class Blodgivning
         Me.bGiverIdTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.bGiverIdTextBox.Name = "bGiverIdTextBox"
         Me.bGiverIdTextBox.Size = New System.Drawing.Size(165, 31)
-        Me.bGiverIdTextBox.TabIndex = 28
+        Me.bGiverIdTextBox.TabIndex = 8
         '
         'registrerBlodtypeKnapp
         '
@@ -229,7 +229,7 @@ Partial Class Blodgivning
         Me.registrerBlodtypeKnapp.Margin = New System.Windows.Forms.Padding(2)
         Me.registrerBlodtypeKnapp.Name = "registrerBlodtypeKnapp"
         Me.registrerBlodtypeKnapp.Size = New System.Drawing.Size(349, 86)
-        Me.registrerBlodtypeKnapp.TabIndex = 29
+        Me.registrerBlodtypeKnapp.TabIndex = 10
         Me.registrerBlodtypeKnapp.Text = "Registrer"
         Me.registrerBlodtypeKnapp.UseVisualStyleBackColor = False
         '
@@ -240,7 +240,7 @@ Partial Class Blodgivning
         Me.blodprosentTekst.Margin = New System.Windows.Forms.Padding(2)
         Me.blodprosentTekst.Name = "blodprosentTekst"
         Me.blodprosentTekst.Size = New System.Drawing.Size(133, 24)
-        Me.blodprosentTekst.TabIndex = 31
+        Me.blodprosentTekst.TabIndex = 5
         '
         'registrerBlodTappGroupBox
         '

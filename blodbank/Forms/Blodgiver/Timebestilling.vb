@@ -37,7 +37,7 @@
             bestillTime = sql_sporring("INSERT INTO Timebestilling(bestilling_dato, bestilling_tidspunkt, blodgiver_id, er_aktiv)
         values('" & konverterDatoFormatTilMySql(valgtDato) & "',
                '" & tidsPunkt & "',
-            '" & innlogget_blodgiver_id & "',
+            '" & innloggetBlodgiverId & "',
             1
             )")
             Dim registrertTime As String = "Du har nå bestilt time. Dato for timen er " & valgtDato & ", klokken " & tidsPunkt & ":00"
@@ -70,7 +70,7 @@
         dineTimer.Items.Clear()
 
         'hent timer til innlogget bruker
-        bestilteTimer = sql_sporring("Select * FROM Timebestilling WHERE blodgiver_id = " & innlogget_blodgiver_id & " And er_aktiv = 1")
+        bestilteTimer = sql_sporring("Select * FROM Timebestilling WHERE blodgiver_id = " & innloggetBlodgiverId & " And er_aktiv = 1")
 
         For Each rad In bestilteTimer.Rows
             dineTimer.Items.Add("Timedato: " & rad("bestilling_dato") & ", klokken: " & rad("bestilling_tidspunkt") & ":00")

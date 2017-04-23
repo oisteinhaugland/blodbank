@@ -42,7 +42,7 @@
         Next
 
         'setter velkomsttekst og dagens dato.
-        Dim velkomst As String = "Velkommen " & innlogget_fornavn & " " & innlogget_etternavn & "!"
+        Dim velkomst As String = "Velkommen " & innloggetFornavn & " " & innloggetEtternavn & "!"
         LabelVelkommen.Text = velkomst
         LabelDagensDatoTid.Text = Today.Date
     End Sub

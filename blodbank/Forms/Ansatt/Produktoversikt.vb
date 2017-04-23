@@ -129,7 +129,7 @@ Public Class Produktoversikt
         chartPlasma.Series.Add(pOversikt)
         '__________________________________________________________
         'Blodplater graf
-
+        chartBlodplater.Series.Clear()
         chartBlodplater.Series.Add("Blodplater oversikt")
 
         Dim blodplatOversikt As New Series
