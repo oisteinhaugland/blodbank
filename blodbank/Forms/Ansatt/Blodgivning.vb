@@ -147,32 +147,33 @@ Public Class Blodgivning
     Private Sub regBlodtype(sender As Object, e As EventArgs) Handles registrerBlodtypeKnapp.Click
 
         Dim id = bGiverIdTextBox.Text
-        Dim blodGiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = " & id & " and blodtype_id = NULL")
+        Dim blodGiver = sql_sporring("SELECT * FROM Blodgiver where blodgiver_id = " & id & " AND blodtype_id IS NULL")
 
         Dim blodType = blodTypeComboBox.SelectedIndex
         Dim bId
         Select Case blodType
             Case 0
-                bId = 0
-            Case 1
                 bId = 1
-            Case 2
+            Case 1
                 bId = 2
-            Case 3
+            Case 2
                 bId = 3
-            Case 4
+            Case 3
                 bId = 4
-            Case 5
+            Case 4
                 bId = 5
-            Case 6
+            Case 5
                 bId = 6
-            Case 7
+            Case 6
                 bId = 7
+            Case 7
+                bId = 8
         End Select
 
         'hvis blodgiver ikke har blodtype
         If blodGiver.Rows.Count <> 0 Then
             sql_sporring("UPDATE Blodgiver SET blodtype_id = " & bId & " where blodgiver_id = " & id)
+            MsgBox("Registrering vellykket.")
         Else
             MsgBox("Blodgiver har allerede registrert blodtype")
         End If

@@ -320,7 +320,7 @@ Partial Class MinSide
         '
         Me.label_innlogget_karantene1.AutoSize = True
         Me.label_innlogget_karantene1.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.label_innlogget_karantene1.Location = New System.Drawing.Point(235, 153)
+        Me.label_innlogget_karantene1.Location = New System.Drawing.Point(259, 173)
         Me.label_innlogget_karantene1.Name = "label_innlogget_karantene1"
         Me.label_innlogget_karantene1.Size = New System.Drawing.Size(105, 27)
         Me.label_innlogget_karantene1.TabIndex = 28
@@ -330,7 +330,7 @@ Partial Class MinSide
         '
         Me.LabelKarantene.AutoSize = True
         Me.LabelKarantene.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelKarantene.Location = New System.Drawing.Point(27, 151)
+        Me.LabelKarantene.Location = New System.Drawing.Point(51, 171)
         Me.LabelKarantene.Name = "LabelKarantene"
         Me.LabelKarantene.Size = New System.Drawing.Size(114, 27)
         Me.LabelKarantene.TabIndex = 27
@@ -340,7 +340,7 @@ Partial Class MinSide
         '
         Me.label_innlogget_blodtype.AutoSize = True
         Me.label_innlogget_blodtype.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(235, 44)
+        Me.label_innlogget_blodtype.Location = New System.Drawing.Point(259, 64)
         Me.label_innlogget_blodtype.Name = "label_innlogget_blodtype"
         Me.label_innlogget_blodtype.Size = New System.Drawing.Size(64, 27)
         Me.label_innlogget_blodtype.TabIndex = 8
@@ -350,7 +350,7 @@ Partial Class MinSide
         '
         Me.label_innlogget_forrige_blodtapp.AutoSize = True
         Me.label_innlogget_forrige_blodtapp.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(235, 126)
+        Me.label_innlogget_forrige_blodtapp.Location = New System.Drawing.Point(259, 146)
         Me.label_innlogget_forrige_blodtapp.Name = "label_innlogget_forrige_blodtapp"
         Me.label_innlogget_forrige_blodtapp.Size = New System.Drawing.Size(101, 27)
         Me.label_innlogget_forrige_blodtapp.TabIndex = 10
@@ -360,7 +360,7 @@ Partial Class MinSide
         '
         Me.LabelSistBlodtapp.AutoSize = True
         Me.LabelSistBlodtapp.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelSistBlodtapp.Location = New System.Drawing.Point(27, 124)
+        Me.LabelSistBlodtapp.Location = New System.Drawing.Point(51, 144)
         Me.LabelSistBlodtapp.Name = "LabelSistBlodtapp"
         Me.LabelSistBlodtapp.Size = New System.Drawing.Size(139, 27)
         Me.LabelSistBlodtapp.TabIndex = 20
@@ -370,7 +370,7 @@ Partial Class MinSide
         '
         Me.LabelBlodType.AutoSize = True
         Me.LabelBlodType.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBlodType.Location = New System.Drawing.Point(27, 44)
+        Me.LabelBlodType.Location = New System.Drawing.Point(51, 64)
         Me.LabelBlodType.Name = "LabelBlodType"
         Me.LabelBlodType.Size = New System.Drawing.Size(100, 27)
         Me.LabelBlodType.TabIndex = 18
@@ -404,7 +404,7 @@ Partial Class MinSide
         '
         Me.label_antall_blodgivninger.AutoSize = True
         Me.label_antall_blodgivninger.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.label_antall_blodgivninger.Location = New System.Drawing.Point(235, 72)
+        Me.label_antall_blodgivninger.Location = New System.Drawing.Point(259, 92)
         Me.label_antall_blodgivninger.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.label_antall_blodgivninger.Name = "label_antall_blodgivninger"
         Me.label_antall_blodgivninger.Size = New System.Drawing.Size(168, 27)
@@ -415,7 +415,7 @@ Partial Class MinSide
         '
         Me.label_forrige_blodprosent.AutoSize = True
         Me.label_forrige_blodprosent.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.label_forrige_blodprosent.Location = New System.Drawing.Point(235, 99)
+        Me.label_forrige_blodprosent.Location = New System.Drawing.Point(259, 119)
         Me.label_forrige_blodprosent.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.label_forrige_blodprosent.Name = "label_forrige_blodprosent"
         Me.label_forrige_blodprosent.Size = New System.Drawing.Size(185, 27)
@@ -437,7 +437,7 @@ Partial Class MinSide
         '
         Me.LabelBlodProsent.AutoSize = True
         Me.LabelBlodProsent.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold)
-        Me.LabelBlodProsent.Location = New System.Drawing.Point(28, 99)
+        Me.LabelBlodProsent.Location = New System.Drawing.Point(52, 119)
         Me.LabelBlodProsent.Name = "LabelBlodProsent"
         Me.LabelBlodProsent.Size = New System.Drawing.Size(200, 27)
         Me.LabelBlodProsent.TabIndex = 30
@@ -447,7 +447,7 @@ Partial Class MinSide
         '
         Me.LabelTakkMelding.AutoSize = True
         Me.LabelTakkMelding.Font = New System.Drawing.Font("Calibri", 16.2!)
-        Me.LabelTakkMelding.Location = New System.Drawing.Point(137, 219)
+        Me.LabelTakkMelding.Location = New System.Drawing.Point(123, 229)
         Me.LabelTakkMelding.Name = "LabelTakkMelding"
         Me.LabelTakkMelding.Size = New System.Drawing.Size(217, 27)
         Me.LabelTakkMelding.TabIndex = 27
@@ -457,7 +457,7 @@ Partial Class MinSide
         '
         Me.LabelAntallBlodgivninger.AutoSize = True
         Me.LabelAntallBlodgivninger.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Bold)
-        Me.LabelAntallBlodgivninger.Location = New System.Drawing.Point(28, 71)
+        Me.LabelAntallBlodgivninger.Location = New System.Drawing.Point(52, 91)
         Me.LabelAntallBlodgivninger.Name = "LabelAntallBlodgivninger"
         Me.LabelAntallBlodgivninger.Size = New System.Drawing.Size(201, 27)
         Me.LabelAntallBlodgivninger.TabIndex = 28

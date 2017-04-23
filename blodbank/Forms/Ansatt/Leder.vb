@@ -206,9 +206,11 @@ Public Class Leder
 
         '__________________________________________________________
         'antall kjønn chart.
+
         chartKjonn.Series.Clear()
         chartKjonn.Series.Add("Antall kvinner")
 
+        
         Dim kvinnerOversikt As New Series
         kvinnerOversikt.XAxisType = AxisType.Primary
         kvinnerOversikt.SmartLabelStyle.Enabled = False
@@ -219,6 +221,7 @@ Public Class Leder
         With kvinnerOversikt.Points
             .AddXY("Kvinner", antallKvinner)
             .AddXY("Menn", antallMenn)
+
         End With
 
         chartKjonn.Series.Add(kvinnerOversikt)
@@ -232,8 +235,8 @@ Public Class Leder
         mannOversikt.XValueType = ChartValueType.String
 
         With mannOversikt.Points
-
         End With
+
         chartKjonn.Series.Add(mannOversikt)
     End Sub
 

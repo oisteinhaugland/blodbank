@@ -139,7 +139,7 @@ Partial Class InnkallingAnsatt
         Me.blodInfoKnapp.Name = "blodInfoKnapp"
         Me.blodInfoKnapp.Size = New System.Drawing.Size(495, 86)
         Me.blodInfoKnapp.TabIndex = 16
-        Me.blodInfoKnapp.Text = "Hent blodgiverinformajson"
+        Me.blodInfoKnapp.Text = "Hent blodgiverinformasjon"
         Me.blodInfoKnapp.UseVisualStyleBackColor = False
         '
         'ledigeTimerKalender
@@ -173,7 +173,7 @@ Partial Class InnkallingAnsatt
         '
         Me.LabelID.AutoSize = True
         Me.LabelID.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelID.Location = New System.Drawing.Point(22, 47)
+        Me.LabelID.Location = New System.Drawing.Point(15, 46)
         Me.LabelID.Name = "LabelID"
         Me.LabelID.Size = New System.Drawing.Size(27, 23)
         Me.LabelID.TabIndex = 22
@@ -223,7 +223,7 @@ Partial Class InnkallingAnsatt
         '
         Me.LabelBlodtype.AutoSize = True
         Me.LabelBlodtype.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBlodtype.Location = New System.Drawing.Point(407, 46)
+        Me.LabelBlodtype.Location = New System.Drawing.Point(400, 47)
         Me.LabelBlodtype.Name = "LabelBlodtype"
         Me.LabelBlodtype.Size = New System.Drawing.Size(82, 23)
         Me.LabelBlodtype.TabIndex = 28
