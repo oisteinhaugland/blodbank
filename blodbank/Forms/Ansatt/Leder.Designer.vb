@@ -22,18 +22,18 @@ Partial Class Leder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea9 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend9 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series9 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea10 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend10 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series10 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea11 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend11 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series11 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea12 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend12 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series12 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.statistikkTabControl = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.chartLederPlasma = New System.Windows.Forms.DataVisualization.Charting.Chart()
@@ -54,6 +54,11 @@ Partial Class Leder
         Me.ledelseBestillinger = New System.Windows.Forms.ListBox()
         Me.LabelTilgjengeligStats = New System.Windows.Forms.Label()
         Me.loggUtBtn = New System.Windows.Forms.Button()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.statistikkTabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.chartLederPlasma, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +69,7 @@ Partial Class Leder
         Me.TabPage4.SuspendLayout()
         CType(Me.chartKjonn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'statistikkTabControl
@@ -93,16 +99,16 @@ Partial Class Leder
         '
         'chartLederPlasma
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.chartLederPlasma.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.chartLederPlasma.Legends.Add(Legend1)
+        ChartArea9.Name = "ChartArea1"
+        Me.chartLederPlasma.ChartAreas.Add(ChartArea9)
+        Legend9.Name = "Legend1"
+        Me.chartLederPlasma.Legends.Add(Legend9)
         Me.chartLederPlasma.Location = New System.Drawing.Point(0, 0)
         Me.chartLederPlasma.Name = "chartLederPlasma"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.chartLederPlasma.Series.Add(Series1)
+        Series9.ChartArea = "ChartArea1"
+        Series9.Legend = "Legend1"
+        Series9.Name = "Series1"
+        Me.chartLederPlasma.Series.Add(Series9)
         Me.chartLederPlasma.Size = New System.Drawing.Size(817, 455)
         Me.chartLederPlasma.TabIndex = 0
         Me.chartLederPlasma.Text = "Chart1"
@@ -120,16 +126,16 @@ Partial Class Leder
         '
         'chartLederBlodplater
         '
-        ChartArea2.Name = "ChartArea1"
-        Me.chartLederBlodplater.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Me.chartLederBlodplater.Legends.Add(Legend2)
+        ChartArea10.Name = "ChartArea1"
+        Me.chartLederBlodplater.ChartAreas.Add(ChartArea10)
+        Legend10.Name = "Legend1"
+        Me.chartLederBlodplater.Legends.Add(Legend10)
         Me.chartLederBlodplater.Location = New System.Drawing.Point(0, 0)
         Me.chartLederBlodplater.Name = "chartLederBlodplater"
-        Series2.ChartArea = "ChartArea1"
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Me.chartLederBlodplater.Series.Add(Series2)
+        Series10.ChartArea = "ChartArea1"
+        Series10.Legend = "Legend1"
+        Series10.Name = "Series1"
+        Me.chartLederBlodplater.Series.Add(Series10)
         Me.chartLederBlodplater.Size = New System.Drawing.Size(817, 455)
         Me.chartLederBlodplater.TabIndex = 1
         Me.chartLederBlodplater.Text = "Chart2"
@@ -147,16 +153,16 @@ Partial Class Leder
         '
         'chartLederBlodlegemer
         '
-        ChartArea3.Name = "ChartArea1"
-        Me.chartLederBlodlegemer.ChartAreas.Add(ChartArea3)
-        Legend3.Name = "Legend1"
-        Me.chartLederBlodlegemer.Legends.Add(Legend3)
+        ChartArea11.Name = "ChartArea1"
+        Me.chartLederBlodlegemer.ChartAreas.Add(ChartArea11)
+        Legend11.Name = "Legend1"
+        Me.chartLederBlodlegemer.Legends.Add(Legend11)
         Me.chartLederBlodlegemer.Location = New System.Drawing.Point(0, 0)
         Me.chartLederBlodlegemer.Name = "chartLederBlodlegemer"
-        Series3.ChartArea = "ChartArea1"
-        Series3.Legend = "Legend1"
-        Series3.Name = "Series1"
-        Me.chartLederBlodlegemer.Series.Add(Series3)
+        Series11.ChartArea = "ChartArea1"
+        Series11.Legend = "Legend1"
+        Series11.Name = "Series1"
+        Me.chartLederBlodlegemer.Series.Add(Series11)
         Me.chartLederBlodlegemer.Size = New System.Drawing.Size(817, 455)
         Me.chartLederBlodlegemer.TabIndex = 1
         Me.chartLederBlodlegemer.Text = "Chart3"
@@ -174,16 +180,16 @@ Partial Class Leder
         '
         'chartKjonn
         '
-        ChartArea4.Name = "ChartArea1"
-        Me.chartKjonn.ChartAreas.Add(ChartArea4)
-        Legend4.Name = "Legend1"
-        Me.chartKjonn.Legends.Add(Legend4)
+        ChartArea12.Name = "ChartArea1"
+        Me.chartKjonn.ChartAreas.Add(ChartArea12)
+        Legend12.Name = "Legend1"
+        Me.chartKjonn.Legends.Add(Legend12)
         Me.chartKjonn.Location = New System.Drawing.Point(0, 0)
         Me.chartKjonn.Name = "chartKjonn"
-        Series4.ChartArea = "ChartArea1"
-        Series4.Legend = "Legend1"
-        Series4.Name = "Series1"
-        Me.chartKjonn.Series.Add(Series4)
+        Series12.ChartArea = "ChartArea1"
+        Series12.Legend = "Legend1"
+        Series12.Name = "Series1"
+        Me.chartKjonn.Series.Add(Series12)
         Me.chartKjonn.Size = New System.Drawing.Size(817, 455)
         Me.chartKjonn.TabIndex = 2
         Me.chartKjonn.Text = "Chart3"
@@ -299,11 +305,66 @@ Partial Class Leder
         Me.loggUtBtn.Text = "Logg Ut"
         Me.loggUtBtn.UseVisualStyleBackColor = False
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(16, 634)
+        Me.Panel5.TabIndex = 21
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel1.Location = New System.Drawing.Point(1044, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(16, 634)
+        Me.Panel1.TabIndex = 35
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 618)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(16, 16)
+        Me.Panel3.TabIndex = 36
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel2.Location = New System.Drawing.Point(16, 618)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1028, 16)
+        Me.Panel2.TabIndex = 36
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel4.Location = New System.Drawing.Point(16, 0)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1028, 20)
+        Me.Panel4.TabIndex = 37
+        '
         'Leder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1060, 634)
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.loggUtBtn)
         Me.Controls.Add(Me.LabelTilgjengeligStats)
         Me.Controls.Add(Me.statistikkTabControl)
@@ -320,6 +381,7 @@ Partial Class Leder
         CType(Me.chartKjonn, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -345,4 +407,9 @@ Partial Class Leder
     Friend WithEvents chartKjonn As DataVisualization.Charting.Chart
     Friend WithEvents LabelTilgjengeligStats As Label
     Friend WithEvents loggUtBtn As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel4 As Panel
 End Class

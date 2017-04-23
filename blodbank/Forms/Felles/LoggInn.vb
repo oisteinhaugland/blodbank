@@ -5,6 +5,7 @@
     Private Sub LoggInn_load(sender As Object, e As EventArgs) Handles MyBase.Load
         'maximerer vindu, setter farge og midtstiller gui
         WindowState = FormWindowState.Maximized
+
         Me.BackColor = Color.FromArgb(255, 255, 255)
         guiPanel.Left = (Me.ClientSize.Width - guiPanel.Width) \ 2
         guiPanel.Top = (Me.ClientSize.Height - guiPanel.Height) \ 2

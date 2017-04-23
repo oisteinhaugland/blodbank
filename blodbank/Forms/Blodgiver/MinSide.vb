@@ -4,6 +4,7 @@
     Private Sub blodgiverMinSide_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'maksimer vindu, sett farge og fyll brukerinfo
         Me.WindowState = FormWindowState.Maximized
+
         Me.BackColor = Color.FromArgb(255, 255, 255)
         fyllBrukerInformasjon()
 
