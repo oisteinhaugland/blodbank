@@ -50,7 +50,7 @@
         Dim klokke As Integer = 9
         listbox.Items.Clear()
         Dim tidsPunkt = ""
-        Dim hvisTid = True
+        Dim visTid = True
 
         If aktiveTimer.Rows.Count <> 0 Then 'hvis det er timer på den dagen
 
@@ -59,15 +59,15 @@
 
                 For Each rad In aktiveTimer.Rows
                     If rad("bestilling_tidspunkt") = klokke Then
-                        hvisTid = False
+                        visTid = False
                     End If
                 Next
                 tidsPunkt = IntegertilKlokkeSlett(klokke)
-                If hvisTid Then
+                If visTid Then
                     listbox.Items.Add(tidsPunkt)
                 End If
                 klokke += 1
-                hvisTid = True
+                visTid = True
             Next
         Else
             For i = 0 To 6
@@ -80,41 +80,41 @@
 
 
     Public Function konverterBlodtypeTilTekst(ByVal id As Integer)
-        Dim blodtypeString
+        Dim blodTypeString
         Select Case id
             Case 1
-                blodtypeString = "A+"
+                blodTypeString = "A+"
             Case 2
-                blodtypeString = "A-"
+                blodTypeString = "A-"
             Case 3
-                blodtypeString = "B+"
+                blodTypeString = "B+"
             Case 4
-                blodtypeString = "B-"
+                blodTypeString = "B-"
             Case 5
-                blodtypeString = "AB+"
+                blodTypeString = "AB+"
             Case 6
-                blodtypeString = "AB-"
+                blodTypeString = "AB-"
             Case 7
-                blodtypeString = "O+"
+                blodTypeString = "O+"
             Case 8
-                blodtypeString = "O-"
+                blodTypeString = "O-"
         End Select
 
-        Return blodtypeString
+        Return blodTypeString
     End Function
 
 
     Public Function konverterBlodEgenskapTilTekst(ByVal Egid As Integer)
-        Dim blodegString
+        Dim blodEgenkapString
         Select Case Egid
             Case 1
-                blodegString = "Legemer"
+                blodEgenkapString = "Legemer"
             Case 2
-                blodegString = "Plater"
+                blodEgenkapString = "Plater"
             Case 3
-                blodegString = "Plasma"
+                blodEgenkapString = "Plasma"
         End Select
-        Return blodegString
+        Return blodEgenkapString
     End Function
 
 
