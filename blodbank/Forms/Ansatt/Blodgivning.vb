@@ -43,7 +43,14 @@ Public Class Blodgivning
         Dim feilmelding1 = "Registrer feil mengde. Feltet kan ikke stå tomt og kan ikke være større enn 9."
         Dim feilmelding2 = "Datoformatet er ikke riktig. Vennligst følg formatet dd.mm.åååå"
 
-        If v.formatSkjekk(IDtekst.Text, v.blodgiverIdFormat) Then blodgiverID = IDtekst.Text Else validert = False
+        Dim eksistererIdIDB = sql_sporring("SELECT * FROM Blodgiver")
+        Dim eksitererId As Boolean = False
+        For Each rad In eksistererIdIDB.Rows
+            If rad("blodgiver_id") = IDtekst.Text Then
+                eksitererId = True
+            End If
+        Next
+        If v.formatSkjekk(IDtekst.Text, v.blodgiverIdFormat) And eksitererId = True Then blodgiverID = IDtekst.Text Else validert = False
 
         Dim blodgiver = sql_sporring("SELECT blodtype_id FROM Blodgiver where blodgiver_id = '" & IDtekst.Text & "'")
         Dim blodtype_id
@@ -167,7 +174,7 @@ Public Class Blodgivning
         If blodGiver.Rows.Count <> 0 Then
             sql_sporring("UPDATE Blodgiver SET blodtype_id = " & bId & " where blodgiver_id = " & id)
         Else
-            MsgBox("blogiver har allerede registrert blodtype")
+            MsgBox("Blodgiver har allerede registrert blodtype")
         End If
     End Sub
 

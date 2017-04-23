@@ -54,6 +54,8 @@ Partial Class Blodgivning
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.guiPanel = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.registrerBlodTappGroupBox.SuspendLayout()
         Me.registrerBlodtypeGroupBox.SuspendLayout()
@@ -209,14 +211,14 @@ Partial Class Blodgivning
         Me.blodTypeComboBox.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Bold)
         Me.blodTypeComboBox.FormattingEnabled = True
         Me.blodTypeComboBox.Items.AddRange(New Object() {"A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"})
-        Me.blodTypeComboBox.Location = New System.Drawing.Point(142, 101)
+        Me.blodTypeComboBox.Location = New System.Drawing.Point(145, 73)
         Me.blodTypeComboBox.Name = "blodTypeComboBox"
         Me.blodTypeComboBox.Size = New System.Drawing.Size(165, 31)
         Me.blodTypeComboBox.TabIndex = 9
         '
         'bGiverIdTextBox
         '
-        Me.bGiverIdTextBox.Location = New System.Drawing.Point(142, 59)
+        Me.bGiverIdTextBox.Location = New System.Drawing.Point(145, 31)
         Me.bGiverIdTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.bGiverIdTextBox.Name = "bGiverIdTextBox"
         Me.bGiverIdTextBox.Size = New System.Drawing.Size(165, 31)
@@ -290,6 +292,8 @@ Partial Class Blodgivning
         '
         'registrerBlodtypeGroupBox
         '
+        Me.registrerBlodtypeGroupBox.Controls.Add(Me.Label5)
+        Me.registrerBlodtypeGroupBox.Controls.Add(Me.Label4)
         Me.registrerBlodtypeGroupBox.Controls.Add(Me.Label11)
         Me.registrerBlodtypeGroupBox.Controls.Add(Me.Label10)
         Me.registrerBlodtypeGroupBox.Controls.Add(Me.registrerBlodtypeKnapp)
@@ -300,16 +304,16 @@ Partial Class Blodgivning
         Me.registrerBlodtypeGroupBox.Margin = New System.Windows.Forms.Padding(2)
         Me.registrerBlodtypeGroupBox.Name = "registrerBlodtypeGroupBox"
         Me.registrerBlodtypeGroupBox.Padding = New System.Windows.Forms.Padding(2)
-        Me.registrerBlodtypeGroupBox.Size = New System.Drawing.Size(410, 370)
+        Me.registrerBlodtypeGroupBox.Size = New System.Drawing.Size(368, 370)
         Me.registrerBlodtypeGroupBox.TabIndex = 31
         Me.registrerBlodtypeGroupBox.TabStop = False
-        Me.registrerBlodtypeGroupBox.Text = "Registrer blodtype til blodgiver"
+        Me.registrerBlodtypeGroupBox.Text = "Etteregistrer blodtype til blodgiver"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(15, 100)
+        Me.Label11.Location = New System.Drawing.Point(18, 72)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(82, 23)
         Me.Label11.TabIndex = 33
@@ -319,7 +323,7 @@ Partial Class Blodgivning
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(15, 62)
+        Me.Label10.Location = New System.Drawing.Point(18, 34)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(112, 23)
         Me.Label10.TabIndex = 32
@@ -361,8 +365,28 @@ Partial Class Blodgivning
         Me.guiPanel.Controls.Add(Me.registrerBlodtypeGroupBox)
         Me.guiPanel.Location = New System.Drawing.Point(45, 98)
         Me.guiPanel.Name = "guiPanel"
-        Me.guiPanel.Size = New System.Drawing.Size(905, 382)
+        Me.guiPanel.Size = New System.Drawing.Size(873, 382)
         Me.guiPanel.TabIndex = 35
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(19, 116)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(314, 15)
+        Me.Label4.TabIndex = 36
+        Me.Label4.Text = "Denne funksjonaliteten skal KUN givere dersom brukere "
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 139)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(162, 15)
+        Me.Label5.TabIndex = 37
+        Me.Label5.Text = "ikke har registrert blodtype. "
         '
         'Blodgivning
         '
@@ -425,4 +449,6 @@ Partial Class Blodgivning
     Friend WithEvents Label10 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents guiPanel As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
 End Class
