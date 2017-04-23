@@ -123,7 +123,6 @@
 
             karanteneTable = sql_sporring("SELECT * FROM Blodgiver where blodgiver_id = " & innloggetBlodgiverId)
             For Each rad In karanteneTable.Rows
-                'karanteneList.Add(New Blodgiver(rad("blodgiver_id"), rad("fornavn"), rad("etternavn"), rad("fodseldato"), rad("adresse"), rad("post_nr"), rad("post_sted"), rad("telefon"), rad("epost"), rad("godkjent_egenerklering"), rad("karantene"), rad("blodtype_id"), rad("personnummer")))
 
                 If karantene1 = True Then
                     sql_sporring("UPDATE Blodgiver SET karantene = '" & konverterDatoFormatTilMySql(dagensDato.AddDays(1)) & "' WHERE blodgiver_id =" & innloggetBlodgiverId)
